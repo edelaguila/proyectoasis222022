@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class MovimientoClientes : Form
+    public partial class Compras : Form
     {
-        public MovimientoClientes()
+        public Compras()
         {
             InitializeComponent();
         }

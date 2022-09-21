@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class MovimientoProveedores : Form
+    public partial class RecepcionesCompras : Form
     {
-        public MovimientoProveedores()
+        public RecepcionesCompras()
         {
             InitializeComponent();
+        }
+
+        private void iconPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
