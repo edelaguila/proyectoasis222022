@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Capa_Controlador;
+//using Capa_Controlador;
 using System.Data.Odbc;
 
 namespace BusquedaInteligente
@@ -171,11 +171,11 @@ namespace BusquedaInteligente
 
         private void iconButton12_Click(object sender, EventArgs e)
         {
-            cn.ejecutarconsulta(textConsultaBusqueda.Text);
-            MessageBox.Show("Las consultas con nombre " + textConsultaBusqueda.Text + " Han sido eliminadas");
-            actualizaconsultas();
+            //cn.ejecutarconsulta(textConsultaBusqueda.Text);
+            //MessageBox.Show("Las consultas con nombre " + textConsultaBusqueda.Text + " Han sido eliminadas");
+            //actualizaconsultas();
 
-            textConsultaBusqueda.Text = "";
+            //textConsultaBusqueda.Text = "";
         }
     }
     }

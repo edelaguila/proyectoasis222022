@@ -7,9 +7,8 @@ using System.Data.Odbc;
 
 namespace Capa_Modelo
 {
-    public class Class1
-    {
-        class Conexion
+   
+      public class Conexion
         {
             //Clase de conexion --------------
             public OdbcConnection conexion()
@@ -41,4 +40,4 @@ namespace Capa_Modelo
             }
         }
     }
-}
+

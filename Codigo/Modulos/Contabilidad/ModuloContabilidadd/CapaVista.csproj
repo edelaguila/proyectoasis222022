@@ -86,6 +86,12 @@
     <Compile Include="Estados Financieros.designer.cs">
       <DependentUpon>Estados Financieros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Proceso Cierre Contable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proceso Cierre Contable.Designer.cs">
+      <DependentUpon>Proceso Cierre Contable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Estados Financieros.resx">
       <DependentUpon>Estados Financieros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proceso Cierre Contable.resx">
+      <DependentUpon>Proceso Cierre Contable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_1.resx">
       <DependentUpon>Form_1.cs</DependentUpon>
