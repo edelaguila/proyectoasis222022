@@ -53,6 +53,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarComprasCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarComprasCompras.Designer.cs">
+      <DependentUpon>AgregarComprasCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarComprobantesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarComprobantesCompras.Designer.cs">
+      <DependentUpon>AgregarComprobantesCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Agregar_RececpcionesCompras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,17 +77,47 @@
     <Compile Include="central_Compra.Designer.cs">
       <DependentUpon>central_Compra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Compras.cs">
+    <Compile Include="ComprasCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Compras.Designer.cs">
-      <DependentUpon>Compras.cs</DependentUpon>
+    <Compile Include="ComprasCompras.Designer.cs">
+      <DependentUpon>ComprasCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComprobantesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComprobantesCompras.Designer.cs">
+      <DependentUpon>ComprobantesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarComprasCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarComprasCompras.Designer.cs">
+      <DependentUpon>EliminarComprasCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarComprobantesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarComprobantesCompras.Designer.cs">
+      <DependentUpon>EliminarComprobantesCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="EliminarRecepcionesCompras.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EliminarRecepcionesCompras.Designer.cs">
       <DependentUpon>EliminarRecepcionesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarComprasCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarComprasCompras.Designer.cs">
+      <DependentUpon>ModificarComprasCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarComprobantesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarComprobantesCompras.Designer.cs">
+      <DependentUpon>ModificarComprobantesCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="Modificar_RecepcionesCompras.cs">
       <SubType>Form</SubType>
@@ -97,14 +139,38 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AgregarComprasCompras.resx">
+      <DependentUpon>AgregarComprasCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarComprobantesCompras.resx">
+      <DependentUpon>AgregarComprobantesCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Agregar_RececpcionesCompras.resx">
       <DependentUpon>Agregar_RececpcionesCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="central_Compra.resx">
       <DependentUpon>central_Compra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ComprasCompras.resx">
+      <DependentUpon>ComprasCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComprobantesCompras.resx">
+      <DependentUpon>ComprobantesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarComprasCompras.resx">
+      <DependentUpon>EliminarComprasCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarComprobantesCompras.resx">
+      <DependentUpon>EliminarComprobantesCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EliminarRecepcionesCompras.resx">
       <DependentUpon>EliminarRecepcionesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarComprasCompras.resx">
+      <DependentUpon>ModificarComprasCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarComprobantesCompras.resx">
+      <DependentUpon>ModificarComprobantesCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modificar_RecepcionesCompras.resx">
       <DependentUpon>Modificar_RecepcionesCompras.cs</DependentUpon>
