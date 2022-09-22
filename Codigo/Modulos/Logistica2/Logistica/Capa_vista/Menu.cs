@@ -70,6 +70,8 @@ namespace Capa_vista
         
         private void btnmovinvent_Click(object sender, EventArgs e)
         {
+            Mov_inventa b = new Mov_inventa();
+            b.Show();
             hideSubMenu();
         }
 
@@ -82,6 +84,8 @@ namespace Capa_vista
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
+            Reportes b = new Reportes();
+            b.Show();
             hideSubMenu();
         }
 
@@ -92,11 +96,15 @@ namespace Capa_vista
 
         private void btnTraslados_Click(object sender, EventArgs e)
         {
+            Traslado b = new Traslado();
+            b.Show();
             hideSubMenu();
         }
 
         private void btnContactoClientes_Click_1(object sender, EventArgs e)
         {
+            Transporte b = new Transporte();
+            b.Show();
             hideSubMenu();
         }
 
@@ -107,11 +115,15 @@ namespace Capa_vista
 
         private void btnMuestreo_Click(object sender, EventArgs e)
         {
+            Muestreo b = new Muestreo();
+            b.Show();
             hideSubMenu();
         }
 
         private void btaudito_Click(object sender, EventArgs e)
         {
+            Auditoria b = new Auditoria();
+            b.Show();
             hideSubMenu();
         }
 

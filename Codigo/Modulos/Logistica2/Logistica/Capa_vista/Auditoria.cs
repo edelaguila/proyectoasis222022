@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Capa_vista
 {
-    public partial class Reportes : Form
+    public partial class Auditoria : Form
     {
-        public Reportes()
+        public Auditoria()
         {
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
         }
     }
 }

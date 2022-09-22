@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Capa_vista
 {
-    public partial class Traslado : Form
+    public partial class Muestreo : Form
     {
-        public Traslado()
+        public Muestreo()
         {
             InitializeComponent();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

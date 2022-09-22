@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Capa_vista
 {
-    public partial class Cierre : Form
+    public partial class Transporte : Form
     {
-        public Cierre()
+        public Transporte()
         {
             InitializeComponent();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }
