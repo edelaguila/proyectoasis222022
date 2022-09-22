@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8FBA52EA-34AD-4CA6-A4D8-5DC1C3B27D2F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vista</RootNamespace>
+    <AssemblyName>Vista</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Controlador">
+      <HintPath>..\Controlador\bin\Debug\Controlador.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgregarComprasCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarComprasCompras.Designer.cs">
+      <DependentUpon>AgregarComprasCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarComprobantesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarComprobantesCompras.Designer.cs">
+      <DependentUpon>AgregarComprobantesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agregar_FacturaVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar_FacturaVentas.Designer.cs">
+      <DependentUpon>Agregar_FacturaVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agregar_OrdenesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar_OrdenesCompras.Designer.cs">
+      <DependentUpon>Agregar_OrdenesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agregar_PedidosVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar_PedidosVentas.Designer.cs">
+      <DependentUpon>Agregar_PedidosVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agregar_RececpcionesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar_RececpcionesCompras.Designer.cs">
+      <DependentUpon>Agregar_RececpcionesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="central_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="central_Compra.Designer.cs">
+      <DependentUpon>central_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComprasCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComprasCompras.Designer.cs">
+      <DependentUpon>ComprasCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComprobantesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComprobantesCompras.Designer.cs">
+      <DependentUpon>ComprobantesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DevolucionesVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevolucionesVentas.Designer.cs">
+      <DependentUpon>DevolucionesVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarComprasCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarComprasCompras.Designer.cs">
+      <DependentUpon>EliminarComprasCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarComprobantesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarComprobantesCompras.Designer.cs">
+      <DependentUpon>EliminarComprobantesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarRecepcionesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarRecepcionesCompras.Designer.cs">
+      <DependentUpon>EliminarRecepcionesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar_FacturaVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar_FacturaVentas.Designer.cs">
+      <DependentUpon>Eliminar_FacturaVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar_OrdenesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar_OrdenesCompras.Designer.cs">
+      <DependentUpon>Eliminar_OrdenesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Eliminar_PedidosVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Eliminar_PedidosVentas.Designer.cs">
+      <DependentUpon>Eliminar_PedidosVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturaVentas.Designer.cs">
+      <DependentUpon>FacturaVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarComprasCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarComprasCompras.Designer.cs">
+      <DependentUpon>ModificarComprasCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarComprobantesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarComprobantesCompras.Designer.cs">
+      <DependentUpon>ModificarComprobantesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar_FacturaVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar_FacturaVentas.Designer.cs">
+      <DependentUpon>Modificar_FacturaVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar_OrdenesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar_OrdenesCompras.Designer.cs">
+      <DependentUpon>Modificar_OrdenesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar_PedidosVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar_PedidosVentas.Designer.cs">
+      <DependentUpon>Modificar_PedidosVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modificar_RecepcionesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modificar_RecepcionesCompras.Designer.cs">
+      <DependentUpon>Modificar_RecepcionesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdenesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdenesCompras.Designer.cs">
+      <DependentUpon>OrdenesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PedidosVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PedidosVentas.Designer.cs">
+      <DependentUpon>PedidosVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RecepcionesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecepcionesCompras.Designer.cs">
+      <DependentUpon>RecepcionesCompras.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AgregarComprasCompras.resx">
+      <DependentUpon>AgregarComprasCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarComprobantesCompras.resx">
+      <DependentUpon>AgregarComprobantesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agregar_FacturaVentas.resx">
+      <DependentUpon>Agregar_FacturaVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agregar_OrdenesCompras.resx">
+      <DependentUpon>Agregar_OrdenesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agregar_PedidosVentas.resx">
+      <DependentUpon>Agregar_PedidosVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agregar_RececpcionesCompras.resx">
+      <DependentUpon>Agregar_RececpcionesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="central_Compra.resx">
+      <DependentUpon>central_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComprasCompras.resx">
+      <DependentUpon>ComprasCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComprobantesCompras.resx">
+      <DependentUpon>ComprobantesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevolucionesVentas.resx">
+      <DependentUpon>DevolucionesVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarComprasCompras.resx">
+      <DependentUpon>EliminarComprasCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarComprobantesCompras.resx">
+      <DependentUpon>EliminarComprobantesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarRecepcionesCompras.resx">
+      <DependentUpon>EliminarRecepcionesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar_FacturaVentas.resx">
+      <DependentUpon>Eliminar_FacturaVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar_OrdenesCompras.resx">
+      <DependentUpon>Eliminar_OrdenesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Eliminar_PedidosVentas.resx">
+      <DependentUpon>Eliminar_PedidosVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturaVentas.resx">
+      <DependentUpon>FacturaVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarComprasCompras.resx">
+      <DependentUpon>ModificarComprasCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarComprobantesCompras.resx">
+      <DependentUpon>ModificarComprobantesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar_FacturaVentas.resx">
+      <DependentUpon>Modificar_FacturaVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar_OrdenesCompras.resx">
+      <DependentUpon>Modificar_OrdenesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar_PedidosVentas.resx">
+      <DependentUpon>Modificar_PedidosVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modificar_RecepcionesCompras.resx">
+      <DependentUpon>Modificar_RecepcionesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdenesCompras.resx">
+      <DependentUpon>OrdenesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PedidosVentas.resx">
+      <DependentUpon>PedidosVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecepcionesCompras.resx">
+      <DependentUpon>RecepcionesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\Soluciones Contables.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administracion.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
