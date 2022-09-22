@@ -66,6 +66,8 @@ namespace Vista
         private void btnRecepción_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formulario = new RecepcionesCompras();
+            formulario.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }

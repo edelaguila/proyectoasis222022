@@ -41,6 +41,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
@@ -65,11 +66,11 @@
     <Compile Include="AgregarComprobantesCompras.Designer.cs">
       <DependentUpon>AgregarComprobantesCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="Agregar_RececpcionesCompras.cs">
+    <Compile Include="AgregarRecepcionesCompras.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Agregar_RececpcionesCompras.Designer.cs">
-      <DependentUpon>Agregar_RececpcionesCompras.cs</DependentUpon>
+    <Compile Include="AgregarRecepcionesCompras.Designer.cs">
+      <DependentUpon>AgregarRecepcionesCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="central_Compra.cs">
       <SubType>Form</SubType>
@@ -107,6 +108,12 @@
     <Compile Include="EliminarRecepcionesCompras.Designer.cs">
       <DependentUpon>EliminarRecepcionesCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarRequisicionesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarRequisicionesCompras.Designer.cs">
+      <DependentUpon>EliminarRequisicionesCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarComprasCompras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +144,24 @@
     <Compile Include="RecepcionesCompras.Designer.cs">
       <DependentUpon>RecepcionesCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="RequisicionesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequisicionesCompras.Designer.cs">
+      <DependentUpon>RequisicionesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RequisicionesComprasAgregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequisicionesComprasAgregar.Designer.cs">
+      <DependentUpon>RequisicionesComprasAgregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RequisicionesComprasModificar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequisicionesComprasModificar.Designer.cs">
+      <DependentUpon>RequisicionesComprasModificar.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AgregarComprasCompras.resx">
@@ -145,8 +170,8 @@
     <EmbeddedResource Include="AgregarComprobantesCompras.resx">
       <DependentUpon>AgregarComprobantesCompras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Agregar_RececpcionesCompras.resx">
-      <DependentUpon>Agregar_RececpcionesCompras.cs</DependentUpon>
+    <EmbeddedResource Include="AgregarRecepcionesCompras.resx">
+      <DependentUpon>AgregarRecepcionesCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="central_Compra.resx">
       <DependentUpon>central_Compra.cs</DependentUpon>
@@ -166,6 +191,9 @@
     <EmbeddedResource Include="EliminarRecepcionesCompras.resx">
       <DependentUpon>EliminarRecepcionesCompras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EliminarRequisicionesCompras.resx">
+      <DependentUpon>EliminarRequisicionesCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModificarComprasCompras.resx">
       <DependentUpon>ModificarComprasCompras.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +209,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RecepcionesCompras.resx">
       <DependentUpon>RecepcionesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequisicionesCompras.resx">
+      <DependentUpon>RequisicionesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequisicionesComprasAgregar.resx">
+      <DependentUpon>RequisicionesComprasAgregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequisicionesComprasModificar.resx">
+      <DependentUpon>RequisicionesComprasModificar.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

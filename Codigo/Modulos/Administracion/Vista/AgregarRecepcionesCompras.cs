@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class Agregar_RececpcionesCompras : Form
+    public partial class AgregarRecepcionesCompras : Form
     {
-        public Agregar_RececpcionesCompras()
+        public AgregarRecepcionesCompras()
         {
             InitializeComponent();
         }
 
         private void Agregar_RececpcionesCompras_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
         {
 
         }

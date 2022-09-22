@@ -10,37 +10,33 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class RecepcionesCompras : Form
+    public partial class RequisicionesCompras : Form
     {
-        public RecepcionesCompras()
+        public RequisicionesCompras()
         {
             InitializeComponent();
-        }
-
-        private void iconPictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formulario = new AgregarRecepcionesCompras();
+            Form formulario = new RequisicionesComprasAgregar();
             formulario.ShowDialog();
-            
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formulario = new Modificar_RecepcionesCompras();
+            Form formulario = new RequisicionesComprasModificar();
             formulario.ShowDialog();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+
+
             //Codigo
-            Form formulario = new EliminarRecepcionesCompras();
+            Form formulario = new EliminarRequisicionesCompras();
             formulario.ShowDialog();
         }
     }
