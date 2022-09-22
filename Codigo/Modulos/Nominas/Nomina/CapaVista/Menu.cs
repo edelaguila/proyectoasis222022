@@ -75,5 +75,50 @@ namespace CapaVista
             b.Show();
             hideSubMenu();
         }
+
+        private void paninvent4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnmovinvent_Click(object sender, EventArgs e)
+        {
+            tipoContrato b = new tipoContrato();
+            b.Show();
+            hideSubMenu();
+        }
+
+        private void btnCierre_Click(object sender, EventArgs e)
+        {
+            PuestosTrabajos b = new PuestosTrabajos();
+            b.Show();
+            hideSubMenu();
+        }
+
+        private void btnMuestreo_Click(object sender, EventArgs e)
+        {
+            Planilla b = new Planilla();
+            b.Show();
+            hideSubMenu();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            BajasEmpleados b = new BajasEmpleados();
+            b.Show();
+            hideSubMenu();
+        }
+
+        private void btntrans_Click(object sender, EventArgs e)
+        {
+            Contrato b = new Contrato();
+            b.Show();
+            hideSubMenu();
+        }
     }
 }

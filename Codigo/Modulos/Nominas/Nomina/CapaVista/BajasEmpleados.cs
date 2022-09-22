@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CapaVista
 {
-    public partial class tipoContrato : Form
+    public partial class BajasEmpleados : Form
     {
-        public tipoContrato()
+        public BajasEmpleados()
         {
             InitializeComponent();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            this.Hide();
         }
     }
 }

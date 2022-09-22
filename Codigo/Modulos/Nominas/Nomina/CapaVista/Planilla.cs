@@ -10,16 +10,12 @@ using System.Windows.Forms;
 
 namespace CapaVista
 {
-    public partial class tipoContrato : Form
+    public partial class Planilla : Form
     {
-        public tipoContrato()
+        public Planilla()
         {
             InitializeComponent();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
     }
 }

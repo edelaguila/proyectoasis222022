@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CapaVista
 {
-    public partial class tipoContrato : Form
+    public partial class PuestosTrabajos : Form
     {
-        public tipoContrato()
+        public PuestosTrabajos()
         {
             InitializeComponent();
         }
