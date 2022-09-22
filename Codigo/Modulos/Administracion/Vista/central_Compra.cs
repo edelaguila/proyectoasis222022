@@ -101,6 +101,8 @@ namespace Vista
         private void btnComprobantesCompras_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formComprobantesCompras = new ComprobantesCompras();
+            formComprobantesCompras.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }

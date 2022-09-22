@@ -21,5 +21,23 @@ namespace Vista
         {
             this.Hide();
         }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            Form formulario = new AgregarComprasCompras();
+            formulario.ShowDialog();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Form formAgregarCompras = new AgregarComprasCompras();
+            formAgregarCompras.ShowDialog();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Form formEliminarCompras = new EliminarComprasCompras();
+            formEliminarCompras.ShowDialog();
+        }
     }
 }

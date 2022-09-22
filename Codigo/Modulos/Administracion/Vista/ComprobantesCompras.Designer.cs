@@ -30,17 +30,6 @@ namespace Vista
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnHelp = new FontAwesome.Sharp.IconButton();
-            this.btnExit = new FontAwesome.Sharp.IconButton();
-            this.btnEnd = new FontAwesome.Sharp.IconButton();
-            this.btnStart = new FontAwesome.Sharp.IconButton();
-            this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.btnNext = new FontAwesome.Sharp.IconButton();
-            this.btnReporte = new FontAwesome.Sharp.IconButton();
-            this.btnConsultar = new FontAwesome.Sharp.IconButton();
-            this.btnDelete = new FontAwesome.Sharp.IconButton();
-            this.btnModificar = new FontAwesome.Sharp.IconButton();
-            this.btnInsert = new FontAwesome.Sharp.IconButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClienteComprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +41,17 @@ namespace Vista
             this.verTimbre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.uuid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noTimbre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnHelp = new FontAwesome.Sharp.IconButton();
+            this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.btnEnd = new FontAwesome.Sharp.IconButton();
+            this.btnStart = new FontAwesome.Sharp.IconButton();
+            this.btnBack = new FontAwesome.Sharp.IconButton();
+            this.btnNext = new FontAwesome.Sharp.IconButton();
+            this.btnReporte = new FontAwesome.Sharp.IconButton();
+            this.btnConsultar = new FontAwesome.Sharp.IconButton();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
+            this.btnModificar = new FontAwesome.Sharp.IconButton();
+            this.btnInsert = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +75,75 @@ namespace Vista
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1084, 87);
             this.panel1.TabIndex = 2;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Clave,
+            this.ClienteComprobante,
+            this.nombreComprobante,
+            this.FechaElabComprobante,
+            this.RFCComprobante,
+            this.FacDigComprobantes,
+            this.envioDocComprobantes,
+            this.verTimbre,
+            this.uuid,
+            this.noTimbre});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 142);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1060, 485);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // Clave
+            // 
+            this.Clave.HeaderText = "Clave";
+            this.Clave.Name = "Clave";
+            // 
+            // ClienteComprobante
+            // 
+            this.ClienteComprobante.HeaderText = "Cliente";
+            this.ClienteComprobante.Name = "ClienteComprobante";
+            // 
+            // nombreComprobante
+            // 
+            this.nombreComprobante.HeaderText = "Nombre";
+            this.nombreComprobante.Name = "nombreComprobante";
+            // 
+            // FechaElabComprobante
+            // 
+            this.FechaElabComprobante.HeaderText = "Fecha de elaboración";
+            this.FechaElabComprobante.Name = "FechaElabComprobante";
+            // 
+            // RFCComprobante
+            // 
+            this.RFCComprobante.HeaderText = "RFC";
+            this.RFCComprobante.Name = "RFCComprobante";
+            // 
+            // FacDigComprobantes
+            // 
+            this.FacDigComprobantes.HeaderText = "Factura Digital";
+            this.FacDigComprobantes.Name = "FacDigComprobantes";
+            // 
+            // envioDocComprobantes
+            // 
+            this.envioDocComprobantes.HeaderText = "Forma de envío del documento";
+            this.envioDocComprobantes.Name = "envioDocComprobantes";
+            // 
+            // verTimbre
+            // 
+            this.verTimbre.HeaderText = "Versión del timbre";
+            this.verTimbre.Name = "verTimbre";
+            // 
+            // uuid
+            // 
+            this.uuid.HeaderText = "UUID";
+            this.uuid.Name = "uuid";
+            // 
+            // noTimbre
+            // 
+            this.noTimbre.HeaderText = "No. serie del timbre";
+            this.noTimbre.Name = "noTimbre";
             // 
             // btnHelp
             // 
@@ -113,6 +182,7 @@ namespace Vista
             this.btnExit.Text = "Salir";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnEnd
             // 
@@ -246,6 +316,7 @@ namespace Vista
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnModificar
             // 
@@ -265,6 +336,7 @@ namespace Vista
             this.btnModificar.Text = "Modificar";
             this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnInsert
             // 
@@ -284,75 +356,7 @@ namespace Vista
             this.btnInsert.Text = "Agregar";
             this.btnInsert.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnInsert.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Clave,
-            this.ClienteComprobante,
-            this.nombreComprobante,
-            this.FechaElabComprobante,
-            this.RFCComprobante,
-            this.FacDigComprobantes,
-            this.envioDocComprobantes,
-            this.verTimbre,
-            this.uuid,
-            this.noTimbre});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 142);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1060, 485);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // Clave
-            // 
-            this.Clave.HeaderText = "Clave";
-            this.Clave.Name = "Clave";
-            // 
-            // ClienteComprobante
-            // 
-            this.ClienteComprobante.HeaderText = "Cliente";
-            this.ClienteComprobante.Name = "ClienteComprobante";
-            // 
-            // nombreComprobante
-            // 
-            this.nombreComprobante.HeaderText = "Nombre";
-            this.nombreComprobante.Name = "nombreComprobante";
-            // 
-            // FechaElabComprobante
-            // 
-            this.FechaElabComprobante.HeaderText = "Fecha de elaboración";
-            this.FechaElabComprobante.Name = "FechaElabComprobante";
-            // 
-            // RFCComprobante
-            // 
-            this.RFCComprobante.HeaderText = "RFC";
-            this.RFCComprobante.Name = "RFCComprobante";
-            // 
-            // FacDigComprobantes
-            // 
-            this.FacDigComprobantes.HeaderText = "Factura Digital";
-            this.FacDigComprobantes.Name = "FacDigComprobantes";
-            // 
-            // envioDocComprobantes
-            // 
-            this.envioDocComprobantes.HeaderText = "Forma de envío del documento";
-            this.envioDocComprobantes.Name = "envioDocComprobantes";
-            // 
-            // verTimbre
-            // 
-            this.verTimbre.HeaderText = "Versión del timbre";
-            this.verTimbre.Name = "verTimbre";
-            // 
-            // uuid
-            // 
-            this.uuid.HeaderText = "UUID";
-            this.uuid.Name = "uuid";
-            // 
-            // noTimbre
-            // 
-            this.noTimbre.HeaderText = "No. serie del timbre";
-            this.noTimbre.Name = "noTimbre";
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // ComprobantesCompras
             // 
