@@ -31,6 +31,7 @@ namespace Vista
         {
             this.btnCheck = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCheck
@@ -72,17 +73,31 @@ namespace Vista
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(-3, 86);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(392, 25);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "¿Deseas eliminar el elemento seleccionado?";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // EliminarComprobantesCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(384, 261);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.btnCancelar);
             this.Name = "EliminarComprobantesCompras";
             this.Text = "EliminarComprobantesCompras";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -90,5 +105,6 @@ namespace Vista
 
         private FontAwesome.Sharp.IconButton btnCheck;
         private FontAwesome.Sharp.IconButton btnCancelar;
+        private System.Windows.Forms.Label label1;
     }
 }

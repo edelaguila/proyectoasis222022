@@ -1,7 +1,7 @@
 ﻿
 namespace Vista
 {
-    partial class RecepcionesCompras
+    partial class ClienteClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,13 @@ namespace Vista
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calleCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saldoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.btnEnd = new FontAwesome.Sharp.IconButton();
@@ -41,7 +48,6 @@ namespace Vista
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.btnModificar = new FontAwesome.Sharp.IconButton();
             this.btnInsert = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +70,52 @@ namespace Vista
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1084, 87);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 2;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Clave,
+            this.estatusCliente,
+            this.nombre,
+            this.calleCliente,
+            this.telefonoCliente,
+            this.saldoCliente});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 164);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1060, 485);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // Clave
+            // 
+            this.Clave.HeaderText = "Clave";
+            this.Clave.Name = "Clave";
+            // 
+            // estatusCliente
+            // 
+            this.estatusCliente.HeaderText = "Estatus";
+            this.estatusCliente.Name = "estatusCliente";
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            // 
+            // calleCliente
+            // 
+            this.calleCliente.HeaderText = "Calle";
+            this.calleCliente.Name = "calleCliente";
+            // 
+            // telefonoCliente
+            // 
+            this.telefonoCliente.HeaderText = "Teléfono";
+            this.telefonoCliente.Name = "telefonoCliente";
+            // 
+            // saldoCliente
+            // 
+            this.saldoCliente.HeaderText = "Saldo";
+            this.saldoCliente.Name = "saldoCliente";
             // 
             // btnHelp
             // 
@@ -103,6 +154,7 @@ namespace Vista
             this.btnExit.Text = "Salir";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnEnd
             // 
@@ -278,15 +330,7 @@ namespace Vista
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 132);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1060, 485);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // RecepcionesCompras
+            // ClienteClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -294,9 +338,8 @@ namespace Vista
             this.ClientSize = new System.Drawing.Size(1084, 661);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
-            this.Name = "RecepcionesCompras";
-            this.Text = "RecepcionesCompras";
+            this.Name = "ClienteClientes";
+            this.Text = "ClienteClientes";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -318,5 +361,11 @@ namespace Vista
         private FontAwesome.Sharp.IconButton btnModificar;
         private FontAwesome.Sharp.IconButton btnInsert;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estatusCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calleCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn saldoCliente;
     }
 }

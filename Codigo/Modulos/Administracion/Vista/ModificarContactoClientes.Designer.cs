@@ -1,7 +1,7 @@
 ﻿
 namespace Vista
 {
-    partial class Modificar_RecepcionesCompras
+    partial class ModificarContactoClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -29,23 +29,15 @@ namespace Vista
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 515);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1060, 135);
-            this.dataGridView1.TabIndex = 5;
             // 
             // panel1
             // 
@@ -58,7 +50,7 @@ namespace Vista
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1084, 87);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 6;
             // 
             // btnCancelar
             // 
@@ -136,7 +128,15 @@ namespace Vista
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExit.UseVisualStyleBackColor = true;
             // 
-            // Modificar_RecepcionesCompras
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 514);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1060, 135);
+            this.dataGridView1.TabIndex = 7;
+            // 
+            // ModificarContactoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,23 +144,21 @@ namespace Vista
             this.ClientSize = new System.Drawing.Size(1084, 661);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.ForeColor = System.Drawing.Color.Cornsilk;
-            this.Name = "Modificar_RecepcionesCompras";
-            this.Text = "Modificar_RecepcionesCompras";
-            this.Load += new System.EventHandler(this.Modificar_RecepcionesCompras_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Name = "ModificarContactoClientes";
+            this.Text = "ModificarContactoClientes";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnCancelar;
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnHelp;
         private FontAwesome.Sharp.IconButton btnExit;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -10,26 +10,16 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class AgregarComprasCompras : Form
+    public partial class EliminarContactoClientes : Form
     {
-        public AgregarComprasCompras()
+        public EliminarContactoClientes()
         {
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Hide();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AgregarComprasCompras_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

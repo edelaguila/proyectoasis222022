@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class AgregarComprobantesCompras : Form
+    public partial class ModificarClientesClientes : Form
     {
-        public AgregarComprobantesCompras()
+        public ModificarClientesClientes()
         {
             InitializeComponent();
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

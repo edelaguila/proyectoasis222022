@@ -1,7 +1,7 @@
 ﻿
 namespace Vista
 {
-    partial class Modificar_RecepcionesCompras
+    partial class Agregar_RececpcionesCompras
     {
         /// <summary>
         /// Required designer variable.
@@ -31,10 +31,10 @@ namespace Vista
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCancelar = new FontAwesome.Sharp.IconButton();
-            this.btnSave = new FontAwesome.Sharp.IconButton();
             this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.btnSave = new FontAwesome.Sharp.IconButton();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -42,10 +42,10 @@ namespace Vista
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 515);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 504);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1060, 135);
-            this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.TabIndex = 3;
             // 
             // panel1
             // 
@@ -58,45 +58,7 @@ namespace Vista
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1084, 87);
-            this.panel1.TabIndex = 4;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnCancelar.FlatAppearance.BorderSize = 2;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
-            this.btnCancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
-            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnCancelar.IconSize = 40;
-            this.btnCancelar.Location = new System.Drawing.Point(87, 12);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(69, 61);
-            this.btnCancelar.TabIndex = 7;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnSave.FlatAppearance.BorderSize = 2;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.btnSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnSave.IconSize = 40;
-            this.btnSave.Location = new System.Drawing.Point(12, 12);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(69, 61);
-            this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "Guardar";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.panel1.TabIndex = 2;
             // 
             // btnHelp
             // 
@@ -136,7 +98,43 @@ namespace Vista
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExit.UseVisualStyleBackColor = true;
             // 
-            // Modificar_RecepcionesCompras
+            // btnSave
+            // 
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnSave.FlatAppearance.BorderSize = 2;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.btnSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnSave.IconSize = 40;
+            this.btnSave.Location = new System.Drawing.Point(12, 12);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(69, 61);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSave.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnCancelar.FlatAppearance.BorderSize = 2;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
+            this.btnCancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnCancelar.IconSize = 40;
+            this.btnCancelar.Location = new System.Drawing.Point(87, 12);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(69, 61);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // Agregar_RececpcionesCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,10 +142,9 @@ namespace Vista
             this.ClientSize = new System.Drawing.Size(1084, 661);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.ForeColor = System.Drawing.Color.Cornsilk;
-            this.Name = "Modificar_RecepcionesCompras";
-            this.Text = "Modificar_RecepcionesCompras";
-            this.Load += new System.EventHandler(this.Modificar_RecepcionesCompras_Load);
+            this.Name = "Agregar_RececpcionesCompras";
+            this.Text = "Agregar_RececpcionesCompras";
+            this.Load += new System.EventHandler(this.Agregar_RececpcionesCompras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -158,9 +155,9 @@ namespace Vista
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton btnCancelar;
-        private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnHelp;
         private FontAwesome.Sharp.IconButton btnExit;
+        private FontAwesome.Sharp.IconButton btnCancelar;
+        private FontAwesome.Sharp.IconButton btnSave;
     }
 }

@@ -24,24 +24,20 @@ namespace Vista
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            //Codigo
-            Form formulario = new AgregarRecepcionesCompras();
-            formulario.ShowDialog();
-            
+            Form formAgregarRecepciones = new Agregar_RececpcionesCompras();
+            formAgregarRecepciones.ShowDialog();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            //Codigo
-            Form formulario = new Modificar_RecepcionesCompras();
-            formulario.ShowDialog();
+            Form formModRecepciones = new Modificar_RecepcionesCompras();
+            formModRecepciones.ShowDialog();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            //Codigo
-            Form formulario = new EliminarRecepcionesCompras();
-            formulario.ShowDialog();
+            Form formEliminarRecepciones = new EliminarRecepcionesCompras();
+            formEliminarRecepciones.ShowDialog();
         }
     }
 }

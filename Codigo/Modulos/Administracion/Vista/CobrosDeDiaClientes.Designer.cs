@@ -1,7 +1,7 @@
 ﻿
 namespace Vista
 {
-    partial class RecepcionesCompras
+    partial class CobrosDeDiaClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -30,18 +30,19 @@ namespace Vista
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.btnReporte = new FontAwesome.Sharp.IconButton();
+            this.btnConsultar = new FontAwesome.Sharp.IconButton();
+            this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saldoVencidoCobrosDeDia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEnd = new FontAwesome.Sharp.IconButton();
             this.btnStart = new FontAwesome.Sharp.IconButton();
             this.btnBack = new FontAwesome.Sharp.IconButton();
             this.btnNext = new FontAwesome.Sharp.IconButton();
-            this.btnReporte = new FontAwesome.Sharp.IconButton();
-            this.btnConsultar = new FontAwesome.Sharp.IconButton();
-            this.btnDelete = new FontAwesome.Sharp.IconButton();
-            this.btnModificar = new FontAwesome.Sharp.IconButton();
-            this.btnInsert = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -57,14 +58,25 @@ namespace Vista
             this.panel1.Controls.Add(this.btnNext);
             this.panel1.Controls.Add(this.btnReporte);
             this.panel1.Controls.Add(this.btnConsultar);
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnModificar);
-            this.panel1.Controls.Add(this.btnInsert);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1084, 87);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Clave,
+            this.nombre,
+            this.telefonoCliente,
+            this.saldoVencidoCobrosDeDia});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 216);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1060, 433);
+            this.dataGridView1.TabIndex = 5;
             // 
             // btnHelp
             // 
@@ -103,82 +115,7 @@ namespace Vista
             this.btnExit.Text = "Salir";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExit.UseVisualStyleBackColor = true;
-            // 
-            // btnEnd
-            // 
-            this.btnEnd.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnEnd.FlatAppearance.BorderSize = 2;
-            this.btnEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnd.ForeColor = System.Drawing.Color.Black;
-            this.btnEnd.IconChar = FontAwesome.Sharp.IconChar.StepForward;
-            this.btnEnd.IconColor = System.Drawing.Color.Black;
-            this.btnEnd.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnEnd.IconSize = 40;
-            this.btnEnd.Location = new System.Drawing.Point(612, 12);
-            this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Size = new System.Drawing.Size(69, 61);
-            this.btnEnd.TabIndex = 13;
-            this.btnEnd.Text = "Fin";
-            this.btnEnd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEnd.UseVisualStyleBackColor = true;
-            // 
-            // btnStart
-            // 
-            this.btnStart.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnStart.FlatAppearance.BorderSize = 2;
-            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.ForeColor = System.Drawing.Color.Black;
-            this.btnStart.IconChar = FontAwesome.Sharp.IconChar.StepBackward;
-            this.btnStart.IconColor = System.Drawing.Color.Black;
-            this.btnStart.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnStart.IconSize = 40;
-            this.btnStart.Location = new System.Drawing.Point(537, 12);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(69, 61);
-            this.btnStart.TabIndex = 10;
-            this.btnStart.Text = "Inicio";
-            this.btnStart.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnStart.UseVisualStyleBackColor = true;
-            // 
-            // btnBack
-            // 
-            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnBack.FlatAppearance.BorderSize = 2;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.Black;
-            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.Forward;
-            this.btnBack.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnBack.IconSize = 40;
-            this.btnBack.Location = new System.Drawing.Point(462, 12);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(69, 61);
-            this.btnBack.TabIndex = 13;
-            this.btnBack.Text = "Siguiente";
-            this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnBack.UseVisualStyleBackColor = true;
-            // 
-            // btnNext
-            // 
-            this.btnNext.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnNext.FlatAppearance.BorderSize = 2;
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.ForeColor = System.Drawing.Color.Black;
-            this.btnNext.IconChar = FontAwesome.Sharp.IconChar.Backward;
-            this.btnNext.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.btnNext.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnNext.IconSize = 40;
-            this.btnNext.Location = new System.Drawing.Point(387, 12);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(69, 61);
-            this.btnNext.TabIndex = 12;
-            this.btnNext.Text = "Anterior";
-            this.btnNext.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnReporte
             // 
@@ -191,7 +128,7 @@ namespace Vista
             this.btnReporte.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.btnReporte.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnReporte.IconSize = 36;
-            this.btnReporte.Location = new System.Drawing.Point(312, 12);
+            this.btnReporte.Location = new System.Drawing.Point(87, 12);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(69, 61);
             this.btnReporte.TabIndex = 9;
@@ -210,7 +147,7 @@ namespace Vista
             this.btnConsultar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.btnConsultar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnConsultar.IconSize = 40;
-            this.btnConsultar.Location = new System.Drawing.Point(237, 12);
+            this.btnConsultar.Location = new System.Drawing.Point(12, 12);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(69, 61);
             this.btnConsultar.TabIndex = 8;
@@ -218,75 +155,103 @@ namespace Vista
             this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnConsultar.UseVisualStyleBackColor = true;
             // 
-            // btnDelete
+            // Clave
             // 
-            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnDelete.FlatAppearance.BorderSize = 2;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnDelete.IconColor = System.Drawing.Color.DimGray;
-            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnDelete.IconSize = 40;
-            this.btnDelete.Location = new System.Drawing.Point(162, 12);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(69, 61);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "Eliminar";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.Clave.HeaderText = "Clave";
+            this.Clave.Name = "Clave";
             // 
-            // btnModificar
+            // nombre
             // 
-            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnModificar.FlatAppearance.BorderSize = 2;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.Black;
-            this.btnModificar.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
-            this.btnModificar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.btnModificar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnModificar.IconSize = 40;
-            this.btnModificar.Location = new System.Drawing.Point(87, 12);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(69, 61);
-            this.btnModificar.TabIndex = 3;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
             // 
-            // btnInsert
+            // telefonoCliente
             // 
-            this.btnInsert.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnInsert.FlatAppearance.BorderSize = 2;
-            this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.ForeColor = System.Drawing.Color.Black;
-            this.btnInsert.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnInsert.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.btnInsert.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnInsert.IconSize = 40;
-            this.btnInsert.Location = new System.Drawing.Point(12, 12);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(69, 61);
-            this.btnInsert.TabIndex = 2;
-            this.btnInsert.Text = "Agregar";
-            this.btnInsert.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnInsert.UseVisualStyleBackColor = true;
-            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            this.telefonoCliente.HeaderText = "Teléfono";
+            this.telefonoCliente.Name = "telefonoCliente";
             // 
-            // dataGridView1
+            // saldoVencidoCobrosDeDia
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 132);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1060, 485);
-            this.dataGridView1.TabIndex = 1;
+            this.saldoVencidoCobrosDeDia.HeaderText = "Saldo vencido";
+            this.saldoVencidoCobrosDeDia.Name = "saldoVencidoCobrosDeDia";
             // 
-            // RecepcionesCompras
+            // btnEnd
+            // 
+            this.btnEnd.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnEnd.FlatAppearance.BorderSize = 2;
+            this.btnEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnd.ForeColor = System.Drawing.Color.Black;
+            this.btnEnd.IconChar = FontAwesome.Sharp.IconChar.StepForward;
+            this.btnEnd.IconColor = System.Drawing.Color.Black;
+            this.btnEnd.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnEnd.IconSize = 40;
+            this.btnEnd.Location = new System.Drawing.Point(421, 12);
+            this.btnEnd.Name = "btnEnd";
+            this.btnEnd.Size = new System.Drawing.Size(69, 61);
+            this.btnEnd.TabIndex = 13;
+            this.btnEnd.Text = "Fin";
+            this.btnEnd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEnd.UseVisualStyleBackColor = true;
+            // 
+            // btnStart
+            // 
+            this.btnStart.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnStart.FlatAppearance.BorderSize = 2;
+            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStart.ForeColor = System.Drawing.Color.Black;
+            this.btnStart.IconChar = FontAwesome.Sharp.IconChar.StepBackward;
+            this.btnStart.IconColor = System.Drawing.Color.Black;
+            this.btnStart.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnStart.IconSize = 40;
+            this.btnStart.Location = new System.Drawing.Point(346, 12);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(69, 61);
+            this.btnStart.TabIndex = 10;
+            this.btnStart.Text = "Inicio";
+            this.btnStart.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnStart.UseVisualStyleBackColor = true;
+            // 
+            // btnBack
+            // 
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnBack.FlatAppearance.BorderSize = 2;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.Black;
+            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.Forward;
+            this.btnBack.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnBack.IconSize = 40;
+            this.btnBack.Location = new System.Drawing.Point(271, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(69, 61);
+            this.btnBack.TabIndex = 13;
+            this.btnBack.Text = "Siguiente";
+            this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBack.UseVisualStyleBackColor = true;
+            // 
+            // btnNext
+            // 
+            this.btnNext.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnNext.FlatAppearance.BorderSize = 2;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.ForeColor = System.Drawing.Color.Black;
+            this.btnNext.IconChar = FontAwesome.Sharp.IconChar.Backward;
+            this.btnNext.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnNext.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnNext.IconSize = 40;
+            this.btnNext.Location = new System.Drawing.Point(196, 12);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(69, 61);
+            this.btnNext.TabIndex = 12;
+            this.btnNext.Text = "Anterior";
+            this.btnNext.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnNext.UseVisualStyleBackColor = true;
+            // 
+            // CobrosDeDiaClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -294,9 +259,8 @@ namespace Vista
             this.ClientSize = new System.Drawing.Size(1084, 661);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
-            this.Name = "RecepcionesCompras";
-            this.Text = "RecepcionesCompras";
+            this.Name = "CobrosDeDiaClientes";
+            this.Text = "CobrosDeDiaClientes";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -308,15 +272,16 @@ namespace Vista
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnHelp;
         private FontAwesome.Sharp.IconButton btnExit;
+        private FontAwesome.Sharp.IconButton btnReporte;
+        private FontAwesome.Sharp.IconButton btnConsultar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn saldoVencidoCobrosDeDia;
         private FontAwesome.Sharp.IconButton btnEnd;
         private FontAwesome.Sharp.IconButton btnStart;
         private FontAwesome.Sharp.IconButton btnBack;
         private FontAwesome.Sharp.IconButton btnNext;
-        private FontAwesome.Sharp.IconButton btnReporte;
-        private FontAwesome.Sharp.IconButton btnConsultar;
-        private FontAwesome.Sharp.IconButton btnDelete;
-        private FontAwesome.Sharp.IconButton btnModificar;
-        private FontAwesome.Sharp.IconButton btnInsert;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

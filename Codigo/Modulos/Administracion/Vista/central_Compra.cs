@@ -66,8 +66,8 @@ namespace Vista
         private void btnRecepción_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formulario = new RecepcionesCompras();
-            formulario.ShowDialog();
+            Form formRecepcionesCompras = new RecepcionesCompras();
+            formRecepcionesCompras.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -117,6 +117,8 @@ namespace Vista
         private void btnClientes_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formClientes = new ClienteClientes();
+            formClientes.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -124,6 +126,8 @@ namespace Vista
         private void btnContactoClientes_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formContactoClientes = new ContactoClientes();
+            formContactoClientes.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -131,6 +135,8 @@ namespace Vista
         private void btnDay_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formCobrosDia = new CobrosDeDiaClientes();
+            formCobrosDia.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
