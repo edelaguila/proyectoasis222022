@@ -1,5 +1,4 @@
-﻿
-namespace Vista
+﻿namespace Vista
 {
     partial class EliminarRequisicionesCompras
     {
@@ -29,9 +28,22 @@ namespace Vista
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.btnCheck = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(-3, 90);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(392, 25);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "¿Deseas eliminar el elemento seleccionado?";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnCheck
             // 
@@ -44,10 +56,10 @@ namespace Vista
             this.btnCheck.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.btnCheck.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnCheck.IconSize = 40;
-            this.btnCheck.Location = new System.Drawing.Point(106, 188);
+            this.btnCheck.Location = new System.Drawing.Point(104, 188);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(69, 61);
-            this.btnCheck.TabIndex = 11;
+            this.btnCheck.TabIndex = 17;
             this.btnCheck.Text = "Aceptar";
             this.btnCheck.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCheck.UseVisualStyleBackColor = true;
@@ -63,10 +75,10 @@ namespace Vista
             this.btnCancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnCancelar.IconSize = 40;
-            this.btnCancelar.Location = new System.Drawing.Point(197, 188);
+            this.btnCancelar.Location = new System.Drawing.Point(195, 188);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(69, 61);
-            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.TabIndex = 16;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -77,16 +89,19 @@ namespace Vista
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(384, 261);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.btnCancelar);
             this.Name = "EliminarRequisicionesCompras";
             this.Text = "EliminarRequisicionesCompras";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton btnCheck;
         private FontAwesome.Sharp.IconButton btnCancelar;
     }

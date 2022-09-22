@@ -82,6 +82,8 @@ namespace Vista
         private void btnRequisiciones_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formRequisicionesCompras = new RequisicionesCompras();
+            formRequisicionesCompras.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }

@@ -19,25 +19,20 @@ namespace Vista
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            //Codigo
-            Form formulario = new RequisicionesComprasAgregar();
-            formulario.ShowDialog();
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            //Codigo
-            Form formulario = new RequisicionesComprasModificar();
-            formulario.ShowDialog();
+            Form formAgregarRequisicionesCompras = new AgregarRequisicionesCompras();
+            formAgregarRequisicionesCompras.ShowDialog();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            Form formEliminarRequisicionesCompras = new EliminarRequisicionesCompras();
+            formEliminarRequisicionesCompras.ShowDialog();
+        }
 
-
-            //Codigo
-            Form formulario = new EliminarRequisicionesCompras();
-            formulario.ShowDialog();
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Form formModRequisicionesCompras = new ModificarRequisicionesCompras();
+            formModRequisicionesCompras.ShowDialog();
         }
     }
 }

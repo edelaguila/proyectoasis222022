@@ -77,6 +77,12 @@
     <Compile Include="AgregarContactoClientes.Designer.cs">
       <DependentUpon>AgregarContactoClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="AgregarRequisicionesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarRequisicionesCompras.Designer.cs">
+      <DependentUpon>AgregarRequisicionesCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Agregar_RececpcionesCompras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,12 @@
     <Compile Include="EliminarRecepcionesCompras.Designer.cs">
       <DependentUpon>EliminarRecepcionesCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarRequisicionesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarRequisicionesCompras.Designer.cs">
+      <DependentUpon>EliminarRequisicionesCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarClientesClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +185,12 @@
     <Compile Include="ModificarContactoClientes.Designer.cs">
       <DependentUpon>ModificarContactoClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarRequisicionesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarRequisicionesCompras.Designer.cs">
+      <DependentUpon>ModificarRequisicionesCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modificar_RecepcionesCompras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +209,12 @@
     <Compile Include="RecepcionesCompras.Designer.cs">
       <DependentUpon>RecepcionesCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="RequisicionesCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequisicionesCompras.Designer.cs">
+      <DependentUpon>RequisicionesCompras.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AgregarClientesClientes.resx">
@@ -204,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarContactoClientes.resx">
       <DependentUpon>AgregarContactoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarRequisicionesCompras.resx">
+      <DependentUpon>AgregarRequisicionesCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Agregar_RececpcionesCompras.resx">
       <DependentUpon>Agregar_RececpcionesCompras.cs</DependentUpon>
@@ -241,6 +268,9 @@
     <EmbeddedResource Include="EliminarRecepcionesCompras.resx">
       <DependentUpon>EliminarRecepcionesCompras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EliminarRequisicionesCompras.resx">
+      <DependentUpon>EliminarRequisicionesCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModificarClientesClientes.resx">
       <DependentUpon>ModificarClientesClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -253,6 +283,9 @@
     <EmbeddedResource Include="ModificarContactoClientes.resx">
       <DependentUpon>ModificarContactoClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModificarRequisicionesCompras.resx">
+      <DependentUpon>ModificarRequisicionesCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modificar_RecepcionesCompras.resx">
       <DependentUpon>Modificar_RecepcionesCompras.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RecepcionesCompras.resx">
       <DependentUpon>RecepcionesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequisicionesCompras.resx">
+      <DependentUpon>RequisicionesCompras.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

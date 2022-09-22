@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class RequisicionesComprasModificar : Form
+    public partial class AgregarRequisicionesCompras : Form
     {
-        public RequisicionesComprasModificar()
+        public AgregarRequisicionesCompras()
         {
             InitializeComponent();
         }

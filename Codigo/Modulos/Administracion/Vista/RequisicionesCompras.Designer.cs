@@ -29,25 +29,8 @@ namespace Vista
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReferenciaProveeedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaDeDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechadeRecepción = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechadeCancelación = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Almacén = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Enlazado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DocAsociado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalInderectos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Folio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ImporteTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TotalDelDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Formaenviodeldocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.btnEnd = new FontAwesome.Sharp.IconButton();
@@ -59,120 +42,19 @@ namespace Vista
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.btnModificar = new FontAwesome.Sharp.IconButton();
             this.btnInsert = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.claveReq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proveedorReq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreReq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estatusReq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SolicitadoPorReq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaReq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaRecepReq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaCanReq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EnlazadoReq = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serieReq = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Clave,
-            this.Proveedor,
-            this.Nombre,
-            this.Estatus,
-            this.ReferenciaProveeedor,
-            this.FechaDeDocumento,
-            this.FechadeRecepción,
-            this.FechadeCancelación,
-            this.Almacén,
-            this.Enlazado,
-            this.DocAsociado,
-            this.TotalInderectos,
-            this.Serie,
-            this.Folio,
-            this.ImporteTotal,
-            this.TotalDelDocumento,
-            this.Formaenviodeldocumento});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 154);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1060, 485);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // Clave
-            // 
-            this.Clave.HeaderText = "Clave";
-            this.Clave.Name = "Clave";
-            // 
-            // Proveedor
-            // 
-            this.Proveedor.HeaderText = "Proveedor";
-            this.Proveedor.Name = "Proveedor";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            // 
-            // Estatus
-            // 
-            this.Estatus.HeaderText = "Estatus";
-            this.Estatus.Name = "Estatus";
-            // 
-            // ReferenciaProveeedor
-            // 
-            this.ReferenciaProveeedor.HeaderText = "Referencia Proveeedor";
-            this.ReferenciaProveeedor.Name = "ReferenciaProveeedor";
-            // 
-            // FechaDeDocumento
-            // 
-            this.FechaDeDocumento.HeaderText = "FechaDeDocumento";
-            this.FechaDeDocumento.Name = "FechaDeDocumento";
-            // 
-            // FechadeRecepción
-            // 
-            this.FechadeRecepción.HeaderText = "Fecha de Recepción";
-            this.FechadeRecepción.Name = "FechadeRecepción";
-            // 
-            // FechadeCancelación
-            // 
-            this.FechadeCancelación.HeaderText = "Fecha de Cancelación";
-            this.FechadeCancelación.Name = "FechadeCancelación";
-            // 
-            // Almacén
-            // 
-            this.Almacén.HeaderText = "Almacén";
-            this.Almacén.Name = "Almacén";
-            // 
-            // Enlazado
-            // 
-            this.Enlazado.HeaderText = "Enlazado";
-            this.Enlazado.Name = "Enlazado";
-            // 
-            // DocAsociado
-            // 
-            this.DocAsociado.HeaderText = "Con Documento Asociado";
-            this.DocAsociado.Name = "DocAsociado";
-            // 
-            // TotalInderectos
-            // 
-            this.TotalInderectos.HeaderText = "Total Inderectos";
-            this.TotalInderectos.Name = "TotalInderectos";
-            // 
-            // Serie
-            // 
-            this.Serie.HeaderText = "Serie";
-            this.Serie.Name = "Serie";
-            // 
-            // Folio
-            // 
-            this.Folio.HeaderText = "Folio";
-            this.Folio.Name = "Folio";
-            // 
-            // ImporteTotal
-            // 
-            this.ImporteTotal.HeaderText = "ImporteTotal";
-            this.ImporteTotal.Name = "ImporteTotal";
-            // 
-            // TotalDelDocumento
-            // 
-            this.TotalDelDocumento.HeaderText = "Total Del Documento";
-            this.TotalDelDocumento.Name = "TotalDelDocumento";
-            // 
-            // Formaenviodeldocumento
-            // 
-            this.Formaenviodeldocumento.HeaderText = "Forma de envio del documento";
-            this.Formaenviodeldocumento.Name = "Formaenviodeldocumento";
             // 
             // panel1
             // 
@@ -192,7 +74,26 @@ namespace Vista
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1084, 87);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.claveReq,
+            this.proveedorReq,
+            this.nombreReq,
+            this.estatusReq,
+            this.SolicitadoPorReq,
+            this.fechaReq,
+            this.fechaRecepReq,
+            this.FechaCanReq,
+            this.EnlazadoReq,
+            this.serieReq});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 164);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1060, 485);
+            this.dataGridView1.TabIndex = 2;
             // 
             // btnHelp
             // 
@@ -406,6 +307,56 @@ namespace Vista
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
+            // claveReq
+            // 
+            this.claveReq.HeaderText = "Clave";
+            this.claveReq.Name = "claveReq";
+            // 
+            // proveedorReq
+            // 
+            this.proveedorReq.HeaderText = "Proveedor";
+            this.proveedorReq.Name = "proveedorReq";
+            // 
+            // nombreReq
+            // 
+            this.nombreReq.HeaderText = "Nombre";
+            this.nombreReq.Name = "nombreReq";
+            // 
+            // estatusReq
+            // 
+            this.estatusReq.HeaderText = "Estatus";
+            this.estatusReq.Name = "estatusReq";
+            // 
+            // SolicitadoPorReq
+            // 
+            this.SolicitadoPorReq.HeaderText = "Solicitado por";
+            this.SolicitadoPorReq.Name = "SolicitadoPorReq";
+            // 
+            // fechaReq
+            // 
+            this.fechaReq.HeaderText = "Fecha de documento";
+            this.fechaReq.Name = "fechaReq";
+            // 
+            // fechaRecepReq
+            // 
+            this.fechaRecepReq.HeaderText = "Fecha de recepción";
+            this.fechaRecepReq.Name = "fechaRecepReq";
+            // 
+            // FechaCanReq
+            // 
+            this.FechaCanReq.HeaderText = "Fecha de cancelación";
+            this.FechaCanReq.Name = "FechaCanReq";
+            // 
+            // EnlazadoReq
+            // 
+            this.EnlazadoReq.HeaderText = "Enlazado";
+            this.EnlazadoReq.Name = "EnlazadoReq";
+            // 
+            // serieReq
+            // 
+            this.serieReq.HeaderText = "Serie";
+            this.serieReq.Name = "serieReq";
+            // 
             // RequisicionesCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -415,33 +366,15 @@ namespace Vista
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Name = "RequisicionesCompras";
-            this.Text = "requisiciones";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "RequisicionesCompras";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Proveedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReferenciaProveeedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaDeDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechadeRecepción;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechadeCancelación;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Almacén;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Enlazado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DocAsociado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalInderectos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Serie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Folio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ImporteTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TotalDelDocumento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Formaenviodeldocumento;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnHelp;
         private FontAwesome.Sharp.IconButton btnExit;
@@ -454,5 +387,16 @@ namespace Vista
         private FontAwesome.Sharp.IconButton btnDelete;
         private FontAwesome.Sharp.IconButton btnModificar;
         private FontAwesome.Sharp.IconButton btnInsert;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn claveReq;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proveedorReq;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreReq;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estatusReq;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SolicitadoPorReq;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaReq;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaRecepReq;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaCanReq;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EnlazadoReq;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serieReq;
     }
 }
