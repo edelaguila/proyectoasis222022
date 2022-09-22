@@ -57,6 +57,8 @@ namespace Vista
         private void btnCompra_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formulario = new ComprasCompras();
+            formulario.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
