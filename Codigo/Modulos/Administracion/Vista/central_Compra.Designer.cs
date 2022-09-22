@@ -68,6 +68,7 @@ namespace Vista
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnVentas = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -101,6 +102,7 @@ namespace Vista
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
+            this.panel2.Controls.Add(this.btnVentas);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.btnVendedores);
             this.panel2.Controls.Add(this.btnCotizaciones);
@@ -110,7 +112,7 @@ namespace Vista
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 1034);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 227);
+            this.panel2.Size = new System.Drawing.Size(220, 269);
             this.panel2.TabIndex = 7;
             // 
             // button2
@@ -694,6 +696,22 @@ namespace Vista
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
+            // btnVentas
+            // 
+            this.btnVentas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVentas.FlatAppearance.BorderSize = 0;
+            this.btnVentas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentas.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnVentas.Location = new System.Drawing.Point(0, 210);
+            this.btnVentas.Name = "btnVentas";
+            this.btnVentas.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnVentas.Size = new System.Drawing.Size(220, 35);
+            this.btnVentas.TabIndex = 23;
+            this.btnVentas.Text = "Ventas";
+            this.btnVentas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentas.UseVisualStyleBackColor = true;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
+            // 
             // central_Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -757,5 +775,6 @@ namespace Vista
         private System.Windows.Forms.Button btnCajaClientes;
         private System.Windows.Forms.Button btnComprobantesCompras;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnVentas;
     }
 }

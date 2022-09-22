@@ -261,5 +261,12 @@ namespace Vista
             //Ocultar submenu
             hideSubMenu();
         }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            //Codigo
+            //Ocultar submenu
+            hideSubMenu();
+        }
     }
 }
