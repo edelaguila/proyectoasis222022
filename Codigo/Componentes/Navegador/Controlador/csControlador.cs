@@ -518,27 +518,31 @@ namespace Controlador
 
             try
             {
-                OdbcDataAdapter dt = sn.buscarnombretabla(tabla.Tag.ToString(), textbox.Length, BD);
+                OdbcDataAdapter dt = sn.buscarnombretabla2(tabla.Tag.ToString(), textbox.Length, BD);
                 DataTable table = new DataTable();
                 dt.Fill(table);
+                string[] datos = new string[textbox.Length];
+                for(int x = 0; x< textbox.Length; x++)
+                {
+                    datos[x] = textbox[x].Tag.ToString();
+                }
 
-
-
+                Array.Sort(datos);
+               
                 for (int x = 0; x < textbox.Length; x++)
                 {
-                    if (textbox[x].Tag.ToString() != table.Rows[x][0].ToString())
+
+                    if (datos[x] != table.Rows[x][0].ToString())
                     {
 
-
-                        MessageBox.Show("Por favor Verificar el nombre de la columna: " + textbox[x].Tag.ToString() + ", Debe de ser: " + table.Rows[x][0].ToString());
-                        formulario.Close();
-                        break;
+                            MessageBox.Show("Por favor Verificar el nombre de la columna: " + table.Rows[x][0].ToString());
+                            Application.Exit();
+                            break;
                         
-
                     }
                     else
                     {
-
+                        //MessageBox.Show(datos[x]);
                     }
                 }
             }
@@ -592,6 +596,24 @@ namespace Controlador
             return permiso;
         }
 
+        private int numeroayuda;
+        public void guardarnumero(int numero)
+        {
+            numeroayuda = numero;
+        }
+
+        public int mostrarnumero()
+        {
+
+            return numeroayuda;
+        }
+
+        private int numero1;
+        public int Numero1
+        {
+            get { return numero1; }
+            set { numero1 = value; }
+        }
 
 
     }

@@ -25,6 +25,7 @@ namespace Vista
             cn.evaluartags(textbox, pb.dgv_tabla, "controlempleados", this);
             cn.llenartablaa(pb.dgv_tabla.Tag.ToString(), pb.dgv_tabla, numero, textbox);
             cn.desactivar(this);
+           
             
             
 

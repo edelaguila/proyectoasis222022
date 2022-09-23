@@ -94,16 +94,15 @@ namespace Modelo
         }
 
         
-
-       /* public OdbcDataAdapter buscarnombretabla(string tabla, int numero, string BD)
+        public OdbcDataAdapter buscarnombretabla2(string tabla, int numero, string BD)
         {
             string[] dato = new string[numero];
-            string sql = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS  WHERE TABLE_SCHEMA= '" + BD + "' AND TABLE_NAME= '" + tabla + "'";
+            string sql = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS  WHERE TABLE_SCHEMA= '" + BD + "' AND TABLE_NAME= '" + tabla + "' order by COLUMN_NAME asc";
             OdbcDataAdapter datatable = new OdbcDataAdapter(sql, con.conexion());
 
             return datatable;
-        }*/
-        public OdbcDataAdapter buscarnombretabla(string tabla, int numero, string BD)
+        }
+        /*public OdbcDataAdapter buscarnombretabla(string tabla, int numero, string BD)
         {
             
                 string[] dato = new string[numero];
@@ -112,7 +111,7 @@ namespace Modelo
            
 
             return datatable;
-        }
+        }*/
 
         public string[] comprobaciondellenado(string tabla, string tipo, string dato, int tamaño)
         {

@@ -47,6 +47,7 @@ namespace Vista
             Eliminar el = new Eliminar();
             el.numero = cn.buscarposicion(dgv_tabla);
             el.Show();
+           
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

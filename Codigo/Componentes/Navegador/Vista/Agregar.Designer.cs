@@ -110,7 +110,7 @@ namespace Vista
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 30;
-            this.textBox3.Tag = "puesto";
+            this.textBox3.Tag = "puestos";
             // 
             // textBox2
             // 
@@ -118,7 +118,7 @@ namespace Vista
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 29;
-            this.textBox2.Tag = "nombre_completo2";
+            this.textBox2.Tag = "nombre_completo";
             // 
             // textBox1
             // 
