@@ -117,12 +117,12 @@ namespace NavegadorVista
             if (opcion == 1)
             {
                 cn.ingresar(textbox, tabla);
-                cn.bloquearbotonesGC(botongc, true);
+                //cn.bloquearbotonesGC(botongc, true);
             }
             else if (opcion == 2)
             {
                 cn.actualizar(textbox, tabla);
-                cn.bloquearbotonesGC(botongc, true);
+               // cn.bloquearbotonesGC(botongc, true);
             }
             else if(opcion == 3)
             {
@@ -130,7 +130,7 @@ namespace NavegadorVista
                 if(resultado == DialogResult.Yes)
                 {
                     cn.delete(textbox, tabla);
-                    cn.bloquearbotonesGC(botongc, true);
+                    //cn.bloquearbotonesGC(botongc, true);
                 }
                 else if(resultado == DialogResult.No)
                 {
