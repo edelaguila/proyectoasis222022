@@ -41,6 +41,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
@@ -76,6 +77,12 @@
     </Compile>
     <Compile Include="AgregarContactoClientes.Designer.cs">
       <DependentUpon>AgregarContactoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarMovimientosClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarMovimientosClientes.Designer.cs">
+      <DependentUpon>AgregarMovimientosClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="AgregarRequisicionesCompras.cs">
       <SubType>Form</SubType>
@@ -119,6 +126,12 @@
     <Compile Include="ComprasCompras.Designer.cs">
       <DependentUpon>ComprasCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComprobantesClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComprobantesClientes.Designer.cs">
+      <DependentUpon>ComprobantesClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ComprobantesCompras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +167,12 @@
     </Compile>
     <Compile Include="EliminarContactoClientes.Designer.cs">
       <DependentUpon>EliminarContactoClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarMovimientosClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarMovimientosClientes.Designer.cs">
+      <DependentUpon>EliminarMovimientosClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="EliminarRecepcionesCompras.cs">
       <SubType>Form</SubType>
@@ -197,6 +216,12 @@
     <Compile Include="ModificarContactoClientes.Designer.cs">
       <DependentUpon>ModificarContactoClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="ModificarMovimientosClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarMovimientosClientes.Designer.cs">
+      <DependentUpon>ModificarMovimientosClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModificarRequisicionesCompras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +240,12 @@
     <Compile Include="Modificar_RecepcionesCompras.Designer.cs">
       <DependentUpon>Modificar_RecepcionesCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="MovimientosClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MovimientosClientes.Designer.cs">
+      <DependentUpon>MovimientosClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrdenesCompras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +263,12 @@
     </Compile>
     <Compile Include="RecepcionesCompras.Designer.cs">
       <DependentUpon>RecepcionesCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteClientesClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteClientesClientes.Designer.cs">
+      <DependentUpon>ReporteClientesClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportesCompras.cs">
       <SubType>Form</SubType>
@@ -259,6 +296,9 @@
     <EmbeddedResource Include="AgregarContactoClientes.resx">
       <DependentUpon>AgregarContactoClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AgregarMovimientosClientes.resx">
+      <DependentUpon>AgregarMovimientosClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AgregarRequisicionesCompras.resx">
       <DependentUpon>AgregarRequisicionesCompras.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +320,9 @@
     <EmbeddedResource Include="ComprasCompras.resx">
       <DependentUpon>ComprasCompras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ComprobantesClientes.resx">
+      <DependentUpon>ComprobantesClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ComprobantesCompras.resx">
       <DependentUpon>ComprobantesCompras.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarContactoClientes.resx">
       <DependentUpon>EliminarContactoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarMovimientosClientes.resx">
+      <DependentUpon>EliminarMovimientosClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarRecepcionesCompras.resx">
       <DependentUpon>EliminarRecepcionesCompras.cs</DependentUpon>
@@ -319,6 +365,9 @@
     <EmbeddedResource Include="ModificarContactoClientes.resx">
       <DependentUpon>ModificarContactoClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModificarMovimientosClientes.resx">
+      <DependentUpon>ModificarMovimientosClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModificarRequisicionesCompras.resx">
       <DependentUpon>ModificarRequisicionesCompras.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,6 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modificar_RecepcionesCompras.resx">
       <DependentUpon>Modificar_RecepcionesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovimientosClientes.resx">
+      <DependentUpon>MovimientosClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrdenesCompras.resx">
       <DependentUpon>OrdenesCompras.cs</DependentUpon>
@@ -337,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RecepcionesCompras.resx">
       <DependentUpon>RecepcionesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteClientesClientes.resx">
+      <DependentUpon>ReporteClientesClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportesCompras.resx">
       <DependentUpon>ReportesCompras.cs</DependentUpon>

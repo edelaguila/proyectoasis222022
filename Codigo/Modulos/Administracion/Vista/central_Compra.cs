@@ -75,6 +75,8 @@ namespace Vista
         private void btnOrdenes_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formOrdenesCompras = new OrdenesCompras();
+            formOrdenesCompras.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -146,6 +148,8 @@ namespace Vista
         private void btnReporteCliente_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formReportesClientes = new ReporteClientesClientes();
+            formReportesClientes.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -153,6 +157,8 @@ namespace Vista
         private void btnComprobantesClientes_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formComprobantesClientes = new ComprobantesClientes();
+            formComprobantesClientes.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -160,6 +166,8 @@ namespace Vista
         private void btnMovimientosCLientes_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formMovClientes = new MovimientosClientes();
+            formMovClientes.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
