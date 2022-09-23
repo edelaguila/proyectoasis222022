@@ -7,89 +7,156 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Controlador;
-namespace Vista
+using FontAwesome.Sharp;
+using NavegadorControlador;
+
+namespace NavegadorVista
 {
-
-  
-
     public partial class Navegador : UserControl
     {
+        csControlador cn = new csControlador();
         public Navegador()
         {
             InitializeComponent();
         }
-        public Form formulario = new Form();
+
+        public Form actual = new Form();
+        public TextBox[] textbox = { };
+        public TextBox[] textboxi = { };
         public DataGridView tabla;
-        public Label ayudanumero;
-        public TextBox ayuda;
-        
-        csControlador cn = new csControlador();
-        public void cargar(DataGridView dtabla)
-        {
-            cn.llenartablaa(dtabla.Tag.ToString(), dtabla);
-        }
+       
 
-        private void btnInsert_Click(object sender, EventArgs e)
+        int opcion; 
+        public void cargar(DataGridView dtabla, TextBox[] text, string BD)
         {
-
+            cn.evaluartabla(dtabla);
+            cn.inicializargrid(dtabla);
+            cn.llenartablainicio(dtabla.Tag.ToString(), dtabla, text);
+            cn.evaluartags(text, dtabla, BD);
+            cn.desactivar(actual);
            
-            formulario.Show();
+            
+
+
+        }
+      
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            actual.Close();
         }
 
-        private void Navegador_Load(object sender, EventArgs e)
+        private void ComponenteNavegador_Load(object sender, EventArgs e)
         {
-
-           
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-
-            NavegadorI navi = new NavegadorI();
-           navi.numeroform = cn.buscarposicion(tabla);
-            //ayuda.Text = numero.ToString();
-           
-            MessageBox.Show(navi.numeroform.ToString());
-            formulario.Show();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-
-            int numero = cn.buscarposicion(tabla);
-            ayudanumero.Tag = numero.ToString();
-            formulario.Show();
+            IconButton[] botongc = { btnSave, btnCancelar };
+            cn.bloquearbotonesGC(botongc, true);
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
             cn.moverseIF(tabla, "b");
+            cn.llenartxt(textbox, tabla);
+            cn.desactivar(actual);
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             cn.moverseIF(tabla, "s");
-        }
-
-        private void btnEnd_Click(object sender, EventArgs e)
-        {
-            cn.moverseIF(tabla, "f");
+            cn.llenartxt(textbox, tabla);
+            cn.desactivar(actual);
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
             cn.moverseIF(tabla, "i");
+            cn.llenartxt(textbox, tabla);
+            cn.desactivar(actual);
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnEnd_Click(object sender, EventArgs e)
         {
-            formulario.Close();
+            cn.moverseIF(tabla, "f");
+            cn.llenartxt(textbox, tabla);
+            cn.desactivar(actual);
         }
 
-        private void btnConsultar_Click(object sender, EventArgs e)
+        private void btnInsert_Click(object sender, EventArgs e)
         {
+            IconButton[] botongc = { btnSave, btnCancelar };
+            opcion = 1;
+            cn.limpiar(actual);
+            cn.activar(actual);
+            cn.crearid(textboxi, tabla);
+            cn.bloquearbotonesGC(botongc, false);
+            
 
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            opcion = 3;
+            IconButton[] botongc = { btnSave, btnCancelar };
+            cn.bloquearbotonesGC(botongc, false);
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            opcion = 2;
+            cn.activar(actual);
+            cn.enfocar(textboxi);
+            IconButton[] botongc = { btnSave, btnCancelar };
+            cn.bloquearbotonesGC(botongc, false);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            IconButton[] botongc = { btnSave, btnCancelar };
+           
+            if (opcion == 1)
+            {
+                cn.ingresar(textbox, tabla);
+                cn.bloquearbotonesGC(botongc, true);
+            }
+            else if (opcion == 2)
+            {
+                cn.actualizar(textbox, tabla);
+                cn.bloquearbotonesGC(botongc, true);
+            }
+            else if(opcion == 3)
+            {
+                DialogResult resultado = MessageBox.Show("Desea eliminar el Resgistro", "Eliminar", MessageBoxButtons.YesNo);
+                if(resultado == DialogResult.Yes)
+                {
+                    cn.delete(textbox, tabla);
+                    cn.bloquearbotonesGC(botongc, true);
+                }
+                else if(resultado == DialogResult.No)
+                {
+
+                    cn.limpiar(actual);
+                    cn.desactivar(actual);
+                    cn.llenartxt(textbox, tabla);
+                    cn.bloquearbotonesGC(botongc, true);
+                }
+               
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            cn.limpiar(actual);
+            cn.desactivar(actual);
+            cn.llenartxt(textbox, tabla);
+            IconButton[] botongc = { btnSave, btnCancelar };
+            cn.bloquearbotonesGC(botongc, true);
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            cn.moverseIF(tabla, "i");
+            cn.llenartablainicio(tabla.Tag.ToString(), tabla, textbox);
         }
     }
 }

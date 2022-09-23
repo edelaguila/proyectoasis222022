@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Odbc;
 
-namespace Modelo
+namespace NavegadorModelo
 {
     public class Sentencias
     {
@@ -102,16 +102,14 @@ namespace Modelo
 
             return datatable;
         }
-        /*public OdbcDataAdapter buscarnombretabla(string tabla, int numero, string BD)
+        public OdbcDataAdapter buscarnombretabla()
         {
             
-                string[] dato = new string[numero];
-                string sql = "show columns from " + tabla + "";
+                string sql = "show tables";
                 OdbcDataAdapter datatable = new OdbcDataAdapter(sql, con.conexion());
            
-
             return datatable;
-        }*/
+        }
 
         public string[] comprobaciondellenado(string tabla, string tipo, string dato, int tamaño)
         {

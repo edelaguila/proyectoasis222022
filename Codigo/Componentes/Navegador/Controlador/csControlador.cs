@@ -7,9 +7,9 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.Odbc;
 using FontAwesome.Sharp;
-using Modelo;
+using NavegadorModelo;
 
-namespace Controlador
+namespace NavegadorControlador
 {
  
     public class csControlador
@@ -18,13 +18,7 @@ namespace Controlador
 
         int next, mov;
 
-        private int opcionboton;
-
-        public int Opcionboton
-        {
-            get { return this.opcionboton; }
-            set { this.opcionboton = value; }
-        }
+        
        
         public void llenartablaa(string ntabla, DataGridView tabla)//Funcion para llenar tabla
         {
@@ -58,23 +52,64 @@ namespace Controlador
             }
             return posicionamiento;
         }
-        public void llenartablaa(string ntabla, DataGridView tabla, int posicion, TextBox[] textbox)//Funcion para llenar tabla
+        public void llenartablainicio(string ntabla, DataGridView tabla, TextBox[] textbox)//Funcion para llenar tabla
         {
             try
             {
                 OdbcDataAdapter dt = sn.llenartabla(ntabla);
                 DataTable table = new DataTable();
                 dt.Fill(table);
-
+                tabla.DataSource = table;
 
                 for (int x = 0; x < table.Columns.Count; x++)
                 {
-                    textbox[x].Text = table.Rows[posicion][x].ToString();
+                    textbox[x].Text = table.Rows[0][x].ToString();
 
 
                 }
             }
-            
+
+            catch (Exception e)
+            {
+                MessageBox.Show("Error:" + e);
+            }
+        }
+        public void llenartabla5(string ntabla, DataGridView tabla, TextBox[] textbox, int posicion)//Funcion para llenar tabla
+        {
+            try
+            {
+                OdbcDataAdapter dt = sn.llenartabla(ntabla);
+                DataTable table = new DataTable();
+                dt.Fill(table);
+                
+                
+                for (int x = 0; x < table.Columns.Count; x++)
+                {
+                    textbox[x].Text = table.Rows[posicion][x].ToString();
+                    textbox[x].Enabled = false;
+
+
+                }
+            }
+
+            catch (Exception e)
+            {
+                MessageBox.Show("Error:" + e);
+            }
+        }
+        public void llenartxt(TextBox[] textbox, DataGridView tabla)//Llena los textbox con datos del datagriedview
+
+        {
+            try
+            {
+                for (int x = 0; x < tabla.ColumnCount; x++)
+                {
+                    textbox[x].Text = tabla.CurrentRow.Cells[x].Value.ToString();
+                    //MessageBox.Show(textbox[x].Text + "    " + tabla.CurrentRow.Cells[x].Value.ToString());
+
+                }
+
+            }
             catch (Exception e)
             {
                 MessageBox.Show("Error:" + e);
@@ -82,6 +117,8 @@ namespace Controlador
 
 
         }
+
+
 
         public void limpiar(Control control)// limpia Componentes
         {
@@ -181,48 +218,7 @@ namespace Controlador
             
         }
 
-        public void enfocarEliminar(TextBox[] textbox) //disabled todos los textbox y enfoca el primer textbox
-        {
-            try
-            {
-                textbox[0].Focus();
-                textbox[1].Enabled = false;
-                textbox[2].Enabled = false;
-                textbox[3].Enabled = false;
-                textbox[4].Enabled = false;
-
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error:" + e);
-            }
-           
-        }
-
-        public void llenartxt(TextBox[] textbox, DataGridView tabla)//Llena los textbox con datos del datagriedview
-
-        {
-            try
-            {
-                for (int x = 0; x < tabla.ColumnCount; x++)
-                {
-                    textbox[x].Text = tabla.CurrentRow.Cells[x].Value.ToString();
-                    MessageBox.Show(textbox[x].Text + "    " + tabla.CurrentRow.Cells[x].Value.ToString());
-
-                }
-
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error:" + e);
-            }
-            
-
-        }
-
         
-
-
          public void moverseIF(DataGridView tabla, string mover)//Metodo para moverse al inicio, final, siguiente, anterior
         {
             try
@@ -430,51 +426,22 @@ namespace Controlador
 
         }
 
-        public void bloquearbotones(IconButton[] boton, bool bloqueo)//bloquea botones
+        public void bloquearbotonesGC(IconButton[] boton, bool bloqueo)//bloquea botones  guardar y cancelar
         {
             try
             {
-                if (bloqueo == true)//activa el boton guardar y cancelar
-                {
-                    boton[0].Enabled = true;
-                    boton[1].Enabled = true;
-                    boton[2].Enabled = false;
-                    boton[3].Enabled = false;
-                    boton[4].Enabled = false;
-                    boton[5].Enabled = false;
-                    boton[6].Enabled = false;
-                    boton[7].Enabled = false;
-                    boton[8].Enabled = false;
-                    boton[9].Enabled = false;
-                    boton[10].Enabled = false;
-                    boton[11].Enabled = false;
-                    boton[12].Enabled = false;
-                    boton[13].Enabled = false;
-
-
-
-
-                }
-                else if (bloqueo == false)//bloque el boton guardar y cancelar
+                if(bloqueo == true)//si es true bloquea botones
                 {
                     boton[0].Enabled = false;
                     boton[1].Enabled = false;
-                    boton[2].Enabled = true;
-                    boton[3].Enabled = true;
-                    boton[4].Enabled = true;
-                    boton[5].Enabled = true;
-                    boton[6].Enabled = true;
-                    boton[7].Enabled = true;
-                    boton[8].Enabled = true;
-                    boton[9].Enabled = true;
-                    boton[10].Enabled = true;
-                    boton[11].Enabled = true;
-                    boton[12].Enabled = true;
-                    boton[13].Enabled = true;
-
-
-
                 }
+               else if(bloqueo == false)//si es true desbloquea botones
+                {
+                    boton[0].Enabled = true;
+                    boton[1].Enabled = true;
+                }
+
+                
             }
             catch (Exception e)
             {
@@ -513,7 +480,7 @@ namespace Controlador
             return autorizacion;
         }
 
-       public void evaluartags(TextBox[] textbox, DataGridView tabla, string BD, Form formulario)//Metodo para evaluar los tags
+       public void evaluartags(TextBox[] textbox, DataGridView tabla, string BD)//Metodo para evaluar los tags
         {
 
             try
@@ -534,8 +501,9 @@ namespace Controlador
 
                     if (datos[x] != table.Rows[x][0].ToString())
                     {
-
-                            MessageBox.Show("Por favor Verificar el nombre de la columna: " + table.Rows[x][0].ToString());
+                        string mensaje = "Por favor Verificar el nombre de la columna: " + table.Rows[x][0].ToString();
+                        MessageBox.Show(mensaje, " Error Campo  ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        
                             Application.Exit();
                             break;
                         
@@ -554,7 +522,7 @@ namespace Controlador
             
 
 
-        }
+         }
         
             bool comprobaractualizacion (DataGridView tabla, TextBox[] textbox)
         {
@@ -596,25 +564,49 @@ namespace Controlador
             return permiso;
         }
 
-        private int numeroayuda;
-        public void guardarnumero(int numero)
+        
+        public void inicializargrid (DataGridView tabla)
         {
-            numeroayuda = numero;
+            tabla.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            tabla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        public int mostrarnumero()
+        public void evaluartabla(DataGridView tabla)//Metodo para evaluar el nombre de la tabla
         {
 
-            return numeroayuda;
-        }
+            try
+            {
+                OdbcDataAdapter dt = sn.buscarnombretabla();
+                DataTable table = new DataTable();
+                dt.Fill(table);
 
-        private int numero1;
-        public int Numero1
-        {
-            get { return numero1; }
-            set { numero1 = value; }
-        }
+                int conteo = 0;
 
+                for (int x = 0; x < table.Rows.Count; x++)
+                {
+
+                    if (tabla.Tag.ToString() != table.Rows[x][0].ToString())
+                    {
+                         conteo += 1;
+                    }
+                    
+                }
+                if(conteo == table.Rows.Count)
+                {
+                    string mensaje = "La tabla: " + tabla.Tag.ToString() + " no aparece en la Base de datos ";
+                    MessageBox.Show(mensaje," Error Tabla ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Application.Exit();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+            }
+
+
+
+
+        }
 
     }
 }
