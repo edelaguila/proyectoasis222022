@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class Eliminar_OrdenesCompras : Form
+    public partial class EliminarVendedoresVentas : Form
     {
-        public Eliminar_OrdenesCompras()
+        public EliminarVendedoresVentas()
         {
             InitializeComponent();
         }

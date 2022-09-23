@@ -1,7 +1,7 @@
 ﻿
 namespace Vista
 {
-    partial class MovimientosClientes
+    partial class CotizacionesVentas
     {
         /// <summary>
         /// Required designer variable.
@@ -42,21 +42,27 @@ namespace Vista
             this.btnModificar = new FontAwesome.Sharp.IconButton();
             this.btnInsert = new FontAwesome.Sharp.IconButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.clienteMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noDocMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RefMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ImporteMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechEntregaMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaAplicMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SistemaMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Clilente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_ela = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_vig = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comisiones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Almacen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.forma_envio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nom_vendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.btnHelp);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnEnd);
@@ -72,7 +78,7 @@ namespace Vista
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1084, 87);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 7;
             // 
             // btnHelp
             // 
@@ -111,7 +117,6 @@ namespace Vista
             this.btnExit.Text = "Salir";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnEnd
             // 
@@ -288,60 +293,96 @@ namespace Vista
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clienteMov,
-            this.noDocMov,
-            this.RefMov,
-            this.tipoMov,
-            this.ImporteMov,
-            this.FechEntregaMov,
-            this.FechaAplicMov,
-            this.SistemaMov});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 164);
+            this.Tipo,
+            this.Clave,
+            this.Clilente,
+            this.Nombre,
+            this.Estatus,
+            this.pedido,
+            this.fecha_ela,
+            this.fecha_vig,
+            this.Subtotal,
+            this.comisiones,
+            this.Almacen,
+            this.forma_envio,
+            this.total,
+            this.nom_vendedor});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 138);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1060, 485);
-            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.TabIndex = 8;
             // 
-            // clienteMov
+            // Tipo
             // 
-            this.clienteMov.HeaderText = "Cliente";
-            this.clienteMov.Name = "clienteMov";
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.Name = "Tipo";
             // 
-            // noDocMov
+            // Clave
             // 
-            this.noDocMov.HeaderText = "No. Documento";
-            this.noDocMov.Name = "noDocMov";
+            this.Clave.HeaderText = "Clave";
+            this.Clave.Name = "Clave";
             // 
-            // RefMov
+            // Clilente
             // 
-            this.RefMov.HeaderText = "Referencia";
-            this.RefMov.Name = "RefMov";
+            this.Clilente.HeaderText = "Clilente";
+            this.Clilente.Name = "Clilente";
             // 
-            // tipoMov
+            // Nombre
             // 
-            this.tipoMov.HeaderText = "Tipo de Movimiento";
-            this.tipoMov.Name = "tipoMov";
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
             // 
-            // ImporteMov
+            // Estatus
             // 
-            this.ImporteMov.HeaderText = "Importe";
-            this.ImporteMov.Name = "ImporteMov";
+            this.Estatus.HeaderText = "Estatus";
+            this.Estatus.Name = "Estatus";
             // 
-            // FechEntregaMov
+            // pedido
             // 
-            this.FechEntregaMov.HeaderText = "Fecha de entrega";
-            this.FechEntregaMov.Name = "FechEntregaMov";
+            this.pedido.HeaderText = "Su pedido";
+            this.pedido.Name = "pedido";
             // 
-            // FechaAplicMov
+            // fecha_ela
             // 
-            this.FechaAplicMov.HeaderText = "Fecha de aplicación";
-            this.FechaAplicMov.Name = "FechaAplicMov";
+            this.fecha_ela.HeaderText = "Fecha de elaboracion";
+            this.fecha_ela.Name = "fecha_ela";
             // 
-            // SistemaMov
+            // fecha_vig
             // 
-            this.SistemaMov.HeaderText = "Sistema";
-            this.SistemaMov.Name = "SistemaMov";
+            this.fecha_vig.HeaderText = "Fecha de vigencia";
+            this.fecha_vig.Name = "fecha_vig";
             // 
-            // MovimientosClientes
+            // Subtotal
+            // 
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.Name = "Subtotal";
+            // 
+            // comisiones
+            // 
+            this.comisiones.HeaderText = "Total de comisiones";
+            this.comisiones.Name = "comisiones";
+            // 
+            // Almacen
+            // 
+            this.Almacen.HeaderText = "Numero de almacen";
+            this.Almacen.Name = "Almacen";
+            // 
+            // forma_envio
+            // 
+            this.forma_envio.HeaderText = "Forma de envio del documento";
+            this.forma_envio.Name = "forma_envio";
+            // 
+            // total
+            // 
+            this.total.HeaderText = "Importe total";
+            this.total.Name = "total";
+            // 
+            // nom_vendedor
+            // 
+            this.nom_vendedor.HeaderText = "Nombre del vendedor";
+            this.nom_vendedor.Name = "nom_vendedor";
+            // 
+            // CotizacionesVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -349,8 +390,8 @@ namespace Vista
             this.ClientSize = new System.Drawing.Size(1084, 661);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Name = "MovimientosClientes";
-            this.Text = "MovimientosClientes";
+            this.Name = "CotizacionesVentas";
+            this.Text = "CotizacionesVentas";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -372,13 +413,19 @@ namespace Vista
         private FontAwesome.Sharp.IconButton btnModificar;
         private FontAwesome.Sharp.IconButton btnInsert;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clienteMov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noDocMov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RefMov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoMov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ImporteMov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechEntregaMov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaAplicMov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SistemaMov;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Clilente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_ela;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_vig;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn comisiones;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Almacen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn forma_envio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nom_vendedor;
     }
 }

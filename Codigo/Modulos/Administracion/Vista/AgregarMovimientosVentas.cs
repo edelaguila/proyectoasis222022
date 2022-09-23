@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class Agregar_OrdenesCompras : Form
+    public partial class AgregarMovimientosVentas : Form
     {
-        public Agregar_OrdenesCompras()
+        public AgregarMovimientosVentas()
         {
             InitializeComponent();
         }

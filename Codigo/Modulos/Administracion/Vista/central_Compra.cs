@@ -100,6 +100,8 @@ namespace Vista
         private void btnReporteCompras_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formReportesCompras = new ReportesCompras();
+            formReportesCompras.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -241,6 +243,8 @@ namespace Vista
         private void btnFactura_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formFacturaVentas = new FacturaVentas();
+            formFacturaVentas.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -248,6 +252,8 @@ namespace Vista
         private void btnPedidos_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formPedidosVentas = new PedidosVentas();
+            formPedidosVentas.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -255,6 +261,8 @@ namespace Vista
         private void btnDevolucionesVentas_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formDevolucionesVentas = new DevolucionesVentas();
+            formDevolucionesVentas.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -262,6 +270,8 @@ namespace Vista
         private void btnCotizaciones_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formCotizacionesVentas = new CotizacionesVentas();
+            formCotizacionesVentas.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -269,13 +279,17 @@ namespace Vista
         private void btnVendedores_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formVendedoresVentas = new VendedoresVentas();
+            formVendedoresVentas.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnMovimientos_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formMovimientosVentas = new MovimientosVentas();
+            formMovimientosVentas.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -283,6 +297,8 @@ namespace Vista
         private void btnVentas_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formVentasVentas = new VentasVentas();
+            formVentasVentas.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }

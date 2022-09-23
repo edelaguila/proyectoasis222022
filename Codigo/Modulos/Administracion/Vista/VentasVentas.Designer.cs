@@ -1,7 +1,7 @@
 ﻿
 namespace Vista
 {
-    partial class MovimientosClientes
+    partial class VentasVentas
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,17 @@ namespace Vista
         /// </summary>
         private void InitializeComponent()
         {
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.refProveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaRep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaCanc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.almacen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enlazado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
@@ -41,18 +52,78 @@ namespace Vista
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.btnModificar = new FontAwesome.Sharp.IconButton();
             this.btnInsert = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.clienteMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noDocMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RefMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipoMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ImporteMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechEntregaMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaAplicMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SistemaMov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Clave,
+            this.proveedor,
+            this.nombre,
+            this.status,
+            this.refProveedor,
+            this.FechDoc,
+            this.FechaRep,
+            this.FechaCanc,
+            this.almacen,
+            this.enlazado});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 156);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1060, 485);
+            this.dataGridView1.TabIndex = 4;
+            // 
+            // Clave
+            // 
+            this.Clave.HeaderText = "Clave";
+            this.Clave.Name = "Clave";
+            // 
+            // proveedor
+            // 
+            this.proveedor.HeaderText = "Proveedor";
+            this.proveedor.Name = "proveedor";
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            // 
+            // status
+            // 
+            this.status.HeaderText = "Status ";
+            this.status.Name = "status";
+            // 
+            // refProveedor
+            // 
+            this.refProveedor.HeaderText = "Referencia Proveedor";
+            this.refProveedor.Name = "refProveedor";
+            // 
+            // FechDoc
+            // 
+            this.FechDoc.HeaderText = "Fecha de documento";
+            this.FechDoc.Name = "FechDoc";
+            // 
+            // FechaRep
+            // 
+            this.FechaRep.HeaderText = "Fecha de recepción";
+            this.FechaRep.Name = "FechaRep";
+            // 
+            // FechaCanc
+            // 
+            this.FechaCanc.HeaderText = "Fecha de cancelación";
+            this.FechaCanc.Name = "FechaCanc";
+            // 
+            // almacen
+            // 
+            this.almacen.HeaderText = "Almacén";
+            this.almacen.Name = "almacen";
+            // 
+            // enlazado
+            // 
+            this.enlazado.HeaderText = "Enlazado";
+            this.enlazado.Name = "enlazado";
             // 
             // panel1
             // 
@@ -72,7 +143,7 @@ namespace Vista
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1084, 87);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 3;
             // 
             // btnHelp
             // 
@@ -111,7 +182,6 @@ namespace Vista
             this.btnExit.Text = "Salir";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnEnd
             // 
@@ -284,64 +354,7 @@ namespace Vista
             this.btnInsert.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnInsert.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clienteMov,
-            this.noDocMov,
-            this.RefMov,
-            this.tipoMov,
-            this.ImporteMov,
-            this.FechEntregaMov,
-            this.FechaAplicMov,
-            this.SistemaMov});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 164);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1060, 485);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // clienteMov
-            // 
-            this.clienteMov.HeaderText = "Cliente";
-            this.clienteMov.Name = "clienteMov";
-            // 
-            // noDocMov
-            // 
-            this.noDocMov.HeaderText = "No. Documento";
-            this.noDocMov.Name = "noDocMov";
-            // 
-            // RefMov
-            // 
-            this.RefMov.HeaderText = "Referencia";
-            this.RefMov.Name = "RefMov";
-            // 
-            // tipoMov
-            // 
-            this.tipoMov.HeaderText = "Tipo de Movimiento";
-            this.tipoMov.Name = "tipoMov";
-            // 
-            // ImporteMov
-            // 
-            this.ImporteMov.HeaderText = "Importe";
-            this.ImporteMov.Name = "ImporteMov";
-            // 
-            // FechEntregaMov
-            // 
-            this.FechEntregaMov.HeaderText = "Fecha de entrega";
-            this.FechEntregaMov.Name = "FechEntregaMov";
-            // 
-            // FechaAplicMov
-            // 
-            this.FechaAplicMov.HeaderText = "Fecha de aplicación";
-            this.FechaAplicMov.Name = "FechaAplicMov";
-            // 
-            // SistemaMov
-            // 
-            this.SistemaMov.HeaderText = "Sistema";
-            this.SistemaMov.Name = "SistemaMov";
-            // 
-            // MovimientosClientes
+            // VentasVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -349,16 +362,27 @@ namespace Vista
             this.ClientSize = new System.Drawing.Size(1084, 661);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Name = "MovimientosClientes";
-            this.Text = "MovimientosClientes";
-            this.panel1.ResumeLayout(false);
+            this.Name = "VentasVentas";
+            this.Text = "VentasVentas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn proveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn refProveedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechDoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaRep;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaCanc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn almacen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enlazado;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnHelp;
         private FontAwesome.Sharp.IconButton btnExit;
@@ -371,14 +395,5 @@ namespace Vista
         private FontAwesome.Sharp.IconButton btnDelete;
         private FontAwesome.Sharp.IconButton btnModificar;
         private FontAwesome.Sharp.IconButton btnInsert;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clienteMov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noDocMov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RefMov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoMov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ImporteMov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechEntregaMov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaAplicMov;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SistemaMov;
     }
 }
