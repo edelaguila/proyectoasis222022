@@ -174,7 +174,7 @@ namespace Vista
             this.btnCotizaciones.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
             this.btnCotizaciones.Size = new System.Drawing.Size(220, 35);
             this.btnCotizaciones.TabIndex = 3;
-            this.btnCotizaciones.Text = "Contizaciones";
+            this.btnCotizaciones.Text = "Cotizaciones";
             this.btnCotizaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCotizaciones.UseVisualStyleBackColor = true;
             this.btnCotizaciones.Click += new System.EventHandler(this.btnCotizaciones_Click);

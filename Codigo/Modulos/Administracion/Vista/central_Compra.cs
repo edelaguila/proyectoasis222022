@@ -189,6 +189,8 @@ namespace Vista
         private void btnProveedores_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formProveedoresProveedores = new ProveedoresProveedores();
+            formProveedoresProveedores.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -196,6 +198,8 @@ namespace Vista
         private void btnContactosProveedores_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formContactoProveedores = new ContactoProveedores();
+            formContactoProveedores.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -203,6 +207,8 @@ namespace Vista
         private void btnPagosDia_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formPagosDiaProveedores = new PagosDiaProveedores();
+            formPagosDiaProveedores.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -210,6 +216,8 @@ namespace Vista
         private void btnReportesProveedores_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formReporteProveedores = new ReporteProveedores();
+            formReporteProveedores.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
