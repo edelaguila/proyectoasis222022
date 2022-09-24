@@ -132,5 +132,21 @@ namespace NavegadorModelo
             return datos;
         }
 
+        public int estadotabla(string tabla)
+        {
+           int dato = 0;
+            string sql = "select count(*) as total from "+tabla;
+            OdbcCommand cmd = new OdbcCommand(sql, con.conexion());
+            OdbcDataReader lr = cmd.ExecuteReader();
+            while (lr.Read())
+            {
+                
+                    dato = lr.GetInt32(0);
+                
+
+            }
+            return dato;
+        }
+
     }
 }

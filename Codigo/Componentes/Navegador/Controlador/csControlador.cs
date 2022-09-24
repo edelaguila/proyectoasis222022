@@ -56,17 +56,32 @@ namespace NavegadorControlador
         {
             try
             {
-                OdbcDataAdapter dt = sn.llenartabla(ntabla);
-                DataTable table = new DataTable();
-                dt.Fill(table);
-                tabla.DataSource = table;
+                int permiso = comprobacionvacio(tabla);
 
-                for (int x = 0; x < table.Columns.Count; x++)
+                if(permiso != 0)
                 {
-                    textbox[x].Text = table.Rows[0][x].ToString();
+                    OdbcDataAdapter dt = sn.llenartabla(ntabla);
+                    DataTable table = new DataTable();
+                    dt.Fill(table);
+                    tabla.DataSource = table;
 
 
+                    for (int x = 0; x < table.Columns.Count; x++)
+                    {
+
+                        textbox[x].Text = table.Rows[0][x].ToString();
+
+                    }
                 }
+                else
+                {
+                    OdbcDataAdapter dt = sn.llenartabla(ntabla);
+                    DataTable table = new DataTable();
+                    dt.Fill(table);
+                    tabla.DataSource = table;
+                }
+
+                
             }
 
             catch (Exception e)
@@ -102,12 +117,21 @@ namespace NavegadorControlador
         {
             try
             {
-                for (int x = 0; x < tabla.ColumnCount; x++)
+                int permiso = comprobacionvacio(tabla);
+                if(permiso != 0)
                 {
-                    textbox[x].Text = tabla.CurrentRow.Cells[x].Value.ToString();
-                    //MessageBox.Show(textbox[x].Text + "    " + tabla.CurrentRow.Cells[x].Value.ToString());
+                    for (int x = 0; x < tabla.ColumnCount; x++)
+                    {
+                        textbox[x].Text = tabla.CurrentRow.Cells[x].Value.ToString();
+
+
+                    }
+                }
+                else
+                {
 
                 }
+               
 
             }
             catch (Exception e)
@@ -223,41 +247,46 @@ namespace NavegadorControlador
         {
             try
             {
-                int fin = (tabla.Rows.Count - 2); ;
-                int posicion;
-
-                if (mover.Equals("i"))
+                int permiso = comprobacionvacio(tabla);
+                if(permiso != 0)
                 {
-                    posicion = 0;
-                    tabla.CurrentCell = tabla.Rows[posicion].Cells[tabla.CurrentCell.ColumnIndex];
+                    int fin = (tabla.Rows.Count - 2); ;
+                    int posicion;
 
-                }
-                else if (mover.Equals("f"))
-                {
-                    posicion = fin;
-                    tabla.CurrentCell = tabla.Rows[posicion].Cells[tabla.CurrentCell.ColumnIndex];
-
-                }
-                else if (mover.Equals("b"))
-                {
-                    mov = tabla.CurrentRow.Index - 1;
-                    if (mov >= 0)
+                    if (mover.Equals("i"))
                     {
-                        tabla.CurrentCell = tabla.Rows[mov].Cells[tabla.CurrentCell.ColumnIndex];
+                        posicion = 0;
+                        tabla.CurrentCell = tabla.Rows[posicion].Cells[tabla.CurrentCell.ColumnIndex];
 
                     }
-
-
-                }
-                else if (mover.Equals("s"))
-                {
-                    next = tabla.CurrentRow.Index + 1;
-                    if (next < tabla.Rows.Count - 1)
+                    else if (mover.Equals("f"))
                     {
-                        tabla.CurrentCell = tabla.Rows[next].Cells[tabla.CurrentCell.ColumnIndex];
+                        posicion = fin;
+                        tabla.CurrentCell = tabla.Rows[posicion].Cells[tabla.CurrentCell.ColumnIndex];
 
                     }
+                    else if (mover.Equals("b"))
+                    {
+                        mov = tabla.CurrentRow.Index - 1;
+                        if (mov >= 0)
+                        {
+                            tabla.CurrentCell = tabla.Rows[mov].Cells[tabla.CurrentCell.ColumnIndex];
+
+                        }
+
+
+                    }
+                    else if (mover.Equals("s"))
+                    {
+                        next = tabla.CurrentRow.Index + 1;
+                        if (next < tabla.Rows.Count - 1)
+                        {
+                            tabla.CurrentCell = tabla.Rows[next].Cells[tabla.CurrentCell.ColumnIndex];
+
+                        }
+                    }
                 }
+                
             }
             catch(Exception e)
             {
@@ -273,17 +302,22 @@ namespace NavegadorControlador
         {
             try
             {
-                string campo = textbox[0].Tag.ToString();
-                int clave = int.Parse(textbox[0].Text);
-
-                sn.eliminar(clave, campo, tabla.Tag.ToString());
-                MessageBox.Show("Dato Eliminado");
-                for (int x = 0; x < textbox.Length; x++)
+                int permiso = comprobacionvacio(tabla);
+                if(permiso != 0)
                 {
-                    textbox[x].Enabled = false;
+                    string campo = textbox[0].Tag.ToString();
+                    int clave = int.Parse(textbox[0].Text);
+
+                    sn.eliminar(clave, campo, tabla.Tag.ToString());
+                    MessageBox.Show("Dato Eliminado");
+                    for (int x = 0; x < textbox.Length; x++)
+                    {
+                        textbox[x].Enabled = false;
 
 
+                    }
                 }
+                
             }
             catch (Exception e)
             {
@@ -354,9 +388,20 @@ namespace NavegadorControlador
                 int incremento = 0;
                 textbox[0].Enabled = false;
                 textbox[1].Focus();
-                string resultado = sn.buscarid(tabla.Tag.ToString(), textbox[0].Tag.ToString());
-                incremento = Convert.ToInt32(resultado) + 1;
-                textbox[0].Text = incremento.ToString();
+                int permiso = comprobacionvacio(tabla);
+                if(permiso != 0)
+                {
+                    string resultado = sn.buscarid(tabla.Tag.ToString(), textbox[0].Tag.ToString());
+                    incremento = Convert.ToInt32(resultado) + 1;
+                    textbox[0].Text = incremento.ToString();
+                }
+                else
+                {
+                    incremento =  1;
+                    textbox[0].Text = incremento.ToString();
+                }
+               
+                
 
             }
             catch (Exception e)
@@ -372,47 +417,54 @@ namespace NavegadorControlador
         {
             try
             {
-                string autorizazcion = evaluarcampos(textbox);
-                bool comporbar = comprobaractualizacion(tabla, textbox);
+                int permiso = comprobacionvacio(tabla);
 
-                if (autorizazcion == "no" && comporbar == false)
+                if(permiso != 0)
                 {
+                    string autorizazcion = evaluarcampos(textbox);
+                    bool comporbar = comprobaractualizacion(tabla, textbox);
 
-
-
-                }
-                else if (autorizazcion == "si" && comporbar == true)
-                {
-                    string dato = " ";
-                    string condicion = "(" + textbox[0].Tag.ToString() + " = '" + textbox[0].Text + "')";
-
-                    for (int x = 1; x < textbox.Length; x++)
+                    if (autorizazcion == "no" && comporbar == false)
                     {
 
-                        if (x == textbox.Length - 1)
-                        {
-                            dato += " " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "' ";
 
-                        }
-                        else if (x == 1)
-                        {
-                            dato += "SET " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "', ";
-
-                        }
-                        else
-                        {
-                            dato += " " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "', ";
-
-                        }
 
                     }
-
-                    sn.actualizar(dato, condicion, tabla.Tag.ToString());
-                    MessageBox.Show("Dato actualizado");
-                    for (int x = 0; x < textbox.Length; x++)
+                    else if (autorizazcion == "si" && comporbar == true)
                     {
-                        textbox[x].Enabled = false;
+                        string dato = " ";
+                        string condicion = "(" + textbox[0].Tag.ToString() + " = '" + textbox[0].Text + "')";
+
+                        for (int x = 1; x < textbox.Length; x++)
+                        {
+
+                            if (x == textbox.Length - 1)
+                            {
+                                dato += " " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "' ";
+
+                            }
+                            else if (x == 1)
+                            {
+                                dato += "SET " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "', ";
+
+                            }
+                            else
+                            {
+                                dato += " " + textbox[x].Tag.ToString() + " = '" + textbox[x].Text + "', ";
+
+                            }
+
+                        }
+
+                        sn.actualizar(dato, condicion, tabla.Tag.ToString());
+                        MessageBox.Show("Dato actualizado");
+                        for (int x = 0; x < textbox.Length; x++)
+                        {
+                            textbox[x].Enabled = false;
+                        }
                     }
+
+                
 
 
                 }
@@ -603,10 +655,16 @@ namespace NavegadorControlador
                 MessageBox.Show("Error: " + e);
             }
 
-
-
-
         }
+
+        public int comprobacionvacio(DataGridView tabla)
+        {
+            int resultado = 0;
+            resultado = sn.estadotabla(tabla.Tag.ToString());
+
+            return resultado;
+        }
+
 
     }
 }

@@ -96,18 +96,26 @@ namespace NavegadorVista
         private void btnDelete_Click(object sender, EventArgs e)
         {
             opcion = 3;
-            IconButton[] botongc = { btnSave, btnCancelar };
-            cn.bloquearbotonesGC(botongc, false);
-
+            int permiso = cn.comprobacionvacio(tabla);
+            if (permiso != 0)
+            {
+                IconButton[] botongc = { btnSave, btnCancelar };
+                cn.bloquearbotonesGC(botongc, false);
+            }
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             opcion = 2;
-            cn.activar(actual);
-            cn.enfocar(textboxi);
-            IconButton[] botongc = { btnSave, btnCancelar };
-            cn.bloquearbotonesGC(botongc, false);
+            int permiso = cn.comprobacionvacio(tabla);
+            if(permiso != 0)
+            {
+                cn.activar(actual);
+                cn.enfocar(textboxi);
+                IconButton[] botongc = { btnSave, btnCancelar };
+                cn.bloquearbotonesGC(botongc, false);
+            }
+           
         }
 
         private void btnSave_Click(object sender, EventArgs e)
