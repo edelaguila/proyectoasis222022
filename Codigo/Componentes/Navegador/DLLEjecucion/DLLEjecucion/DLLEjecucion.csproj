@@ -45,7 +45,11 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Vista">
+<<<<<<< HEAD
       <HintPath>..\..\..\OneDrive\Universidad\8semestre\Analisis2\proyectofinalasis222022\Codigo\Componentes\Navegador\Vista\bin\Debug\Vista.dll</HintPath>
+=======
+      <HintPath>..\..\Vista\bin\Debug\Vista.dll</HintPath>
+>>>>>>> 35877a1634bed80136671cceb7d8710cc622a501
     </Reference>
   </ItemGroup>
   <ItemGroup>

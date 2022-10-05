@@ -30,5 +30,13 @@ namespace DLLEjecucion
 
 
         }
+<<<<<<< HEAD
+=======
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> 35877a1634bed80136671cceb7d8710cc622a501
     }
 }

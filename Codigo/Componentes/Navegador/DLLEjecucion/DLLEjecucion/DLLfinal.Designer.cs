@@ -83,6 +83,10 @@ namespace DLLEjecucion
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 15;
             this.textBox1.Tag = "codigo_empleado";
+<<<<<<< HEAD
+=======
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+>>>>>>> 35877a1634bed80136671cceb7d8710cc622a501
             // 
             // label5
             // 
