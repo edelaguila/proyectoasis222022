@@ -137,7 +137,7 @@ namespace Modelo
         public int getModuloAplicacion(int aplicacion)
         {
             int idModulo = 0;
-            int i = 0;
+           // int i = 0;
             string sql = "SELECT fk_id_modulos FROM tbl_AsignacionModuloAplicacion where fk_id_aplicacion='" + aplicacion + "';";
             try
             {
