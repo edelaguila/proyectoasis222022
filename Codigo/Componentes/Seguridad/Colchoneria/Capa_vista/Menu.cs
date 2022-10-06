@@ -21,7 +21,7 @@ namespace Capa_vista
         {
             vistalogis.MenuLogistica b = new vistalogis.MenuLogistica();
             b.Show();
-            this.Hide();
+            //this.Hide();
         }
 
         public void btncontabilidad_Click(object sender, EventArgs e)
