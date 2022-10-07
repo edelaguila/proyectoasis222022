@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Capa_vista
 {
-    public partial class Menu : Form
+    public partial class Menulogis : Form
     {
-        public Menu()
+        public Menulogis()
         {
             InitializeComponent();
             customizeDesing();

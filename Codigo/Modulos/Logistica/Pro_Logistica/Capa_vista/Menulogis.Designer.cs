@@ -1,7 +1,7 @@
 ﻿
 namespace Capa_vista
 {
-    partial class Menu
+    partial class Menulogis
     {
         /// <summary>
         /// Required designer variable.
