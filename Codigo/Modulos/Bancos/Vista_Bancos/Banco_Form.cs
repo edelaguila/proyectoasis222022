@@ -69,7 +69,7 @@ namespace Vista_Bancos
             Cheque frm_cheque = Cheque.ventana_unica();
             frm_cheque.MdiParent = this;
             frm_cheque.Show();
-            logo.Visible = false;
+            logop.Visible = false;
         }
 
         private void btnDepositos_Click(object sender, EventArgs e)
@@ -120,11 +120,19 @@ namespace Vista_Bancos
         private void btnBancos_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            MantBancos frm_mtbancos = new MantBancos();
+            frm_mtbancos.MdiParent = this;
+            frm_mtbancos.Show();
+            logop.Visible = false;
         }
 
         private void btnCuentasBanc_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            MntCuentas frm_cuentas = new MntCuentas();
+            frm_cuentas.MdiParent = this;
+            frm_cuentas.Show();
+            logop.Visible = false;
         }
     }
 }
