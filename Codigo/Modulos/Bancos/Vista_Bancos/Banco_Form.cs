@@ -66,6 +66,10 @@ namespace Vista_Bancos
         private void btnCheques_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            Cheque frm_cheque = Cheque.ventana_unica();
+            frm_cheque.MdiParent = this;
+            frm_cheque.Show();
+            logo.Visible = false;
         }
 
         private void btnDepositos_Click(object sender, EventArgs e)
