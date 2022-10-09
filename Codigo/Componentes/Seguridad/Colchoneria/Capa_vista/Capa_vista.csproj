@@ -34,6 +34,9 @@
     <Reference Include="Capa_controlador">
       <HintPath>..\Capa_controlador\bin\Debug\Capa_controlador.dll</HintPath>
     </Reference>
+    <Reference Include="eCryptography, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Eramake.eCryptography.1.1.6\lib\net45\eCryptography.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -64,11 +67,41 @@
     <Compile Include="AsignacionAplicacionesPerfiles.Designer.cs">
       <DependentUpon>AsignacionAplicacionesPerfiles.cs</DependentUpon>
     </Compile>
+    <Compile Include="AsignacionModuloAplicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsignacionModuloAplicacion.Designer.cs">
+      <DependentUpon>AsignacionModuloAplicacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="AsignacionPerfiles.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AsignacionPerfiles.Designer.cs">
       <DependentUpon>AsignacionPerfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bitacora.Designer.cs">
+      <DependentUpon>Bitacora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cambio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cambio.Designer.cs">
+      <DependentUpon>Cambio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contrase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contrase.Designer.cs">
+      <DependentUpon>Contrase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListAplicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListAplicaciones.Designer.cs">
+      <DependentUpon>ListAplicaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -100,6 +133,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="recuperacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="recuperacion.Designer.cs">
+      <DependentUpon>recuperacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splash.Designer.cs">
+      <DependentUpon>splash.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,8 +162,23 @@
     <EmbeddedResource Include="AsignacionAplicacionesPerfiles.resx">
       <DependentUpon>AsignacionAplicacionesPerfiles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AsignacionModuloAplicacion.resx">
+      <DependentUpon>AsignacionModuloAplicacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AsignacionPerfiles.resx">
       <DependentUpon>AsignacionPerfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bitacora.resx">
+      <DependentUpon>Bitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cambio.resx">
+      <DependentUpon>Cambio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contrase.resx">
+      <DependentUpon>Contrase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListAplicaciones.resx">
+      <DependentUpon>ListAplicaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -136,11 +196,18 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="recuperacion.resx">
+      <DependentUpon>recuperacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splash.resx">
+      <DependentUpon>splash.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\Imagen3.png" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +215,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bloquear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rabit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

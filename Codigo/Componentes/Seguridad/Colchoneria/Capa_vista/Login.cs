@@ -27,29 +27,24 @@ namespace Capa_vista
 
         public void login()
         {
-           
-
-            if(da1.Equals(TBusuario) && da2.Equals(TBcontrasena))
+            if (cn.validarLogin(TBusuario.Text, Controlador.SetHash(TBcontrasena.Text)))
             {
-                DataTable dt = cn.buscarlogin(tab, da1, da2);
-                Navegador_seg c = new Navegador_seg();
-            c.Show();
-            this.Hide();
+                Controlador.Username = Controlador.SetHash(TBusuario.Text); 
+                if (cn.getAccesoModulos(1000))
+                {
+                    Navegador_seg mdi = new Navegador_seg();
+                    mdi.Show();
+                    this.Hide();
+                    cn.setBtitacora("1000", "login");
+                };
             }
-
-
-             
-
         }
-
 
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            login();
-           
+            login();  
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -65,6 +60,12 @@ namespace Capa_vista
                 // TBcontraseña.PasswordChar = '\0';
                 TBcontrasena.PasswordChar = '*';
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            recuperacion b = new recuperacion();
+            b.Show();
         }
     }
 }

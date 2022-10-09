@@ -33,7 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Capa_vista">
+    <Reference Include="Capa_vista, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Colchoneria\Capa_vista\bin\Debug\Capa_vista.dll</HintPath>
     </Reference>
     <Reference Include="System" />
