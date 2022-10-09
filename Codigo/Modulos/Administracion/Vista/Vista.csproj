@@ -156,6 +156,18 @@
     <Compile Include="Agregar_RececpcionesCompras.Designer.cs">
       <DependentUpon>Agregar_RececpcionesCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="Caja_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caja_Clientes.Designer.cs">
+      <DependentUpon>Caja_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caja_Proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caja_Proveedores.Designer.cs">
+      <DependentUpon>Caja_Proveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="central_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -562,6 +574,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Agregar_RececpcionesCompras.resx">
       <DependentUpon>Agregar_RececpcionesCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caja_Clientes.resx">
+      <DependentUpon>Caja_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caja_Proveedores.resx">
+      <DependentUpon>Caja_Proveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="central_Compra.resx">
       <DependentUpon>central_Compra.cs</DependentUpon>

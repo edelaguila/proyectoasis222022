@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class OrdenesCompras : Form
+    public partial class Caja_Clientes : Form
     {
-        public OrdenesCompras()
+        public Caja_Clientes()
         {
             InitializeComponent();
-        }
-
-        private void OrdenesCompras_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

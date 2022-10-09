@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class OrdenesCompras : Form
+    public partial class Caja_Proveedores : Form
     {
-        public OrdenesCompras()
+        public Caja_Proveedores()
         {
             InitializeComponent();
         }
 
-        private void OrdenesCompras_Load(object sender, EventArgs e)
+        private void Caja_Proveedores_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

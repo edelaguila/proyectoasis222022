@@ -54,6 +54,7 @@ namespace Vista
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnClient = new System.Windows.Forms.Button();
             this.panelCompras = new System.Windows.Forms.Panel();
+            this.btnPrecios = new System.Windows.Forms.Button();
             this.btnComprobantesCompras = new System.Windows.Forms.Button();
             this.btnOrdenes = new System.Windows.Forms.Button();
             this.btnCompra = new System.Windows.Forms.Button();
@@ -61,7 +62,6 @@ namespace Vista
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnPrecios = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -89,7 +89,7 @@ namespace Vista
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(237, 681);
+            this.panelSideMenu.Size = new System.Drawing.Size(237, 961);
             this.panelSideMenu.TabIndex = 1;
             // 
             // panel2
@@ -475,6 +475,21 @@ namespace Vista
             this.panelCompras.Size = new System.Drawing.Size(220, 265);
             this.panelCompras.TabIndex = 1;
             // 
+            // btnPrecios
+            // 
+            this.btnPrecios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPrecios.FlatAppearance.BorderSize = 0;
+            this.btnPrecios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrecios.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnPrecios.Location = new System.Drawing.Point(0, 105);
+            this.btnPrecios.Name = "btnPrecios";
+            this.btnPrecios.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnPrecios.Size = new System.Drawing.Size(220, 35);
+            this.btnPrecios.TabIndex = 23;
+            this.btnPrecios.Text = "Listado de Precios";
+            this.btnPrecios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrecios.UseVisualStyleBackColor = true;
+            // 
             // btnComprobantesCompras
             // 
             this.btnComprobantesCompras.Dock = System.Windows.Forms.DockStyle.Top;
@@ -565,34 +580,19 @@ namespace Vista
             this.pictureBox2.Image = global::Vista.Properties.Resources.Administracion;
             this.pictureBox2.Location = new System.Drawing.Point(237, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(827, 681);
+            this.pictureBox2.Size = new System.Drawing.Size(1027, 961);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            // 
-            // btnPrecios
-            // 
-            this.btnPrecios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPrecios.FlatAppearance.BorderSize = 0;
-            this.btnPrecios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrecios.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnPrecios.Location = new System.Drawing.Point(0, 105);
-            this.btnPrecios.Name = "btnPrecios";
-            this.btnPrecios.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnPrecios.Size = new System.Drawing.Size(220, 35);
-            this.btnPrecios.TabIndex = 23;
-            this.btnPrecios.Text = "Listado de Precios";
-            this.btnPrecios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrecios.UseVisualStyleBackColor = true;
             // 
             // central_Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.ClientSize = new System.Drawing.Size(1264, 961);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panelSideMenu);
-            this.MinimumSize = new System.Drawing.Size(1080, 720);
+            this.MinimumSize = new System.Drawing.Size(1280, 900);
             this.Name = "central_Compra";
             this.Text = "central_Compra";
             this.panelSideMenu.ResumeLayout(false);
