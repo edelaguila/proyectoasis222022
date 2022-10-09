@@ -121,6 +121,35 @@ namespace Capa_controlador
             return respuestAcceso;
         }
 
+        public void deshabilitarApps(Button[] paneles)
+        {
+            for (int i = 0; i < paneles.Length; i++)
+            {
+                paneles[i].Visible = false;
+            }
+        }
+        public void getAccesoApp(int idApp, Button boton)
+        {
+            string idUsuario = GetHash(idUser);
+            int[] perfiles = sn.getPerfilesUsuario(idUsuario);
+            for (int i = 0; i < perfiles.Length; i++)
+            {
+                if (perfiles[i] != 0 && perfiles[i] != null)
+                {
+                    Boolean aplicaciones = sn.getAuthPerfilAplicacion(perfiles[i], idApp);
+                    Console.WriteLine(aplicaciones);
+                    if (aplicaciones)
+                    {
+                        boton.Visible = true;
+                    }
+                    else
+                    {
+                        boton.Visible = false;
+                    }
+                }
+            }
+        }
+
         public int[] getPermisosAplicaion(string App)
         {
             int[] result = new int[5];

@@ -19,8 +19,8 @@ namespace Capa_vista
 
         public void btlogistica_Click(object sender, EventArgs e)
         {
-            vistalogis.MenuLogistica b = new vistalogis.MenuLogistica();
-            b.Show();
+            //vistalogis.MenuLogistica b = new vistalogis.MenuLogistica();
+            //b.Show();
             //this.Hide();
         }
 
