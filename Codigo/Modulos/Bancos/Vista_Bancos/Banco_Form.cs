@@ -100,6 +100,10 @@ namespace Vista_Bancos
         private void btnPolizas_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            Polizas pol = new Polizas();
+            pol.MdiParent = this;
+            pol.Show();
+            logop.Visible = false;
         }
 
         private void btnIngresosEgresos_Click(object sender, EventArgs e)
