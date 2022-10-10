@@ -1,7 +1,7 @@
 ﻿
 namespace Vista
 {
-    partial class VendedoresVentas
+    partial class MovimientosProveedores
     {
         /// <summary>
         /// Required designer variable.
@@ -30,8 +30,7 @@ namespace Vista
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -44,17 +43,15 @@ namespace Vista
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idvend = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dpi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idmovproveedores = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idprov = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idprod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.domicilio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comisiones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rubro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.servicios = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,214 +62,185 @@ namespace Vista
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1084, 139);
-            this.panel1.TabIndex = 12;
+            this.panel1.TabIndex = 3;
             // 
-            // textBox8
+            // textBox1
             // 
-            this.textBox8.Location = new System.Drawing.Point(148, 339);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(309, 20);
-            this.textBox8.TabIndex = 66;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label8.Location = new System.Drawing.Point(84, 342);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 13);
-            this.label8.TabIndex = 65;
-            this.label8.Text = "Correo";
+            this.textBox1.Location = new System.Drawing.Point(205, 174);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(309, 20);
+            this.textBox1.TabIndex = 33;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(807, 262);
+            this.textBox7.Location = new System.Drawing.Point(711, 247);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(198, 20);
-            this.textBox7.TabIndex = 64;
+            this.textBox7.TabIndex = 45;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label7.Location = new System.Drawing.Point(727, 221);
+            this.label7.Location = new System.Drawing.Point(634, 250);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 13);
-            this.label7.TabIndex = 63;
-            this.label7.Text = "Comisiones";
+            this.label7.Size = new System.Drawing.Size(50, 13);
+            this.label7.TabIndex = 44;
+            this.label7.Text = "Servicios";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(807, 218);
+            this.textBox6.Location = new System.Drawing.Point(711, 209);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(198, 20);
-            this.textBox6.TabIndex = 62;
+            this.textBox6.TabIndex = 43;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label6.Location = new System.Drawing.Point(762, 265);
+            this.label6.Location = new System.Drawing.Point(634, 212);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(25, 13);
-            this.label6.TabIndex = 61;
-            this.label6.Text = "NIT";
+            this.label6.Size = new System.Drawing.Size(55, 13);
+            this.label6.TabIndex = 42;
+            this.label6.Text = "Productos";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(807, 176);
+            this.textBox5.Location = new System.Drawing.Point(711, 174);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(198, 20);
-            this.textBox5.TabIndex = 60;
+            this.textBox5.TabIndex = 41;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label5.Location = new System.Drawing.Point(738, 179);
+            this.label5.Location = new System.Drawing.Point(634, 177);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
-            this.label5.TabIndex = 59;
-            this.label5.Text = "Telefono";
+            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "Rubro/Giro";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(148, 301);
+            this.textBox4.Location = new System.Drawing.Point(205, 286);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(705, 20);
-            this.textBox4.TabIndex = 58;
+            this.textBox4.Size = new System.Drawing.Size(704, 20);
+            this.textBox4.TabIndex = 39;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label4.Location = new System.Drawing.Point(73, 304);
+            this.label4.Location = new System.Drawing.Point(121, 289);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 57;
+            this.label4.TabIndex = 38;
             this.label4.Text = "Domicilio";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(148, 218);
+            this.textBox3.Location = new System.Drawing.Point(205, 247);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(309, 20);
-            this.textBox3.TabIndex = 56;
+            this.textBox3.TabIndex = 37;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label3.Location = new System.Drawing.Point(97, 221);
+            this.label3.Location = new System.Drawing.Point(121, 250);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 13);
-            this.label3.TabIndex = 55;
-            this.label3.Text = "DPI";
+            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Id Producto";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(148, 262);
+            this.textBox2.Location = new System.Drawing.Point(205, 209);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(414, 20);
-            this.textBox2.TabIndex = 54;
+            this.textBox2.Size = new System.Drawing.Size(309, 20);
+            this.textBox2.TabIndex = 35;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label2.Location = new System.Drawing.Point(78, 265);
+            this.label2.Location = new System.Drawing.Point(121, 212);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 53;
-            this.label2.Text = "Nombre";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(148, 176);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(309, 20);
-            this.textBox1.TabIndex = 52;
+            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "Id Proveedor";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label1.Location = new System.Drawing.Point(57, 179);
+            this.label1.Location = new System.Drawing.Point(121, 177);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "Id Vendedor";
+            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Id Movimiento";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idvend,
-            this.dpi,
-            this.Nombre,
+            this.idmovproveedores,
+            this.idprov,
+            this.idprod,
             this.domicilio,
-            this.nit,
-            this.telefono,
-            this.comisiones,
-            this.correo});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 377);
+            this.rubro,
+            this.productos,
+            this.servicios});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 350);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1060, 272);
-            this.dataGridView1.TabIndex = 50;
+            this.dataGridView1.Size = new System.Drawing.Size(1060, 299);
+            this.dataGridView1.TabIndex = 31;
             // 
-            // idvend
+            // idmovproveedores
             // 
-            this.idvend.Frozen = true;
-            this.idvend.HeaderText = "Id Vendedor";
-            this.idvend.Name = "idvend";
+            this.idmovproveedores.HeaderText = "Id Movimiento";
+            this.idmovproveedores.Name = "idmovproveedores";
             // 
-            // dpi
+            // idprov
             // 
-            this.dpi.Frozen = true;
-            this.dpi.HeaderText = "DPI";
-            this.dpi.Name = "dpi";
+            this.idprov.HeaderText = "Id Proveedor";
+            this.idprov.Name = "idprov";
             // 
-            // Nombre
+            // idprod
             // 
-            this.Nombre.Frozen = true;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
+            this.idprod.HeaderText = "Id Producto";
+            this.idprod.Name = "idprod";
             // 
             // domicilio
             // 
-            this.domicilio.Frozen = true;
             this.domicilio.HeaderText = "Domicilio";
             this.domicilio.Name = "domicilio";
             // 
-            // nit
+            // rubro
             // 
-            this.nit.Frozen = true;
-            this.nit.HeaderText = "NIT";
-            this.nit.Name = "nit";
+            this.rubro.HeaderText = "Rubro/Giro";
+            this.rubro.Name = "rubro";
             // 
-            // telefono
+            // productos
             // 
-            this.telefono.HeaderText = "Telefono";
-            this.telefono.Name = "telefono";
+            this.productos.HeaderText = "Productos";
+            this.productos.Name = "productos";
             // 
-            // comisiones
+            // servicios
             // 
-            this.comisiones.HeaderText = "Comisiones";
-            this.comisiones.Name = "comisiones";
+            this.servicios.HeaderText = "Servicios";
+            this.servicios.Name = "servicios";
             // 
-            // correo
-            // 
-            this.correo.HeaderText = "Correo";
-            this.correo.Name = "correo";
-            // 
-            // VendedoresVentas
+            // MovimientosProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1084, 661);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox6);
@@ -285,12 +253,11 @@ namespace Vista
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Name = "VendedoresVentas";
-            this.Text = "VendedoresVentas";
+            this.Name = "MovimientosProveedores";
+            this.Text = "MovimientosProveedores";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -300,8 +267,7 @@ namespace Vista
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox6;
@@ -314,16 +280,14 @@ namespace Vista
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idvend;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dpi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idmovproveedores;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idprov;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idprod;
         private System.Windows.Forms.DataGridViewTextBoxColumn domicilio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn comisiones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn correo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rubro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn servicios;
     }
 }

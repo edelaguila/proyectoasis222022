@@ -89,7 +89,7 @@ namespace Vista
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(237, 961);
+            this.panelSideMenu.Size = new System.Drawing.Size(237, 881);
             this.panelSideMenu.TabIndex = 1;
             // 
             // panel2
@@ -580,7 +580,7 @@ namespace Vista
             this.pictureBox2.Image = global::Vista.Properties.Resources.Administracion;
             this.pictureBox2.Location = new System.Drawing.Point(237, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1027, 961);
+            this.pictureBox2.Size = new System.Drawing.Size(1027, 881);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -589,10 +589,10 @@ namespace Vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 961);
+            this.ClientSize = new System.Drawing.Size(1264, 881);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panelSideMenu);
-            this.MinimumSize = new System.Drawing.Size(1280, 900);
+            this.MinimumSize = new System.Drawing.Size(1280, 858);
             this.Name = "central_Compra";
             this.Text = "central_Compra";
             this.panelSideMenu.ResumeLayout(false);

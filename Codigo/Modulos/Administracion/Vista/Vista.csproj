@@ -444,6 +444,12 @@
     <Compile Include="MovimientosClientes.Designer.cs">
       <DependentUpon>MovimientosClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="MovimientosProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MovimientosProveedores.Designer.cs">
+      <DependentUpon>MovimientosProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="MovimientosVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -718,6 +724,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MovimientosClientes.resx">
       <DependentUpon>MovimientosClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovimientosProveedores.resx">
+      <DependentUpon>MovimientosProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovimientosVentas.resx">
       <DependentUpon>MovimientosVentas.cs</DependentUpon>

@@ -232,6 +232,8 @@ namespace Vista
         private void btnMovimientosProveedores_Click(object sender, EventArgs e)
         {
             //Codigo
+            Form formMovimientosProveedores = new MovimientosProveedores();
+            formMovimientosProveedores.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
