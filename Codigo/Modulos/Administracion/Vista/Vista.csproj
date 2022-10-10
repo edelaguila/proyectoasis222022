@@ -450,11 +450,11 @@
     <Compile Include="MovimientosProveedores.Designer.cs">
       <DependentUpon>MovimientosProveedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="MovimientosVentas.cs">
+    <Compile Include="Pedidos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MovimientosVentas.Designer.cs">
-      <DependentUpon>MovimientosVentas.cs</DependentUpon>
+    <Compile Include="Pedidos.Designer.cs">
+      <DependentUpon>Pedidos.cs</DependentUpon>
     </Compile>
     <Compile Include="OrdenesCompras.cs">
       <SubType>Form</SubType>
@@ -728,8 +728,8 @@
     <EmbeddedResource Include="MovimientosProveedores.resx">
       <DependentUpon>MovimientosProveedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MovimientosVentas.resx">
-      <DependentUpon>MovimientosVentas.cs</DependentUpon>
+    <EmbeddedResource Include="Pedidos.resx">
+      <DependentUpon>Pedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrdenesCompras.resx">
       <DependentUpon>OrdenesCompras.cs</DependentUpon>

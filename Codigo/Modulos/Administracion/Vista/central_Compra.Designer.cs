@@ -89,7 +89,7 @@ namespace Vista
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(237, 881);
+            this.panelSideMenu.Size = new System.Drawing.Size(237, 749);
             this.panelSideMenu.TabIndex = 1;
             // 
             // panel2
@@ -133,7 +133,7 @@ namespace Vista
             this.btnMovimientos.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
             this.btnMovimientos.Size = new System.Drawing.Size(220, 35);
             this.btnMovimientos.TabIndex = 22;
-            this.btnMovimientos.Text = "Movimientos";
+            this.btnMovimientos.Text = "Pedidos";
             this.btnMovimientos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMovimientos.UseVisualStyleBackColor = true;
             this.btnMovimientos.Click += new System.EventHandler(this.btnMovimientos_Click);
@@ -580,7 +580,7 @@ namespace Vista
             this.pictureBox2.Image = global::Vista.Properties.Resources.Administracion;
             this.pictureBox2.Location = new System.Drawing.Point(237, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1027, 881);
+            this.pictureBox2.Size = new System.Drawing.Size(1027, 749);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -589,10 +589,10 @@ namespace Vista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 881);
+            this.ClientSize = new System.Drawing.Size(1264, 749);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panelSideMenu);
-            this.MinimumSize = new System.Drawing.Size(1280, 858);
+            this.MinimumSize = new System.Drawing.Size(1280, 766);
             this.Name = "central_Compra";
             this.Text = "central_Compra";
             this.panelSideMenu.ResumeLayout(false);

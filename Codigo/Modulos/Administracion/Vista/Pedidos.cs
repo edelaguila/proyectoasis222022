@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class MovimientosVentas : Form
+    public partial class Pedidos : Form
     {
-        public MovimientosVentas()
+        public Pedidos()
         {
             InitializeComponent();
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

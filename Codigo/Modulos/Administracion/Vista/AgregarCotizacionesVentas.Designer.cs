@@ -89,15 +89,9 @@ namespace Vista
             this.IVA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costo_uni = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCancelar = new FontAwesome.Sharp.IconButton();
-            this.btnSave = new FontAwesome.Sharp.IconButton();
-            this.btnHelp = new FontAwesome.Sharp.IconButton();
-            this.btnExit = new FontAwesome.Sharp.IconButton();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox22
@@ -587,93 +581,6 @@ namespace Vista
             this.subtotal.HeaderText = "Subtotal por partida";
             this.subtotal.Name = "subtotal";
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btnCancelar);
-            this.panel1.Controls.Add(this.btnSave);
-            this.panel1.Controls.Add(this.btnHelp);
-            this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1084, 87);
-            this.panel1.TabIndex = 200;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnCancelar.FlatAppearance.BorderSize = 2;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
-            this.btnCancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
-            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnCancelar.IconSize = 40;
-            this.btnCancelar.Location = new System.Drawing.Point(87, 12);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(69, 61);
-            this.btnCancelar.TabIndex = 7;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnSave
-            // 
-            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnSave.FlatAppearance.BorderSize = 2;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.btnSave.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnSave.IconSize = 40;
-            this.btnSave.Location = new System.Drawing.Point(12, 12);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(69, 61);
-            this.btnSave.TabIndex = 6;
-            this.btnSave.Text = "Guardar";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // btnHelp
-            // 
-            this.btnHelp.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnHelp.FlatAppearance.BorderSize = 2;
-            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHelp.ForeColor = System.Drawing.Color.Black;
-            this.btnHelp.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btnHelp.IconColor = System.Drawing.Color.DimGray;
-            this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnHelp.IconSize = 40;
-            this.btnHelp.Location = new System.Drawing.Point(928, 12);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(69, 61);
-            this.btnHelp.TabIndex = 15;
-            this.btnHelp.Text = "Ayuda";
-            this.btnHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnHelp.UseVisualStyleBackColor = true;
-            // 
-            // btnExit
-            // 
-            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnExit.FlatAppearance.BorderSize = 2;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.Black;
-            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
-            this.btnExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
-            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnExit.IconSize = 40;
-            this.btnExit.Location = new System.Drawing.Point(1003, 12);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(69, 61);
-            this.btnExit.TabIndex = 14;
-            this.btnExit.Text = "Salir";
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnExit.UseVisualStyleBackColor = true;
-            // 
             // dateTimePicker3
             // 
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -749,11 +656,9 @@ namespace Vista
             this.Controls.Add(this.domainUpDown1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panel1);
             this.Name = "AgregarCotizacionesVentas";
             this.Text = "AgregarCotizacionesVentas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -821,11 +726,6 @@ namespace Vista
         private System.Windows.Forms.DataGridViewTextBoxColumn IVA;
         private System.Windows.Forms.DataGridViewTextBoxColumn costo_uni;
         private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
-        private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton btnCancelar;
-        private FontAwesome.Sharp.IconButton btnSave;
-        private FontAwesome.Sharp.IconButton btnHelp;
-        private FontAwesome.Sharp.IconButton btnExit;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label16;
     }

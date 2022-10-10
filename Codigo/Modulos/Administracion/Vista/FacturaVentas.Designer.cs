@@ -31,50 +31,33 @@ namespace Vista
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Clilente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_ela = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IVA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaemision = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.comisiones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Almacen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fac_dig = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.forma_envio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.met_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pagoSAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nom_vendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnHelp = new FontAwesome.Sharp.IconButton();
-            this.btnExit = new FontAwesome.Sharp.IconButton();
-            this.btnEnd = new FontAwesome.Sharp.IconButton();
-            this.btnStart = new FontAwesome.Sharp.IconButton();
-            this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.btnNext = new FontAwesome.Sharp.IconButton();
-            this.btnReporte = new FontAwesome.Sharp.IconButton();
-            this.btnConsultar = new FontAwesome.Sharp.IconButton();
-            this.btnDelete = new FontAwesome.Sharp.IconButton();
-            this.btnModificar = new FontAwesome.Sharp.IconButton();
-            this.btnInsert = new FontAwesome.Sharp.IconButton();
-            this.panel1.SuspendLayout();
+            this.totalt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.btnHelp);
-            this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.btnEnd);
-            this.panel1.Controls.Add(this.btnStart);
-            this.panel1.Controls.Add(this.btnBack);
-            this.panel1.Controls.Add(this.btnNext);
-            this.panel1.Controls.Add(this.btnReporte);
-            this.panel1.Controls.Add(this.btnConsultar);
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.btnModificar);
-            this.panel1.Controls.Add(this.btnInsert);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -86,308 +69,169 @@ namespace Vista
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Clave,
-            this.Clilente,
-            this.Nombre,
-            this.Estatus,
-            this.pedido,
-            this.fecha_ela,
+            this.nit,
+            this.IVA,
+            this.producto,
+            this.fechaemision,
             this.Subtotal,
-            this.comisiones,
-            this.Almacen,
-            this.fac_dig,
-            this.forma_envio,
-            this.total,
-            this.met_pago,
-            this.pagoSAT,
-            this.nom_vendedor});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 142);
+            this.totalt});
+            this.dataGridView1.Location = new System.Drawing.Point(12, 296);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1060, 485);
+            this.dataGridView1.Size = new System.Drawing.Size(1060, 331);
             this.dataGridView1.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(238, 136);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(180, 137);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Id factura ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(212, 185);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(20, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Nit";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(238, 178);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(375, 146);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Producto";
+            this.label3.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(431, 139);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(237, 20);
+            this.textBox3.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(375, 185);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Fecha de emisión";
+            this.label4.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(468, 177);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(696, 143);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Sub total";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(714, 178);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Total";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(751, 139);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(129, 20);
+            this.textBox4.TabIndex = 5;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(751, 171);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(129, 20);
+            this.textBox5.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(204, 230);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(24, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "IVA";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(238, 227);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(153, 20);
+            this.textBox6.TabIndex = 8;
             // 
             // Clave
             // 
-            this.Clave.HeaderText = "Clave";
+            this.Clave.HeaderText = "ID Factura";
             this.Clave.Name = "Clave";
             // 
-            // Clilente
+            // nit
             // 
-            this.Clilente.HeaderText = "Clilente";
-            this.Clilente.Name = "Clilente";
+            this.nit.HeaderText = "Nit";
+            this.nit.Name = "nit";
             // 
-            // Nombre
+            // IVA
             // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
+            this.IVA.HeaderText = "IVA";
+            this.IVA.Name = "IVA";
             // 
-            // Estatus
+            // producto
             // 
-            this.Estatus.HeaderText = "Estatus";
-            this.Estatus.Name = "Estatus";
+            this.producto.HeaderText = "producto";
+            this.producto.Name = "producto";
             // 
-            // pedido
+            // fechaemision
             // 
-            this.pedido.HeaderText = "Su pedido";
-            this.pedido.Name = "pedido";
-            // 
-            // fecha_ela
-            // 
-            this.fecha_ela.HeaderText = "Fecha de elaboracion";
-            this.fecha_ela.Name = "fecha_ela";
+            this.fechaemision.HeaderText = "Fecha emisión";
+            this.fechaemision.Name = "fechaemision";
             // 
             // Subtotal
             // 
             this.Subtotal.HeaderText = "Subtotal";
             this.Subtotal.Name = "Subtotal";
             // 
-            // comisiones
+            // totalt
             // 
-            this.comisiones.HeaderText = "Total de comisiones";
-            this.comisiones.Name = "comisiones";
-            // 
-            // Almacen
-            // 
-            this.Almacen.HeaderText = "Numero de almacen";
-            this.Almacen.Name = "Almacen";
-            // 
-            // fac_dig
-            // 
-            this.fac_dig.HeaderText = "Factura digital";
-            this.fac_dig.Name = "fac_dig";
-            // 
-            // forma_envio
-            // 
-            this.forma_envio.HeaderText = "Forma de envio del documento";
-            this.forma_envio.Name = "forma_envio";
-            // 
-            // total
-            // 
-            this.total.HeaderText = "Importe total";
-            this.total.Name = "total";
-            // 
-            // met_pago
-            // 
-            this.met_pago.HeaderText = "Metodo de pago";
-            this.met_pago.Name = "met_pago";
-            // 
-            // pagoSAT
-            // 
-            this.pagoSAT.HeaderText = "Forma de pago SAT";
-            this.pagoSAT.Name = "pagoSAT";
-            // 
-            // nom_vendedor
-            // 
-            this.nom_vendedor.HeaderText = "Nombre del vendedor";
-            this.nom_vendedor.Name = "nom_vendedor";
-            // 
-            // btnHelp
-            // 
-            this.btnHelp.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnHelp.FlatAppearance.BorderSize = 2;
-            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHelp.ForeColor = System.Drawing.Color.Black;
-            this.btnHelp.IconChar = FontAwesome.Sharp.IconChar.Question;
-            this.btnHelp.IconColor = System.Drawing.Color.DimGray;
-            this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnHelp.IconSize = 40;
-            this.btnHelp.Location = new System.Drawing.Point(928, 12);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(69, 61);
-            this.btnHelp.TabIndex = 15;
-            this.btnHelp.Text = "Ayuda";
-            this.btnHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnHelp.UseVisualStyleBackColor = true;
-            // 
-            // btnExit
-            // 
-            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnExit.FlatAppearance.BorderSize = 2;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.Black;
-            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
-            this.btnExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
-            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnExit.IconSize = 40;
-            this.btnExit.Location = new System.Drawing.Point(1003, 12);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(69, 61);
-            this.btnExit.TabIndex = 14;
-            this.btnExit.Text = "Salir";
-            this.btnExit.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnExit.UseVisualStyleBackColor = true;
-            // 
-            // btnEnd
-            // 
-            this.btnEnd.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnEnd.FlatAppearance.BorderSize = 2;
-            this.btnEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnd.ForeColor = System.Drawing.Color.Black;
-            this.btnEnd.IconChar = FontAwesome.Sharp.IconChar.StepForward;
-            this.btnEnd.IconColor = System.Drawing.Color.Black;
-            this.btnEnd.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnEnd.IconSize = 40;
-            this.btnEnd.Location = new System.Drawing.Point(612, 12);
-            this.btnEnd.Name = "btnEnd";
-            this.btnEnd.Size = new System.Drawing.Size(69, 61);
-            this.btnEnd.TabIndex = 13;
-            this.btnEnd.Text = "Fin";
-            this.btnEnd.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnEnd.UseVisualStyleBackColor = true;
-            // 
-            // btnStart
-            // 
-            this.btnStart.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnStart.FlatAppearance.BorderSize = 2;
-            this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStart.ForeColor = System.Drawing.Color.Black;
-            this.btnStart.IconChar = FontAwesome.Sharp.IconChar.StepBackward;
-            this.btnStart.IconColor = System.Drawing.Color.Black;
-            this.btnStart.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnStart.IconSize = 40;
-            this.btnStart.Location = new System.Drawing.Point(537, 12);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(69, 61);
-            this.btnStart.TabIndex = 10;
-            this.btnStart.Text = "Inicio";
-            this.btnStart.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnStart.UseVisualStyleBackColor = true;
-            // 
-            // btnBack
-            // 
-            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnBack.FlatAppearance.BorderSize = 2;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.Black;
-            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.Forward;
-            this.btnBack.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnBack.IconSize = 40;
-            this.btnBack.Location = new System.Drawing.Point(462, 12);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(69, 61);
-            this.btnBack.TabIndex = 13;
-            this.btnBack.Text = "Siguiente";
-            this.btnBack.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnBack.UseVisualStyleBackColor = true;
-            // 
-            // btnNext
-            // 
-            this.btnNext.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnNext.FlatAppearance.BorderSize = 2;
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.ForeColor = System.Drawing.Color.Black;
-            this.btnNext.IconChar = FontAwesome.Sharp.IconChar.Backward;
-            this.btnNext.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.btnNext.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnNext.IconSize = 40;
-            this.btnNext.Location = new System.Drawing.Point(387, 12);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(69, 61);
-            this.btnNext.TabIndex = 12;
-            this.btnNext.Text = "Anterior";
-            this.btnNext.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNext.UseVisualStyleBackColor = true;
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnReporte.FlatAppearance.BorderSize = 2;
-            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporte.ForeColor = System.Drawing.Color.Black;
-            this.btnReporte.IconChar = FontAwesome.Sharp.IconChar.Print;
-            this.btnReporte.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.btnReporte.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnReporte.IconSize = 36;
-            this.btnReporte.Location = new System.Drawing.Point(312, 12);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(69, 61);
-            this.btnReporte.TabIndex = 9;
-            this.btnReporte.Text = "Reportes";
-            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnReporte.UseVisualStyleBackColor = true;
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnConsultar.FlatAppearance.BorderSize = 2;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.ForeColor = System.Drawing.Color.Black;
-            this.btnConsultar.IconChar = FontAwesome.Sharp.IconChar.FilePen;
-            this.btnConsultar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.btnConsultar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnConsultar.IconSize = 40;
-            this.btnConsultar.Location = new System.Drawing.Point(237, 12);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(69, 61);
-            this.btnConsultar.TabIndex = 8;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnDelete.FlatAppearance.BorderSize = 2;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnDelete.IconColor = System.Drawing.Color.DimGray;
-            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnDelete.IconSize = 40;
-            this.btnDelete.Location = new System.Drawing.Point(162, 12);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(69, 61);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "Eliminar";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnModificar.FlatAppearance.BorderSize = 2;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.Black;
-            this.btnModificar.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
-            this.btnModificar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.btnModificar.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnModificar.IconSize = 40;
-            this.btnModificar.Location = new System.Drawing.Point(87, 12);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(69, 61);
-            this.btnModificar.TabIndex = 3;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // btnInsert
-            // 
-            this.btnInsert.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnInsert.FlatAppearance.BorderSize = 2;
-            this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsert.ForeColor = System.Drawing.Color.Black;
-            this.btnInsert.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnInsert.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
-            this.btnInsert.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnInsert.IconSize = 40;
-            this.btnInsert.Location = new System.Drawing.Point(12, 12);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(69, 61);
-            this.btnInsert.TabIndex = 2;
-            this.btnInsert.Text = "Agregar";
-            this.btnInsert.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnInsert.UseVisualStyleBackColor = true;
+            this.totalt.HeaderText = "Total ";
+            this.totalt.Name = "totalt";
             // 
             // FacturaVentas
             // 
@@ -395,45 +239,54 @@ namespace Vista
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1084, 661);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Name = "FacturaVentas";
             this.Text = "FacturaVentas";
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton btnHelp;
-        private FontAwesome.Sharp.IconButton btnExit;
-        private FontAwesome.Sharp.IconButton btnEnd;
-        private FontAwesome.Sharp.IconButton btnStart;
-        private FontAwesome.Sharp.IconButton btnBack;
-        private FontAwesome.Sharp.IconButton btnNext;
-        private FontAwesome.Sharp.IconButton btnReporte;
-        private FontAwesome.Sharp.IconButton btnConsultar;
-        private FontAwesome.Sharp.IconButton btnDelete;
-        private FontAwesome.Sharp.IconButton btnModificar;
-        private FontAwesome.Sharp.IconButton btnInsert;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clilente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pedido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_ela;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IVA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaemision;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn comisiones;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Almacen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fac_dig;
-        private System.Windows.Forms.DataGridViewTextBoxColumn forma_envio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn met_pago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pagoSAT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nom_vendedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalt;
     }
 }

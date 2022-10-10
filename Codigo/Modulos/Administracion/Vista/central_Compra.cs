@@ -298,7 +298,7 @@ namespace Vista
         private void btnMovimientos_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formMovimientosVentas = new MovimientosVentas();
+            Form formMovimientosVentas = new Pedidos();
             formMovimientosVentas.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
