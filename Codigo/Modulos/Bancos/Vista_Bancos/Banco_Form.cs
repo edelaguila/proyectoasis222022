@@ -85,6 +85,10 @@ namespace Vista_Bancos
         private void btnDisponibilidad_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            DisponibilidadD frm_dispo = new DisponibilidadD();
+            frm_dispo.MdiParent = this;
+            frm_dispo.Show();
+            logop.Visible = false;
         }
 
         private void btnMovBanc_Click(object sender, EventArgs e)
@@ -95,6 +99,10 @@ namespace Vista_Bancos
         private void btnTipoDeCambio_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            tipoCambio frm_tcambio = new tipoCambio();
+            frm_tcambio.MdiParent = this;
+            frm_tcambio.Show();
+            logop.Visible = false;
         }
 
         private void btnPolizas_Click(object sender, EventArgs e)
