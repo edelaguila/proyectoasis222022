@@ -312,5 +312,12 @@ namespace Vista
             //Ocultar submenu
             hideSubMenu();
         }
+
+        private void btnPrecios_Click(object sender, EventArgs e)
+        {
+            Form formListadoPrecios = new ListadoPrecios();
+            formListadoPrecios.ShowDialog();
+            hideSubMenu();
+        }
     }
 }
