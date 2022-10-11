@@ -15,6 +15,7 @@ namespace NavegadorControlador
     public class csControlador
     {
         Sentencias sn = new Sentencias();
+        Capa_controlador.Controlador cnseg = new Capa_controlador.Controlador();
 
         int next, mov;
 
@@ -298,7 +299,7 @@ namespace NavegadorControlador
         }
 
       
-        public void delete(TextBox[] textbox, DataGridView tabla)
+        public void delete(TextBox[] textbox, DataGridView tabla, IconButton[] botones, string idApp)
         {
             try
             {
@@ -309,7 +310,9 @@ namespace NavegadorControlador
                     int clave = int.Parse(textbox[0].Text);
 
                     sn.eliminar(clave, campo, tabla.Tag.ToString());
+                    cnseg.setBtitacora(idApp, "Eliminar");
                     MessageBox.Show("Dato Eliminado");
+                    bloquearbotonesGC(botones, true);
                     for (int x = 0; x < textbox.Length; x++)
                     {
                         textbox[x].Enabled = false;
@@ -327,10 +330,10 @@ namespace NavegadorControlador
             
                
         }
-        public void ingresar(TextBox[] textbox, DataGridView tabla)//Crea cadenas de datos para la insercion
-        {
+        public void ingresar(TextBox[] textbox, DataGridView tabla, IconButton[] botones, String idApp)//Crea cadenas de datos para la insercion
+        {   
             try
-            {
+            {   
                 string autorizazcion = evaluarcampos(textbox);
 
 
@@ -357,7 +360,10 @@ namespace NavegadorControlador
                     }
 
                     sn.insertar(dato, tipo, tabla.Tag.ToString());
+                    
+                    cnseg.setBtitacora(idApp, "Guardar");
                     MessageBox.Show("Dato Insertado");
+                    bloquearbotonesGC(botones, true);
                     for (int x = 0; x < textbox.Length; x++)
                     {
                         textbox[x].Enabled = false;
@@ -413,7 +419,7 @@ namespace NavegadorControlador
             
         }
 
-        public void actualizar(TextBox[] textbox, DataGridView tabla)//Crea cadenas de datos para la actualizacion
+        public void actualizar(TextBox[] textbox, DataGridView tabla, IconButton[] botones, string idApp)//Crea cadenas de datos para la actualizacion
         {
             try
             {
@@ -457,7 +463,9 @@ namespace NavegadorControlador
                         }
 
                         sn.actualizar(dato, condicion, tabla.Tag.ToString());
+                        cnseg.setBtitacora(idApp, "Modificar");
                         MessageBox.Show("Dato actualizado");
+                        bloquearbotonesGC(botones, true);
                         for (int x = 0; x < textbox.Length; x++)
                         {
                             textbox[x].Enabled = false;
@@ -664,10 +672,12 @@ namespace NavegadorControlador
 
             return resultado;
         }
+     
+        /*
         public void bloqueobtn(IconButton[] boton)//Metodo para evaluar el nombre de la tabla
         {
             string[] seguridad = new string[7];
-            seguridad = sn.buscarseguridad(7,2000);
+            seguridad = sn.buscarseguridad(8,2000);
             int [] evaluacion = new int [7];
             
 
@@ -693,7 +703,7 @@ namespace NavegadorControlador
             {
                 MessageBox.Show("Error: " + e);
             }
-        }
+        }*/
 
      }
 }
