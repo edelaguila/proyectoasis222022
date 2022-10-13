@@ -54,108 +54,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgregarClientesClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarClientesClientes.Designer.cs">
-      <DependentUpon>AgregarClientesClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarComprasCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarComprasCompras.Designer.cs">
-      <DependentUpon>AgregarComprasCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarComprobantesCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarComprobantesCompras.Designer.cs">
-      <DependentUpon>AgregarComprobantesCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarContactoClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarContactoClientes.Designer.cs">
-      <DependentUpon>AgregarContactoClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarContactoProveedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarContactoProveedores.Designer.cs">
-      <DependentUpon>AgregarContactoProveedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarCotizacionesVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarCotizacionesVentas.Designer.cs">
-      <DependentUpon>AgregarCotizacionesVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarDevolucionesVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarDevolucionesVentas.Designer.cs">
-      <DependentUpon>AgregarDevolucionesVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarFacturaVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarFacturaVentas.Designer.cs">
-      <DependentUpon>AgregarFacturaVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarMovimientosClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarMovimientosClientes.Designer.cs">
-      <DependentUpon>AgregarMovimientosClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarMovimientosVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarMovimientosVentas.Designer.cs">
-      <DependentUpon>AgregarMovimientosVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarPedidosVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarPedidosVentas.Designer.cs">
-      <DependentUpon>AgregarPedidosVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarProveedoresProveedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarProveedoresProveedores.Designer.cs">
-      <DependentUpon>AgregarProveedoresProveedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarRequisicionesCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarRequisicionesCompras.Designer.cs">
-      <DependentUpon>AgregarRequisicionesCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarOrdenesCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarOrdenesCompras.Designer.cs">
-      <DependentUpon>AgregarOrdenesCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarVendedoresVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarVendedoresVentas.Designer.cs">
-      <DependentUpon>AgregarVendedoresVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AgregarVentasVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarVentasVentas.Designer.cs">
-      <DependentUpon>AgregarVentasVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Agregar_RececpcionesCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Agregar_RececpcionesCompras.Designer.cs">
-      <DependentUpon>Agregar_RececpcionesCompras.cs</DependentUpon>
-    </Compile>
     <Compile Include="Caja_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,161 +72,17 @@
     <Compile Include="central_Compra.Designer.cs">
       <DependentUpon>central_Compra.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClienteClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ClienteClientes.Designer.cs">
-      <DependentUpon>ClienteClientes.cs</DependentUpon>
-    </Compile>
     <Compile Include="CobrosDeDiaClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CobrosDeDiaClientes.Designer.cs">
       <DependentUpon>CobrosDeDiaClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="ComprasCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ComprasCompras.Designer.cs">
-      <DependentUpon>ComprasCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ComprobantesClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ComprobantesClientes.Designer.cs">
-      <DependentUpon>ComprobantesClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ComprobantesCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ComprobantesCompras.Designer.cs">
-      <DependentUpon>ComprobantesCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ContactoClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ContactoClientes.Designer.cs">
-      <DependentUpon>ContactoClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ContactoProveedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ContactoProveedores.Designer.cs">
-      <DependentUpon>ContactoProveedores.cs</DependentUpon>
-    </Compile>
     <Compile Include="CotizacionesVentas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CotizacionesVentas.Designer.cs">
       <DependentUpon>CotizacionesVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DevolucionesVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DevolucionesVentas.Designer.cs">
-      <DependentUpon>DevolucionesVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarClientesClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarClientesClientes.Designer.cs">
-      <DependentUpon>EliminarClientesClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarComprasCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarComprasCompras.Designer.cs">
-      <DependentUpon>EliminarComprasCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarComprobantesCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarComprobantesCompras.Designer.cs">
-      <DependentUpon>EliminarComprobantesCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarContactoClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarContactoClientes.Designer.cs">
-      <DependentUpon>EliminarContactoClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarContactoProveedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarContactoProveedores.Designer.cs">
-      <DependentUpon>EliminarContactoProveedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarCotizacionesVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarCotizacionesVentas.Designer.cs">
-      <DependentUpon>EliminarCotizacionesVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarDevolucionesVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarDevolucionesVentas.Designer.cs">
-      <DependentUpon>EliminarDevolucionesVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarFacturaVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarFacturaVentas.Designer.cs">
-      <DependentUpon>EliminarFacturaVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarMovimientosClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarMovimientosClientes.Designer.cs">
-      <DependentUpon>EliminarMovimientosClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarMovimientosVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarMovimientosVentas.Designer.cs">
-      <DependentUpon>EliminarMovimientosVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarPedidosVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarPedidosVentas.Designer.cs">
-      <DependentUpon>EliminarPedidosVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarProveedoresProveedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarProveedoresProveedores.Designer.cs">
-      <DependentUpon>EliminarProveedoresProveedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarRecepcionesCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarRecepcionesCompras.Designer.cs">
-      <DependentUpon>EliminarRecepcionesCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarRequisicionesCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarRequisicionesCompras.Designer.cs">
-      <DependentUpon>EliminarRequisicionesCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarOrdenesCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarOrdenesCompras.Designer.cs">
-      <DependentUpon>EliminarOrdenesCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarVendedoresVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarVendedoresVentas.Designer.cs">
-      <DependentUpon>EliminarVendedoresVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarVentasVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarVentasVentas.Designer.cs">
-      <DependentUpon>EliminarVentasVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="FacturaVentas.cs">
       <SubType>Form</SubType>
@@ -341,108 +95,6 @@
     </Compile>
     <Compile Include="ListadoPrecios.Designer.cs">
       <DependentUpon>ListadoPrecios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarClientesClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarClientesClientes.Designer.cs">
-      <DependentUpon>ModificarClientesClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarComprasCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarComprasCompras.Designer.cs">
-      <DependentUpon>ModificarComprasCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarComprobantesCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarComprobantesCompras.Designer.cs">
-      <DependentUpon>ModificarComprobantesCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarContactoClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarContactoClientes.Designer.cs">
-      <DependentUpon>ModificarContactoClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarContactoProveedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarContactoProveedores.Designer.cs">
-      <DependentUpon>ModificarContactoProveedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarCotizacionesVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarCotizacionesVentas.Designer.cs">
-      <DependentUpon>ModificarCotizacionesVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarDevolucionesVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarDevolucionesVentas.Designer.cs">
-      <DependentUpon>ModificarDevolucionesVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarFacturaVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarFacturaVentas.Designer.cs">
-      <DependentUpon>ModificarFacturaVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarMovimientosClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarMovimientosClientes.Designer.cs">
-      <DependentUpon>ModificarMovimientosClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarMovimientosVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarMovimientosVentas.Designer.cs">
-      <DependentUpon>ModificarMovimientosVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarPedidosVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarPedidosVentas.Designer.cs">
-      <DependentUpon>ModificarPedidosVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarProveedoresProveedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarProveedoresProveedores.Designer.cs">
-      <DependentUpon>ModificarProveedoresProveedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarRequisicionesCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarRequisicionesCompras.Designer.cs">
-      <DependentUpon>ModificarRequisicionesCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarOrdenesCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarOrdenesCompras.Designer.cs">
-      <DependentUpon>ModificarOrdenesCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarVendedoresVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarVendedoresVentas.Designer.cs">
-      <DependentUpon>ModificarVendedoresVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModificarVentasVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ModificarVentasVentas.Designer.cs">
-      <DependentUpon>ModificarVentasVentas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modificar_RecepcionesCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modificar_RecepcionesCompras.Designer.cs">
-      <DependentUpon>Modificar_RecepcionesCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="MovimientosClientes.cs">
       <SubType>Form</SubType>
@@ -468,59 +120,11 @@
     <Compile Include="OrdenesCompras.Designer.cs">
       <DependentUpon>OrdenesCompras.cs</DependentUpon>
     </Compile>
-    <Compile Include="PagosDiaProveedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PagosDiaProveedores.Designer.cs">
-      <DependentUpon>PagosDiaProveedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PedidosVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PedidosVentas.Designer.cs">
-      <DependentUpon>PedidosVentas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="ProveedoresProveedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProveedoresProveedores.Designer.cs">
-      <DependentUpon>ProveedoresProveedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RecepcionesCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RecepcionesCompras.Designer.cs">
-      <DependentUpon>RecepcionesCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReporteClientesClientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReporteClientesClientes.Designer.cs">
-      <DependentUpon>ReporteClientesClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReporteProveedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReporteProveedores.Designer.cs">
-      <DependentUpon>ReporteProveedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReportesCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReportesCompras.Designer.cs">
-      <DependentUpon>ReportesCompras.cs</DependentUpon>
-    </Compile>
-    <Compile Include="RequisicionesCompras.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RequisicionesCompras.Designer.cs">
-      <DependentUpon>RequisicionesCompras.cs</DependentUpon>
     </Compile>
     <Compile Include="VendedoresVentas.cs">
       <SubType>Form</SubType>
@@ -528,65 +132,8 @@
     <Compile Include="VendedoresVentas.Designer.cs">
       <DependentUpon>VendedoresVentas.cs</DependentUpon>
     </Compile>
-    <Compile Include="VentasVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="VentasVentas.Designer.cs">
-      <DependentUpon>VentasVentas.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AgregarClientesClientes.resx">
-      <DependentUpon>AgregarClientesClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarComprasCompras.resx">
-      <DependentUpon>AgregarComprasCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarComprobantesCompras.resx">
-      <DependentUpon>AgregarComprobantesCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarContactoClientes.resx">
-      <DependentUpon>AgregarContactoClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarContactoProveedores.resx">
-      <DependentUpon>AgregarContactoProveedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarCotizacionesVentas.resx">
-      <DependentUpon>AgregarCotizacionesVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarDevolucionesVentas.resx">
-      <DependentUpon>AgregarDevolucionesVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarFacturaVentas.resx">
-      <DependentUpon>AgregarFacturaVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarMovimientosClientes.resx">
-      <DependentUpon>AgregarMovimientosClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarMovimientosVentas.resx">
-      <DependentUpon>AgregarMovimientosVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarPedidosVentas.resx">
-      <DependentUpon>AgregarPedidosVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarProveedoresProveedores.resx">
-      <DependentUpon>AgregarProveedoresProveedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarRequisicionesCompras.resx">
-      <DependentUpon>AgregarRequisicionesCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarOrdenesCompras.resx">
-      <DependentUpon>AgregarOrdenesCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarVendedoresVentas.resx">
-      <DependentUpon>AgregarVendedoresVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AgregarVentasVentas.resx">
-      <DependentUpon>AgregarVentasVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Agregar_RececpcionesCompras.resx">
-      <DependentUpon>Agregar_RececpcionesCompras.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Caja_Clientes.resx">
       <DependentUpon>Caja_Clientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -596,140 +143,17 @@
     <EmbeddedResource Include="central_Compra.resx">
       <DependentUpon>central_Compra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClienteClientes.resx">
-      <DependentUpon>ClienteClientes.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CobrosDeDiaClientes.resx">
       <DependentUpon>CobrosDeDiaClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ComprasCompras.resx">
-      <DependentUpon>ComprasCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ComprobantesClientes.resx">
-      <DependentUpon>ComprobantesClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ComprobantesCompras.resx">
-      <DependentUpon>ComprobantesCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ContactoClientes.resx">
-      <DependentUpon>ContactoClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ContactoProveedores.resx">
-      <DependentUpon>ContactoProveedores.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CotizacionesVentas.resx">
       <DependentUpon>CotizacionesVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DevolucionesVentas.resx">
-      <DependentUpon>DevolucionesVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarClientesClientes.resx">
-      <DependentUpon>EliminarClientesClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarComprasCompras.resx">
-      <DependentUpon>EliminarComprasCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarComprobantesCompras.resx">
-      <DependentUpon>EliminarComprobantesCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarContactoClientes.resx">
-      <DependentUpon>EliminarContactoClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarContactoProveedores.resx">
-      <DependentUpon>EliminarContactoProveedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarCotizacionesVentas.resx">
-      <DependentUpon>EliminarCotizacionesVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarDevolucionesVentas.resx">
-      <DependentUpon>EliminarDevolucionesVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarFacturaVentas.resx">
-      <DependentUpon>EliminarFacturaVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarMovimientosClientes.resx">
-      <DependentUpon>EliminarMovimientosClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarMovimientosVentas.resx">
-      <DependentUpon>EliminarMovimientosVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarPedidosVentas.resx">
-      <DependentUpon>EliminarPedidosVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarProveedoresProveedores.resx">
-      <DependentUpon>EliminarProveedoresProveedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarRecepcionesCompras.resx">
-      <DependentUpon>EliminarRecepcionesCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarRequisicionesCompras.resx">
-      <DependentUpon>EliminarRequisicionesCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarOrdenesCompras.resx">
-      <DependentUpon>EliminarOrdenesCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarVendedoresVentas.resx">
-      <DependentUpon>EliminarVendedoresVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarVentasVentas.resx">
-      <DependentUpon>EliminarVentasVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FacturaVentas.resx">
       <DependentUpon>FacturaVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoPrecios.resx">
       <DependentUpon>ListadoPrecios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarClientesClientes.resx">
-      <DependentUpon>ModificarClientesClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarComprasCompras.resx">
-      <DependentUpon>ModificarComprasCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarComprobantesCompras.resx">
-      <DependentUpon>ModificarComprobantesCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarContactoClientes.resx">
-      <DependentUpon>ModificarContactoClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarContactoProveedores.resx">
-      <DependentUpon>ModificarContactoProveedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarCotizacionesVentas.resx">
-      <DependentUpon>ModificarCotizacionesVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarDevolucionesVentas.resx">
-      <DependentUpon>ModificarDevolucionesVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarFacturaVentas.resx">
-      <DependentUpon>ModificarFacturaVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarMovimientosClientes.resx">
-      <DependentUpon>ModificarMovimientosClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarMovimientosVentas.resx">
-      <DependentUpon>ModificarMovimientosVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarPedidosVentas.resx">
-      <DependentUpon>ModificarPedidosVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarProveedoresProveedores.resx">
-      <DependentUpon>ModificarProveedoresProveedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarRequisicionesCompras.resx">
-      <DependentUpon>ModificarRequisicionesCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarOrdenesCompras.resx">
-      <DependentUpon>ModificarOrdenesCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarVendedoresVentas.resx">
-      <DependentUpon>ModificarVendedoresVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ModificarVentasVentas.resx">
-      <DependentUpon>ModificarVentasVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modificar_RecepcionesCompras.resx">
-      <DependentUpon>Modificar_RecepcionesCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MovimientosClientes.resx">
       <DependentUpon>MovimientosClientes.cs</DependentUpon>
@@ -743,39 +167,12 @@
     <EmbeddedResource Include="OrdenesCompras.resx">
       <DependentUpon>OrdenesCompras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PagosDiaProveedores.resx">
-      <DependentUpon>PagosDiaProveedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PedidosVentas.resx">
-      <DependentUpon>PedidosVentas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProveedoresProveedores.resx">
-      <DependentUpon>ProveedoresProveedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RecepcionesCompras.resx">
-      <DependentUpon>RecepcionesCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteClientesClientes.resx">
-      <DependentUpon>ReporteClientesClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReporteProveedores.resx">
-      <DependentUpon>ReporteProveedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReportesCompras.resx">
-      <DependentUpon>ReportesCompras.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RequisicionesCompras.resx">
-      <DependentUpon>RequisicionesCompras.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="VendedoresVentas.resx">
       <DependentUpon>VendedoresVentas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VentasVentas.resx">
-      <DependentUpon>VentasVentas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

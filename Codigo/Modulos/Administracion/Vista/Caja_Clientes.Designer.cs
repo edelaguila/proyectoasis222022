@@ -110,9 +110,9 @@ namespace Vista
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 453);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 438);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1084, 208);
+            this.dataGridView1.Size = new System.Drawing.Size(1084, 223);
             this.dataGridView1.TabIndex = 13;
             // 
             // panel1
