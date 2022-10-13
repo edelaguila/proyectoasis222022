@@ -34,6 +34,8 @@ namespace Vista_Bancos
         private void button1_Click(object sender, EventArgs e)
         {
             txt_montoLetras.Text = con.enletras(txt_Monto.Text).ToUpper();
+            Imprimir frm_imp = new Imprimir();
+            frm_imp.Show();
         }
     }
 }
