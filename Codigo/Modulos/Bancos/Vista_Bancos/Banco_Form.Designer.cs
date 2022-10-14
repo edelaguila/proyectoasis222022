@@ -288,7 +288,7 @@ namespace Vista_Bancos
             this.btnMovBanc.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnMovBanc.Size = new System.Drawing.Size(295, 43);
             this.btnMovBanc.TabIndex = 5;
-            this.btnMovBanc.Text = "Movimientos Bancarios";
+            this.btnMovBanc.Text = "Conceptos Bancarios";
             this.btnMovBanc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMovBanc.UseVisualStyleBackColor = true;
             this.btnMovBanc.Click += new System.EventHandler(this.btnMovBanc_Click);
@@ -375,7 +375,7 @@ namespace Vista_Bancos
             this.btnConceptosBanc.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btnConceptosBanc.Size = new System.Drawing.Size(295, 48);
             this.btnConceptosBanc.TabIndex = 0;
-            this.btnConceptosBanc.Text = "Conceptos Bancarios";
+            this.btnConceptosBanc.Text = "Movimientos Bancarios";
             this.btnConceptosBanc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConceptosBanc.UseVisualStyleBackColor = true;
             this.btnConceptosBanc.Click += new System.EventHandler(this.btnConceptosBanc_Click);
