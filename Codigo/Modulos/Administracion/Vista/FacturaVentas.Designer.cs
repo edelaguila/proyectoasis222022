@@ -1,5 +1,5 @@
 ﻿
-namespace Vista
+namespace ComprasVista
 {
     partial class FacturaVentas
     {

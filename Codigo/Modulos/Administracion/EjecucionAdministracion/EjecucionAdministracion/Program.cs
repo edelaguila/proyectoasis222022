@@ -16,7 +16,7 @@ namespace EjecucionAdministracion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Vista.central_Compra());
+            Application.Run(new Vista_Seguridad.splash());
         }
     }
 }
