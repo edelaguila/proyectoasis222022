@@ -36,7 +36,7 @@ namespace Vista_Bancos
             this.btnMantenimientos = new System.Windows.Forms.Button();
             this.btnRepBanc = new System.Windows.Forms.Button();
             this.panelPartidasCont = new System.Windows.Forms.Panel();
-            this.btnEgresos = new System.Windows.Forms.Button();
+            this.btnOrdenes = new System.Windows.Forms.Button();
             this.btnIngresosEgresos = new System.Windows.Forms.Button();
             this.btnPolizas = new System.Windows.Forms.Button();
             this.btnPartidasCont = new System.Windows.Forms.Button();
@@ -163,7 +163,7 @@ namespace Vista_Bancos
             // panelPartidasCont
             // 
             this.panelPartidasCont.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(237)))), ((int)(((byte)(223)))));
-            this.panelPartidasCont.Controls.Add(this.btnEgresos);
+            this.panelPartidasCont.Controls.Add(this.btnOrdenes);
             this.panelPartidasCont.Controls.Add(this.btnIngresosEgresos);
             this.panelPartidasCont.Controls.Add(this.btnPolizas);
             this.panelPartidasCont.Dock = System.Windows.Forms.DockStyle.Top;
@@ -173,22 +173,22 @@ namespace Vista_Bancos
             this.panelPartidasCont.Size = new System.Drawing.Size(295, 143);
             this.panelPartidasCont.TabIndex = 3;
             // 
-            // btnEgresos
+            // btnOrdenes
             // 
-            this.btnEgresos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEgresos.FlatAppearance.BorderSize = 0;
-            this.btnEgresos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEgresos.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnEgresos.Location = new System.Drawing.Point(0, 86);
-            this.btnEgresos.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEgresos.Name = "btnEgresos";
-            this.btnEgresos.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnEgresos.Size = new System.Drawing.Size(295, 43);
-            this.btnEgresos.TabIndex = 3;
-            this.btnEgresos.Text = "Ordenes de Compra";
-            this.btnEgresos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEgresos.UseVisualStyleBackColor = true;
-            this.btnEgresos.Click += new System.EventHandler(this.btnEgresos_Click);
+            this.btnOrdenes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrdenes.FlatAppearance.BorderSize = 0;
+            this.btnOrdenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrdenes.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnOrdenes.Location = new System.Drawing.Point(0, 86);
+            this.btnOrdenes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOrdenes.Name = "btnOrdenes";
+            this.btnOrdenes.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnOrdenes.Size = new System.Drawing.Size(295, 43);
+            this.btnOrdenes.TabIndex = 3;
+            this.btnOrdenes.Text = "Ordenes de Compra";
+            this.btnOrdenes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrdenes.UseVisualStyleBackColor = true;
+            this.btnOrdenes.Click += new System.EventHandler(this.btnEgresos_Click);
             // 
             // btnIngresosEgresos
             // 
@@ -288,7 +288,7 @@ namespace Vista_Bancos
             this.btnMovBanc.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnMovBanc.Size = new System.Drawing.Size(295, 43);
             this.btnMovBanc.TabIndex = 5;
-            this.btnMovBanc.Text = "Conceptos Bancarios";
+            this.btnMovBanc.Text = "Movimientos Bancarios";
             this.btnMovBanc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMovBanc.UseVisualStyleBackColor = true;
             this.btnMovBanc.Click += new System.EventHandler(this.btnMovBanc_Click);
@@ -375,7 +375,7 @@ namespace Vista_Bancos
             this.btnConceptosBanc.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.btnConceptosBanc.Size = new System.Drawing.Size(295, 48);
             this.btnConceptosBanc.TabIndex = 0;
-            this.btnConceptosBanc.Text = "Movimientos Bancarios";
+            this.btnConceptosBanc.Text = "Conceptos Bancarios";
             this.btnConceptosBanc.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConceptosBanc.UseVisualStyleBackColor = true;
             this.btnConceptosBanc.Click += new System.EventHandler(this.btnConceptosBanc_Click);
@@ -417,7 +417,7 @@ namespace Vista_Bancos
         private System.Windows.Forms.Button btnMantenimientos;
         private System.Windows.Forms.Button btnRepBanc;
         private System.Windows.Forms.Panel panelPartidasCont;
-        private System.Windows.Forms.Button btnEgresos;
+        private System.Windows.Forms.Button btnOrdenes;
         private System.Windows.Forms.Button btnIngresosEgresos;
         private System.Windows.Forms.Button btnPolizas;
         private System.Windows.Forms.Button btnPartidasCont;

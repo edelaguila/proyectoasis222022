@@ -10,12 +10,20 @@ using System.Windows.Forms;
 
 namespace Vista_Bancos
 {
+
     public partial class Banco_Form : Form
     {
+        Seguridad_Controlador.Controlador cnseg = new Seguridad_Controlador.Controlador();
         public Banco_Form()
         {
             InitializeComponent();
             HideStart();
+            Button[] apps = {btnCheques,btnDepositos,btnNC,btnDisponibilidad,
+            btnMovBanc,btnTipoDeCambio,btnPolizas,btnIngresosEgresos,
+            btnOrdenes,btnBancos,btnCuentasBanc};
+            cnseg.deshabilitarApps(apps);
+
+            cnseg.getAccesoApp(7101, apps[0]);
         }
         private void HideStart()
         {
