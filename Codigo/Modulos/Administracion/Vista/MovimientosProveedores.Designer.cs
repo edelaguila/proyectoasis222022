@@ -1,5 +1,5 @@
 ﻿
-namespace Vista
+namespace ComprasVista
 {
     partial class MovimientosProveedores
     {
@@ -61,7 +61,7 @@ namespace Vista
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1084, 139);
+            this.panel1.Size = new System.Drawing.Size(1084, 125);
             this.panel1.TabIndex = 3;
             // 
             // textBox1

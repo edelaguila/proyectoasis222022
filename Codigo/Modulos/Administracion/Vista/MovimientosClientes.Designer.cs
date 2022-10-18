@@ -1,5 +1,5 @@
 ﻿
-namespace Vista
+namespace ComprasVista
 {
     partial class MovimientosClientes
     {
@@ -63,9 +63,9 @@ namespace Vista
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
-            this.Dgv_MovimientoCliente.Location = new System.Drawing.Point(64, 239);
+            this.Dgv_MovimientoCliente.Location = new System.Drawing.Point(138, 226);
             this.Dgv_MovimientoCliente.Name = "Dgv_MovimientoCliente";
-            this.Dgv_MovimientoCliente.Size = new System.Drawing.Size(932, 410);
+            this.Dgv_MovimientoCliente.Size = new System.Drawing.Size(745, 410);
             this.Dgv_MovimientoCliente.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn1

@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vista
+namespace ComprasVista
 {
     public partial class ListadoPrecios : Form
     {
         public ListadoPrecios()
         {
             InitializeComponent();
+        }
+
+        private void ListadoPrecios_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
