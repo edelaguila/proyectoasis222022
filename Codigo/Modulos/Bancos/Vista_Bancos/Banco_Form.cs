@@ -18,8 +18,8 @@ namespace Vista_Bancos
         {
             InitializeComponent();
             HideStart();
-            Button[] apps = {btnCheques,btnDepositos,btnNC,btnDisponibilidad,
-            btnMovBanc,btnTipoDeCambio,btnPolizas,btnIngresosEgresos,
+            Button[] apps = {btnTipoDeCambio,btnCheques,btnDepositos,btnNC,btnDisponibilidad,
+            btnMovBanc,btnPolizas,btnIngresosEgresos,
             btnOrdenes,btnBancos,btnCuentasBanc};
             cnseg.deshabilitarApps(apps);
 

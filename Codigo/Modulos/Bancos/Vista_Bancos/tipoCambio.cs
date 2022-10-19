@@ -31,5 +31,30 @@ namespace Vista_Bancos
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+   
+
+        private void tipoCambio_Load(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void navegador1_Load_1(object sender, EventArgs e)
+        {
+            NavegadorVista.Navegador.idApp = "7000";
+            TextBox[] Grupotextbox = { txtID, txtFecha, txtCompra, txtVenta, txtMoneda };
+            TextBox[] Idtextbox = { txtID, txtFecha };
+            navegador1.textbox = Grupotextbox;
+            navegador1.tabla = dataGridView1;
+            navegador1.textboxi = Idtextbox;
+            navegador1.actual = this;
+            navegador1.cargar(dataGridView1, Grupotextbox, "Tbl_Reg_tipoCambio");
+        }
     }
 }
