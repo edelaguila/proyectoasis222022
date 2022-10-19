@@ -57,9 +57,9 @@ namespace Vista_Seguridad
 
         private void btncompras_Click(object sender, EventArgs e)
         {
-            /*VistaLogistica.Menu b = new VistaLogistica.Menu();
-            b.Show();
-            cn.setBtitacora("3000", "Ingreso Compras");*/
+            ComprasVista.central_Compra ccp = new ComprasVista.central_Compra();
+            ccp.Show();
+            cn.setBtitacora("3000", "Ingreso Compras");
         }
 
         private void btnProduccion_Click(object sender, EventArgs e)
