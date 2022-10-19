@@ -36,9 +36,9 @@ namespace Capa_VistaContabilidad
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.navegador1 = new NavegadorVista.Navegador();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.navegador1 = new NavegadorVista.Navegador();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -113,6 +113,15 @@ namespace Capa_VistaContabilidad
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Navegador";
             // 
+            // navegador1
+            // 
+            this.navegador1.Location = new System.Drawing.Point(5, 17);
+            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(761, 180);
+            this.navegador1.TabIndex = 0;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.groupBox3);
@@ -139,14 +148,6 @@ namespace Capa_VistaContabilidad
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Estatus";
-            // 
-            // navegador1
-            // 
-            this.navegador1.Location = new System.Drawing.Point(5, 17);
-            this.navegador1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(761, 180);
-            this.navegador1.TabIndex = 0;
             // 
             // MantenimientoClasesCuentas
             // 

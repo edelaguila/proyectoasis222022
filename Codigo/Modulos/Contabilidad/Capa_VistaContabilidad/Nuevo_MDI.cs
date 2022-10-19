@@ -12,10 +12,26 @@ namespace Capa_VistaContabilidad
 {
     public partial class Nuevo_MDI : Form
     {
+        Seguridad_Controlador.Controlador cnc = new Seguridad_Controlador.Controlador
+            ();
         public Nuevo_MDI()
         {
             InitializeComponent();
             customizeDesing();
+            Button[] apps = { btn_mantClaseCtas };
+            cnc.deshabilitarApps(apps);
+            //mante clases
+            cnc.getAccesoApp (8002,apps[0]);
+            //mante poliza contable
+            cnc.getAccesoApp(8003, apps[0]);
+            //mante tipo cuenta
+            cnc.getAccesoApp(8004, apps[0]);
+            //mante activos
+            cnc.getAccesoApp(8005, apps[0]);
+            //mante estado financiero
+            cnc.getAccesoApp(8006, apps[0]);
+            
+
         }
         private void customizeDesing()
         {
@@ -350,7 +366,43 @@ namespace Capa_VistaContabilidad
 
         private void button3_Click(object sender, EventArgs e)
         {
+            Presupuesto mantclas = new Presupuesto();
+            mantclas.MdiParent = this;
+            mantclas.StartPosition = FormStartPosition.CenterScreen;
+            mantclas.Show();
+            hideSubMenu();
+        }
 
+        private void bnt_MantAct_Click(object sender, EventArgs e)
+        {
+            Activos mantclas = new Activos();
+            mantclas.MdiParent = this;
+            mantclas.StartPosition = FormStartPosition.CenterScreen;
+            mantclas.Show();
+            hideSubMenu();
+        }
+
+        private void btn_MantEFinancieros_Click(object sender, EventArgs e)
+        {
+            EstadosFinancieros mantclas = new EstadosFinancieros();
+            mantclas.MdiParent = this;
+            mantclas.StartPosition = FormStartPosition.CenterScreen;
+            mantclas.Show();
+            hideSubMenu();
+        }
+
+        private void btn_MantTCuenta_Click(object sender, EventArgs e)
+        {
+            MantenimientoTipodeCuentas mantclas = new MantenimientoTipodeCuentas();
+            mantclas.MdiParent = this;
+            mantclas.StartPosition = FormStartPosition.CenterScreen;
+            mantclas.Show();
+            hideSubMenu();
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
