@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Seguridad_Controlador;
+using Capa_VistaContabilidad;
 
 namespace Vista_Seguridad
 {
@@ -85,9 +86,9 @@ namespace Vista_Seguridad
 
         private void btnContabilidad_Click(object sender, EventArgs e)
         {
-            /*VistaLogistica.Menu b = new VistaLogistica.Menu();
+            Capa_VistaContabilidad.Nuevo_MDI b = new Capa_VistaContabilidad.Nuevo_MDI();
            b.Show();
-            cn.setBtitacora("8000", "Ingreso Contabilidad");*/
+            cn.setBtitacora("8000", "Ingreso Contabilidad");
         }
     }
 }
