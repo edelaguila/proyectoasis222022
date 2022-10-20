@@ -38,11 +38,10 @@
       <HintPath>..\ControladorLogistica\bin\Debug\ControladorLogistica.dll</HintPath>
     </Reference>
     <Reference Include="NavegadorVista">
-      <HintPath>..\..\..\proyectofinalasis222022\Codigo\Componentes\Navegador\Vista\bin\Debug\NavegadorVista.dll</HintPath>
+      <HintPath>..\..\..\Componentes\Navegador\Vista\bin\Debug\NavegadorVista.dll</HintPath>
     </Reference>
-    <Reference Include="Seguridad_Controlador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\proyectofinalasis222022\Codigo\Componentes\Seguridad\Colchoneria\Capa_controlador\bin\Debug\Seguridad_Controlador.dll</HintPath>
+    <Reference Include="Seguridad_Controlador">
+      <HintPath>..\..\..\Componentes\Seguridad\Colchoneria\Capa_controlador\bin\Debug\Seguridad_Controlador.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -140,6 +139,12 @@
     <Compile Include="Ruta.Designer.cs">
       <DependentUpon>Ruta.cs</DependentUpon>
     </Compile>
+    <Compile Include="TipoTransporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipoTransporte.Designer.cs">
+      <DependentUpon>TipoTransporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transporte.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ruta.resx">
       <DependentUpon>Ruta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TipoTransporte.resx">
+      <DependentUpon>TipoTransporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transporte.resx">
       <DependentUpon>Transporte.cs</DependentUpon>
