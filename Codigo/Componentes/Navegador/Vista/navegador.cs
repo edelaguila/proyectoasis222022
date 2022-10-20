@@ -29,22 +29,22 @@ namespace NavegadorVista
         public TextBox[] textboxi = { };
         public DataGridView tabla;
         public static string idApp;
+        /* Consultas Boton descomentar Linea 297 
+        public void consulta()
+        {
+            string tablan2 = tabla.Tag.ToString();
+            Capa_VistaConsultas.Busqueda_Simple bs = new Capa_VistaConsultas.Busqueda_Simple();
 
-        /* public void consulta()
-         {
-             string tablan2 = tabla.Tag.ToString();
-              Capa_VistaConsultas.Busqueda_Simple bs = new Capa_VistaConsultas.Busqueda_Simple();
-
-              bs.tableN1 = tablan2;
-              Console.WriteLine(tablan2);
-              bs.BuscarT();
-              bs.Show();
-
-              Console.WriteLine(bs.tableN1);
-
-
-          }*/
-
+            bs.tableN1 = tablan2;
+            Console.WriteLine(tablan2);
+            bs.BuscarT();
+            bs.Show();
+           
+            Console.WriteLine(bs.tableN1);
+            
+            
+        }
+        */
 
 
 
@@ -305,9 +305,9 @@ namespace NavegadorVista
 
         private void btnReporte_Click(object sender, EventArgs e)
         {
-            cnseg.setBtitacora(idApp, "Reportes");
-           /* Capa_VistaConsultas.Consulta rp = new Capa_VistaConsultas.Consulta();
-            rp.Show();*/
+            //cnseg.setBtitacora(idApp, "Reportes");
+            //CapaVista.Consulta rp = new CapaVista.Consulta();
+            //rp.Show();
             //Reportes.Vista cr = new Reportes.Vista();
             /*
              * Form 'fcr' = new 'cr.BusquedaAvanzada';

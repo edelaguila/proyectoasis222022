@@ -40,6 +40,9 @@ namespace ComprasVista
             this.btnBalance = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.panelClientes = new System.Windows.Forms.Panel();
+            this.btnCompra = new System.Windows.Forms.Button();
+            this.btnCompraOrden = new System.Windows.Forms.Button();
+            this.btnFacturaProveedores = new System.Windows.Forms.Button();
             this.btnFacturaCliente = new System.Windows.Forms.Button();
             this.btnPedidos = new System.Windows.Forms.Button();
             this.btnCotizaciones = new System.Windows.Forms.Button();
@@ -52,18 +55,15 @@ namespace ComprasVista
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnCatalogo = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnFacturaProveedores = new System.Windows.Forms.Button();
-            this.btnCompraOrden = new System.Windows.Forms.Button();
-            this.btnCompra = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelClientes.SuspendLayout();
             this.panelCompras.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -113,6 +113,7 @@ namespace ComprasVista
             this.btnAyuda.Text = "AYUDA";
             this.btnAyuda.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // panel2
             // 
@@ -236,6 +237,51 @@ namespace ComprasVista
             this.panelClientes.Name = "panelClientes";
             this.panelClientes.Size = new System.Drawing.Size(220, 515);
             this.panelClientes.TabIndex = 3;
+            // 
+            // btnCompra
+            // 
+            this.btnCompra.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCompra.FlatAppearance.BorderSize = 0;
+            this.btnCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompra.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnCompra.Location = new System.Drawing.Point(0, 280);
+            this.btnCompra.Name = "btnCompra";
+            this.btnCompra.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnCompra.Size = new System.Drawing.Size(220, 35);
+            this.btnCompra.TabIndex = 26;
+            this.btnCompra.Text = "Compras";
+            this.btnCompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompra.UseVisualStyleBackColor = true;
+            // 
+            // btnCompraOrden
+            // 
+            this.btnCompraOrden.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCompraOrden.FlatAppearance.BorderSize = 0;
+            this.btnCompraOrden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompraOrden.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnCompraOrden.Location = new System.Drawing.Point(0, 245);
+            this.btnCompraOrden.Name = "btnCompraOrden";
+            this.btnCompraOrden.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnCompraOrden.Size = new System.Drawing.Size(220, 35);
+            this.btnCompraOrden.TabIndex = 25;
+            this.btnCompraOrden.Text = "Orden de Compra";
+            this.btnCompraOrden.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompraOrden.UseVisualStyleBackColor = true;
+            // 
+            // btnFacturaProveedores
+            // 
+            this.btnFacturaProveedores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFacturaProveedores.FlatAppearance.BorderSize = 0;
+            this.btnFacturaProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacturaProveedores.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnFacturaProveedores.Location = new System.Drawing.Point(0, 210);
+            this.btnFacturaProveedores.Name = "btnFacturaProveedores";
+            this.btnFacturaProveedores.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnFacturaProveedores.Size = new System.Drawing.Size(220, 35);
+            this.btnFacturaProveedores.TabIndex = 24;
+            this.btnFacturaProveedores.Text = "Facturas Proveedores";
+            this.btnFacturaProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFacturaProveedores.UseVisualStyleBackColor = true;
             // 
             // btnFacturaCliente
             // 
@@ -421,6 +467,15 @@ namespace ComprasVista
             this.panelLogo.Size = new System.Drawing.Size(220, 87);
             this.panelLogo.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(220, 87);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -431,60 +486,6 @@ namespace ComprasVista
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(220, 87);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnFacturaProveedores
-            // 
-            this.btnFacturaProveedores.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFacturaProveedores.FlatAppearance.BorderSize = 0;
-            this.btnFacturaProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacturaProveedores.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnFacturaProveedores.Location = new System.Drawing.Point(0, 210);
-            this.btnFacturaProveedores.Name = "btnFacturaProveedores";
-            this.btnFacturaProveedores.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnFacturaProveedores.Size = new System.Drawing.Size(220, 35);
-            this.btnFacturaProveedores.TabIndex = 24;
-            this.btnFacturaProveedores.Text = "Facturas Proveedores";
-            this.btnFacturaProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFacturaProveedores.UseVisualStyleBackColor = true;
-            // 
-            // btnCompraOrden
-            // 
-            this.btnCompraOrden.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCompraOrden.FlatAppearance.BorderSize = 0;
-            this.btnCompraOrden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompraOrden.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnCompraOrden.Location = new System.Drawing.Point(0, 245);
-            this.btnCompraOrden.Name = "btnCompraOrden";
-            this.btnCompraOrden.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnCompraOrden.Size = new System.Drawing.Size(220, 35);
-            this.btnCompraOrden.TabIndex = 25;
-            this.btnCompraOrden.Text = "Orden de Compra";
-            this.btnCompraOrden.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompraOrden.UseVisualStyleBackColor = true;
-            // 
-            // btnCompra
-            // 
-            this.btnCompra.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCompra.FlatAppearance.BorderSize = 0;
-            this.btnCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompra.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnCompra.Location = new System.Drawing.Point(0, 280);
-            this.btnCompra.Name = "btnCompra";
-            this.btnCompra.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnCompra.Size = new System.Drawing.Size(220, 35);
-            this.btnCompra.TabIndex = 26;
-            this.btnCompra.Text = "Compras";
-            this.btnCompra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompra.UseVisualStyleBackColor = true;
             // 
             // central_Compra
             // 
@@ -502,8 +503,8 @@ namespace ComprasVista
             this.panelClientes.ResumeLayout(false);
             this.panelCompras.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

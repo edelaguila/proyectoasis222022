@@ -31,6 +31,7 @@ namespace ComprasVista
             panelClientes.Visible = false;
             panel1.Visible = false;
             panel2.Visible = false;
+            panel3.Visible = false;
         }
 
         private void hideSubMenu()
@@ -43,6 +44,9 @@ namespace ComprasVista
                 panel1.Visible = false;
             if (panel2.Visible == true)
                 panel2.Visible = false;
+            if (panel3.Visible == true)
+                panel3.Visible = false;
+
         }
 
         private void showSubMenu(Panel subMenu)
@@ -319,6 +323,11 @@ namespace ComprasVista
             Form formListadoPrecios = new ListadoPrecios();
             formListadoPrecios.ShowDialog();
             hideSubMenu();
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panel3);
         }
     }
 }
