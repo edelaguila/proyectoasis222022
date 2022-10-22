@@ -57,6 +57,7 @@ namespace ComprasVista
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.MovProveedores = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelClientes.SuspendLayout();
@@ -223,6 +224,7 @@ namespace ComprasVista
             // panelClientes
             // 
             this.panelClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(215)))), ((int)(((byte)(249)))));
+            this.panelClientes.Controls.Add(this.MovProveedores);
             this.panelClientes.Controls.Add(this.btnCompra);
             this.panelClientes.Controls.Add(this.btnCompraOrden);
             this.panelClientes.Controls.Add(this.btnFacturaProveedores);
@@ -487,6 +489,21 @@ namespace ComprasVista
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
+            // MovProveedores
+            // 
+            this.MovProveedores.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MovProveedores.FlatAppearance.BorderSize = 0;
+            this.MovProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MovProveedores.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.MovProveedores.Location = new System.Drawing.Point(0, 315);
+            this.MovProveedores.Name = "MovProveedores";
+            this.MovProveedores.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.MovProveedores.Size = new System.Drawing.Size(220, 35);
+            this.MovProveedores.TabIndex = 27;
+            this.MovProveedores.Text = "Movimientos Proveedores";
+            this.MovProveedores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MovProveedores.UseVisualStyleBackColor = true;
+            // 
             // central_Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -539,5 +556,6 @@ namespace ComprasVista
         private System.Windows.Forms.Button btnCompraOrden;
         private System.Windows.Forms.Button btnFacturaProveedores;
         private System.Windows.Forms.Button btnCompra;
+        private System.Windows.Forms.Button MovProveedores;
     }
 }
