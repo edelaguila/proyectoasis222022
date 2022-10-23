@@ -60,7 +60,6 @@ namespace ComprasModelo
             }
 
         }
-
         //Codigo movimiento clientes
         public OdbcDataAdapter llenartablaMovCliente(string tabla, string tipodato, string dato)
         {
@@ -69,5 +68,6 @@ namespace ComprasModelo
             return datatable;
 
         }
+
     }
  }

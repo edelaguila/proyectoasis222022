@@ -8,7 +8,6 @@ using System.Data.Odbc;
 using ComprasModelo;
 using System.Windows;
 using System.Windows.Forms;
-using FontAwesome.Sharp;
 
 namespace ComprasControlador
 {
@@ -76,8 +75,6 @@ namespace ComprasControlador
             }
 
         }
-
-
         //Codigo movimiento clientes
         public void fillTableMovClient(string ntabla, DataGridView tabla, string tipo, string dato)//Funcion para llenar tabla
         {
@@ -92,7 +89,6 @@ namespace ComprasControlador
             {
                 System.Windows.MessageBox.Show("Error:" + e);
             }
-
         } //Fin codigo movimiento Clientes
     }
 }

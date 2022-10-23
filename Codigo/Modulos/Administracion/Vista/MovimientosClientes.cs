@@ -17,7 +17,6 @@ namespace ComprasVista
         {
             InitializeComponent();
         }
-
         public DataGridView tabla;
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -30,7 +29,6 @@ namespace ComprasVista
             txtIdCliente.Text = " ";
 
         }
-
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             string texto = txtIdCliente.Text;
@@ -45,7 +43,6 @@ namespace ComprasVista
                 AdminCn.fillTableMovClient(tabla.Tag.ToString(), Dgv_MovimientoCliente, "FkId_Clientes", txtIdCliente.Text);
 
             }
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
