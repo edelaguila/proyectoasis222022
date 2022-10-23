@@ -21,5 +21,17 @@ namespace   ComprasVista
         {
 
         }
+
+        private void navegador1_Load(object sender, EventArgs e)
+        {
+            NavegadorVista.Navegador.idApp = "3103";
+            TextBox[] Grupotextbox = { txtIdCaja, txtSaldo, txtIdCliente, txtAbono };
+            TextBox[] Idtextbox = { txtIdCaja, txtIdCliente };
+            navegador1.textbox = Grupotextbox;
+            navegador1.tabla = Dgv_CajaClientes;
+            navegador1.textboxi = Idtextbox;
+            navegador1.actual = this;
+            navegador1.cargar(Dgv_CajaClientes, Grupotextbox, "colchoneria");
+        }
     }
 }
