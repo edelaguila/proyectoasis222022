@@ -1,8 +1,0 @@
-C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Modelo\bin\Debug\NavegadorModelo.dll
-C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Modelo\bin\Debug\NavegadorModelo.pdb
-C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Modelo\bin\Debug\FontAwesome.Sharp.dll
-C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Modelo\obj\Debug\NavegadorModelo.csproj.AssemblyReference.cache
-C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Modelo\obj\Debug\NavegadorModelo.csproj.CoreCompileInputs.cache
-C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Modelo\obj\Debug\NavegadorModelo.csproj.CopyComplete
-C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Modelo\obj\Debug\NavegadorModelo.dll
-C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Modelo\obj\Debug\NavegadorModelo.pdb
