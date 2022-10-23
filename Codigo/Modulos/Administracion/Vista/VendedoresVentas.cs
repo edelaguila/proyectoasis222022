@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vista
+namespace ComprasVista
 {
     public partial class VendedoresVentas : Form
     {

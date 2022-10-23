@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 //Libreria--------
 using System.Data.Odbc;
 
-namespace Modelo
+namespace NavegadorModelo
 {
     class Conexion
     {
@@ -14,7 +14,7 @@ namespace Modelo
         public OdbcConnection conexion()
         {
             //creacion de la conexion via ODBC
-            OdbcConnection conn = new OdbcConnection("Dsn=Prueba1");
+            OdbcConnection conn = new OdbcConnection("Dsn=colchoneria");
             try
             {
                 conn.Open();

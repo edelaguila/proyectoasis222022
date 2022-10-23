@@ -8,14 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vista
+namespace ComprasVista
 {
     public partial class central_Compra : Form
     {
+        Seguridad_Controlador.Controlador cnseg = new Seguridad_Controlador.Controlador();
         public central_Compra()
         {
             InitializeComponent();
             customizeDesing();
+
+            Button [] apps = { btnCliente, btnProveedores };
+            cnseg.deshabilitarApps(apps);
+
+            cnseg.getAccesoApp(3001, apps[0]);
+            cnseg.getAccesoApp(3002, apps[1]);
         }
         private void customizeDesing()
         {
@@ -24,6 +31,7 @@ namespace Vista
             panelClientes.Visible = false;
             panel1.Visible = false;
             panel2.Visible = false;
+            panel3.Visible = false;
         }
 
         private void hideSubMenu()
@@ -36,6 +44,9 @@ namespace Vista
                 panel1.Visible = false;
             if (panel2.Visible == true)
                 panel2.Visible = false;
+            if (panel3.Visible == true)
+                panel3.Visible = false;
+
         }
 
         private void showSubMenu(Panel subMenu)
@@ -51,6 +62,7 @@ namespace Vista
 
         private void btnCompras_Click(object sender, EventArgs e)
         {
+            
             showSubMenu(panelCompras);
 
         }
@@ -58,9 +70,10 @@ namespace Vista
         private void btnCompra_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formulario = new ComprasCompras();
-            formulario.ShowDialog();
-            formulario.MdiParent = this;
+            Clientes cl = new Clientes();
+            cl.MdiParent = this;
+            cl.Show();
+            pictureBox2.Visible = false;
             //Ocultar submenu
             hideSubMenu();
 
@@ -71,8 +84,7 @@ namespace Vista
         private void btnRecepción_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formRecepcionesCompras = new RecepcionesCompras();
-            formRecepcionesCompras.ShowDialog();
+           
             //Ocultar submenu
             hideSubMenu();
         }
@@ -80,8 +92,10 @@ namespace Vista
         private void btnOrdenes_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formOrdenesCompras = new OrdenesCompras();
-            formOrdenesCompras.ShowDialog();
+            Proveedores p = new Proveedores();
+            p.MdiParent = this;
+            p.Show();
+            pictureBox2.Visible = false;
             //Ocultar submenu
             hideSubMenu();
         }
@@ -89,8 +103,7 @@ namespace Vista
         private void btnRequisiciones_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formRequisicionesCompras = new RequisicionesCompras();
-            formRequisicionesCompras.ShowDialog();
+           
             //Ocultar submenu
             hideSubMenu();
         }
@@ -105,8 +118,7 @@ namespace Vista
         private void btnReporteCompras_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formReportesCompras = new ReportesCompras();
-            formReportesCompras.ShowDialog();
+          
             //Ocultar submenu
             hideSubMenu();
         }
@@ -114,8 +126,7 @@ namespace Vista
         private void btnComprobantesCompras_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formComprobantesCompras = new ComprobantesCompras();
-            formComprobantesCompras.ShowDialog();
+           
             //Ocultar submenu
             hideSubMenu();
         }
@@ -128,8 +139,7 @@ namespace Vista
         private void btnClientes_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formClientes = new ClienteClientes();
-            formClientes.ShowDialog();
+          
             //Ocultar submenu
             hideSubMenu();
         }
@@ -137,8 +147,7 @@ namespace Vista
         private void btnContactoClientes_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formContactoClientes = new ContactoClientes();
-            formContactoClientes.ShowDialog();
+           
             //Ocultar submenu
             hideSubMenu();
         }
@@ -155,8 +164,7 @@ namespace Vista
         private void btnReporteCliente_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formReportesClientes = new ReporteClientesClientes();
-            formReportesClientes.ShowDialog();
+          
             //Ocultar submenu
             hideSubMenu();
         }
@@ -164,8 +172,8 @@ namespace Vista
         private void btnComprobantesClientes_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formComprobantesClientes = new ComprobantesClientes();
-            formComprobantesClientes.ShowDialog();
+            Cotizaciones c = new Cotizaciones();
+            c.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -194,8 +202,7 @@ namespace Vista
         private void btnProveedores_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formProveedoresProveedores = new ProveedoresProveedores();
-            formProveedoresProveedores.ShowDialog();
+           
             //Ocultar submenu
             hideSubMenu();
         }
@@ -203,8 +210,10 @@ namespace Vista
         private void btnContactosProveedores_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formContactoProveedores = new ContactoProveedores();
-            formContactoProveedores.ShowDialog();
+            MovimientosClientes lp = new MovimientosClientes();
+            lp.MdiParent = this;
+            lp.Show();
+            pictureBox2.Visible = false;
             //Ocultar submenu
             hideSubMenu();
         }
@@ -212,8 +221,7 @@ namespace Vista
         private void btnPagosDia_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formPagosDiaProveedores = new PagosDiaProveedores();
-            formPagosDiaProveedores.ShowDialog();
+           
             //Ocultar submenu
             hideSubMenu();
         }
@@ -221,8 +229,7 @@ namespace Vista
         private void btnReportesProveedores_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formReporteProveedores = new ReporteProveedores();
-            formReporteProveedores.ShowDialog();
+           
             //Ocultar submenu
             hideSubMenu();
         }
@@ -267,8 +274,7 @@ namespace Vista
         private void btnPedidos_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formPedidosVentas = new PedidosVentas();
-            formPedidosVentas.ShowDialog();
+          
             //Ocultar submenu
             hideSubMenu();
         }
@@ -276,8 +282,7 @@ namespace Vista
         private void btnDevolucionesVentas_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formDevolucionesVentas = new DevolucionesVentas();
-            formDevolucionesVentas.ShowDialog();
+           
             //Ocultar submenu
             hideSubMenu();
         }
@@ -312,8 +317,7 @@ namespace Vista
         private void btnVentas_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formVentasVentas = new VentasVentas();
-            formVentasVentas.ShowDialog();
+           
             //Ocultar submenu
             hideSubMenu();
         }
@@ -323,6 +327,11 @@ namespace Vista
             Form formListadoPrecios = new ListadoPrecios();
             formListadoPrecios.ShowDialog();
             hideSubMenu();
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panel3);
         }
     }
 }
