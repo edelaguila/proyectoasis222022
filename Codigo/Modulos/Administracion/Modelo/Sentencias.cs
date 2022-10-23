@@ -10,6 +10,7 @@ namespace ComprasModelo
     public class Sentencias
     {
         Conexion con = new Conexion();
+
         // obtener datos de una tabla CAPA MODELO
 
         //Consulta la BD y dichos datos estarán en un data table
@@ -61,4 +62,3 @@ namespace ComprasModelo
         }
     }
  }
-

@@ -35,10 +35,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Controlador\bin\Debug\ComprasControlador.dll</HintPath>
     </Reference>
-
-    <Reference Include="ComprasModelo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Controlador\bin\Debug\ComprasModelo.dll</HintPath>
     <Reference Include="Controlador">
       <HintPath>..\Controlador\bin\Debug\Controlador.dll</HintPath>
     </Reference>

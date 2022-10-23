@@ -147,15 +147,10 @@ namespace ComprasVista
         private void btnContactoClientes_Click(object sender, EventArgs e)
         {
             //Codigo
-          
             Caja_Clientes p = new Caja_Clientes();
             p.MdiParent = this;
             p.Show();
             pictureBox2.Visible = false;
-            //Ocultar submenu
-            hideSubMenu();
-            //Ocultar submenu
-            hideSubMenu();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -163,12 +158,8 @@ namespace ComprasVista
         private void btnDay_Click(object sender, EventArgs e)
         {
             //Codigo
-            Caja_Proveedores p = new Caja_Proveedores();
-            p.MdiParent = this;
-            p.Show();
-            pictureBox2.Visible = false;
-            //Ocultar submenu
-            hideSubMenu();
+            Form formCobrosDia = new CobrosDeDiaClientes();
+            formCobrosDia.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }

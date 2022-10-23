@@ -9,15 +9,10 @@ using ComprasModelo;
 using System.Windows;
 using System.Windows.Forms;
 
-using FontAwesome.Sharp;
-
-
-
 namespace ComprasControlador
 {
     public class csContralador
     {
-
         Sentencias sn = new Sentencias();
         public DataTable llenarTbl(string tabla)
         {
@@ -80,6 +75,5 @@ namespace ComprasControlador
             }
 
         }
-
     }
 }
