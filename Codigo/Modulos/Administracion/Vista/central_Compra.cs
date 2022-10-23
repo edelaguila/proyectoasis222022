@@ -184,8 +184,10 @@ namespace ComprasVista
         private void btnMovimientosCLientes_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formMovClientes = new MovimientosClientes();
-            formMovClientes.ShowDialog();
+            Pedidos p = new Pedidos();
+            p.MdiParent = this;
+            p.Show();
+            pictureBox2.Visible = false;
             //Ocultar submenu
             hideSubMenu();
         }
