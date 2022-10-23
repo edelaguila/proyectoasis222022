@@ -1,0 +1,14 @@
+C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Controlador\obj\Debug\NavegadorControlador.csproj.AssemblyReference.cache
+C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Controlador\obj\Debug\NavegadorControlador.csproj.CoreCompileInputs.cache
+C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Controlador\bin\Debug\NavegadorControlador.dll
+C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Controlador\bin\Debug\NavegadorControlador.pdb
+C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Controlador\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Controlador\bin\Debug\NavegadorModelo.dll
+C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Controlador\bin\Debug\Seguridad_Controlador.dll
+C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Controlador\bin\Debug\Modelo_Seguridad.dll
+C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Controlador\bin\Debug\NavegadorModelo.pdb
+C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Controlador\bin\Debug\Seguridad_Controlador.pdb
+C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Controlador\bin\Debug\Modelo_Seguridad.pdb
+C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Controlador\obj\Debug\NavegadorControlador.csproj.CopyComplete
+C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Controlador\obj\Debug\NavegadorControlador.dll
+C:\Users\josue\Desktop\UNIVERSIDAD\SEMESTRE_8\Analisis_de_Sistemas_II\FINAL\arreglomovcliente\proyectofinalasis222022\Codigo\Componentes\Navegador\Controlador\obj\Debug\NavegadorControlador.pdb
