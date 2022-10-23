@@ -60,5 +60,13 @@ namespace ComprasModelo
             }
 
         }
+        //Codigo movimiento clientes
+        public OdbcDataAdapter llenartablaMovCliente(string tabla, string tipodato, string dato)
+        {
+            string sql = "select * from " + tabla + " where " + tipodato + " like ('" + dato + "%');";
+            OdbcDataAdapter datatable = new OdbcDataAdapter(sql, con.conexion());
+            return datatable;
+
+        }
     }
  }

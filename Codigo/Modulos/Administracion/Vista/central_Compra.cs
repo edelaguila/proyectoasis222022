@@ -213,7 +213,10 @@ namespace ComprasVista
         private void btnContactosProveedores_Click(object sender, EventArgs e)
         {
             //Codigo
-           
+            MovimientosClientes lp = new MovimientosClientes();
+            lp.MdiParent = this;
+            lp.Show();
+            pictureBox2.Visible = false;
             //Ocultar submenu
             hideSubMenu();
         }
