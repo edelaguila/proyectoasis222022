@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vista
+namespace ComprasVista
 {
     public partial class CobrosDeDiaClientes : Form
     {
@@ -19,14 +19,12 @@ namespace Vista
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            Form formEliminarCobrosDeDia = new EliminarCobrosDeDiaClientes();
-            formEliminarCobrosDeDia.ShowDialog();
+          
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Form formModificarCobrosDeDia = new ModificarCobrosDeDiaClientes();
-            formModificarCobrosDeDia.ShowDialog();
+           
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
