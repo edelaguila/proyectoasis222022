@@ -101,7 +101,7 @@ namespace Vista_Bancos
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(419, 231);
+            this.label6.Location = new System.Drawing.Point(400, 211);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 17);
             this.label6.TabIndex = 19;
@@ -109,7 +109,7 @@ namespace Vista_Bancos
             // 
             // txtCompra
             // 
-            this.txtCompra.Location = new System.Drawing.Point(482, 231);
+            this.txtCompra.Location = new System.Drawing.Point(463, 213);
             this.txtCompra.Name = "txtCompra";
             this.txtCompra.Size = new System.Drawing.Size(100, 22);
             this.txtCompra.TabIndex = 17;
@@ -146,7 +146,7 @@ namespace Vista_Bancos
             // 
             // navegador1
             // 
-            this.navegador1.Location = new System.Drawing.Point(57, 4);
+            this.navegador1.Location = new System.Drawing.Point(57, 13);
             this.navegador1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(765, 187);

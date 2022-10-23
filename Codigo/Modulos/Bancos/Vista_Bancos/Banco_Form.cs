@@ -18,12 +18,25 @@ namespace Vista_Bancos
         {
             InitializeComponent();
             HideStart();
-            Button[] apps = {btnTipoDeCambio,btnCheques,btnDepositos,btnNC,btnDisponibilidad,
-            btnMovBanc,btnPolizas,btnIngresosEgresos,
-            btnOrdenes,btnBancos,btnCuentasBanc};
+            Button[] apps = {CncBancario,btnCheques,btnDepositos,btnDisponibilidad,
+            btnMovBanc,btnBitacora,btnConcilacionBancaria,btnPolizas,btnIngresosEgresos,
+            btnOrdenes,btnBancos,btnCuentasBanc,btnTipoDeCambio};
             cnseg.deshabilitarApps(apps);
 
             cnseg.getAccesoApp(7101, apps[0]);
+            cnseg.getAccesoApp(7002, apps[1]);
+            cnseg.getAccesoApp(7003, apps[2]);
+            cnseg.getAccesoApp(7004, apps[3]);
+            cnseg.getAccesoApp(7001, apps[4]);
+            cnseg.getAccesoApp(7102, apps[5]);
+            cnseg.getAccesoApp(7103, apps[6]);
+            cnseg.getAccesoApp(7104, apps[7]);
+            cnseg.getAccesoApp(7105, apps[8]);
+            cnseg.getAccesoApp(7106, apps[9]);
+            cnseg.getAccesoApp(7201, apps[10]);
+            cnseg.getAccesoApp(7202, apps[11]);
+            cnseg.getAccesoApp(7203, apps[12]);
+
         }
         private void HideStart()
         {
@@ -152,6 +165,20 @@ namespace Vista_Bancos
             MntCuentas frm_cuentas = new MntCuentas();
             frm_cuentas.MdiParent = this;
             frm_cuentas.Show();
+            logop.Visible = false;
+        }
+
+        private void btnBitacora_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void CncBancario_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            ConceptoBancario frm_cb = new ConceptoBancario();
+            frm_cb.MdiParent = this;
+            frm_cb.Show();
             logop.Visible = false;
         }
     }
