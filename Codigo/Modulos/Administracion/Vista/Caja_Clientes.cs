@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using ComprasControlador;
 using ComprasModelo;
+
 
 
 
@@ -16,14 +18,16 @@ namespace   ComprasVista
 {
     public partial class Caja_Clientes : Form
     {
+
         ComprasControlador.csContralador AdminCn = new ComprasControlador.csContralador();
+
         public Caja_Clientes()
         {
             InitializeComponent();
         }
 
-        public DataGridView tabla;
 
+        public DataGridView tabla;
 
         private void Caja_Clientes_Load(object sender, EventArgs e)
         {

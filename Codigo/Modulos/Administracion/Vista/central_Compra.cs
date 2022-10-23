@@ -184,7 +184,8 @@ namespace ComprasVista
         private void btnComprobantesClientes_Click(object sender, EventArgs e)
         {
             //Codigo
-            
+            Cotizaciones c = new Cotizaciones();
+            c.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -201,7 +202,8 @@ namespace ComprasVista
         private void btnCajaClientes_Click(object sender, EventArgs e)
         {
             //Codigo
-           
+            //Ocultar submenu
+            hideSubMenu();
         }
 
         private void btnProveedor_Click(object sender, EventArgs e)

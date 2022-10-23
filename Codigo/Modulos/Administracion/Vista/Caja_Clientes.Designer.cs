@@ -61,6 +61,7 @@ namespace ComprasVista
             this.txtIdCliente.Size = new System.Drawing.Size(260, 20);
             this.txtIdCliente.TabIndex = 37;
             this.txtIdCliente.Tag = "FkId_Cliente";
+
             // 
             // label4
             // 
@@ -139,6 +140,7 @@ namespace ComprasVista
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 41;
             this.label3.Text = "Abono";
+
             // 
             // Caja_Clientes
             // 
@@ -178,5 +180,6 @@ namespace ComprasVista
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtAbono;
         private System.Windows.Forms.Label label3;
+
     }
 }
