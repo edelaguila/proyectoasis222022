@@ -75,6 +75,7 @@ namespace ComprasControlador
             }
 
         }
+
         //Codigo movimiento clientes
         public void fillTableMovClient(string ntabla, DataGridView tabla, string tipo, string dato)//Funcion para llenar tabla
         {

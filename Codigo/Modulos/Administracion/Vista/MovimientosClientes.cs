@@ -18,7 +18,7 @@ namespace ComprasVista
             InitializeComponent();
         }
         public DataGridView tabla;
-
+        
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Hide();
