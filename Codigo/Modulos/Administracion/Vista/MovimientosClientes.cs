@@ -36,7 +36,7 @@ namespace ComprasVista
             string texto = txtIdCliente.Text;
             if (texto == "")
             {
-                string message = "Debe Ingresar un ID Usuario";
+                string message = "Debe Ingresar un Id Cliente";
                 MessageBox.Show(message);
             }
             else
