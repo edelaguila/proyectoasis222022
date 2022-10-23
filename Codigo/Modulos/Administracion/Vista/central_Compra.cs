@@ -311,8 +311,8 @@ namespace ComprasVista
         private void btnMovimientos_Click(object sender, EventArgs e)
         {
             //Codigo
-            Form formMovimientosVentas = new Pedidos();
-            formMovimientosVentas.ShowDialog();
+           /* Form formMovimientosVentas = new Pedidos();
+            formMovimientosVentas.ShowDialog();*/
             //Ocultar submenu
             hideSubMenu();
         }
