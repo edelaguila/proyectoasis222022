@@ -22,7 +22,7 @@ namespace Capa_VistaContabilidad
             cnc.deshabilitarApps(apps);
             //mante clases
             cnc.getAccesoApp (8002,apps[0]);
-            //mante poliza contable
+            //mante tipo poliza contable
             cnc.getAccesoApp(8003, apps[0]);
             //mante tipo cuenta
             cnc.getAccesoApp(8004, apps[0]);
@@ -343,7 +343,7 @@ namespace Capa_VistaContabilidad
 
         private void btn_mantPC_Click(object sender, EventArgs e)
         {
-            MantenimientoPolizaContable mantpol = new MantenimientoPolizaContable();
+            MantenimientoDetallePolizaContable mantpol = new MantenimientoDetallePolizaContable();
             mantpol.MdiParent = this;
             mantpol.StartPosition = FormStartPosition.CenterScreen;
             mantpol.Show();
@@ -352,7 +352,7 @@ namespace Capa_VistaContabilidad
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            MantenimientoClasesCuentas mantclas = new MantenimientoClasesCuentas();
+            MantenimientoEncabezadoCuentas mantclas = new MantenimientoEncabezadoCuentas();
             mantclas.MdiParent = this;
             mantclas.StartPosition = FormStartPosition.CenterScreen;
             mantclas.Show();
@@ -403,6 +403,16 @@ namespace Capa_VistaContabilidad
         private void btn_exit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            DetallePoliza mantclas = new DetallePoliza();
+
+            mantclas.MdiParent = this;
+            mantclas.StartPosition = FormStartPosition.CenterScreen;
+            mantclas.Show();
+            hideSubMenu();
         }
     }
 }

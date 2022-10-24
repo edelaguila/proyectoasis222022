@@ -62,6 +62,7 @@ namespace Capa_VistaContabilidad
             this.btnCompras = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelMant.SuspendLayout();
             this.panelEstadosF.SuspendLayout();
@@ -278,6 +279,7 @@ namespace Capa_VistaContabilidad
             // panelActivos
             // 
             this.panelActivos.BackColor = System.Drawing.Color.LemonChiffon;
+            this.panelActivos.Controls.Add(this.button2);
             this.panelActivos.Controls.Add(this.btn_MantTCuenta);
             this.panelActivos.Controls.Add(this.bnt_MantAct);
             this.panelActivos.Controls.Add(this.btn_MantEFinancieros);
@@ -303,7 +305,7 @@ namespace Capa_VistaContabilidad
             this.btn_MantTCuenta.Size = new System.Drawing.Size(220, 35);
             this.btn_MantTCuenta.TabIndex = 9;
             this.btn_MantTCuenta.Text = "Mantenimiento Tipo Cuenta";
-            this.btn_MantTCuenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_MantTCuenta.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btn_MantTCuenta.UseVisualStyleBackColor = true;
             this.btn_MantTCuenta.Click += new System.EventHandler(this.btn_MantTCuenta_Click);
             // 
@@ -573,6 +575,22 @@ namespace Capa_VistaContabilidad
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.button2.Location = new System.Drawing.Point(0, 245);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(220, 35);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "MantenimientoDetallePoliza";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_2);
+            // 
             // Nuevo_MDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -634,5 +652,6 @@ namespace Capa_VistaContabilidad
         private System.Windows.Forms.Button btn_ConsultaInt;
         private System.Windows.Forms.Button btn_Security;
         private System.Windows.Forms.Button btn_ReportesConta;
+        private System.Windows.Forms.Button button2;
     }
 }
