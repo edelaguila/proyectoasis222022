@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*Diana Victores 
+ 9959-19-1471
+Mantenimiento Tipo Poliza*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

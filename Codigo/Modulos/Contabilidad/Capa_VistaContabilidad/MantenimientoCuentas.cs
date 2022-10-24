@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*Diana Victores
+ 9959-19-1471
+Mantenimiento Cuentas*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +19,11 @@ namespace Capa_VistaContabilidad
         public MantenimientoCuentas()
         {
             InitializeComponent();
+        }
+
+        private void navegador1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
