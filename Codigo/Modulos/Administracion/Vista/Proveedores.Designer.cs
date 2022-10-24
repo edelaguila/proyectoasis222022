@@ -44,6 +44,7 @@ namespace ComprasVista
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtRubro = new System.Windows.Forms.TextBox();
+            this.navegador1 = new NavegadorVista.Navegador();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -175,11 +176,20 @@ namespace ComprasVista
             this.txtRubro.TabIndex = 38;
             this.txtRubro.Tag = "RubroGiro_Proveedores";
             // 
+            // navegador1
+            // 
+            this.navegador1.Location = new System.Drawing.Point(139, 12);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(574, 152);
+            this.navegador1.TabIndex = 39;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load_1);
+            // 
             // Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
+            this.Controls.Add(this.navegador1);
             this.Controls.Add(this.txtRubro);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtdomicilio);
@@ -220,5 +230,6 @@ namespace ComprasVista
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtRubro;
+        private NavegadorVista.Navegador navegador1;
     }
 }
