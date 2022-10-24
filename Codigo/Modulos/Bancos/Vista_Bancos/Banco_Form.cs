@@ -181,5 +181,14 @@ namespace Vista_Bancos
             frm_cb.Show();
             logop.Visible = false;
         }
+
+        private void btnTipoDeCambio_Click_1(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            tipoCambio frm_tcambio = new tipoCambio();
+            frm_tcambio.MdiParent = this;
+            frm_tcambio.Show();
+            logop.Visible = false;
+        }
     }
 }

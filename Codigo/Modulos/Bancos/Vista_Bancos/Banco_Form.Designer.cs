@@ -43,14 +43,14 @@ namespace Vista_Bancos
             this.btnPolizas = new System.Windows.Forms.Button();
             this.btnPartidasCont = new System.Windows.Forms.Button();
             this.panelConceptosBanc = new System.Windows.Forms.Panel();
+            this.btnConcilacionBancaria = new System.Windows.Forms.Button();
+            this.btnBitacora = new System.Windows.Forms.Button();
             this.btnMovBanc = new System.Windows.Forms.Button();
             this.btnDisponibilidad = new System.Windows.Forms.Button();
             this.btnDepositos = new System.Windows.Forms.Button();
             this.btnCheques = new System.Windows.Forms.Button();
             this.Procesos = new System.Windows.Forms.Button();
             this.logop = new System.Windows.Forms.Panel();
-            this.btnBitacora = new System.Windows.Forms.Button();
-            this.btnConcilacionBancaria = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelMantenimientos.SuspendLayout();
             this.panelPartidasCont.SuspendLayout();
@@ -95,7 +95,7 @@ namespace Vista_Bancos
             this.CncBancario.Dock = System.Windows.Forms.DockStyle.Top;
             this.CncBancario.FlatAppearance.BorderSize = 0;
             this.CncBancario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CncBancario.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.CncBancario.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CncBancario.Location = new System.Drawing.Point(0, 129);
             this.CncBancario.Margin = new System.Windows.Forms.Padding(4);
             this.CncBancario.Name = "CncBancario";
@@ -112,7 +112,7 @@ namespace Vista_Bancos
             this.btnTipoDeCambio.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTipoDeCambio.FlatAppearance.BorderSize = 0;
             this.btnTipoDeCambio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTipoDeCambio.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnTipoDeCambio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipoDeCambio.Location = new System.Drawing.Point(0, 86);
             this.btnTipoDeCambio.Margin = new System.Windows.Forms.Padding(4);
             this.btnTipoDeCambio.Name = "btnTipoDeCambio";
@@ -122,6 +122,7 @@ namespace Vista_Bancos
             this.btnTipoDeCambio.Text = "Moneda";
             this.btnTipoDeCambio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTipoDeCambio.UseVisualStyleBackColor = true;
+            this.btnTipoDeCambio.Click += new System.EventHandler(this.btnTipoDeCambio_Click_1);
             // 
             // btnCuentasBanc
             // 
@@ -129,7 +130,7 @@ namespace Vista_Bancos
             this.btnCuentasBanc.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCuentasBanc.FlatAppearance.BorderSize = 0;
             this.btnCuentasBanc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCuentasBanc.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnCuentasBanc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCuentasBanc.Location = new System.Drawing.Point(0, 43);
             this.btnCuentasBanc.Margin = new System.Windows.Forms.Padding(4);
             this.btnCuentasBanc.Name = "btnCuentasBanc";
@@ -147,7 +148,7 @@ namespace Vista_Bancos
             this.btnBancos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBancos.FlatAppearance.BorderSize = 0;
             this.btnBancos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBancos.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnBancos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBancos.Location = new System.Drawing.Point(0, 0);
             this.btnBancos.Margin = new System.Windows.Forms.Padding(4);
             this.btnBancos.Name = "btnBancos";
@@ -165,7 +166,7 @@ namespace Vista_Bancos
             this.btnMantenimientos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMantenimientos.FlatAppearance.BorderSize = 0;
             this.btnMantenimientos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMantenimientos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMantenimientos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMantenimientos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.btnMantenimientos.Location = new System.Drawing.Point(0, 548);
             this.btnMantenimientos.Margin = new System.Windows.Forms.Padding(4);
@@ -184,7 +185,7 @@ namespace Vista_Bancos
             this.btnRepBanc.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRepBanc.FlatAppearance.BorderSize = 0;
             this.btnRepBanc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRepBanc.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRepBanc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRepBanc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.btnRepBanc.Location = new System.Drawing.Point(0, 500);
             this.btnRepBanc.Margin = new System.Windows.Forms.Padding(4);
@@ -215,7 +216,7 @@ namespace Vista_Bancos
             this.btnOrdenes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnOrdenes.FlatAppearance.BorderSize = 0;
             this.btnOrdenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrdenes.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnOrdenes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrdenes.Location = new System.Drawing.Point(0, 86);
             this.btnOrdenes.Margin = new System.Windows.Forms.Padding(4);
             this.btnOrdenes.Name = "btnOrdenes";
@@ -232,7 +233,7 @@ namespace Vista_Bancos
             this.btnIngresosEgresos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnIngresosEgresos.FlatAppearance.BorderSize = 0;
             this.btnIngresosEgresos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIngresosEgresos.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnIngresosEgresos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresosEgresos.Location = new System.Drawing.Point(0, 43);
             this.btnIngresosEgresos.Margin = new System.Windows.Forms.Padding(4);
             this.btnIngresosEgresos.Name = "btnIngresosEgresos";
@@ -249,7 +250,7 @@ namespace Vista_Bancos
             this.btnPolizas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPolizas.FlatAppearance.BorderSize = 0;
             this.btnPolizas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPolizas.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnPolizas.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPolizas.Location = new System.Drawing.Point(0, 0);
             this.btnPolizas.Margin = new System.Windows.Forms.Padding(4);
             this.btnPolizas.Name = "btnPolizas";
@@ -267,7 +268,7 @@ namespace Vista_Bancos
             this.btnPartidasCont.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPartidasCont.FlatAppearance.BorderSize = 0;
             this.btnPartidasCont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPartidasCont.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPartidasCont.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPartidasCont.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.btnPartidasCont.Location = new System.Drawing.Point(0, 317);
             this.btnPartidasCont.Margin = new System.Windows.Forms.Padding(4);
@@ -290,18 +291,52 @@ namespace Vista_Bancos
             this.panelConceptosBanc.Controls.Add(this.btnDepositos);
             this.panelConceptosBanc.Controls.Add(this.btnCheques);
             this.panelConceptosBanc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelConceptosBanc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelConceptosBanc.Location = new System.Drawing.Point(0, 48);
             this.panelConceptosBanc.Margin = new System.Windows.Forms.Padding(4);
             this.panelConceptosBanc.Name = "panelConceptosBanc";
             this.panelConceptosBanc.Size = new System.Drawing.Size(295, 269);
             this.panelConceptosBanc.TabIndex = 1;
             // 
+            // btnConcilacionBancaria
+            // 
+            this.btnConcilacionBancaria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConcilacionBancaria.FlatAppearance.BorderSize = 0;
+            this.btnConcilacionBancaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConcilacionBancaria.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConcilacionBancaria.Location = new System.Drawing.Point(0, 215);
+            this.btnConcilacionBancaria.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConcilacionBancaria.Name = "btnConcilacionBancaria";
+            this.btnConcilacionBancaria.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnConcilacionBancaria.Size = new System.Drawing.Size(295, 43);
+            this.btnConcilacionBancaria.TabIndex = 7;
+            this.btnConcilacionBancaria.Text = "Concilación Bancaria";
+            this.btnConcilacionBancaria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConcilacionBancaria.UseVisualStyleBackColor = true;
+            // 
+            // btnBitacora
+            // 
+            this.btnBitacora.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBitacora.FlatAppearance.BorderSize = 0;
+            this.btnBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBitacora.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBitacora.Location = new System.Drawing.Point(0, 172);
+            this.btnBitacora.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBitacora.Name = "btnBitacora";
+            this.btnBitacora.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnBitacora.Size = new System.Drawing.Size(295, 43);
+            this.btnBitacora.TabIndex = 6;
+            this.btnBitacora.Text = "Bitacora";
+            this.btnBitacora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBitacora.UseVisualStyleBackColor = true;
+            this.btnBitacora.Click += new System.EventHandler(this.btnBitacora_Click);
+            // 
             // btnMovBanc
             // 
             this.btnMovBanc.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMovBanc.FlatAppearance.BorderSize = 0;
             this.btnMovBanc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMovBanc.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnMovBanc.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMovBanc.Location = new System.Drawing.Point(0, 129);
             this.btnMovBanc.Margin = new System.Windows.Forms.Padding(4);
             this.btnMovBanc.Name = "btnMovBanc";
@@ -318,7 +353,7 @@ namespace Vista_Bancos
             this.btnDisponibilidad.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDisponibilidad.FlatAppearance.BorderSize = 0;
             this.btnDisponibilidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDisponibilidad.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnDisponibilidad.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisponibilidad.Location = new System.Drawing.Point(0, 86);
             this.btnDisponibilidad.Margin = new System.Windows.Forms.Padding(4);
             this.btnDisponibilidad.Name = "btnDisponibilidad";
@@ -335,7 +370,7 @@ namespace Vista_Bancos
             this.btnDepositos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDepositos.FlatAppearance.BorderSize = 0;
             this.btnDepositos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDepositos.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnDepositos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDepositos.Location = new System.Drawing.Point(0, 43);
             this.btnDepositos.Margin = new System.Windows.Forms.Padding(4);
             this.btnDepositos.Name = "btnDepositos";
@@ -352,7 +387,7 @@ namespace Vista_Bancos
             this.btnCheques.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCheques.FlatAppearance.BorderSize = 0;
             this.btnCheques.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCheques.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.btnCheques.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheques.Location = new System.Drawing.Point(0, 0);
             this.btnCheques.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheques.Name = "btnCheques";
@@ -370,7 +405,7 @@ namespace Vista_Bancos
             this.Procesos.Dock = System.Windows.Forms.DockStyle.Top;
             this.Procesos.FlatAppearance.BorderSize = 0;
             this.Procesos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Procesos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Procesos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Procesos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.Procesos.Location = new System.Drawing.Point(0, 0);
             this.Procesos.Margin = new System.Windows.Forms.Padding(4);
@@ -391,39 +426,6 @@ namespace Vista_Bancos
             this.logop.Name = "logop";
             this.logop.Size = new System.Drawing.Size(867, 532);
             this.logop.TabIndex = 6;
-            // 
-            // btnBitacora
-            // 
-            this.btnBitacora.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBitacora.FlatAppearance.BorderSize = 0;
-            this.btnBitacora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBitacora.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnBitacora.Location = new System.Drawing.Point(0, 172);
-            this.btnBitacora.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBitacora.Name = "btnBitacora";
-            this.btnBitacora.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnBitacora.Size = new System.Drawing.Size(295, 43);
-            this.btnBitacora.TabIndex = 6;
-            this.btnBitacora.Text = "Bitacora";
-            this.btnBitacora.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBitacora.UseVisualStyleBackColor = true;
-            this.btnBitacora.Click += new System.EventHandler(this.btnBitacora_Click);
-            // 
-            // btnConcilacionBancaria
-            // 
-            this.btnConcilacionBancaria.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnConcilacionBancaria.FlatAppearance.BorderSize = 0;
-            this.btnConcilacionBancaria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConcilacionBancaria.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.btnConcilacionBancaria.Location = new System.Drawing.Point(0, 215);
-            this.btnConcilacionBancaria.Margin = new System.Windows.Forms.Padding(4);
-            this.btnConcilacionBancaria.Name = "btnConcilacionBancaria";
-            this.btnConcilacionBancaria.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.btnConcilacionBancaria.Size = new System.Drawing.Size(295, 43);
-            this.btnConcilacionBancaria.TabIndex = 7;
-            this.btnConcilacionBancaria.Text = "Concilación Bancaria";
-            this.btnConcilacionBancaria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConcilacionBancaria.UseVisualStyleBackColor = true;
             // 
             // Banco_Form
             // 

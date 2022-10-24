@@ -47,7 +47,7 @@ namespace Vista_Bancos
 
         private void navegador1_Load_1(object sender, EventArgs e)
         {
-            NavegadorVista.Navegador.idApp = "7000";
+            NavegadorVista.Navegador.idApp = "7003";
             TextBox[] Grupotextbox = { txtID, txtFecha, txtCompra, txtVenta, txtMoneda };
             TextBox[] Idtextbox = { txtID, txtFecha };
             navegador1.textbox = Grupotextbox;
