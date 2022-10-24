@@ -94,6 +94,12 @@
     <Compile Include="ConceptoPoliza.Designer.cs">
       <DependentUpon>ConceptoPoliza.cs</DependentUpon>
     </Compile>
+    <Compile Include="Conciliacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Conciliacion.Designer.cs">
+      <DependentUpon>Conciliacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="DisponibilidadD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,12 @@
     <Compile Include="NuevaPoliza.Designer.cs">
       <DependentUpon>NuevaPoliza.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ordenes_Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordenes_Compras.Designer.cs">
+      <DependentUpon>Ordenes_Compras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Polizas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +147,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Conciliacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Conciliacion.Designer.cs">
+      <DependentUpon>Reporte_Conciliacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte_Orden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte_Orden.Designer.cs">
+      <DependentUpon>Reporte_Orden.cs</DependentUpon>
     </Compile>
     <Compile Include="tipoCambio.cs">
       <SubType>Form</SubType>
@@ -156,6 +180,9 @@
     <EmbeddedResource Include="ConceptoPoliza.resx">
       <DependentUpon>ConceptoPoliza.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Conciliacion.resx">
+      <DependentUpon>Conciliacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DisponibilidadD.resx">
       <DependentUpon>DisponibilidadD.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,12 +199,21 @@
     <EmbeddedResource Include="NuevaPoliza.resx">
       <DependentUpon>NuevaPoliza.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ordenes_Compras.resx">
+      <DependentUpon>Ordenes_Compras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Polizas.resx">
       <DependentUpon>Polizas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Conciliacion.resx">
+      <DependentUpon>Reporte_Conciliacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte_Orden.resx">
+      <DependentUpon>Reporte_Orden.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tipoCambio.resx">
       <DependentUpon>tipoCambio.cs</DependentUpon>

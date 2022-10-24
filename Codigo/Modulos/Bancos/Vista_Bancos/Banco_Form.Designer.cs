@@ -313,6 +313,7 @@ namespace Vista_Bancos
             this.btnConcilacionBancaria.Text = "Concilación Bancaria";
             this.btnConcilacionBancaria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConcilacionBancaria.UseVisualStyleBackColor = true;
+            this.btnConcilacionBancaria.Click += new System.EventHandler(this.btnConcilacionBancaria_Click);
             // 
             // btnBitacora
             // 
