@@ -30,5 +30,17 @@ namespace Vista_Bancos
             // nuv.MdiParent = this;
             nuv.Show();
         }
+
+        private void conceptoPolizasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConceptoPoliza conpol = new ConceptoPoliza();
+            // nuv.MdiParent = this;
+            conpol.Show();
+        }
+
+        private void imprimirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
