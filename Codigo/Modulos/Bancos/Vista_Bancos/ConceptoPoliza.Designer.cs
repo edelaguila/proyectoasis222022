@@ -31,11 +31,13 @@ namespace Vista_Bancos
         {
             this.navegador1 = new NavegadorVista.Navegador();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txt_tipopoli = new System.Windows.Forms.TextBox();
+            this.txt_clave = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_despoli = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // navegador1
@@ -48,30 +50,30 @@ namespace Vista_Bancos
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 198);
+            this.label1.Location = new System.Drawing.Point(27, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tipo";
             // 
-            // textBox1
+            // txt_tipopoli
             // 
-            this.textBox1.Location = new System.Drawing.Point(108, 195);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.txt_tipopoli.Location = new System.Drawing.Point(61, 194);
+            this.txt_tipopoli.Name = "txt_tipopoli";
+            this.txt_tipopoli.Size = new System.Drawing.Size(100, 20);
+            this.txt_tipopoli.TabIndex = 3;
             // 
-            // textBox2
+            // txt_clave
             // 
-            this.textBox2.Location = new System.Drawing.Point(421, 195);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.txt_clave.Location = new System.Drawing.Point(492, 194);
+            this.txt_clave.Name = "txt_clave";
+            this.txt_clave.Size = new System.Drawing.Size(100, 20);
+            this.txt_clave.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(381, 197);
+            this.label2.Location = new System.Drawing.Point(452, 197);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 5;
@@ -80,33 +82,43 @@ namespace Vista_Bancos
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(212, 248);
+            this.label3.Location = new System.Drawing.Point(212, 201);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Descripción";
             // 
-            // textBox3
+            // txt_despoli
             // 
-            this.textBox3.Location = new System.Drawing.Point(311, 248);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
+            this.txt_despoli.Location = new System.Drawing.Point(292, 197);
+            this.txt_despoli.Name = "txt_despoli";
+            this.txt_despoli.Size = new System.Drawing.Size(100, 20);
+            this.txt_despoli.TabIndex = 7;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(119, 248);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(425, 78);
+            this.dataGridView1.TabIndex = 8;
             // 
             // ConceptoPoliza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 292);
-            this.Controls.Add(this.textBox3);
+            this.ClientSize = new System.Drawing.Size(635, 360);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txt_despoli);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_clave);
+            this.Controls.Add(this.txt_tipopoli);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.navegador1);
             this.Name = "ConceptoPoliza";
             this.Text = "ConceptoPoliza";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,10 +128,11 @@ namespace Vista_Bancos
 
         private NavegadorVista.Navegador navegador1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txt_tipopoli;
+        private System.Windows.Forms.TextBox txt_clave;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_despoli;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

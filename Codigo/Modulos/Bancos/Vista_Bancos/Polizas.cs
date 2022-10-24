@@ -40,7 +40,8 @@ namespace Vista_Bancos
 
         private void imprimirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Imprimir frm_im = new Imprimir();
+            frm_im.Show();
         }
     }
 }
