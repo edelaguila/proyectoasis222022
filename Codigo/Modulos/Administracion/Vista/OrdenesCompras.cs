@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Vista
+namespace ComprasVista
 {
     public partial class OrdenesCompras : Form
     {
         public OrdenesCompras()
         {
             InitializeComponent();
+        }
+
+        private void OrdenesCompras_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
