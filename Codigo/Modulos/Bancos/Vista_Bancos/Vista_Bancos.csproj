@@ -100,6 +100,12 @@
     <Compile Include="DisponibilidadD.Designer.cs">
       <DependentUpon>DisponibilidadD.cs</DependentUpon>
     </Compile>
+    <Compile Include="MovBancos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MovBancos.Designer.cs">
+      <DependentUpon>MovBancos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Imprimir.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MntCuentas.resx">
       <DependentUpon>MntCuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MovBancos.resx">
+      <DependentUpon>MovBancos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevaPoliza.resx">
       <DependentUpon>NuevaPoliza.cs</DependentUpon>

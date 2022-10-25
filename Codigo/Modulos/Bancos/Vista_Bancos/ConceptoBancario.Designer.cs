@@ -36,13 +36,13 @@ namespace Vista_Bancos
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,7 +96,7 @@ namespace Vista_Bancos
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(461, 202);
+            this.label4.Location = new System.Drawing.Point(445, 202);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 17);
             this.label4.TabIndex = 33;
@@ -105,33 +105,11 @@ namespace Vista_Bancos
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(461, 267);
+            this.label5.Location = new System.Drawing.Point(465, 267);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 17);
             this.label5.TabIndex = 34;
             this.label5.Text = "Estado";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Cargo",
-            "Abono"});
-            this.comboBox1.Location = new System.Drawing.Point(553, 199);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 36;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "0",
-            "1"});
-            this.comboBox2.Location = new System.Drawing.Point(553, 267);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(36, 24);
-            this.comboBox2.TabIndex = 37;
             // 
             // textBox1
             // 
@@ -159,7 +137,7 @@ namespace Vista_Bancos
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(696, 199);
+            this.textBox4.Location = new System.Drawing.Point(688, 197);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(112, 22);
             this.textBox4.TabIndex = 41;
@@ -168,25 +146,49 @@ namespace Vista_Bancos
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(696, 262);
+            this.textBox5.Location = new System.Drawing.Point(688, 262);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(112, 22);
             this.textBox5.TabIndex = 42;
             this.textBox5.Tag = "Estado";
             this.textBox5.Visible = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Cargo",
+            "Abono"});
+            this.comboBox1.Location = new System.Drawing.Point(553, 199);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 43;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "0",
+            "1"});
+            this.comboBox2.Location = new System.Drawing.Point(553, 264);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(37, 24);
+            this.comboBox2.TabIndex = 44;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
             // ConceptoBancario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 585);
+            this.ClientSize = new System.Drawing.Size(827, 590);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -212,12 +214,12 @@ namespace Vista_Bancos
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
     }
 }

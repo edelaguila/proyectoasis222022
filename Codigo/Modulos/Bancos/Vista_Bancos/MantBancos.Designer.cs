@@ -39,6 +39,8 @@ namespace Vista_Bancos
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.navegador1 = new NavegadorVista.Navegador();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,11 +132,30 @@ namespace Vista_Bancos
             this.navegador1.TabIndex = 29;
             this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(545, 289);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 17);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Banco";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(611, 286);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 22);
+            this.textBox5.TabIndex = 31;
+            this.textBox5.Tag = "Saldo_banco";
+            // 
             // MantBancos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 645);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.navegador1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
@@ -164,5 +185,7 @@ namespace Vista_Bancos
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private NavegadorVista.Navegador navegador1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
