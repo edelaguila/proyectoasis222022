@@ -33,9 +33,26 @@ namespace Vista_Bancos
 
         private void button1_Click(object sender, EventArgs e)
         {
-            txt_montoLetras.Text = con.enletras(txt_Monto.Text).ToUpper();
+            txtMontoLetras.Text = con.enletras(txtMonto.Text).ToUpper();
             Imprimir frm_imp = new Imprimir();
             frm_imp.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void navegador2_Load(object sender, EventArgs e)
+        {
+            NavegadorVista.Navegador.idApp = "7003";
+            TextBox[] Grupotextbox = { txtID, txtIDCuentaBancaria, txtIDConcepto, txtMonto, txtFechaReg, txtFechaAp, txtMontoLetras, txtIDBanco };
+            TextBox[] Idtextbox = { txtID, txtIDCuentaBancaria };
+            navegador1.textbox = Grupotextbox;
+            navegador1.tabla = dataGridView1;
+            navegador1.textboxi = Idtextbox;
+            navegador1.actual = this;
+            navegador1.cargar(dataGridView1, Grupotextbox, "tbl_ctrl_cheques");
         }
     }
 }
