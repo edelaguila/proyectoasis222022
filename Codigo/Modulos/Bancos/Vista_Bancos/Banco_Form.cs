@@ -115,6 +115,10 @@ namespace Vista_Bancos
         private void btnMovBanc_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            MovBancos frm_mantbancos = new MovBancos();
+            frm_mantbancos.MdiParent = this;
+            frm_mantbancos.Show();
+            logop.Visible = false;
         }
 
         private void btnTipoDeCambio_Click(object sender, EventArgs e)

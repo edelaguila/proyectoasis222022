@@ -10,23 +10,23 @@ using System.Windows.Forms;
 
 namespace Vista_Bancos
 {
-    public partial class MantBancos : Form
+    public partial class MovBancos : Form
     {
-        public MantBancos()
+        public MovBancos()
         {
             InitializeComponent();
         }
 
         private void navegador1_Load(object sender, EventArgs e)
         {
-            NavegadorVista.Navegador.idApp = "7001";
-            TextBox[] Grupotextbox = { textBox1, textBox2, textBox3, textBox4, textBox5 };
+            NavegadorVista.Navegador.idApp = "7002";
+            TextBox[] Grupotextbox = { textBox1, textBox2, textBox3, textBox4 };
             TextBox[] Idtextbox = { textBox1, textBox2 };
             navegador1.textbox = Grupotextbox;
             navegador1.tabla = dataGridView1;
             navegador1.textboxi = Idtextbox;
             navegador1.actual = this;
-            navegador1.cargar(dataGridView1, Grupotextbox, "Tbl_bancos");
+            navegador1.cargar(dataGridView1, Grupotextbox, "Tbl_Cuentas");
         }
     }
 }
