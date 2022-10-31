@@ -50,8 +50,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="Vista_Bancos">
-      <HintPath>..\..\..\..\..\..\..\BANCARIO\proyectofinalasis222022\Codigo\Modulos\Bancos\Vista_Bancos\bin\Debug\Vista_Bancos.dll</HintPath>
+    <Reference Include="Vista_Bancos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Modulos\Bancos\Vista_Bancos\bin\Debug\Vista_Bancos.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
