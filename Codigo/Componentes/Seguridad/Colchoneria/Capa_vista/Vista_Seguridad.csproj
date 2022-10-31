@@ -31,11 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaModelo">
+      <HintPath>..\..\..\..\..\..\..\Parcial Serie 3\Prototipo2P\CapaVista\bin\Debug\CapaModelo.dll</HintPath>
+    </Reference>
     <Reference Include="eCryptography, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Eramake.eCryptography.1.1.6\lib\net45\eCryptography.dll</HintPath>
-    </Reference>
-    <Reference Include="Modelo">
-      <HintPath>..\Capa_controlador\bin\Debug\Modelo.dll</HintPath>
     </Reference>
     <Reference Include="Seguridad_Controlador">
       <HintPath>..\Capa_controlador\bin\Debug\Seguridad_Controlador.dll</HintPath>
@@ -50,8 +50,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="Vista_Bancos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Vista_Bancos">
       <HintPath>..\..\..\..\Modulos\Bancos\Vista_Bancos\bin\Debug\Vista_Bancos.dll</HintPath>
     </Reference>
   </ItemGroup>

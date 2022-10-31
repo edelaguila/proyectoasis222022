@@ -147,6 +147,10 @@ namespace Vista_Bancos
         private void btnEgresos_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            Ordenes_Compras form_orde = new Ordenes_Compras();
+            form_orde.MdiParent = this;
+            form_orde.Show();
+            logop.Visible = false;
         }
 
         private void btnRepBanc_Click(object sender, EventArgs e)
@@ -192,6 +196,14 @@ namespace Vista_Bancos
             tipoCambio frm_tcambio = new tipoCambio();
             frm_tcambio.MdiParent = this;
             frm_tcambio.Show();
+            logop.Visible = false;
+        }
+
+        private void btnConcilacionBancaria_Click(object sender, EventArgs e)
+        {
+            Conciliacion form_conci = new Conciliacion();
+            form_conci.MdiParent = this;
+            form_conci.Show();
             logop.Visible = false;
         }
     }
