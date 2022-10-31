@@ -16,5 +16,17 @@ namespace Vista_Bancos
         {
             InitializeComponent();
         }
+
+        private void navegador1_Load(object sender, EventArgs e)
+        {
+            NavegadorVista.Navegador.idApp = "7002";
+            TextBox[] Grupotextbox = { textBox1, textBox2, textBox3, textBox4 };
+            TextBox[] Idtextbox = { textBox1, textBox2 };
+            navegador1.textbox = Grupotextbox;
+            navegador1.tabla = dataGridView1;
+            navegador1.textboxi = Idtextbox;
+            navegador1.actual = this;
+            navegador1.cargar(dataGridView1, Grupotextbox, "Tbl_Cuentas");
+        }
     }
 }
