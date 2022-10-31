@@ -100,6 +100,12 @@
     <Compile Include="Conciliacion.Designer.cs">
       <DependentUpon>Conciliacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="consultaPoliza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultaPoliza.Designer.cs">
+      <DependentUpon>consultaPoliza.cs</DependentUpon>
+    </Compile>
     <Compile Include="DisponibilidadD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Conciliacion.resx">
       <DependentUpon>Conciliacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultaPoliza.resx">
+      <DependentUpon>consultaPoliza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DisponibilidadD.resx">
       <DependentUpon>DisponibilidadD.cs</DependentUpon>

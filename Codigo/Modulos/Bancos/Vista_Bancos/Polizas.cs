@@ -26,7 +26,7 @@ namespace Vista_Bancos
 
         private void consultarPólizasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            NuevaPoliza nuv = new NuevaPoliza();
+            consultaPoliza nuv = new consultaPoliza();
             // nuv.MdiParent = this;
             nuv.Show();
         }
