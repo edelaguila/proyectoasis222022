@@ -19,7 +19,7 @@ namespace Vista_Bancos
 
         private void navegador1_Load_1(object sender, EventArgs e)
         {
-            NavegadorVista.Navegador.idApp = "7008";
+            NavegadorVista.Navegador.idApp = "7003";
             TextBox[] Grupotextbox = { txt_descpoli,txt_nopoli };
             TextBox[] Idtextbox = { txt_descpoli, txt_nopoli };
             navegador1.textbox = Grupotextbox;
@@ -29,5 +29,13 @@ namespace Vista_Bancos
             navegador1.cargar(dataGridView1, Grupotextbox, "tbl_polizasbancarias");
         }
 
+       
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txt_fechapoli.Text = fecha_poli.Value.ToString("dd/MM/yyyy");
+            txt_ctapoli.Text = cmb_cta.Text;
+            txt_elepoli.Text = cmb_ele.Text;
+            this.Enabled = true;
+        }
     }
 }

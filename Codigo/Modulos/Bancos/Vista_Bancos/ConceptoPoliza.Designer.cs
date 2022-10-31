@@ -31,8 +31,8 @@ namespace Vista_Bancos
         {
             this.navegador1 = new NavegadorVista.Navegador();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_tipopoli = new System.Windows.Forms.TextBox();
-            this.txt_clave = new System.Windows.Forms.TextBox();
+            this.txt_idtipopoli = new System.Windows.Forms.TextBox();
+            this.txt_estadopoli = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_despoli = new System.Windows.Forms.TextBox();
@@ -52,32 +52,34 @@ namespace Vista_Bancos
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(27, 197);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Tipo";
+            this.label1.Text = "ID";
             // 
-            // txt_tipopoli
+            // txt_idtipopoli
             // 
-            this.txt_tipopoli.Location = new System.Drawing.Point(61, 194);
-            this.txt_tipopoli.Name = "txt_tipopoli";
-            this.txt_tipopoli.Size = new System.Drawing.Size(100, 20);
-            this.txt_tipopoli.TabIndex = 3;
+            this.txt_idtipopoli.Location = new System.Drawing.Point(61, 194);
+            this.txt_idtipopoli.Name = "txt_idtipopoli";
+            this.txt_idtipopoli.Size = new System.Drawing.Size(100, 20);
+            this.txt_idtipopoli.TabIndex = 3;
+            this.txt_idtipopoli.Tag = "Pk_TipoPoliza";
             // 
-            // txt_clave
+            // txt_estadopoli
             // 
-            this.txt_clave.Location = new System.Drawing.Point(492, 194);
-            this.txt_clave.Name = "txt_clave";
-            this.txt_clave.Size = new System.Drawing.Size(100, 20);
-            this.txt_clave.TabIndex = 4;
+            this.txt_estadopoli.Location = new System.Drawing.Point(492, 194);
+            this.txt_estadopoli.Name = "txt_estadopoli";
+            this.txt_estadopoli.Size = new System.Drawing.Size(100, 20);
+            this.txt_estadopoli.TabIndex = 4;
+            this.txt_estadopoli.Tag = "status_tipoPoliza";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(452, 197);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Clave";
+            this.label2.Text = "Estado";
             // 
             // label3
             // 
@@ -94,6 +96,7 @@ namespace Vista_Bancos
             this.txt_despoli.Name = "txt_despoli";
             this.txt_despoli.Size = new System.Drawing.Size(100, 20);
             this.txt_despoli.TabIndex = 7;
+            this.txt_despoli.Tag = "descripcion";
             // 
             // dataGridView1
             // 
@@ -112,8 +115,8 @@ namespace Vista_Bancos
             this.Controls.Add(this.txt_despoli);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txt_clave);
-            this.Controls.Add(this.txt_tipopoli);
+            this.Controls.Add(this.txt_estadopoli);
+            this.Controls.Add(this.txt_idtipopoli);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.navegador1);
             this.Name = "ConceptoPoliza";
@@ -128,8 +131,8 @@ namespace Vista_Bancos
 
         private NavegadorVista.Navegador navegador1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_tipopoli;
-        private System.Windows.Forms.TextBox txt_clave;
+        private System.Windows.Forms.TextBox txt_idtipopoli;
+        private System.Windows.Forms.TextBox txt_estadopoli;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_despoli;
