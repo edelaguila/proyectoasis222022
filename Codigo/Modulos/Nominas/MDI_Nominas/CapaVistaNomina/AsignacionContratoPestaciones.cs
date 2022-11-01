@@ -47,6 +47,7 @@ namespace CapaVistaNomina
             }
             if (permisos[1] == 1)//Modifcar
             {
+
             }
             if (permisos[2] == 1)//Eliminar
             {
@@ -56,9 +57,11 @@ namespace CapaVistaNomina
             }
             if (permisos[3] == 1)//Consultar
             {
+
             }
             if (permisos[4] == 1)//Reportes
             {
+
             }
         }
 
