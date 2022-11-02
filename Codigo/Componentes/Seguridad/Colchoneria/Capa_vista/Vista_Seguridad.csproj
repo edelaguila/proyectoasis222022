@@ -33,6 +33,10 @@
   <ItemGroup>
     <Reference Include="CapaModelo">
       <HintPath>..\..\..\..\..\..\..\Parcial Serie 3\Prototipo2P\CapaVista\bin\Debug\CapaModelo.dll</HintPath>
+    <Reference Include="CapaVistaNomina, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Modulos\Nominas\MDI_Nominas\CapaVistaNomina\bin\Debug\CapaVistaNomina.dll</HintPath>
+
     </Reference>
     <Reference Include="eCryptography, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Eramake.eCryptography.1.1.6\lib\net45\eCryptography.dll</HintPath>
@@ -53,6 +57,8 @@
     <Reference Include="Vista_Bancos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\Modulos\Bancos\Vista_Bancos\bin\Debug\Vista_Bancos.dll</HintPath>
+    <Reference Include="VistaLogistica">
+      <HintPath>..\..\..\..\Modulos\Logistica\VistaLogistica\bin\Debug\VistaLogistica.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
