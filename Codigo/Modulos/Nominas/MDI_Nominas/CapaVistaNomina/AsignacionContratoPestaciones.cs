@@ -37,6 +37,7 @@ namespace CapaVistaNomina
             btn_asignarUT.Enabled = false;
             btn_quitarUU.Enabled = false;
             btn_quitarUT.Enabled = false;
+            btn_Reporte.Enabled = false;
 
             int[] permisos = controladorSeguridad.getPermisosAplicaion("6104");
             if (permisos[0] == 1)//Guardar
@@ -61,7 +62,7 @@ namespace CapaVistaNomina
             }
             if (permisos[4] == 1)//Reportes
             {
-
+                btn_Reporte.Enabled = true;
             }
         }
 
@@ -166,7 +167,13 @@ namespace CapaVistaNomina
 
         private void btn_Reporte_Click(object sender, EventArgs e)
         {
-
+            if (controladorNomina.validarReporte("6104"))
+            {
+                string path = controladorNomina.buscarPathReporte("6104");
+                Console.WriteLine(path);
+                CapaVistaReporteria.visualizar b = new CapaVistaReporteria.visualizar(path);
+                b.Show();
+            }
         }
     }
 }

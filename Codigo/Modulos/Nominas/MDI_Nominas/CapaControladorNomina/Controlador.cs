@@ -84,6 +84,25 @@ namespace CapaControladorNomina
 
             return respuesta;
         }
+
+        public Boolean validarReporte(string idApp)
+        {
+            Boolean respuesta = false;
+            string tabla = "tbl_regreporteria";
+            string clausula = "aplicacion='" + idApp + "' AND estado='Visible'";
+            respuesta = sn.CountQuery(tabla, clausula) == 0 ? false : true;
+            return respuesta;
+        }
+        public string buscarPathReporte(string idApp)
+        {
+            string path = "";
+            string campos = "ruta";
+            string tabla = "tbl_regreporteria";
+            string clausula = "aplicacion='" + idApp +"'";
+            string[] data = sn.Query(campos, tabla, clausula);
+            return path = data[0];
+        }
+
         public void eliminarContratoPercepcion(string contrato, string percepcion)
         {
             string tabla = "tbl_asignacion_contratopercepciones";

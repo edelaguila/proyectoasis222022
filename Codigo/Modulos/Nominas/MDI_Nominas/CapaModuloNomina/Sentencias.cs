@@ -30,7 +30,7 @@ namespace CapaModuloNomina
         public string[] Query(string campoSolicitado, string tabla, string clausula)//Leonel Dominguez
         {
             string[] respuesta = new string[100];
-            string sql = "SELECT "+campoSolicitado+" FROM "+tabla+ " WHERE "+clausula+";";
+            string sql = "SELECT "+campoSolicitado+ " FROM colchoneria." + tabla+ " WHERE "+clausula+";";
             try
             {
                 OdbcCommand command = new OdbcCommand(sql, con.conexion());
@@ -120,7 +120,7 @@ namespace CapaModuloNomina
 
         public int CountQuery(string tabla, string clausulas)
         {
-            string sql = "SELECT COUNT(*) FROM "+ tabla +" WHERE "+ clausulas +";";
+            string sql = "SELECT COUNT(*) FROM colchoneria." + tabla +" WHERE "+ clausulas +";";
             OdbcCommand command = new OdbcCommand(sql, con.conexion());
             int count = Convert.ToInt32(command.ExecuteScalar());
             return count;
