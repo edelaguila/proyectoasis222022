@@ -163,5 +163,10 @@ namespace CapaVistaNomina
                 MessageBox.Show("Existen campos vacios, seleccione un contrato");
             }
         }
+
+        private void btn_Reporte_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

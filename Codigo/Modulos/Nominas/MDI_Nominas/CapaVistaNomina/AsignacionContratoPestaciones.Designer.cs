@@ -46,6 +46,7 @@ namespace CapaVistaNomina
             this.tbl_asignacion_contratopercepciones = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_Reporte = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_percepciones)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_asignacion_contratopercepciones)).BeginInit();
@@ -183,9 +184,9 @@ namespace CapaVistaNomina
             this.label1.Location = new System.Drawing.Point(4, 19);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(691, 48);
+            this.label1.Size = new System.Drawing.Size(617, 48);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Asiganación de Contrato a Percepciones";
+            this.label1.Text = "Asignación percepciones a contrato";
             // 
             // panel1
             // 
@@ -268,11 +269,27 @@ namespace CapaVistaNomina
             this.btn_cancelar.UseVisualStyleBackColor = false;
             this.btn_cancelar.Click += new System.EventHandler(this.button7_Click);
             // 
+            // btn_Reporte
+            // 
+            this.btn_Reporte.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_Reporte.BackColor = System.Drawing.Color.Salmon;
+            this.btn_Reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Reporte.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reporte.Location = new System.Drawing.Point(496, 579);
+            this.btn_Reporte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Reporte.Name = "btn_Reporte";
+            this.btn_Reporte.Size = new System.Drawing.Size(152, 49);
+            this.btn_Reporte.TabIndex = 58;
+            this.btn_Reporte.Text = "REPORTE";
+            this.btn_Reporte.UseVisualStyleBackColor = false;
+            this.btn_Reporte.Click += new System.EventHandler(this.btn_Reporte_Click);
+            // 
             // AsignacionContratoPestaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1239, 638);
+            this.Controls.Add(this.btn_Reporte);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.tbl_asignacion_contratopercepciones);
             this.Controls.Add(this.label3);
@@ -320,5 +337,6 @@ namespace CapaVistaNomina
         private System.Windows.Forms.DataGridView tbl_asignacion_contratopercepciones;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn_cancelar;
+        private System.Windows.Forms.Button btn_Reporte;
     }
 }
