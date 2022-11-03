@@ -59,10 +59,10 @@ namespace Vista_Bancos
             switch (indice2)
             {
                 case 0:
-                    textBox4.Text = "0";
+                    textBox5.Text = "0";
                     break;
                 case 1:
-                    textBox4.Text = "1";
+                    textBox5.Text = "1";
                     break;
             }
         }

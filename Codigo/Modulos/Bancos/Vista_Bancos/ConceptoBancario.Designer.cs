@@ -142,7 +142,6 @@ namespace Vista_Bancos
             this.textBox4.Size = new System.Drawing.Size(112, 22);
             this.textBox4.TabIndex = 41;
             this.textBox4.Tag = "Clasificacion";
-            this.textBox4.Visible = false;
             // 
             // textBox5
             // 
@@ -151,7 +150,6 @@ namespace Vista_Bancos
             this.textBox5.Size = new System.Drawing.Size(112, 22);
             this.textBox5.TabIndex = 42;
             this.textBox5.Tag = "Estado";
-            this.textBox5.Visible = false;
             // 
             // comboBox1
             // 
