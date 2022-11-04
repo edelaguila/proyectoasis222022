@@ -77,6 +77,12 @@
     <Compile Include="Banco_Form.Designer.cs">
       <DependentUpon>Banco_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bitacora.Designer.cs">
+      <DependentUpon>Bitacora.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cheque.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Banco_Form.resx">
       <DependentUpon>Banco_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bitacora.resx">
+      <DependentUpon>Bitacora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cheque.resx">
       <DependentUpon>Cheque.cs</DependentUpon>

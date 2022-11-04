@@ -272,6 +272,7 @@ namespace Vista_Bancos
             // 
             // textBox9
             // 
+            this.textBox9.Enabled = false;
             this.textBox9.Location = new System.Drawing.Point(337, 291);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(100, 22);
@@ -279,6 +280,7 @@ namespace Vista_Bancos
             // 
             // textBox10
             // 
+            this.textBox10.Enabled = false;
             this.textBox10.Location = new System.Drawing.Point(337, 318);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(100, 22);
@@ -286,9 +288,10 @@ namespace Vista_Bancos
             // 
             // textBox12
             // 
+            this.textBox12.Enabled = false;
             this.textBox12.Location = new System.Drawing.Point(603, 233);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(100, 22);
+            this.textBox12.Size = new System.Drawing.Size(197, 22);
             this.textBox12.TabIndex = 56;
             // 
             // monedapanel
@@ -315,7 +318,7 @@ namespace Vista_Bancos
             // bancospanel
             // 
             this.bancospanel.Controls.Add(this.dataGridView3);
-            this.bancospanel.Location = new System.Drawing.Point(21, 258);
+            this.bancospanel.Location = new System.Drawing.Point(4, 258);
             this.bancospanel.Name = "bancospanel";
             this.bancospanel.Size = new System.Drawing.Size(619, 234);
             this.bancospanel.TabIndex = 58;

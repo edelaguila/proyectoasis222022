@@ -179,6 +179,10 @@ namespace Vista_Bancos
         private void btnBitacora_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            Bitacora frm_bcora = new Bitacora();
+            frm_bcora.MdiParent = this;
+            frm_bcora.Show();
+            logop.Visible = false;
         }
 
         private void CncBancario_Click(object sender, EventArgs e)
