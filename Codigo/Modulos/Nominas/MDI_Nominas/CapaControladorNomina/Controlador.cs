@@ -7,6 +7,7 @@ using CapaModuloNomina;
 using System.Data;
 using System.Data.Odbc;
 using System.Windows.Forms;
+using System.IO;
 
 namespace CapaControladorNomina
 {
@@ -71,6 +72,18 @@ namespace CapaControladorNomina
             if(!sn.Insert(campos, tabla, datos))
             {
                 MessageBox.Show("NO SE PUDO REGISTRAR LA ASIGNACIÓN");
+            }
+        }
+
+        public void mostrarReporte(Form forma, string url)
+        {
+            try
+            {
+                Help.ShowHelpIndex(forma, Path.GetFullPath("..\\..\\..\\..\\..\\..\\..\\Ayuda\\Modulos\\Nominas\\" + url));
+            }
+            catch
+            {
+                MessageBox.Show("NO SE PUEDE CARGAR LA AYUDA");
             }
         }
 
