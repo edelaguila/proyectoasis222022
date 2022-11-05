@@ -45,7 +45,7 @@ namespace Vista_Seguridad
         {
             VistaLogistica.Menu b = new VistaLogistica.Menu();
               b.Show();
-            cn.setBtitacora("2000", "Ingreso Logistica");
+            cn.setBtitacora("2000", "Ingreso Logistica"); 
         }
 
         private void btnLogout_Click_1(object sender, EventArgs e)
@@ -60,14 +60,14 @@ namespace Vista_Seguridad
         {
             ComprasVista.central_Compra b = new ComprasVista.central_Compra();
             b.Show();
-            cn.setBtitacora("3000", "Ingreso Compras");
+            cn.setBtitacora("3000", "Ingreso Compras"); 
         }
 
         private void btnProduccion_Click(object sender, EventArgs e)
         {
             CapaVistaProduccion.inicio b = new CapaVistaProduccion.inicio();
            b.Show();
-            cn.setBtitacora("5000", "Ingreso Produccion");
+            cn.setBtitacora("5000", "Ingreso Produccion"); 
         }
 
         private void btnnominas_Click(object sender, EventArgs e)
@@ -81,7 +81,7 @@ namespace Vista_Seguridad
         {
            Vista_Bancos.Banco_Form b = new Vista_Bancos.Banco_Form();
            b.Show();
-           cn.setBtitacora("7000", "Ingreso Bancos");
+           cn.setBtitacora("7000", "Ingreso Bancos"); 
         }
 
         private void btnContabilidad_Click(object sender, EventArgs e)

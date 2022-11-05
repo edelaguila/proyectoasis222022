@@ -167,7 +167,8 @@ namespace ComprasVista
         private void btnComprobantesClientes_Click(object sender, EventArgs e)
         {
             //Codigo
-            
+            Cotizaciones ct = new Cotizaciones();
+            ct.Show();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -211,7 +212,8 @@ namespace ComprasVista
         private void btnPagosDia_Click(object sender, EventArgs e)
         {
             //Codigo
-           
+            MovimientosProveedores mv = new MovimientosProveedores();
+            mv.Show();
             //Ocultar submenu
             hideSubMenu();
         }
