@@ -125,6 +125,18 @@
     <Compile Include="Confirmar Cierre Por Cuentas.designer.cs">
       <DependentUpon>Confirmar Cierre Por Cuentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaCCtas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaCCtas.designer.cs">
+      <DependentUpon>ConsultaCCtas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaCGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaCGeneral.designer.cs">
+      <DependentUpon>ConsultaCGeneral.cs</DependentUpon>
+    </Compile>
     <Compile Include="DetallePoliza.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,6 +211,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Confirmar Cierre Por Cuentas.resx">
       <DependentUpon>Confirmar Cierre Por Cuentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaCCtas.resx">
+      <DependentUpon>ConsultaCCtas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaCGeneral.resx">
+      <DependentUpon>ConsultaCGeneral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DetallePoliza.resx">
       <DependentUpon>DetallePoliza.cs</DependentUpon>
