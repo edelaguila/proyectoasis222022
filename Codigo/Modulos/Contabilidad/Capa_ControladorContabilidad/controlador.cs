@@ -377,5 +377,357 @@ namespace Capa_ControladorContabilidad
             return dt;
         }
 
+        //Josue Amaya 0901-19-12421
+        public void ConsultaConta(TextBox txt_boxcodcont, TextBox txt_boxnamecont, string fecha, string cuenta)
+        {
+            try
+            {
+                OdbcConnection con = new OdbcConnection("Dsn=colchoneria");
+                con.Open();
+                OdbcCommand comando = new OdbcCommand("SELECT codigo_contador, nombre_contador FROM tbl_confctascierrre WHERE cuenta_nombre LIKE ('%" + cuenta.Trim() + "%') AND fecha_cierre LIKE ('%" + fecha + "%')", con);
+                OdbcDataReader leer = comando.ExecuteReader();
+                while (leer.Read())
+                {
+                    txt_boxcodcont.Text = leer["codigo_contador"].ToString();
+                    txt_boxnamecont.Text = leer["nombre_contador"].ToString();
+                }
+                con.Close();
+            }
+            catch
+            {
+                String mensaje = "Error al Consultar Contador Encargado";
+                MessageBox.Show(mensaje);
+            }
+
+        }
+
+        //Josue Amaya 0901-19-12421
+        public DataTable ConsultarCtas(string cuenta, String fecha, DataTable dt1, DataTable dt2, DateTimePicker dtime_consulta)
+        {
+            OdbcConnection con = new OdbcConnection("Dsn=colchoneria");
+            String cadena1 = "";
+            String cadena2 = "";
+            con.Open();
+            try
+            {
+                cadena1 = "SELECT fecha,razon,monto FROM  tbl_cierrectasact WHERE nombre_cuenta LIKE ('%" + cuenta.Trim() + "%') AND fecha LIKE ('%" + fecha + "%') ";
+                cadena2 = "SELECT fecha,razon,monto FROM  tbl_cierrectaspas WHERE nombre_cuenta LIKE ('%" + cuenta.Trim() + "%') AND fecha LIKE ('%" + fecha + "%') ";
+                OdbcDataAdapter datos1 = new OdbcDataAdapter(cadena1, con);
+                OdbcDataAdapter datos2 = new OdbcDataAdapter(cadena2, con);
+                datos1.Fill(dt1);
+                datos2.Fill(dt2);
+                OdbcCommand comando1 = new OdbcCommand(cadena1, con);
+                OdbcCommand comando2 = new OdbcCommand(cadena2, con);
+                OdbcDataReader leer;
+                leer = comando1.ExecuteReader();
+                leer = comando2.ExecuteReader();
+                con.Close();
+
+            }
+            catch
+            {
+                String mensaje = "Error al realizar la consulta.";
+                MessageBox.Show(mensaje);
+            }
+            return dt1;
+            return dt2;
+        }
+
+        //Josue Amaya 0901-19-12421
+        public void ConsultaCont2(string finicio, string ffin, TextBox txt_boxcodcont, TextBox txt_boxnamecont)
+        {
+            try
+            {
+                OdbcConnection con = new OdbcConnection("Dsn=colchoneria");
+                con.Open();
+                OdbcCommand comando = new OdbcCommand("SELECT codigo_contador, nombre_contador FROM tbl_cierregeneral WHERE fecha_cierre BETWEEN ('" + finicio + "') AND ('" + ffin + "')", con);
+                OdbcDataReader leer = comando.ExecuteReader();
+                while (leer.Read())
+                {
+                    txt_boxcodcont.Text = leer["codigo_contador"].ToString();
+                    txt_boxnamecont.Text = leer["nombre_contador"].ToString();
+                }
+                con.Close();
+            }
+            catch
+            {
+                String mensaje = "Error al Consultar Contador Encargado";
+                MessageBox.Show(mensaje);
+            }
+        }
+
+        //Josue Amaya 0901-19-12421
+        public DataTable ConsultaCG(string finicio, string ffin, DataTable dt1, DataTable dt2)
+        {
+            OdbcConnection con = new OdbcConnection("Dsn=colchoneria");
+            String cadena1 = "";
+            String cadena2 = "";
+            con.Open();
+            try
+            {
+                cadena1 = "SELECT fecha_cierre, cuenta_nombre, monto_total FROM  tbl_cierreact WHERE fecha_cierre BETWEEN ('" + finicio + "') AND ('" + ffin + "')";
+                cadena2 = "SELECT fecha_cierre, cuenta_nombre, monto_total FROM  tbl_cierrepas WHERE fecha_cierre BETWEEN('" + finicio + "') AND ('" + ffin + "')";
+                OdbcDataAdapter datos1 = new OdbcDataAdapter(cadena1, con);
+                OdbcDataAdapter datos2 = new OdbcDataAdapter(cadena2, con);
+                datos1.Fill(dt1);
+                datos2.Fill(dt2);
+                OdbcCommand comando1 = new OdbcCommand(cadena1, con);
+                OdbcCommand comando2 = new OdbcCommand(cadena2, con);
+                OdbcDataReader leer;
+                leer = comando1.ExecuteReader();
+                leer = comando2.ExecuteReader();
+                con.Close();
+
+            }
+            catch
+            {
+                String mensaje = "Error al realizar la consulta. Cierre Contable No Encontrado";
+                MessageBox.Show(mensaje);
+            }
+            return dt1;
+            return dt2;
+        }
+
+        //Josue Amaya 0901-19-12421
+        public void CargarComboCtas(ComboBox cbo_boxctas)
+        {
+            OdbcConnection con = new OdbcConnection("Dsn=colchoneria");
+            con.Open();
+            OdbcCommand comando = new OdbcCommand("SELECT nombre_cuenta FROM tbl_cuentas", con);
+            OdbcDataReader leer = comando.ExecuteReader();
+            while (leer.Read())
+            {
+                cbo_boxctas.Items.Add(leer["nombre_cuenta"].ToString());
+            }
+        }
+
+        //Josue Amaya 0901-19-12421
+        public bool cierreGAct(string p, string cuenta, float monto, string fecha)
+        {
+            try
+            {
+                using (OdbcConnection con = new OdbcConnection("FIL=MS Access;DSN=colchoneria"))
+                {
+                    OdbcCommand cmd = new OdbcCommand();
+                    con.Open();
+                    cmd.Connection = con;
+
+                    #region Query
+                    string query = @"INSERT INTO tbl_cierreAct (pkid_cierreA,cuenta_nombre,monto_total,fecha_cierre)VALUE(?,?,?,?);";
+                    #endregion
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.Add("@pkid_cierreA", OdbcType.Int).Value = p;
+                    cmd.Parameters.Add("@cuenta_nombre", OdbcType.VarChar).Value = cuenta;
+                    cmd.Parameters.Add("@monto_total", OdbcType.Double).Value = monto;
+                    cmd.Parameters.Add("@fecha_cierre", OdbcType.Date).Value = fecha;
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+                    con.Close();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        //Josue Amaya 0901-19-12421
+        public bool CierreGeneral(string p, float totA, float totP, string cod, string name, string fecha)
+        {
+            try
+            {
+                using (OdbcConnection con = new OdbcConnection("FIL=MS Access;DSN=colchoneria"))
+                {
+                    OdbcCommand cmd = new OdbcCommand();
+                    con.Open();
+                    cmd.Connection = con;
+
+                    #region Query
+                    string query = @"INSERT INTO tbl_cierregeneral (pkid_cierreG,total_activo,total_pasivo,codigo_contador,nombre_contador,fecha_cierre)VALUE(?,?,?,?,?,?);";
+                    #endregion
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.Add("@pkid_cierreG", OdbcType.Int).Value = p;
+                    cmd.Parameters.Add("@total_activo", OdbcType.Double).Value = totA;
+                    cmd.Parameters.Add("@total_pasivo", OdbcType.Double).Value = totP;
+                    cmd.Parameters.Add("@codigo_contador", OdbcType.VarChar).Value = cod;
+                    cmd.Parameters.Add("@nombre_contador", OdbcType.VarChar).Value = name;
+                    cmd.Parameters.Add("@fecha_cierre", OdbcType.Date).Value = fecha;
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+                    con.Close();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        //Josue Amaya 0901-19-12421
+        public bool cierreGPas(string p, string cuenta, float monto, string fecha)
+        {
+            try
+            {
+                using (OdbcConnection con = new OdbcConnection("FIL=MS Access;DSN=colchoneria"))
+                {
+                    OdbcCommand cmd = new OdbcCommand();
+                    con.Open();
+                    cmd.Connection = con;
+
+                    #region Query
+                    string query = @"INSERT INTO tbl_cierrePas (pkid_cierreP,cuenta_nombre,monto_total,fecha_cierre)VALUE(?,?,?,?);";
+                    #endregion
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.Add("@pkid_cierreP", OdbcType.Int).Value = p;
+                    cmd.Parameters.Add("@cuenta_nombre", OdbcType.VarChar).Value = cuenta;
+                    cmd.Parameters.Add("@monto_total", OdbcType.Double).Value = monto;
+                    cmd.Parameters.Add("@fecha_cierre", OdbcType.Date).Value = fecha;
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+                    con.Close();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        //Josue Amaya 0901-19-12421
+        public DataTable ctas(DataTable dt)
+        {
+            OdbcConnection con = new OdbcConnection("Dsn=colchoneria");
+            String cadena = "";
+            try
+            {
+                con.Open();
+                cadena = "SELECT nombre_cuenta FROM  tbl_cuentas";
+                OdbcDataAdapter datos = new OdbcDataAdapter(cadena, con);
+                datos.Fill(dt);
+                OdbcCommand comando = new OdbcCommand(cadena, con);
+                OdbcDataReader leer;
+                leer = comando.ExecuteReader();
+                con.Close();
+            }
+            catch
+            {
+
+            }
+            return dt;
+        }
+
+        //Josue Amaya 0901-19-12421
+        public bool confcierre(string p, string cuenta, float totp, float totac, string cod, string name, string fec)
+        {
+            try
+            {
+                using (OdbcConnection con = new OdbcConnection("FIL=MS Access;DSN=colchoneria"))
+                {
+                    OdbcCommand cmd = new OdbcCommand();
+                    con.Open();
+                    cmd.Connection = con;
+
+                    #region Query
+                    string query = @"INSERT INTO tbl_confctascierrre (pkid_confcierre,cuenta_nombre,total_activo,total_pasivo,codigo_contador,nombre_contador,fecha_cierre)VALUE(?,?,?,?,?,?,?);";
+                    #endregion
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.Add("@pkid_confcierre", OdbcType.Int).Value = p;
+                    cmd.Parameters.Add("@cuenta_nombre", OdbcType.VarChar).Value = cuenta;
+                    cmd.Parameters.Add("@total_activo", OdbcType.Double).Value = totac;
+                    cmd.Parameters.Add("@total_pasivo", OdbcType.Double).Value = totp;
+                    cmd.Parameters.Add("@codigo_contador", OdbcType.VarChar).Value = cod;
+                    cmd.Parameters.Add("@nombre_contador", OdbcType.VarChar).Value = name;
+                    cmd.Parameters.Add("@fecha_cierre", OdbcType.Date).Value = fec;
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+                    con.Close();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        //Josue Amaya 0901-19-12421
+        public bool guardarcta(string razon, float monto, string fecha, string cuenta, string p)
+        {
+            try
+            {
+                using (OdbcConnection con = new OdbcConnection("FIL=MS Access;DSN=colchoneria"))
+                {
+                    OdbcCommand cmd = new OdbcCommand();
+                    con.Open();
+                    cmd.Connection = con;
+
+                    #region Query
+                    string query = @"INSERT INTO tbl_cierrectasact (pkid_ctaAct,nombre_cuenta,razon,monto,fecha)VALUE(?,?,?,?,?);";
+                    #endregion
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.Add("@pkid_ctaAct", OdbcType.Int).Value = p;
+                    cmd.Parameters.Add("@nombre_cuenta", OdbcType.VarChar).Value = cuenta;
+                    cmd.Parameters.Add("@razon", OdbcType.VarChar).Value = razon;
+                    cmd.Parameters.Add("@monto", OdbcType.Double).Value = monto;
+                    cmd.Parameters.Add("@fecha", OdbcType.Date).Value = fecha;
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+                    con.Close();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        //Josue Amaya 0901-19-12421
+        public bool guardarctaP(string p, string razon, float monto, string cuenta, string fecha)
+        {
+            try
+            {
+                using (OdbcConnection con = new OdbcConnection("FIL=MS Access;DSN=colchoneria"))
+                {
+                    OdbcCommand cmd = new OdbcCommand();
+                    con.Open();
+                    cmd.Connection = con;
+
+                    #region Query
+                    string query = @"INSERT INTO tbl_cierrectaspas (pkid_ctaPas,nombre_cuenta,razon,monto,fecha)VALUE(?,?,?,?,?);";
+                    #endregion
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = query;
+                    cmd.Parameters.Add("@pkid_ctaPas", OdbcType.Int).Value = p;
+                    cmd.Parameters.Add("@nombre_cuenta", OdbcType.VarChar).Value = cuenta;
+                    cmd.Parameters.Add("@razon", OdbcType.VarChar).Value = razon;
+                    cmd.Parameters.Add("@monto", OdbcType.Double).Value = monto;
+                    cmd.Parameters.Add("@fecha", OdbcType.Date).Value = fecha;
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+                    con.Close();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
     }
 }
