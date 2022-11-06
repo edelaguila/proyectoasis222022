@@ -20,7 +20,7 @@ namespace Vista_Bancos
         private void navegador1_Load(object sender, EventArgs e)
         {
             NavegadorVista.Navegador.idApp = "7002";
-            TextBox[] Grupotextbox = { textBox1, textBox2, textBox3, textBox4, textBox5, textBox6, textBox7 };
+            TextBox[] Grupotextbox = { textBox1, textBox2, textBox3, textBox4 };
             TextBox[] Idtextbox = { textBox1, textBox2 };
             navegador1.textbox = Grupotextbox;
             navegador1.tabla = dataGridView1;

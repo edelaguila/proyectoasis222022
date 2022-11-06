@@ -28,21 +28,11 @@ namespace Controlador_Bancos
             {
                 MessageBox.Show("Error:" + e);
             }
+
+
+
         }
-        public void filtrobitacora(string ntabla, DataGridView tabla)//Funcion para llenar tabla
-        {
-            try
-            {
-                OdbcDataAdapter dt = sn.bitacora(ntabla);
-                DataTable table = new DataTable();
-                dt.Fill(table);
-                tabla.DataSource = table;
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Error:" + e);
-            }
-        }
+
 
     }
 }
