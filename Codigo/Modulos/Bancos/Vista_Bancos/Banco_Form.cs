@@ -86,20 +86,20 @@ namespace Vista_Bancos
 
         private void btnCheques_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            /*hideSubMenu();
             Cheque frm_cheque = new Cheque();
             frm_cheque.MdiParent = this;
             frm_cheque.Show();
-            logop.Visible = false;
+            logop.Visible = false;*/
         }
 
         private void btnDepositos_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            /*hideSubMenu();
             ChequePlanilla frm_chequePlanilla = new ChequePlanilla();
             frm_chequePlanilla.MdiParent = this;
             frm_chequePlanilla.Show();
-            logop.Visible = false;
+            logop.Visible = false;*/
         }
 
         private void btnNC_Click(object sender, EventArgs e)
@@ -136,11 +136,11 @@ namespace Vista_Bancos
 
         private void btnPolizas_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            /*hideSubMenu();
             Polizas pol = new Polizas();
             pol.MdiParent = this;
             pol.Show();
-            logop.Visible = false;
+            logop.Visible = false;*/
         }
 
         private void btnIngresosEgresos_Click(object sender, EventArgs e)
@@ -150,11 +150,11 @@ namespace Vista_Bancos
 
         private void btnEgresos_Click(object sender, EventArgs e)
         {
-            hideSubMenu();
+            /*hideSubMenu();
             Ordenes_Compras form_orde = new Ordenes_Compras();
             form_orde.MdiParent = this;
             form_orde.Show();
-            logop.Visible = false;
+            logop.Visible = false;*/
         }
 
         private void btnRepBanc_Click(object sender, EventArgs e)
@@ -213,10 +213,10 @@ namespace Vista_Bancos
 
         private void btnRepCuentasBanc_Click(object sender, EventArgs e)
         {
-            ReporteCuentasBancarias form_rptCuenBanc = new ReporteCuentasBancarias();
+             /*ReporteCuentasBancarias form_rptCuenBanc = new ReporteCuentasBancarias();
             form_rptCuenBanc.MdiParent = this;
             form_rptCuenBanc.Show();
-            logop.Visible = false;
+            logop.Visible = false;*/
         }
 
         private void btnReportesBancarios_Click(object sender, EventArgs e)
@@ -226,10 +226,10 @@ namespace Vista_Bancos
 
         private void btnEstadoCuenta_Click(object sender, EventArgs e)
         {
-            EstadosCuentas form_estcta = new EstadosCuentas();
+             /*EstadosCuentas form_estcta = new EstadosCuentas();
             form_estcta.MdiParent = this;
             form_estcta.Show();
-            logop.Visible = false;
+            logop.Visible = false;*/
         }
     }
 }
