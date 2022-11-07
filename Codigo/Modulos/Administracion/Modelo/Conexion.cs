@@ -13,7 +13,8 @@ namespace ComprasModelo
         public OdbcConnection conexion()
         {
             //creacion de la conexion via ODBC
-            OdbcConnection conn = new OdbcConnection("Dsn=colchoneria");
+            OdbcConnection conn = new OdbcConnection("Dsn=prueba2");
+
             try
             {
                 conn.Open();

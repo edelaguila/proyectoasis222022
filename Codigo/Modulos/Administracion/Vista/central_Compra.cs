@@ -12,17 +12,17 @@ namespace ComprasVista
 {
     public partial class central_Compra : Form
     {
-        /*Seguridad_Controlador.Controlador cnseg = new Seguridad_Controlador.Controlador();*/
+        Seguridad_Controlador.Controlador cnseg = new Seguridad_Controlador.Controlador();
         public central_Compra()
         {
             InitializeComponent();
             customizeDesing();
 
             Button [] apps = { btnCliente, btnProveedores };
-           /* cnseg.deshabilitarApps(apps);
+            cnseg.deshabilitarApps(apps);
 
             cnseg.getAccesoApp(3001, apps[0]);
-            cnseg.getAccesoApp(3002, apps[1]);*/
+            cnseg.getAccesoApp(3002, apps[1]);
         }
         private void customizeDesing()
         {
@@ -92,7 +92,11 @@ namespace ComprasVista
         private void btnOrdenes_Click(object sender, EventArgs e)
         {
             //Codigo
-            
+            Proveedores p = new Proveedores();
+            p.MdiParent = this;
+            p.Show();
+            pictureBox2.Visible = false;
+            //Ocultar submenu
             hideSubMenu();
         }
 
@@ -143,7 +147,10 @@ namespace ComprasVista
         private void btnContactoClientes_Click(object sender, EventArgs e)
         {
             //Codigo
-           
+            Caja_Clientes p = new Caja_Clientes();
+            p.MdiParent = this;
+            p.Show();
+            pictureBox2.Visible = false;
             //Ocultar submenu
             hideSubMenu();
         }
@@ -151,7 +158,10 @@ namespace ComprasVista
         private void btnDay_Click(object sender, EventArgs e)
         {
             //Codigo
-           
+            Caja_Proveedores p = new Caja_Proveedores();
+            p.MdiParent = this;
+            p.Show();
+            pictureBox2.Visible = false;
             //Ocultar submenu
             hideSubMenu();
         }
@@ -167,7 +177,8 @@ namespace ComprasVista
         private void btnComprobantesClientes_Click(object sender, EventArgs e)
         {
             //Codigo
-            
+            Cotizaciones c = new Cotizaciones();
+            c.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -175,7 +186,10 @@ namespace ComprasVista
         private void btnMovimientosCLientes_Click(object sender, EventArgs e)
         {
             //Codigo
-           
+            Pedidos p = new Pedidos();
+            p.MdiParent = this;
+            p.Show();
+            pictureBox2.Visible = false;
             //Ocultar submenu
             hideSubMenu();
         }
@@ -195,7 +209,10 @@ namespace ComprasVista
         private void btnProveedores_Click(object sender, EventArgs e)
         {
             //Codigo
-           
+            Pedidos p = new Pedidos();
+            p.MdiParent = this;
+            p.Show();
+            pictureBox2.Visible = false;
             //Ocultar submenu
             hideSubMenu();
         }
@@ -203,7 +220,10 @@ namespace ComprasVista
         private void btnContactosProveedores_Click(object sender, EventArgs e)
         {
             //Codigo
-           
+            MovimientosClientes lp = new MovimientosClientes();
+            lp.MdiParent = this;
+            lp.Show();
+            pictureBox2.Visible = false;
             //Ocultar submenu
             hideSubMenu();
         }
@@ -234,7 +254,8 @@ namespace ComprasVista
         private void btnMovimientosProveedores_Click(object sender, EventArgs e)
         {
             //Codigo
-           
+            Form formMovimientosProveedores = new MovimientosProveedores();
+            formMovimientosProveedores.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -254,7 +275,8 @@ namespace ComprasVista
         private void btnFactura_Click(object sender, EventArgs e)
         {
             //Codigo
-           
+            Form formFacturaVentas = new FacturaVentas();
+            formFacturaVentas.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -278,7 +300,8 @@ namespace ComprasVista
         private void btnCotizaciones_Click(object sender, EventArgs e)
         {
             //Codigo
-           
+            Form formCotizacionesVentas = new CotizacionesVentas();
+            formCotizacionesVentas.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -286,7 +309,8 @@ namespace ComprasVista
         private void btnVendedores_Click(object sender, EventArgs e)
         {
             //Codigo
-           
+            Form formVendedoresVentas = new VendedoresVentas();
+            formVendedoresVentas.ShowDialog();
             //Ocultar submenu
             hideSubMenu();
         }
@@ -294,7 +318,8 @@ namespace ComprasVista
         private void btnMovimientos_Click(object sender, EventArgs e)
         {
             //Codigo
-           
+           /* Form formMovimientosVentas = new Pedidos();
+            formMovimientosVentas.ShowDialog();*/
             //Ocultar submenu
             hideSubMenu();
         }
@@ -309,7 +334,8 @@ namespace ComprasVista
 
         private void btnPrecios_Click(object sender, EventArgs e)
         {
-           
+            Form formListadoPrecios = new ListadoPrecios();
+            formListadoPrecios.ShowDialog();
             hideSubMenu();
         }
 
