@@ -14,7 +14,7 @@ namespace CapaVistaProduccion
 {
     public partial class ordenes : Form
     {
-        string connectionString = @"Server=localhost;Database=colchoneria;Uid=root;Pwd=root;";
+        string connectionString = @"Server=colchoneria.mysql.database.azure.com;Database=colchoneria;Uid=administrador;Pwd=Jm123456;";
         int pk_idordenes_tbl_ordenes = 0;
         public ordenes()
         {
