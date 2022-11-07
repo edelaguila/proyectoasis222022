@@ -32,7 +32,7 @@ namespace CapaVistaNomina
         {
             NavegadorVista.Navegador.idApp = "6002";
             TextBox[] Grupotextbox = { txtidpuesto, txtnombrepuesto, txtestado };
-            TextBox[] Idtextbox = { txtidpuesto, txtnombrepuesto };
+            TextBox[] Idtextbox = { txtidpuesto, txtnombrepuesto, txtestado };
             navegador1.textbox = Grupotextbox;
             navegador1.tabla = dataGridPuestosTrabajo;
             navegador1.textboxi = Idtextbox;
