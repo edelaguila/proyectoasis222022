@@ -55,23 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bodega.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bodega.Designer.cs">
-      <DependentUpon>Bodega.cs</DependentUpon>
-    </Compile>
     <Compile Include="Conductor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Conductor.Designer.cs">
       <DependentUpon>Conductor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Envio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Envio.Designer.cs">
-      <DependentUpon>Envio.cs</DependentUpon>
     </Compile>
     <Compile Include="ExistenciaBodega.cs">
       <SubType>Form</SubType>
@@ -85,23 +73,11 @@
     <Compile Include="Inventario.Designer.cs">
       <DependentUpon>Inventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Linea.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Linea.Designer.cs">
-      <DependentUpon>Linea.cs</DependentUpon>
-    </Compile>
     <Compile Include="Lote.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Lote.Designer.cs">
       <DependentUpon>Lote.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Marca.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Marca.Designer.cs">
-      <DependentUpon>Marca.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
@@ -145,28 +121,10 @@
     <Compile Include="TipoTransporte.Designer.cs">
       <DependentUpon>TipoTransporte.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transporte.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transporte.Designer.cs">
-      <DependentUpon>Transporte.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Traslados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Traslados.Designer.cs">
-      <DependentUpon>Traslados.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Bodega.resx">
-      <DependentUpon>Bodega.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Conductor.resx">
       <DependentUpon>Conductor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Envio.resx">
-      <DependentUpon>Envio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExistenciaBodega.resx">
       <DependentUpon>ExistenciaBodega.cs</DependentUpon>
@@ -174,14 +132,8 @@
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Linea.resx">
-      <DependentUpon>Linea.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Lote.resx">
       <DependentUpon>Lote.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Marca.resx">
-      <DependentUpon>Marca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -204,12 +156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TipoTransporte.resx">
       <DependentUpon>TipoTransporte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transporte.resx">
-      <DependentUpon>Transporte.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Traslados.resx">
-      <DependentUpon>Traslados.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
