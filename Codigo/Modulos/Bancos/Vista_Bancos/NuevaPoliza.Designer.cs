@@ -48,6 +48,9 @@ namespace Vista_Bancos
             this.label1 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_haber = new System.Windows.Forms.TextBox();
+            this.txt_debe = new System.Windows.Forms.TextBox();
+            this.cmb_ele = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,9 +59,6 @@ namespace Vista_Bancos
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.navegador1 = new NavegadorVista.Navegador();
-            this.cmb_ele = new System.Windows.Forms.ComboBox();
-            this.txt_debe = new System.Windows.Forms.TextBox();
-            this.txt_haber = new System.Windows.Forms.TextBox();
             this.txt_fechapoli = new System.Windows.Forms.TextBox();
             this.txt_ctapoli = new System.Windows.Forms.TextBox();
             this.txt_elepoli = new System.Windows.Forms.TextBox();
@@ -165,27 +165,30 @@ namespace Vista_Bancos
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(241, 185);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 13);
+            this.label4.Size = new System.Drawing.Size(86, 15);
             this.label4.TabIndex = 6;
             this.label4.Text = "Descripción";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(135, 185);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(47, 15);
             this.label3.TabIndex = 5;
             this.label3.Text = "Fecha";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(29, 185);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.Size = new System.Drawing.Size(32, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "No. ";
             // 
@@ -242,39 +245,73 @@ namespace Vista_Bancos
             this.panel2.Size = new System.Drawing.Size(550, 57);
             this.panel2.TabIndex = 4;
             // 
+            // txt_haber
+            // 
+            this.txt_haber.Location = new System.Drawing.Point(356, 32);
+            this.txt_haber.Name = "txt_haber";
+            this.txt_haber.Size = new System.Drawing.Size(74, 20);
+            this.txt_haber.TabIndex = 14;
+            // 
+            // txt_debe
+            // 
+            this.txt_debe.Location = new System.Drawing.Point(261, 32);
+            this.txt_debe.Name = "txt_debe";
+            this.txt_debe.Size = new System.Drawing.Size(74, 20);
+            this.txt_debe.TabIndex = 12;
+            // 
+            // cmb_ele
+            // 
+            this.cmb_ele.FormattingEnabled = true;
+            this.cmb_ele.Items.AddRange(new object[] {
+            "CLIENTES",
+            "VENTAS",
+            "COMPRAS",
+            "CAJA CHICA",
+            "BANCOS",
+            "IVA POR COBRAR",
+            "IVA POR PAGAR"});
+            this.cmb_ele.Location = new System.Drawing.Point(127, 31);
+            this.cmb_ele.Name = "cmb_ele";
+            this.cmb_ele.Size = new System.Drawing.Size(101, 21);
+            this.cmb_ele.TabIndex = 13;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(353, 18);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(36, 13);
+            this.label9.Size = new System.Drawing.Size(47, 15);
             this.label9.TabIndex = 12;
             this.label9.Text = "Haber";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(258, 16);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(33, 13);
+            this.label8.Size = new System.Drawing.Size(41, 15);
             this.label8.TabIndex = 11;
             this.label8.Text = "Debe";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(127, 18);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 13);
+            this.label7.Size = new System.Drawing.Size(69, 15);
             this.label7.TabIndex = 10;
             this.label7.Text = "Elemento";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(8, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 13);
+            this.label5.Size = new System.Drawing.Size(54, 15);
             this.label5.TabIndex = 9;
             this.label5.Text = "Cuenta";
             // 
@@ -309,43 +346,12 @@ namespace Vista_Bancos
             this.navegador1.Size = new System.Drawing.Size(572, 157);
             this.navegador1.TabIndex = 11;
             // 
-            // cmb_ele
-            // 
-            this.cmb_ele.FormattingEnabled = true;
-            this.cmb_ele.Items.AddRange(new object[] {
-            "CLIENTES",
-            "VENTAS",
-            "COMPRAS",
-            "CAJA CHICA",
-            "BANCOS",
-            "IVA POR COBRAR",
-            "IVA POR PAGAR"});
-            this.cmb_ele.Location = new System.Drawing.Point(127, 31);
-            this.cmb_ele.Name = "cmb_ele";
-            this.cmb_ele.Size = new System.Drawing.Size(101, 21);
-            this.cmb_ele.TabIndex = 13;
-            // 
-            // txt_debe
-            // 
-            this.txt_debe.Location = new System.Drawing.Point(261, 32);
-            this.txt_debe.Name = "txt_debe";
-            this.txt_debe.Size = new System.Drawing.Size(74, 20);
-            this.txt_debe.TabIndex = 12;
-            // 
-            // txt_haber
-            // 
-            this.txt_haber.Location = new System.Drawing.Point(356, 32);
-            this.txt_haber.Name = "txt_haber";
-            this.txt_haber.Size = new System.Drawing.Size(74, 20);
-            this.txt_haber.TabIndex = 14;
-            // 
             // txt_fechapoli
             // 
             this.txt_fechapoli.Location = new System.Drawing.Point(20, 450);
             this.txt_fechapoli.Name = "txt_fechapoli";
             this.txt_fechapoli.Size = new System.Drawing.Size(74, 20);
             this.txt_fechapoli.TabIndex = 15;
-            this.txt_fechapoli.Visible = false;
             // 
             // txt_ctapoli
             // 
