@@ -19,6 +19,15 @@ namespace Modelo_Bancos
 
             return datatable;
         }
+        public OdbcDataAdapter bitacoras(string tabla)
+        {
+
+
+            string sql = "select * from " + tabla + " where fk_id_aplicacion between 7000 and 7999;";
+            OdbcDataAdapter datatable = new OdbcDataAdapter(sql, con.conexion());
+
+            return datatable;
+        }
 
     }
 }

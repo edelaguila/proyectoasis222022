@@ -19,7 +19,7 @@ namespace Vista_Bancos
             InitializeComponent();
             HideStart();
             Button[] apps = {CncBancario,btnCheques,btnDepositos,btnDisponibilidad,
-            btnMovBanc,btnBitacora,btnConcilacionBancaria,btnPolizas,btnIngresosEgresos,
+            btnMovBanc,btnBitacora,btnConcilacionBancaria,btnPolizas,btnRepCuentasBanc,
             btnOrdenes,btnBancos,btnCuentasBanc,btnTipoDeCambio};
             cnseg.deshabilitarApps(apps);
 
@@ -183,6 +183,10 @@ namespace Vista_Bancos
         private void btnBitacora_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            BitacoraBancos frm_bi = new BitacoraBancos();
+            frm_bi.MdiParent = this;
+            frm_bi.Show();
+            logop.Visible = false;
         }
 
         private void CncBancario_Click(object sender, EventArgs e)

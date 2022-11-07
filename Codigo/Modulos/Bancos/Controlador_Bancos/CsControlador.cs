@@ -32,6 +32,23 @@ namespace Controlador_Bancos
 
 
         }
+        public void bitacora(string ntabla, DataGridView tabla)//Funcion para llenar tabla
+        {
+            try
+            {
+                OdbcDataAdapter dt = sn.bitacoras(ntabla);
+                DataTable table = new DataTable();
+                dt.Fill(table);
+                tabla.DataSource = table;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error:" + e);
+            }
+
+
+
+        }
 
 
     }
