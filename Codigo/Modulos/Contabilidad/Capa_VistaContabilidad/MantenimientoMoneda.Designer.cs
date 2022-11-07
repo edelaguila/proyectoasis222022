@@ -80,6 +80,7 @@ namespace Capa_VistaContabilidad
             this.navegador1.Name = "navegador1";
             this.navegador1.Size = new System.Drawing.Size(580, 160);
             this.navegador1.TabIndex = 6;
+            this.navegador1.Load += new System.EventHandler(this.navegador1_Load_1);
             // 
             // label1
             // 
@@ -125,6 +126,7 @@ namespace Capa_VistaContabilidad
             this.button4.TabIndex = 7;
             this.button4.Text = "Guardar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // label5
             // 
@@ -205,6 +207,7 @@ namespace Capa_VistaContabilidad
             this.button3.TabIndex = 2;
             this.button3.Text = "Salir";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button2
             // 
@@ -214,6 +217,7 @@ namespace Capa_VistaContabilidad
             this.button2.TabIndex = 1;
             this.button2.Text = "Limpiar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -223,6 +227,7 @@ namespace Capa_VistaContabilidad
             this.button1.TabIndex = 0;
             this.button1.Text = "Calcular";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // MantenimientoMoneda
             // 

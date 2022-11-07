@@ -1,6 +1,6 @@
 ﻿//Joselyne Aracely Rivera Cifuentes
 //    0901-17-5
-//Proceso Presupuesto
+//Mantenimiento Moneda
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +21,8 @@ namespace Capa_VistaContabilidad
         }
         Capa_ControladorContabilidad.controlador crud = new Capa_ControladorContabilidad.controlador();
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             double quetzales, dolar, euro;
             try
@@ -40,7 +41,7 @@ namespace Capa_VistaContabilidad
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             txtCantidad.Text = String.Empty;
             txrtMQzt.Text = String.Empty;
@@ -50,7 +51,7 @@ namespace Capa_VistaContabilidad
             txtCantidad.Focus();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("¿Desea salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -58,19 +59,7 @@ namespace Capa_VistaContabilidad
             }
         }
 
-        private void navegador1_Load(object sender, EventArgs e)
-        {
-            NavegadorVista.Navegador.idApp = "8009";
-            TextBox[] Grupotextbox = { txrtMQzt, txtDolar , txtEuro };
-            TextBox[] Idtextbox = { txrtMQzt };
-            navegador1.textbox = Grupotextbox;
-            navegador1.tabla = dataGridView1;
-            navegador1.textboxi = Idtextbox;
-            navegador1.actual = this;
-            navegador1.cargar(dataGridView1, Grupotextbox, "Colchoneria");
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
             float MpnedaDolar, MonedaEuro, MonedaQuetzal;
 
@@ -84,6 +73,18 @@ namespace Capa_VistaContabilidad
                 string confirmacion = "Moneda Agregada Correctamente";
                 MessageBox.Show(confirmacion);
             }
+        }
+
+        private void navegador1_Load_1(object sender, EventArgs e)
+        {
+            NavegadorVista.Navegador.idApp = "8009";
+            TextBox[] Grupotextbox = { txrtMQzt, txtDolar, txtEuro };
+            TextBox[] Idtextbox = { txrtMQzt };
+            navegador1.textbox = Grupotextbox;
+            navegador1.tabla = dataGridView1;
+            navegador1.textboxi = Idtextbox;
+            navegador1.actual = this;
+            navegador1.cargar(dataGridView1, Grupotextbox, "Colchoneria");
         }
     }
 }
