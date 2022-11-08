@@ -7,24 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Controlador_Bancos;
 namespace Vista_Bancos
 {
-    public partial class DisponibilidadD : Form
+    public partial class Disponibilidad : Form
     {
-        public DisponibilidadD()
+        CsControlador cn = new CsControlador();
+        public Disponibilidad()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btndisponibilidad_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void DisponibilidadD_Load(object sender, EventArgs e)
-        {
-
+            cn.disponibilidad(dataGridView1.Tag.ToString(), dataGridView1);
         }
     }
 }

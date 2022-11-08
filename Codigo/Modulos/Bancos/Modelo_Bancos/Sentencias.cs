@@ -28,6 +28,16 @@ namespace Modelo_Bancos
 
             return datatable;
         }
+        public OdbcDataAdapter disponibilidads(string tabla)
+        {
+
+
+            string sql = "select nombre_banco,Nombre_cta,TCargos_montbancario,TAbonos_montbancario,SActual_montbancario from " + tabla 
+                + " inner join Tbl_bancos on fk_bancos = Pk_idbancos;";
+            OdbcDataAdapter datatable = new OdbcDataAdapter(sql, con.conexion());
+
+            return datatable;
+        }
 
     }
 }

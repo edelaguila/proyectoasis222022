@@ -55,7 +55,7 @@ namespace Vista_Bancos
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            indice2 = comboBox1.SelectedIndex;
+            indice2 = comboBox2.SelectedIndex;
             switch (indice2)
             {
                 case 0:

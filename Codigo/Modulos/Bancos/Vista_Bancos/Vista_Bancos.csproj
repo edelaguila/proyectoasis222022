@@ -119,11 +119,11 @@
     <Compile Include="consultaPoliza.Designer.cs">
       <DependentUpon>consultaPoliza.cs</DependentUpon>
     </Compile>
-    <Compile Include="DisponibilidadD.cs">
+    <Compile Include="Disponibilidad.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DisponibilidadD.Designer.cs">
-      <DependentUpon>DisponibilidadD.cs</DependentUpon>
+    <Compile Include="Disponibilidad.Designer.cs">
+      <DependentUpon>Disponibilidad.cs</DependentUpon>
     </Compile>
     <Compile Include="DsCheque.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -251,8 +251,8 @@
     <EmbeddedResource Include="consultaPoliza.resx">
       <DependentUpon>consultaPoliza.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DisponibilidadD.resx">
-      <DependentUpon>DisponibilidadD.cs</DependentUpon>
+    <EmbeddedResource Include="Disponibilidad.resx">
+      <DependentUpon>Disponibilidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EstadosCuentas.resx">
       <DependentUpon>EstadosCuentas.cs</DependentUpon>

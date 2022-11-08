@@ -110,7 +110,7 @@ namespace Vista_Bancos
         private void btnDisponibilidad_Click(object sender, EventArgs e)
         {
             hideSubMenu();
-            DisponibilidadD frm_dispo = new DisponibilidadD();
+            Disponibilidad frm_dispo = new Disponibilidad();
             frm_dispo.MdiParent = this;
             frm_dispo.Show();
             logop.Visible = false;
