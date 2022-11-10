@@ -30,14 +30,13 @@ namespace ComprasVista
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Txt_costo = new System.Windows.Forms.TextBox();
             this.Txt_descripcion = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Txt_linea = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.Txt_precio = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.Cbo_medidas = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btneliminar = new FontAwesome.Sharp.IconButton();
             this.btnagregar = new FontAwesome.Sharp.IconButton();
@@ -46,6 +45,7 @@ namespace ComprasVista
             this.Txt_idproducto = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.label9 = new System.Windows.Forms.Label();
             this.Dtp_fechavencimiento = new System.Windows.Forms.DateTimePicker();
             this.button4 = new System.Windows.Forms.Button();
@@ -62,6 +62,7 @@ namespace ComprasVista
             this.PkId_EncabezadoPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FkId_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantidadDetalle_DetallePedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioDetalle_DetallePedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CostoDetalle_DetallePedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalDetalle_DetallePedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Txt_total = new System.Windows.Forms.TextBox();
@@ -73,14 +74,13 @@ namespace ComprasVista
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.Txt_costo);
             this.groupBox2.Controls.Add(this.Txt_descripcion);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.Txt_linea);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.Txt_precio);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.Cbo_medidas);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.btneliminar);
             this.groupBox2.Controls.Add(this.btnagregar);
@@ -91,11 +91,19 @@ namespace ComprasVista
             this.groupBox2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 162);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(857, 137);
+            this.groupBox2.Size = new System.Drawing.Size(940, 137);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DetallePedido";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // Txt_costo
+            // 
+            this.Txt_costo.Location = new System.Drawing.Point(767, 106);
+            this.Txt_costo.Name = "Txt_costo";
+            this.Txt_costo.Size = new System.Drawing.Size(84, 25);
+            this.Txt_costo.TabIndex = 57;
+            this.Txt_costo.Visible = false;
             // 
             // Txt_descripcion
             // 
@@ -108,7 +116,7 @@ namespace ComprasVista
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(299, 32);
+            this.label10.Location = new System.Drawing.Point(276, 33);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(96, 17);
             this.label10.TabIndex = 55;
@@ -125,7 +133,7 @@ namespace ComprasVista
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(299, 69);
+            this.label8.Location = new System.Drawing.Point(299, 70);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 17);
             this.label8.TabIndex = 53;
@@ -133,7 +141,7 @@ namespace ComprasVista
             // 
             // Txt_precio
             // 
-            this.Txt_precio.Location = new System.Drawing.Point(111, 106);
+            this.Txt_precio.Location = new System.Drawing.Point(111, 80);
             this.Txt_precio.Name = "Txt_precio";
             this.Txt_precio.Size = new System.Drawing.Size(84, 25);
             this.Txt_precio.TabIndex = 52;
@@ -142,30 +150,11 @@ namespace ComprasVista
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 109);
+            this.label5.Location = new System.Drawing.Point(26, 88);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 17);
             this.label5.TabIndex = 51;
             this.label5.Text = "Precio";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 70);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 17);
-            this.label4.TabIndex = 50;
-            this.label4.Text = "Medidas";
-            // 
-            // Cbo_medidas
-            // 
-            this.Cbo_medidas.FormattingEnabled = true;
-            this.Cbo_medidas.Location = new System.Drawing.Point(111, 67);
-            this.Cbo_medidas.Name = "Cbo_medidas";
-            this.Cbo_medidas.Size = new System.Drawing.Size(121, 25);
-            this.Cbo_medidas.TabIndex = 49;
-            this.Cbo_medidas.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -187,7 +176,7 @@ namespace ComprasVista
             this.btneliminar.IconColor = System.Drawing.Color.DimGray;
             this.btneliminar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btneliminar.IconSize = 40;
-            this.btneliminar.Location = new System.Drawing.Point(752, 22);
+            this.btneliminar.Location = new System.Drawing.Point(797, 27);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(69, 61);
             this.btneliminar.TabIndex = 47;
@@ -206,7 +195,7 @@ namespace ComprasVista
             this.btnagregar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
             this.btnagregar.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnagregar.IconSize = 40;
-            this.btnagregar.Location = new System.Drawing.Point(647, 20);
+            this.btnagregar.Location = new System.Drawing.Point(675, 25);
             this.btnagregar.Name = "btnagregar";
             this.btnagregar.Size = new System.Drawing.Size(69, 61);
             this.btnagregar.TabIndex = 45;
@@ -252,6 +241,7 @@ namespace ComprasVista
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnHelp);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.Dtp_fechavencimiento);
             this.groupBox1.Controls.Add(this.button4);
@@ -267,10 +257,30 @@ namespace ComprasVista
             this.groupBox1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(857, 144);
+            this.groupBox1.Size = new System.Drawing.Size(940, 144);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pedido";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // btnHelp
+            // 
+            this.btnHelp.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnHelp.FlatAppearance.BorderSize = 2;
+            this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.IconChar = FontAwesome.Sharp.IconChar.Question;
+            this.btnHelp.IconColor = System.Drawing.Color.DimGray;
+            this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnHelp.IconSize = 40;
+            this.btnHelp.Location = new System.Drawing.Point(854, 43);
+            this.btnHelp.Name = "btnHelp";
+            this.btnHelp.Size = new System.Drawing.Size(69, 61);
+            this.btnHelp.TabIndex = 66;
+            this.btnHelp.Text = "Ayuda";
+            this.btnHelp.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnHelp.UseVisualStyleBackColor = true;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // label9
             // 
@@ -406,11 +416,12 @@ namespace ComprasVista
             this.PkId_EncabezadoPedido,
             this.FkId_Producto,
             this.CantidadDetalle_DetallePedido,
+            this.PrecioDetalle_DetallePedido,
             this.CostoDetalle_DetallePedido,
             this.TotalDetalle_DetallePedido});
             this.Dgvpedido.Location = new System.Drawing.Point(12, 305);
             this.Dgvpedido.Name = "Dgvpedido";
-            this.Dgvpedido.Size = new System.Drawing.Size(857, 273);
+            this.Dgvpedido.Size = new System.Drawing.Size(940, 273);
             this.Dgvpedido.TabIndex = 6;
             // 
             // PkId_EncabezadoPedido
@@ -428,9 +439,14 @@ namespace ComprasVista
             this.CantidadDetalle_DetallePedido.HeaderText = "Cantidad";
             this.CantidadDetalle_DetallePedido.Name = "CantidadDetalle_DetallePedido";
             // 
+            // PrecioDetalle_DetallePedido
+            // 
+            this.PrecioDetalle_DetallePedido.HeaderText = "Precio";
+            this.PrecioDetalle_DetallePedido.Name = "PrecioDetalle_DetallePedido";
+            // 
             // CostoDetalle_DetallePedido
             // 
-            this.CostoDetalle_DetallePedido.HeaderText = "Precio";
+            this.CostoDetalle_DetallePedido.HeaderText = "Costo";
             this.CostoDetalle_DetallePedido.Name = "CostoDetalle_DetallePedido";
             // 
             // TotalDetalle_DetallePedido
@@ -441,7 +457,7 @@ namespace ComprasVista
             // Txt_total
             // 
             this.Txt_total.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Txt_total.Location = new System.Drawing.Point(651, 598);
+            this.Txt_total.Location = new System.Drawing.Point(734, 598);
             this.Txt_total.Name = "Txt_total";
             this.Txt_total.Size = new System.Drawing.Size(218, 25);
             this.Txt_total.TabIndex = 58;
@@ -451,7 +467,7 @@ namespace ComprasVista
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(586, 601);
+            this.label11.Location = new System.Drawing.Point(684, 601);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 17);
             this.label11.TabIndex = 57;
@@ -462,7 +478,7 @@ namespace ComprasVista
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(880, 629);
+            this.ClientSize = new System.Drawing.Size(964, 629);
             this.Controls.Add(this.Txt_total);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.groupBox2);
@@ -503,8 +519,6 @@ namespace ComprasVista
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView Dgvpedido;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox Cbo_medidas;
         private System.Windows.Forms.TextBox Txt_linea;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox Txt_precio;
@@ -513,12 +527,15 @@ namespace ComprasVista
         private System.Windows.Forms.DateTimePicker Dtp_fechavencimiento;
         private System.Windows.Forms.TextBox Txt_descripcion;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox Txt_total;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridViewTextBoxColumn PkId_EncabezadoPedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn FkId_Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadDetalle_DetallePedido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioDetalle_DetallePedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn CostoDetalle_DetallePedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalDetalle_DetallePedido;
-        private System.Windows.Forms.TextBox Txt_total;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox Txt_costo;
+        private FontAwesome.Sharp.IconButton btnHelp;
     }
 }

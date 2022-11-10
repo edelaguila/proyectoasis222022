@@ -194,6 +194,7 @@ namespace ComprasVista
             this.TxtEstado.Size = new System.Drawing.Size(100, 20);
             this.TxtEstado.TabIndex = 42;
             this.TxtEstado.Tag = "status_Proveedores";
+            this.TxtEstado.Visible = false;
             this.TxtEstado.TextChanged += new System.EventHandler(this.TxtEstado_TextChanged);
             // 
             // comboBox1

@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ComprasControlador;
 
 namespace ComprasVista
 {
     public partial class MovimientosClientes : Form
     {
-        ComprasControlador.csControladorJ AdminCn = new ComprasControlador.csControladorJ();
+        csControladorJ AdminCn = new csControladorJ();
+
         public MovimientosClientes()
         {
             InitializeComponent();
@@ -54,6 +56,25 @@ namespace ComprasVista
         private void btnExit_Click_1(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            //Codigo
+            //this.Hide();
+            ReporteMovimientoCliente frm = new ReporteMovimientoCliente();
+            frm.Show();
+        }
+
+        private void MovimientosClientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listclientes frm = new listclientes();
+            frm.Show();
         }
     }
 }

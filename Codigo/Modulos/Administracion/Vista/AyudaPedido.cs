@@ -31,15 +31,15 @@ namespace ComprasVista
 
         private void AyudaPedido_Load(object sender, EventArgs e)
         {
-            if(table.Equals("tblEmpleados"))
+           /* if(table.Equals("tbl_trabajador"))
             {
                 cn.llenartablaa(Dgv_ayudapedido);
 
             }
             else
-            {
+            {*/
                 cn.llenartablaa(table, Dgv_ayudapedido);
-            }
+           // }
             
         }
 

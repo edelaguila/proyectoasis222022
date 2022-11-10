@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ComprasControlador
 {
-    
+
     public class csControladort
     {
         Sentenciast sn = new Sentenciast();
@@ -22,7 +22,8 @@ namespace ComprasControlador
         }
 
 
-        static DataTable inventario = new DataTable();
+      public static DataTable inventario = new DataTable();
+        DataTable detalleventa = new DataTable();
 
 
 
@@ -43,8 +44,23 @@ namespace ComprasControlador
             }
 
         }
+        public void llenartablaa(string ntabla, DataGridView tabla, string status)//Funcion para llenar tabla
+        {
+            try
+            {
+                OdbcDataAdapter dt = sn.llenartabla(ntabla, status);
+                DataTable table = new DataTable();
+                dt.Fill(table);
+                tabla.DataSource = table;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error:" + e);
+            }
 
-        public void llenartablaa(DataGridView tabla)//Funcion para llenar tabla
+        }
+
+        /*public void llenartablaa(DataGridView tabla)//Funcion para llenar tabla
         {
             try
             {
@@ -58,7 +74,7 @@ namespace ComprasControlador
                 MessageBox.Show("Error:" + e);
             }
 
-        }
+        }*/
 
         public void llenarcombo(string nombre, ComboBox combo)
         {
@@ -96,10 +112,31 @@ namespace ComprasControlador
 
                 string descripcion = sn.buscardescripcion(nombre);
                 string[] datos = sn.camposcombo(medida, descripcion);
-                for (int x = 0; x < 3; x++)
+                for (int x = 0; x < 4; x++)
                 {
                     textbox[x].Text = datos[x];
                 }
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error:" + e);
+
+            }
+
+        }
+        public void llenardatostextbox(TextBox[] textbox, string id)
+        {
+            try
+            {
+
+               
+                string[] datos = sn.campostextbox(id);
+                for (int x = 0; x < 4; x++)
+                {
+                    textbox[x].Text = datos[x];
+                }
+
             }
             catch (Exception e)
             {
@@ -125,15 +162,15 @@ namespace ComprasControlador
 
         }
 
-        public void insertardatagrid(DataGridView tabla, string scantidad, string sprecio, string medida, string descripcion, TextBox total, string idpedido, GroupBox group)
+        public void insertardatagrid(DataGridView tabla, string scantidad, string sprecio, string idproducto, string descripcion, TextBox total, string idpedido, GroupBox group, string costo)
         {
 
-            string[] datos = new string[5];
+            string[] datos = new string[6];
             bool permiso = Verificarcamposvacios(group);
 
             if (permiso == true)
             {
-                datos[1] = sn.buscaridproducto(medida, descripcion);
+                datos[1] = idproducto;
                 string existencia = verificarexistencia(datos[1]);
                 double cantidad = Convert.ToDouble(scantidad);
                 double cantidadactual;
@@ -141,6 +178,10 @@ namespace ComprasControlador
                 if (existencia.Equals(0))
                 {
                     cantidadactual = 0;
+                }
+                else if (Convert.ToDouble(existencia) < cantidad)
+                {
+                    cantidadactual = -1;
                 }
                 else
                 {
@@ -175,7 +216,8 @@ namespace ComprasControlador
                 datos[2] = cantidad.ToString();
                 datos[3] = sprecio.ToString();
                 double precio = Convert.ToDouble(sprecio);
-                datos[4] = (cantidad * precio).ToString();
+                datos[4] = costo;
+                datos[5] = (cantidad * precio).ToString();
 
                 if (existencia.Equals(0))
                 {
@@ -185,7 +227,7 @@ namespace ComprasControlador
 
                 if (cantidadactual >= 0)
                 {
-                    tabla.Rows.Add(datos[0], datos[1], datos[2], datos[3], datos[4]);
+                    tabla.Rows.Add(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5]);
                     double suma = 0;
                     foreach (DataGridViewRow row in tabla.Rows)
                     {
@@ -306,7 +348,8 @@ namespace ComprasControlador
 
         public void llenarcolumnasdatatable()
         {
-
+            inventario.Clear();
+            inventario.Columns.Clear();
             inventario.Columns.Add("Idproducto");
             inventario.Columns.Add("Existenciaincial");
             inventario.Columns.Add("Existencianueva");
@@ -342,6 +385,41 @@ namespace ComprasControlador
                 if (c is TextBox)
                 {
                     c.Text = "";
+                }
+
+            }
+        }
+
+        void bloqueargroup(GroupBox group)
+        {
+
+
+            foreach (Control c in group.Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Enabled = false;
+                }
+                if(c is DateTimePicker)
+                {
+                    c.Enabled = false;
+                }
+
+            }
+        }
+        void desbloqueargroup(GroupBox group)
+        {
+
+
+            foreach (Control c in group.Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Enabled = true;
+                }
+                if (c is DateTimePicker)
+                {
+                    c.Enabled = true;
                 }
 
             }
@@ -397,7 +475,7 @@ namespace ComprasControlador
             return fechavencimineto;
         }
 
-        public void inicio(DateTimePicker vencimineto, TextBox id, TextBox descripcion, TextBox precio, TextBox linea, TextBox total)
+        public void inicio(DateTimePicker vencimineto, TextBox id, TextBox descripcion, TextBox precio, TextBox linea, TextBox total, TextBox vendedor, TextBox cliente, TextBox producto)
         {
             descripcion.Enabled = false;
             precio.Enabled = false;
@@ -405,6 +483,9 @@ namespace ComprasControlador
             total.Enabled = false;
             vencimineto.Value = fechavencimineto();
             vencimineto.Enabled = false;
+            vendedor.Enabled = false;
+            producto.Enabled = false;
+            cliente.Enabled = false;
 
 
             id.Enabled = false;
@@ -445,6 +526,36 @@ namespace ComprasControlador
 
         }
 
+        public string crearidwo( string tabla, string campo)//Crea el id siguiente a ingresar
+        {
+            string textbox = "";
+            try
+            {
+                int incremento = 0;
+              
+                int permiso = comprobacionvacio(tabla);
+                if (permiso != 0)
+                {
+                    string resultado = sn.buscarid(tabla, campo);
+                    incremento = Convert.ToInt32(resultado) + 1;
+                    textbox = incremento.ToString();
+                }
+                else
+                {
+                    incremento = 1;
+                    textbox = incremento.ToString();
+                }
+
+             
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error: " + e);
+            }
+            return textbox;
+        }
+
         public void crearidstring(TextBox textbox, string tabla, string codigo, string campo)//Crea el id siguiente a ingresar
         {
 
@@ -477,6 +588,7 @@ namespace ComprasControlador
                 MessageBox.Show("Error: " + e);
             }
         }
+
 
 
         public string crearidstring(string textbox, string tabla, string codigo, string campo)//Crea el id siguiente a ingresar
@@ -536,11 +648,12 @@ namespace ComprasControlador
                     string idproducto = tabla.Rows[x].Cells[1].Value.ToString();
                     string cantidad = tabla.Rows[x].Cells[2].Value.ToString();
                     string precio = tabla.Rows[x].Cells[3].Value.ToString();
-                    string total = tabla.Rows[x].Cells[4].Value.ToString();
+                    string costo = tabla.Rows[x].Cells[4].Value.ToString();
+                    string total = tabla.Rows[x].Cells[5].Value.ToString();
                     string fila = x.ToString();
-                    string consultadetallepe = "'" + idpedido + "', '" + idproducto + "', '" + cantidad + "', '" + precio + "', '" + total + "', '" + fila + "'";
-                    string consultadetallepe_campos = "PkId_EncabezadoPedido, FkId_Producto, CantidadDetalle_DetallePedido, CostoDetalle_DetallePedido, TotalDetalle_DetallePedido, linea";
-                    sn.insertar(consultadetallepe, consultadetallepe_campos, "tbldetallepedido");
+                    string consultadetallepe = "'" + idpedido + "', '" + idproducto + "', '" + cantidad + "', '" + precio + "', '" + costo + "', '" + total + "', '" + fila + "'";
+                    string consultadetallepe_campos = "PkId_EncabezadoPedido, FkId_Producto, CantidadDetalle_DetallePedido, PrecioDetalle_DetallePedido, CostoDetalle_DetallePedido,TotalDetalle_DetallePedido, linea";
+                    sn.insertar(consultadetallepe, consultadetallepe_campos, "tblDetallePedido");
                 }
 
                 OdbcDataAdapter dt = sn.formadortablareserva(idpedidoo);
@@ -591,7 +704,7 @@ namespace ComprasControlador
                     if (idsproductos[x] != null && idsproductos[x] != "")
                     {
                         string consultadetallereserva = "'" + idreserva + "', '" + idsproductos[x] + "', " + cantidadesproducto[x] + ", " + existenciaproducto[x] + ", " + (existenciaproducto[x] - cantidadesproducto[x]) + ", " + x;
-                        string consultadetallereserva_campos = "Pk_Reserva, Id_producto, Cantidad_Descontar, Existencia_anterior, Existencia_nueva, linea";
+                        string consultadetallereserva_campos = "Pk_Reserva, Id_producto, CantidadDescontar_DetalleReservacionPedido, ExistenciaAnterior_DetalleReservacionPedido, ExistenciaNueva_DetalleReservacionPedido, linea_DetalleReservacionPedido";
                         sn.insertar(consultadetallereserva, consultadetallereserva_campos, "tbldetallereservacionpedido");
                         sn.actualizarexistenciaproducto(idsproductos[x], (existenciaproducto[x] - cantidadesproducto[x]).ToString());
                     }
@@ -612,18 +725,18 @@ namespace ComprasControlador
                 string idasociado = verificarasociacion(textbox[0].Text, textbox[1].Text);
 
 
-                string consultaenpedido = textbox[2].Text + ", '" + idasociado + "', '" + dtp.Value.ToString("yyyyMMdd") + "',  '" + DateTime.Now.Date.ToString("yyyyMMdd") + "', " + textbox[3].Text + ", 0";
-                string consultaenpedido_campos = "PkId_EncabezadoPedido, FkIdAsociacion, FechaVencimineto, FechaEmision, Total, EstatusOrdenCompra_EncabezadoPedido";
+                string consultaenpedido = textbox[2].Text + ", '" + idasociado + "', '" + dtp.Value.ToString("yyyyMMdd") + "',  '" + DateTime.Now.Date.ToString("yyyyMMdd") + "', " + textbox[3].Text + ", 1";
+                string consultaenpedido_campos = "PkId_EncabezadoPedido, FkIdAsociacion, FechaVencimineto_EncabezadoPedido, FechaEmision_EncabezadoPedido, Total_EncabezadoPedido, Estatus_EncabezadoPedido";
                 sn.insertar(consultaenpedido, consultaenpedido_campos, "tblencabezadopedido");
-                string mensaje = "Pedido Exitoso, tiene hasta: " + dtp.Value.ToString("dd-MM-YY") + " para realizar el pago de: Q" + textbox[3].Text;
+                string mensaje = "Pedido Exitoso, tiene hasta: " + dtp.Value.ToString("dd/MM/yyyy") + " para realizar el pago de: Q" + textbox[3].Text;
                 MessageBox.Show(mensaje, " Pedido Exitoso  ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                 //Reservacion de producto
 
                 string idencabezadopedido = crearidstring("", "tblEncabezadoReservacionPedido", "Rsp", "PkId_Reserva");
-                string consultaencabezadopedido = "'" + idencabezadopedido + "', '" + textbox[2].Text + "', 0";
-                string consultaencabezadopedido_campos = "PkId_Reserva, FkId_pedido, estatus";
+                string consultaencabezadopedido = "'" + idencabezadopedido + "', '" + textbox[2].Text + "', 1";
+                string consultaencabezadopedido_campos = "PkId_Reserva, FkId_pedido, estatus_Reserva";
                 sn.insertar(consultaencabezadopedido, consultaencabezadopedido_campos, "tblEncabezadoReservacionPedido");
 
                 textbox[3].Clear();
@@ -644,7 +757,7 @@ namespace ComprasControlador
             {
                 idasociado = crearidstring("", "tblasociacion", "Asc", "PkId_Asociacion");
                 string consulta = "'" + idasociado + "' , " + empleado + " , " + cliente;
-                string consulta_campos = "PkId_Asociacion, FkId_Empleados, FkId_Clientes";
+                string consulta_campos = "PkId_Asociacion, fk_id_trabajador, FkId_Clientes";
 
                 sn.insertar(consulta, consulta_campos, "tblasociacion");
             }
@@ -665,9 +778,398 @@ namespace ComprasControlador
             limpiardetallepedido(group[1]);
             inventario.Clear();
         }
+
+
+        
+
+
+        //metodo inicioventa
+        public void inicioventa(TextBox id, TextBox pedido, GroupBox venta, TextBox total, TextBox subtotal)
+        {
+
+            limpiardetallepedido(venta);
+            bloqueargroup(venta);
+            pedido.Enabled = false;
+            total.Enabled = false;
+            subtotal.Enabled = false;
+            crearid(id, "tblventasencabezado", " ", "PkId_VentasEncabezado");
+            
+
+        }
+
+
+       public void llenarventaydetalle(string id, TextBox nombrecliente, DateTimePicker[] fechas, DataGridView tabla, TextBox subtotal, TextBox nit )
+        {
+            string verificadorpedido = sn.verificarexistenciapedido(id);
+            nit.Enabled = true;
+            nit.Focus();
+            if(verificadorpedido != "")
+            {
+                string[] datos = new string[3];
+                datos = sn.llenarventa(id);
+                for(int x = 0; x  < datos.Length; x++)
+                {
+                    if (datos[x] != "")
+                    {
+                        fechas[0].Value = Convert.ToDateTime(datos[0]);
+                        fechas[1].Value = Convert.ToDateTime(datos[1]);
+                        subtotal.Text = datos[2];
+                        nombrecliente.Text = datos[3];
+                        OdbcDataAdapter dt = sn.formadortabladetalleventainterna(id);
+                        detalleventa.Clear();
+                        dt.Fill(detalleventa);
+
+                        OdbcDataAdapter dt2 = sn.formadortabladetalleventaexterna(id);
+                        DataTable table = new DataTable();
+                        dt2.Fill(table);
+                        tabla.DataSource = table;
+                    }
+                }
+            
+               
+
+            }
+            /*else
+            {
+                string mensaje = "El pedido no existe ó ya a expirado";
+                MessageBox.Show(mensaje, " Pedido  ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }*/
+
+
+        }
+
+        public void preestablecido(GroupBox[] groupBoxes, TextBox id, TextBox abono, TextBox pedido, DataGridView tabla, TextBox nit)
+        {
+            limpiardetallepedido(groupBoxes[0]);
+            limpiardetallepedido(groupBoxes[1]);
+          
+            pedido.Enabled = false;
+            abono.Enabled = true;
+            nit.Enabled = true;
+            crearid(id, "tblventasencabezado", " ", "PkId_VentasEncabezado");
+            tabla.DataSource = "";
+            
+        }
+
+
+        public void eliminarpedido(TextBox idpedido)
+        {
+            if(idpedido.Text.Length != 0)
+            {
+
+            
+            sn.eliminarpedidostatuspedido(idpedido.Text);
+            sn.eliminarpedidostatusreservapedido(idpedido.Text);
+            string idreserva = sn.buscardato("tblencabezadoreservacionpedido", "FkId_pedido", "PkId_Reserva", idpedido.Text);
+            
+            int lineas = sn.estadotabladrp( idreserva);
+                
+
+            for (int x = 0; x < lineas; x++)
+            {
+              string[] datos =   sn.devolverainventario(idreserva, x.ToString());
+
+              string existencia = sn.buscardato("tbl_producto", "pk_codigo_producto", "existencia",datos[0]);
+                    
+                    double nuevaexistenica = Convert.ToDouble(existencia) + Convert.ToDouble(datos[1]);
+                    
+                    sn.actualizarexistenciaproducto(datos[0], nuevaexistenica.ToString());
+                
+            }
+                sn.eliminar(idreserva, "Pk_Reserva", "tbldetallereservacionpedido");
+                sn.eliminar(idreserva, "PkId_Reserva", "tblencabezadoreservacionpedido");
+                sn.eliminar(idpedido.Text, "PkId_EncabezadoPedido", "tbldetallepedido");
+                
+                sn.eliminar(idpedido.Text, "PkId_EncabezadoPedido", "tblencabezadopedido");
+                string mensaje = "Pedido Eliminado Exitosamente";
+                MessageBox.Show(mensaje, " Pedido  ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else 
+            {
+                string mensaje = "Seleccione un pedido para eliminar";
+                MessageBox.Show(mensaje, " Pedido  ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        public void convertirmoneda(TextBox txtsubtotal, string moneda, TextBox txttotal)
+        {
+            double total;
+        
+           double subtotal = Convert.ToDouble(txtsubtotal.Text);
+            if (moneda.Equals("$"))//$ cambio Q7.84
+            {
+               total = subtotal / 7.84;
+            }
+            else if(moneda.Equals("€"))//€ ambio Q7.75
+            {
+                
+                total = subtotal / 7.75;
+            }
+            else 
+            {
+                total = subtotal;
+              
+            }
+            
+            txttotal.Text = total.ToString();
+        }
+
+        public void calculototalventa( string combotipopago,  TextBox[] textBoxes, string combotipoplazo)
+        {
+            double descuento = 0, subtotal, valordescuento=0, Total = 0;
+
+            if(combotipopago.Equals("Contado"))
+            {
+                descuento = 0.13;
+            }
+            else if(combotipopago.Equals("Plazos"))
+            {
+                if(combotipoplazo.Equals("15 – 29 días"))
+                {
+                    descuento = 0.12;
+                }
+               else if (combotipoplazo.Equals("30 días"))
+                {
+                    descuento = 0.10;
+                }
+                else if (combotipoplazo.Equals("31 – 60 días"))
+                {
+                    descuento = 0.08;
+                }
+                else if (combotipoplazo.Equals("61 – 90 días"))
+                {
+                    descuento = 0.06;
+                }
+
+            }
+
+            subtotal = Convert.ToDouble(textBoxes[0].Text);
+            if(descuento != 0)
+            {
+                valordescuento = subtotal * descuento;
+            }
+            
+           
+            Total = subtotal - valordescuento;
+            textBoxes[1].Text = Total.ToString();
+        }
+
+        public void calculototalventa(string combotipopago, TextBox[] textBoxes)
+        {
+            double descuento = 0, subtotal, valordescuento = 0, Total = 0;
+
+            if (combotipopago.Equals("Contado"))
+            {
+                descuento = 0.13;
+            }
+            
+
+            subtotal = Convert.ToDouble(textBoxes[0].Text);
+            if (descuento != 0)
+            {
+                valordescuento = subtotal * descuento;
+            }
+
+
+            Total = subtotal - valordescuento;
+            textBoxes[1].Text = Total.ToString();
+        }
+
+         string[] generarcertificacion()
+        {
+            string[] datos = new string[3];
+            Random r = new Random();
+            string idcertificacion = crearidwo("tblcertificacionfacturacion", "PkId_CertificacionFacturacion");
+            datos[0] = idcertificacion;
+            datos[1] = r.Next(1, 10000).ToString();
+            datos[2] = r.Next(1, 10000).ToString();
+            string consultaencabezadocertificacion = "'" + idcertificacion + "', '" + datos[1] + "', '" + datos[2] + "'";
+            string consultaencabezadocertificacion_campos = "PkId_CertificacionFacturacion, NoDocumento_CertificacionFacturacion, Serie_CertificacionFacturacion";
+            sn.insertar(consultaencabezadocertificacion, consultaencabezadocertificacion_campos, "tblcertificacionfacturacion");
+            return datos;
+        }
+        public void insertarventa( TextBox[] textbox, GroupBox[] groupBoxes, ComboBox combo )
+        {
+
+           bool verificardorv;
+            bool verificardorp;
+            bool verificardorvdp;
+
+            if(combo.SelectedItem.ToString().Equals("Contado"))
+            {
+                verificardorv = Verificarcamposvacios(groupBoxes[0]);
+                verificardorp = true;
+                verificardorvdp = Verificarcamposvacios(groupBoxes[2]);
+                
+            }
+            else
+            {
+                verificardorv = Verificarcamposvacios(groupBoxes[0]);
+                verificardorp = Verificarcamposvacios(groupBoxes[1]);
+                verificardorvdp = Verificarcamposvacios(groupBoxes[2]);
+            }
+
+            if (verificardorp == true && verificardorv == true && verificardorvdp == true)
+            {
+                string asociacion = sn.buscardato("tblencabezadopedido", "PkId_EncabezadoPedido", "FkIdAsociacion", textbox[1].Text);
+                string consultaencabezadoventa = "'" + textbox[0].Text + "', '" + textbox[1].Text + "', '" + asociacion + "','" + DateTime.Now.Date.ToString("yyyyMMdd") + "','" + textbox[3].Text + "'";
+                string consultaencabezadoventa_campos = "PkId_VentasEncabezado, FKId_Pedido, FkId_Asociacion, FechaVenta_VentasEncabezado, Total_VentasEncabezado";
+                sn.insertar(consultaencabezadoventa, consultaencabezadoventa_campos, "tblventasencabezado");
+
+                //ingreso factura
+                string[] encabezado = generarcertificacion();
+                string idfactura = crearidwo("tblfacturaclientes", "PkId_FacturaClientes");
+                string consultaencabezadofactura = "'" + idfactura + "', '" + textbox[0].Text + "', '" + encabezado[0] + "', '" + encabezado[1] + "', '" + encabezado[2] + "', '" + textbox[4].Text + "', '" + DateTime.Now.Date.ToString("yyyyMMdd") + "','" + textbox[3].Text + "'";
+                string consultaencabezadovfactura_campos = "PkId_FacturaClientes, FkId_VentasEncabezado, FkId_CertificacionFacturacion, Serie_FacturaClientes, NoDocumento_FacturaClientes, Nit_FacturaClientes, FechaEmision_FacturaClientes, Total_FacturaClientes";
+                sn.insertar(consultaencabezadofactura, consultaencabezadovfactura_campos, "tblfacturaclientes");
+
+
+                //caja clientes
+                double saldo = Convert.ToDouble(textbox[3].Text);
+                double abono = Convert.ToDouble(textbox[5].Text);
+                double saldonuevo = saldo - abono;
+                string idcaja = crearidwo("tblcajaclientes", "PkId_CajaClientes");
+                string consultaencabezadocaja = "'" + idcaja + "', '" + textbox[0].Text + "', '" + textbox[5].Text + "','" + textbox[3].Text + "','" + saldonuevo + "','" + idfactura + "'";
+                string consultaencabezadovcaja_campos = "PkId_CajaClientes, FKId_VentasEncabezado, abono_CajaClientes, SaldoAnterior_CajaClientes, SaldoActualizado_CajaClientes, FkId_FacturaClientes";
+                sn.insertar(consultaencabezadocaja, consultaencabezadovcaja_campos, "tblcajaclientes");
+
+                insertardetalleventa(textbox[0].Text, idfactura);
+                string dato = " set Estatus_EncabezadoPedido = 0 ";
+                string condicion = " where PkId_EncabezadoPedido = '" + textbox[0].Text + "'";
+                sn.actualizar("tblencabezadopedido", dato, condicion);
+
+                sn.eliminarpedidostatuspedido(textbox[0].Text);
+                string mensaje = "Venta realizada exitosamente";
+                MessageBox.Show(mensaje, " Venta  ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
+            
+
+        }
+
+
+         void insertardetalleventa(string idventa, string idfactura)
+        {
+            foreach (DataRow row in detalleventa.Rows)
+            {
+              
+
+                string consultaencabezadoventadetalle = "'" + idventa + "', '" + row[0] + "', '" + row[1] + "','" + row[2] + "','" + row[3] + "','" + row[4] + "','" + row[5] + "'";
+                string consultaencabezadoventadetalle_campos = "PkId_DetalleVenta, FkId_Producto, FkId_EncabezadoPedido, PrecioProducto_DetalleVenta, Cantidad_DetalleVenta, Costo_DetalleVenta, Total_DetalleVenta";
+                sn.insertar(consultaencabezadoventadetalle, consultaencabezadoventadetalle_campos, "tbldetalleventa");
+
+
+                string consultaencabezadofechadetalle = "'" + idfactura + "', '" + row[0] + "', '" + row[3] + "','" + row[2] + "','" + row[4] + "','" + (Convert.ToDouble(row[5]) / 1.12) + "','" + row[5] + "'";
+                string consultaencabezadofechadetalle_campos = "PkId_FacturaClientes, FkId_Producto, CantidadProducto_DetalleFacturaClientes, PrecioProducto_DetalleFacturaClientes, Costo_DetalleFacturaClientes, IvaPorCobrar_DetalleFacturaCliente, Total_DetalleFacturaClientes";
+                sn.insertar(consultaencabezadofechadetalle, consultaencabezadofechadetalle_campos, "tbldetallefacturaclientes");
+
+            }
+            
+        }
+        public void llenartablaf(string ntabla, DataGridView tabla, DateTimePicker[] fechas)//Funcion para llenar tablafactura
+        {
+            try
+            {
+                OdbcDataAdapter dt = sn.llenartablafactura(ntabla, fechas[0].Value.ToString("yyyyMMdd"), fechas[1].Value.ToString("yyyyMMdd"));
+                DataTable table = new DataTable();
+                dt.Fill(table);
+                tabla.DataSource = table;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error:" + e);
+            }
+
+        }
+        public void llenarcomboformapago( ComboBox combo)
+        {
+            try
+            {
+
+
+
+                OdbcDataAdapter dt = sn.llenarcomboformapago();
+                DataTable table = new DataTable();
+                dt.Fill(table);
+
+                int contador = 0;
+                combo.Items.Clear();
+
+
+                foreach (DataRow row in table.Rows)
+                {
+                    combo.Items.Add(table.Rows[contador][0].ToString());
+
+                    contador++;
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(" " + e);
+            }
+        }
+
+        void limpiargroup(GroupBox group)
+        {
+
+
+            foreach (Control c in group.Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Text = "";
+                }
+
+            }
+        }
+
+        public void limpiarventa(GroupBox[] groupBoxes, DataGridView tabla)
+        {
+            limpiargroup(groupBoxes[0]);
+            limpiargroup(groupBoxes[1]);
+            limpiargroup(groupBoxes[2]);
+            tabla.DataSource = "";
+
+        }
+
+        public void eliminarpedidocaducado()
+        {
+            OdbcDataAdapter dt = sn.idscaducados();
+            DataTable tablacaducados = new DataTable();
+            dt.Fill(tablacaducados);
+            
+            foreach(DataRow r in tablacaducados.Rows)
+            {
+                sn.eliminarpedidostatuspedido(r[0].ToString());
+                sn.eliminarpedidostatusreservapedido(r[0].ToString());
+                string idreserva = sn.buscardato("tblencabezadoreservacionpedido", "FkId_pedido", "PkId_Reserva", r[0].ToString());
+
+                int lineas = sn.estadotabladrp(idreserva);
+
+
+                for (int x = 0; x < lineas; x++)
+                {
+                    string[] datos = sn.devolverainventario(idreserva, x.ToString());
+
+                    string existencia = sn.buscardato("tbl_producto", "pk_codigo_producto", "existencia", datos[0]);
+                    double nuevaexistenica = Convert.ToDouble(existencia) + Convert.ToDouble(datos[1]);
+                     sn.actualizarexistenciaproducto(datos[0], nuevaexistenica.ToString());
+                   
+                }
+                sn.eliminar(idreserva, "Pk_Reserva", "tbldetallereservacionpedido");
+           
+                sn.eliminar(idreserva, "PkId_Reserva", "tblencabezadoreservacionpedido");
+                sn.eliminar(r[0].ToString(), "PkId_EncabezadoPedido", "tbldetallepedido");
+                sn.eliminar(r[0].ToString(), "PkId_EncabezadoPedido", "tblencabezadopedido");
+            }
+          
+               
+        }
+
     }
 
-
-
-
 }
+

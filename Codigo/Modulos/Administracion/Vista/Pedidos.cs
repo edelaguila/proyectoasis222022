@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ComprasControlador;
 
+
 namespace ComprasVista
 {
     public partial class Pedidos : Form
@@ -27,20 +28,7 @@ namespace ComprasVista
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int tamaño = Cbo_medidas.Items.Count;
-           
-            TextBox[] campos = { Txt_descripcion, Txt_precio, Txt_linea };
          
-            for(int x = 0; x < tamaño; x++)
-            {
-                if (Cbo_medidas.SelectedIndex.Equals(x))
-                {
-                    if(Txt_idproducto.TextLength != 0)
-                    {
-                        cn.llenardatoscombo(Cbo_medidas.SelectedItem.ToString(), campos, Txt_idproducto.Text);
-                    }
-                }
-            }
            
         }
 
@@ -52,7 +40,7 @@ namespace ComprasVista
         private void button1_Click(object sender, EventArgs e)
         {
             AyudaPedido a = new AyudaPedido("tbl_producto","pk_codigo_producto");
-
+            
 
             if (cn.IDS == null && Txt_idproducto.Text.Length == 0)
             {
@@ -68,7 +56,8 @@ namespace ComprasVista
 
         private void button4_Click(object sender, EventArgs e)
         {
-            AyudaPedido a = new AyudaPedido("tblEmpleados", "PkId_Empleados");
+            AyudaPedido a = new AyudaPedido("tbl_trabajador", "pk_id_trabajador");
+           
 
 
             if (cn.IDS == null && Txt_idvendedor.Text.Length == 0)
@@ -86,7 +75,7 @@ namespace ComprasVista
         private void button3_Click(object sender, EventArgs e)
         {
             AyudaPedido a = new AyudaPedido("tblClientes", "PkId_Clientes");
-
+           
 
             if (cn.IDS == null && Txt_idcliente.Text.Length == 0)
             {
@@ -102,9 +91,11 @@ namespace ComprasVista
 
         private void Txt_idproducto_TextChanged(object sender, EventArgs e)
         {
+            TextBox[] campos = { Txt_descripcion, Txt_precio, Txt_linea, Txt_costo };
             if (Txt_idproducto.TextLength != 0 )
             {
-                cn.llenarcombo(Txt_idproducto.Text, Cbo_medidas);
+                
+                cn.llenardatostextbox(campos,Txt_idproducto.Text);
             }
            
         }
@@ -113,13 +104,12 @@ namespace ComprasVista
         {
             if(Txt_idproducto.Text.Length != 0 && Txt_descripcion.Text.Length != 0 && Txt_precio.Text.Length != 0 && Txt_linea.Text.Length != 0 && Txt_cantidad.Text.Length != 0)
             {
-                if (Cbo_medidas.Items.Count != 0)
-                {
-                    cn.insertardatagrid(Dgvpedido, Txt_cantidad.Text, Txt_precio.Text, Cbo_medidas.SelectedItem.ToString(), Txt_descripcion.Text, Txt_total, Txt_idpedido.Text, groupBox2);
-                }
+                
+                    cn.insertardatagrid(Dgvpedido, Txt_cantidad.Text, Txt_precio.Text, Txt_idproducto.Text, Txt_descripcion.Text, Txt_total, Txt_idpedido.Text, groupBox2, Txt_costo.Text);
+                
                
             }
-            Cbo_medidas.SelectedIndex = -1;
+           
 
 
 
@@ -128,15 +118,15 @@ namespace ComprasVista
 
         private void btneliminar_Click(object sender, EventArgs e)
         {
-            TextBox[] limpiar = { Txt_idproducto, Txt_descripcion, Txt_precio, Txt_linea, Txt_cantidad };
+            TextBox[] limpiar = { Txt_idproducto, Txt_descripcion, Txt_precio, Txt_linea, Txt_cantidad, Txt_costo};
             cn.eliminarfilagrid(Dgvpedido, Txt_total, groupBox2);
         }
 
         private void Pedidos_Load(object sender, EventArgs e)
         {
-            
+            cn.eliminarpedidocaducado();
             cn.llenarcolumnasdatatable();
-            cn.inicio(Dtp_fechavencimiento,Txt_idpedido, Txt_descripcion,Txt_precio,Txt_linea, Txt_total);
+            cn.inicio(Dtp_fechavencimiento,Txt_idpedido, Txt_descripcion,Txt_precio,Txt_linea, Txt_total, Txt_idvendedor, Txt_idproducto, Txt_idcliente);
         }
 
         private void Txt_total_TextChanged(object sender, EventArgs e)
@@ -148,14 +138,18 @@ namespace ComprasVista
 
         private void btninsertar_Click(object sender, EventArgs e)
         {
-            TextBox[] textBoxes = { Txt_idvendedor, Txt_idcliente, Txt_idpedido, Txt_total};
-            GroupBox[] groupBoxes = { groupBox1,groupBox2};
-            cn.insertardbencabezado(textBoxes, Dtp_fechavencimiento, groupBox1);
-            cn.insertarbddetalle(Dgvpedido);
-            cn.limpiarpedido(groupBoxes);
-            Dgvpedido.Rows.Clear();
-            Cbo_medidas.SelectedIndex = -1;
-            cn.inicio(Dtp_fechavencimiento, Txt_idpedido, Txt_descripcion, Txt_precio, Txt_linea, Txt_total);
+            if(Dgvpedido.Rows.Count > 1)
+            {
+                TextBox[] textBoxes = { Txt_idvendedor, Txt_idcliente, Txt_idpedido, Txt_total };
+                GroupBox[] groupBoxes = { groupBox1, groupBox2 };
+                cn.insertardbencabezado(textBoxes, Dtp_fechavencimiento, groupBox1);
+                cn.insertarbddetalle(Dgvpedido);
+                cn.limpiarpedido(groupBoxes);
+                Dgvpedido.Rows.Clear();
+
+                cn.inicio(Dtp_fechavencimiento, Txt_idpedido, Txt_descripcion, Txt_precio, Txt_linea, Txt_total, Txt_idvendedor, Txt_idproducto, Txt_idcliente);
+            }
+           
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
@@ -163,10 +157,19 @@ namespace ComprasVista
             GroupBox[] groupBoxes = { groupBox1, groupBox2 };
             cn.limpiarpedido(groupBoxes);
             Dgvpedido.Rows.Clear();
-            Cbo_medidas.SelectedIndex = -1;
+         
             Txt_total.Clear();
-            cn.inicio(Dtp_fechavencimiento, Txt_idpedido, Txt_descripcion, Txt_precio, Txt_linea, Txt_total);
+            cn.inicio(Dtp_fechavencimiento, Txt_idpedido, Txt_descripcion, Txt_precio, Txt_linea, Txt_total, Txt_idvendedor, Txt_idproducto, Txt_idcliente);
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, @"C:\Users\luist\OneDrive\Universidad\8semestre\Analisis2\proyectofinalasis222022\Codigo\Modulos\Administracion\Ayudast\ayudast.chm", "AyudaPedido.html");
         }
     }
 }
-

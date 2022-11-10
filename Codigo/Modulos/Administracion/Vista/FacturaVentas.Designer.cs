@@ -29,264 +29,160 @@ namespace ComprasVista
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Dgv_factura = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.Clave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IVA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaemision = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Dtp_inicio = new System.Windows.Forms.DateTimePicker();
+            this.Dtp_fin = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnUpdate = new FontAwesome.Sharp.IconButton();
+            this.btnReporte = new FontAwesome.Sharp.IconButton();
+            this.Crv_factura = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.btncancelar = new FontAwesome.Sharp.IconButton();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_factura)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // Dgv_factura
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1084, 87);
-            this.panel1.TabIndex = 2;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Clave,
-            this.nit,
-            this.IVA,
-            this.producto,
-            this.fechaemision,
-            this.Subtotal,
-            this.totalt});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 296);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1060, 331);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(238, 136);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(180, 137);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Id factura ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(212, 185);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Nit";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(238, 178);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(375, 146);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Producto";
-            this.label3.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(431, 139);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(237, 20);
-            this.textBox3.TabIndex = 8;
+            this.Dgv_factura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_factura.Location = new System.Drawing.Point(24, 145);
+            this.Dgv_factura.Name = "Dgv_factura";
+            this.Dgv_factura.Size = new System.Drawing.Size(653, 216);
+            this.Dgv_factura.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(375, 185);
+            this.label4.Location = new System.Drawing.Point(34, 26);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 13);
+            this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Fecha de emisión";
+            this.label4.Text = "Fecha Inicio";
             this.label4.Click += new System.EventHandler(this.label2_Click);
             // 
-            // dateTimePicker2
+            // Dtp_inicio
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(468, 177);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 11;
+            this.Dtp_inicio.Location = new System.Drawing.Point(109, 20);
+            this.Dtp_inicio.Name = "Dtp_inicio";
+            this.Dtp_inicio.Size = new System.Drawing.Size(200, 20);
+            this.Dtp_inicio.TabIndex = 11;
             // 
-            // label5
+            // Dtp_fin
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(696, 143);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Sub total";
+            this.Dtp_fin.Location = new System.Drawing.Point(109, 66);
+            this.Dtp_fin.Name = "Dtp_fin";
+            this.Dtp_fin.Size = new System.Drawing.Size(200, 20);
+            this.Dtp_fin.TabIndex = 13;
             // 
-            // label6
+            // label1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(714, 178);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Total";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Fecha de Fin";
             // 
-            // textBox4
+            // btnUpdate
             // 
-            this.textBox4.Location = new System.Drawing.Point(751, 139);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(129, 20);
-            this.textBox4.TabIndex = 5;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnUpdate.FlatAppearance.BorderSize = 2;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.IconChar = FontAwesome.Sharp.IconChar.ArrowRotateForward;
+            this.btnUpdate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnUpdate.IconSize = 40;
+            this.btnUpdate.Location = new System.Drawing.Point(363, 24);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(69, 61);
+            this.btnUpdate.TabIndex = 48;
+            this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // textBox5
+            // btnReporte
             // 
-            this.textBox5.Location = new System.Drawing.Point(751, 171);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(129, 20);
-            this.textBox5.TabIndex = 13;
+            this.btnReporte.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnReporte.FlatAppearance.BorderSize = 2;
+            this.btnReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReporte.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.btnReporte.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(123)))), ((int)(((byte)(180)))), ((int)(((byte)(227)))));
+            this.btnReporte.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnReporte.IconSize = 36;
+            this.btnReporte.Location = new System.Drawing.Point(470, 24);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(69, 61);
+            this.btnReporte.TabIndex = 50;
+            this.btnReporte.Text = "Reportes";
+            this.btnReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
-            // label7
+            // Crv_factura
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(204, 230);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(24, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "IVA";
+            this.Crv_factura.ActiveViewIndex = -1;
+            this.Crv_factura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Crv_factura.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Crv_factura.Location = new System.Drawing.Point(12, 105);
+            this.Crv_factura.Name = "Crv_factura";
+            this.Crv_factura.Size = new System.Drawing.Size(665, 271);
+            this.Crv_factura.TabIndex = 51;
+            this.Crv_factura.Visible = false;
             // 
-            // textBox6
+            // btncancelar
             // 
-            this.textBox6.Location = new System.Drawing.Point(238, 227);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(153, 20);
-            this.textBox6.TabIndex = 8;
-            // 
-            // Clave
-            // 
-            this.Clave.HeaderText = "ID Factura";
-            this.Clave.Name = "Clave";
-            // 
-            // nit
-            // 
-            this.nit.HeaderText = "Nit";
-            this.nit.Name = "nit";
-            // 
-            // IVA
-            // 
-            this.IVA.HeaderText = "IVA";
-            this.IVA.Name = "IVA";
-            // 
-            // producto
-            // 
-            this.producto.HeaderText = "producto";
-            this.producto.Name = "producto";
-            // 
-            // fechaemision
-            // 
-            this.fechaemision.HeaderText = "Fecha emisión";
-            this.fechaemision.Name = "fechaemision";
-            // 
-            // Subtotal
-            // 
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.Name = "Subtotal";
-            // 
-            // totalt
-            // 
-            this.totalt.HeaderText = "Total ";
-            this.totalt.Name = "totalt";
+            this.btncancelar.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btncancelar.FlatAppearance.BorderSize = 2;
+            this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btncancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancelar.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
+            this.btncancelar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(50)))), ((int)(((byte)(52)))));
+            this.btncancelar.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btncancelar.IconSize = 40;
+            this.btncancelar.Location = new System.Drawing.Point(587, 24);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Size = new System.Drawing.Size(69, 61);
+            this.btncancelar.TabIndex = 59;
+            this.btncancelar.Text = "Cerrar";
+            this.btncancelar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Visible = false;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
             // 
             // FacturaVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(247)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(1084, 661);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox2);
+            this.ClientSize = new System.Drawing.Size(696, 388);
+            this.Controls.Add(this.btncancelar);
+            this.Controls.Add(this.Crv_factura);
+            this.Controls.Add(this.btnReporte);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.Dtp_fin);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Dtp_inicio);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.Dgv_factura);
             this.Name = "FacturaVentas";
             this.Text = "FacturaVentas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_factura)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DataGridView Dgv_factura;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Clave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IVA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaemision;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalt;
+        private System.Windows.Forms.DateTimePicker Dtp_inicio;
+        private System.Windows.Forms.DateTimePicker Dtp_fin;
+        private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton btnUpdate;
+        private FontAwesome.Sharp.IconButton btnReporte;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer Crv_factura;
+        private FontAwesome.Sharp.IconButton btncancelar;
     }
 }

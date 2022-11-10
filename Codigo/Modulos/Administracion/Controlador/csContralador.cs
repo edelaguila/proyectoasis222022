@@ -77,6 +77,7 @@ namespace ComprasControlador
                     sn.eliminar(clave, campo, tabla.Tag.ToString());
                     
 
+
             }
             catch (Exception e)
             {
@@ -84,5 +85,22 @@ namespace ComprasControlador
             }
 
         }
+
+        //Codigo movimiento clientes
+        public void fillTableMovClient(string ntabla, DataGridView tabla, string tipo, string dato)//Funcion para llenar tabla
+        {
+            try
+            {
+                OdbcDataAdapter dt = sn.llenartablaMovCliente(ntabla, tipo, dato);
+                DataTable table = new DataTable();
+                dt.Fill(table);
+                tabla.DataSource = table;
+            }
+            catch (Exception e)
+            {
+                System.Windows.MessageBox.Show("Error:" + e);
+            }
+
+        } //Fin codigo movimiento Clientes
     }
 }
