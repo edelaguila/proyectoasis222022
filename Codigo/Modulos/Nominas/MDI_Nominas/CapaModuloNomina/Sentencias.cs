@@ -20,6 +20,33 @@ namespace CapaModuloNomina
             return dataTable;
         }
 
+        public OdbcDataAdapter llenarListaPuesto(string tabla)
+        {
+            string sql = "select  pk_id_puesto as ID, nombre_puesto AS Puesto, estado_puesto as Estado from tbl_puestosdetrabajo where estado_puesto != 0;";
+            OdbcDataAdapter datatable = new OdbcDataAdapter(sql, con.conexion());
+            return datatable;
+        }
+        public OdbcDataAdapter llenarListaDepartamentos(string tabla)
+        {
+            string sql = "select pk_id_departamento as ID, nombre_departamento AS Departamento, descripcion_departamento as Descripcion from tbl_departamentos where estado_departamento != 0;";
+            OdbcDataAdapter datatable = new OdbcDataAdapter(sql, con.conexion());
+            return datatable;
+        }
+
+        public OdbcDataAdapter llenarListaPuesto2(string tabla)
+        {
+            string sql = "select  pk_id_puesto as ID, nombre_puesto AS Puesto, estado_puesto as Estado from tbl_puestosdetrabajo where estado_puesto != 0;";
+            OdbcDataAdapter datatable = new OdbcDataAdapter(sql, con.conexion());
+            return datatable;
+        }
+
+        public OdbcDataAdapter llenarListaTrabajador(string tabla)
+        {
+            string sql = "select pk_id_trabajador as ID, nombre_trabajador AS Trabajador, estado_trabajador AS Estado from tbl_trabajador where estado_trabajador != 0;";
+            OdbcDataAdapter datatable = new OdbcDataAdapter(sql, con.conexion());
+            return datatable;
+        }
+
         public OdbcDataAdapter llenarListaContratos(string tabla)
         {
             string sql = "select  pk_id_contrato as ID, tipoPago_contrato AS TipoContrato, estado_contrato as Estado from tbl_contrato where estado_contrato != 0;";

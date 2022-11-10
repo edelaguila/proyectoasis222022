@@ -22,6 +22,38 @@ namespace CapaControladorNomina
             return table;
         }
 
+        public void llenarListPuestos(string ntabla, DataGridView tabla)
+        {
+            OdbcDataAdapter dt = sn.llenarListaPuesto(ntabla);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            tabla.DataSource = table;
+        }
+
+        public void llenarListDepartamentos(string ntabla, DataGridView tabla)
+        {
+            OdbcDataAdapter dt = sn.llenarListaDepartamentos(ntabla);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            tabla.DataSource = table;
+        }
+
+        public void llenarListPuestos2(string ntabla, DataGridView tabla)
+        {
+            OdbcDataAdapter dt = sn.llenarListaPuesto2(ntabla);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            tabla.DataSource = table;
+        }
+
+        public void llenarListTrabajadores(string ntabla, DataGridView tabla)
+        {
+            OdbcDataAdapter dt = sn.llenarListaTrabajador(ntabla);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            tabla.DataSource = table;
+        }
+
         public void llenarListContrato(string ntabla, DataGridView tabla)
         {
             OdbcDataAdapter dt = sn.llenarListaContratos(ntabla);
@@ -37,7 +69,6 @@ namespace CapaControladorNomina
             dt.Fill(table);
             tabla.DataSource = table;
         }
-
 
         public void ingresar(TextBox[] textbox, string tabla)
         {

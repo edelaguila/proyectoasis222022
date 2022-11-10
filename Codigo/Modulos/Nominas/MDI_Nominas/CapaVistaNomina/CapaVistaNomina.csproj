@@ -31,10 +31,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CapaControladorNomina, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\CapaControladorNomina\bin\Debug\CapaControladorNomina.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="NavegadorVista">
       <HintPath>..\..\..\..\Componentes\Navegador\Vista\bin\Debug\NavegadorVista.dll</HintPath>
     </Reference>
@@ -44,6 +49,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -167,6 +174,24 @@
     <Compile Include="PuestosTrabajo.Designer.cs">
       <DependentUpon>PuestosTrabajo.cs</DependentUpon>
     </Compile>
+    <Compile Include="RepAsigPuestoTrab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepAsigPuestoTrab.Designer.cs">
+      <DependentUpon>RepAsigPuestoTrab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteContratos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteContratos.Designer.cs">
+      <DependentUpon>ReporteContratos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPuestosTrab.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportPuestosTrab.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="TrabajadoresInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,12 +258,25 @@
     <EmbeddedResource Include="PuestosTrabajo.resx">
       <DependentUpon>PuestosTrabajo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RepAsigPuestoTrab.resx">
+      <DependentUpon>RepAsigPuestoTrab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteContratos.resx">
+      <DependentUpon>ReporteContratos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPuestosTrab.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportPuestosTrab.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrabajadoresInfo.resx">
       <DependentUpon>TrabajadoresInfo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -19,7 +19,7 @@ namespace CapaVistaNomina
         public void actualizardatagriew()
         {
             DataTable dt = cn.llenarTbl(emp);
-            dataGridView1.DataSource = dt;
+            dataGridTrabajador.DataSource = dt;
 
         }
         public TrabajadoresInfo()
@@ -43,6 +43,16 @@ namespace CapaVistaNomina
             b.Show();
         }
 
-   
+        private void navegador1_Load(object sender, EventArgs e)
+        {
+            NavegadorVista.Navegador.idApp = "6001";
+            TextBox[] Grupotextbox = { txtIDtrabajador, txtfechaAlta, txtnomTrab, txtemailTrab, txtdireccionTrab, txttelefonoTrab, txtestado };
+            TextBox[] Idtextbox = { txtIDtrabajador, txtfechaAlta, txtnomTrab, txtemailTrab, txtdireccionTrab, txttelefonoTrab, txtestado };
+            navegador1.textbox = Grupotextbox;
+            navegador1.tabla = dataGridTrabajador;
+            navegador1.textboxi = Idtextbox;
+            navegador1.actual = this;
+            navegador1.cargar(dataGridTrabajador, Grupotextbox, "colchoneria");
+        }
     }
 }

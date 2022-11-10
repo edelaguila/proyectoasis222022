@@ -224,6 +224,10 @@ namespace CapaVistaNomina
 
         private void btnRcontrato_Click(object sender, EventArgs e)
         {
+            ReporteContratos b = new ReporteContratos();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
             hideSubMenu();
         }
 
