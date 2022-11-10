@@ -75,7 +75,7 @@ namespace CapaVistaNomina
         private void AsignacionPuestoDepto_Load(object sender, EventArgs e)
         {
             txtDepartamento.Visible = false;
-            cn.llenarListPuestos(ListaDatos.Tag.ToString(), ListaDatos);
+            cn.llenarListContrato(ListaDatos.Tag.ToString(), ListaDatos);
         }
 
         private void ListaDatos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -96,14 +96,14 @@ namespace CapaVistaNomina
         {
             cont = 1;
             ListaDatos.Columns.Clear();
-            cn.llenarListPuestos(ListaDatos.Tag.ToString(), ListaDatos);
+            cn.llenarListContrato(ListaDatos.Tag.ToString(), ListaDatos);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             cont = 2;
             ListaDatos.Columns.Clear();
-            cn.llenarListDepartamentos(ListaDatos.Tag.ToString(), ListaDatos);
+            cn.llenarListTrabajadores2(ListaDatos.Tag.ToString(), ListaDatos);
         }
 
         private void button1_Click(object sender, EventArgs e)

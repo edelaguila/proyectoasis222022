@@ -22,21 +22,22 @@ namespace CapaControladorNomina
             return table;
         }
 
-        public void llenarListPuestos(string ntabla, DataGridView tabla)
+        public void llenarListContrato(string ntabla, DataGridView tabla)
         {
-            OdbcDataAdapter dt = sn.llenarListaPuesto(ntabla);
+            OdbcDataAdapter dt = sn.llenarListaContratos(ntabla);
             DataTable table = new DataTable();
             dt.Fill(table);
             tabla.DataSource = table;
         }
 
-        public void llenarListDepartamentos(string ntabla, DataGridView tabla)
+        public void llenarListTrabajadores2(string ntabla, DataGridView tabla)
         {
-            OdbcDataAdapter dt = sn.llenarListaDepartamentos(ntabla);
+            OdbcDataAdapter dt = sn.llenarListaTrabajador2(ntabla);
             DataTable table = new DataTable();
             dt.Fill(table);
             tabla.DataSource = table;
         }
+
 
         public void ingresar(TextBox[] textbox, string tabla)
         {
