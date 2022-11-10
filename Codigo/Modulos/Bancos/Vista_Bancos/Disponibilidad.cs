@@ -22,5 +22,11 @@ namespace Vista_Bancos
         {
             cn.disponibilidad(dataGridView1.Tag.ToString(), dataGridView1);
         }
+
+        private void btnreporte_Click(object sender, EventArgs e)
+        {
+            ReporteDisponibilidad frm_dispo = new ReporteDisponibilidad();
+            frm_dispo.Show();
+        }
     }
 }

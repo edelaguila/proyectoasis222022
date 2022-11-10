@@ -33,8 +33,10 @@ namespace Vista_Bancos
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dsCheque1 = new Vista_Bancos.DsCheque();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCheque1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -69,6 +71,11 @@ namespace Vista_Bancos
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // dsCheque1
+            // 
+            this.dsCheque1.DataSetName = "DsCheque";
+            this.dsCheque1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // BitacoraBancos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -81,6 +88,7 @@ namespace Vista_Bancos
             this.Text = "BitacoraBancos";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCheque1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -90,5 +98,6 @@ namespace Vista_Bancos
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DsCheque dsCheque1;
     }
 }

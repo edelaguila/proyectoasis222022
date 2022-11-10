@@ -125,6 +125,9 @@
     <Compile Include="Disponibilidad.Designer.cs">
       <DependentUpon>Disponibilidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="DsCheque.cs">
+      <DependentUpon>DsCheque.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DsCheque.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -206,6 +209,12 @@
     </Compile>
     <Compile Include="ReporteCuentasBancarias.Designer.cs">
       <DependentUpon>ReporteCuentasBancarias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteDisponibilidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteDisponibilidad.Designer.cs">
+      <DependentUpon>ReporteDisponibilidad.cs</DependentUpon>
     </Compile>
     <Compile Include="Reporte_Conciliacion.cs">
       <SubType>Form</SubType>
@@ -295,6 +304,9 @@
     <EmbeddedResource Include="reporteChequePlanilla.rdlc" />
     <EmbeddedResource Include="ReporteCuentasBancarias.resx">
       <DependentUpon>ReporteCuentasBancarias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteDisponibilidad.resx">
+      <DependentUpon>ReporteDisponibilidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reporte_Conciliacion.resx">
       <DependentUpon>Reporte_Conciliacion.cs</DependentUpon>
