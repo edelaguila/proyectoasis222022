@@ -253,6 +253,10 @@ namespace CapaVistaNomina
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
+            AyudaInfo b = new AyudaInfo();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
             hideSubMenu();
         }
 

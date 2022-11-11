@@ -136,6 +136,12 @@
     <Compile Include="AsignacionVacaciones.Designer.cs">
       <DependentUpon>AsignacionVacaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="AyudaInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AyudaInfo.Designer.cs">
+      <DependentUpon>AyudaInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Contrato.cs">
       <SubType>Form</SubType>
     </Compile>
