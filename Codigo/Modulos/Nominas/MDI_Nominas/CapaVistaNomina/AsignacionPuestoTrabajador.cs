@@ -1,5 +1,4 @@
-﻿using CapaControladorNomina;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaControladorNomina;
 
 namespace CapaVistaNomina
 {
@@ -17,7 +17,10 @@ namespace CapaVistaNomina
         int cont = 1;
 
         Controlador cn = new Controlador();
-
+        public AsignacionPuestoTrabajador()
+        {
+            InitializeComponent();
+        }
         public void getId()
         {
             try
@@ -67,9 +70,22 @@ namespace CapaVistaNomina
             txtCadenas2.Text = "";
         }
 
-        public AsignacionPuestoTrabajador()
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
+            char[] delimiterChars = { ',' };
+            string text = txtCadenas2.Text;
+            string[] words = text.Split(delimiterChars);
+
+            foreach (var word in words)
+            {
+                txtTrabajador.Text = word;
+                TextBox[] textbox = { txtCadenas1, txtTrabajador };
+                cn.ingresar(textbox, table);
+            }
+            string message = "Registro Guardado";
+            actualizardatagriew();
+            limpiar();
+            MessageBox.Show(message);
         }
 
         private void ListaDatos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -100,24 +116,6 @@ namespace CapaVistaNomina
             cn.llenarListTrabajadores(ListaDatos.Tag.ToString(), ListaDatos);
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            char[] delimiterChars = { ',' };
-            string text = txtCadenas2.Text;
-            string[] words = text.Split(delimiterChars);
-
-            foreach (var word in words)
-            {
-                txtTrabajador.Text = word;
-                TextBox[] textbox = { txtCadenas1, txtTrabajador };
-                cn.ingresar(textbox, table);
-            }
-            string message = "Registro Guardado";
-            actualizardatagriew();
-            limpiar();
-            MessageBox.Show(message);
-        }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (txtCadenas1.Text == "")
@@ -132,44 +130,19 @@ namespace CapaVistaNomina
             }
         }
 
-        private void ListaAsignacion_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void btnReport_Click(object sender, EventArgs e)
         {
-            string message = "Deseas Eliminar el Registro?";
-            string title = "Eliminar Registro";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, title, buttons);
-            if (result == DialogResult.Yes)
-            {
-                String dato1 = ListaAsignacion.CurrentRow.Cells[0].Value.ToString();
-                String dato2 = ListaAsignacion.CurrentRow.Cells[2].Value.ToString();
-
-                int campo1 = int.Parse(dato1);
-                string condicion1 = txtCadenas1.Tag.ToString();
-                int campo2 = int.Parse(dato2);
-                string condicion2 = txtTrabajador.Tag.ToString();
-                cn.eliminarAsiganaciones(table, condicion1, campo1, condicion2, campo2);
-                //listAplicacionPerfil.Columns.Clear();
-                string id = txtCadenas1.Text;
-                cn.llenarListAsignaciones(ListaAsignacion.Tag.ToString(), ListaAsignacion, id);
-            }
-            else
-            {
-                limpiar();
-            }
+            RepAsigPuestoTrab b = new RepAsigPuestoTrab();
+            // b.MdiParent = this;
+            b.Show();
+            //pictureBox1.Visible = false;
+            //hideSubMenu();
         }
 
         private void AsignacionPuestoTrabajador_Load(object sender, EventArgs e)
         {
             txtTrabajador.Visible = false;
-        }
-
-        private void btnReport_Click(object sender, EventArgs e)
-        {
-            RepAsigPuestoTrab b = new RepAsigPuestoTrab();
-           // b.MdiParent = this;
-            b.Show();
-            //pictureBox1.Visible = false;
-            //hideSubMenu();
+            cn.llenarListPuestos2(ListaDatos.Tag.ToString(), ListaDatos);
         }
     }
 }

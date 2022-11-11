@@ -96,5 +96,19 @@ namespace CapaModuloNomina
                 Console.WriteLine(ex.Message.ToString() + " \nNo se puede eliminar por permisos asignados");
             }
         }
+
+        public OdbcDataAdapter llenarListas(string tabla)
+        {
+            string sql = "select  *from " + tabla + ";";
+            OdbcDataAdapter datatable = new OdbcDataAdapter(sql, con.conexion());
+            return datatable;
+        }
+
+        public OdbcDataAdapter llenarListContratos(string tabla)
+        {
+            string sql = "select pk_id_contrato as Contrato , salario_contrato as Salario  from tbl_contrato where estado_contrato != 0;";
+            OdbcDataAdapter datatable = new OdbcDataAdapter(sql, con.conexion());
+            return datatable;
+        }
     }
 }

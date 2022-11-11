@@ -30,6 +30,14 @@ namespace CapaControladorNomina
             tabla.DataSource = table;
         }
 
+        public void llenarListas(string ntabla, DataGridView tabla)
+        {
+            OdbcDataAdapter dt = sn.llenarListas(ntabla);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            tabla.DataSource = table;
+        }
+
         public void llenarListDepartamentos(string ntabla, DataGridView tabla)
         {
             OdbcDataAdapter dt = sn.llenarListaDepartamentos(ntabla);
@@ -65,6 +73,14 @@ namespace CapaControladorNomina
         public void llenarListTrabajadores2(string ntabla, DataGridView tabla)
         {
             OdbcDataAdapter dt = sn.llenarListaTrabajador2(ntabla);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            tabla.DataSource = table;
+        }
+
+        public void llenarListContratos(string ntabla, DataGridView tabla)
+        {
+            OdbcDataAdapter dt = sn.llenarListContratos(ntabla);
             DataTable table = new DataTable();
             dt.Fill(table);
             tabla.DataSource = table;
@@ -113,5 +129,6 @@ namespace CapaControladorNomina
                 Console.WriteLine(ex.Message.ToString() + " \nNo se puede eliminar por permisos asignados");
             }
         }
+
     }
 }

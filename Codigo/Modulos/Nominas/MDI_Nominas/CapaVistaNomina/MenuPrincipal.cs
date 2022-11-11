@@ -20,7 +20,7 @@ namespace CapaVistaNomina
 
             Button[] apps = { btnTrabajadores, btnPuestos, btnDepto, btnContrato, btnPres, btnHorasX,
                 btnFaltas, btnAsPuestoDepto, btnAsPuestoTrab, btnAsContratoTrab, btnAsContratoPres, btnPercyDeduc,
-                btnNomina,btnRplanilla,btnRcontrato,bntRtrabajador,btnSegNomina,btnInfo};
+                btnNomina,btnRplanilla,btnRcontrato,bntRtrabajador,btnSegNomina,btnInfo,btnPrestacionesIndividuales};
             cnseg.deshabilitarApps(apps);
 
             cnseg.getAccesoApp(6001, apps[0]);
@@ -44,6 +44,8 @@ namespace CapaVistaNomina
 
             cnseg.getAccesoApp(6301, apps[16]);
             cnseg.getAccesoApp(6401, apps[17]);
+
+            cnseg.getAccesoApp(6009, apps[18]);
 
         }
 
@@ -214,6 +216,10 @@ namespace CapaVistaNomina
 
         private void btnNomina_Click(object sender, EventArgs e)
         {
+            nominas b = new nominas();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
             hideSubMenu();
         }
 
@@ -249,6 +255,15 @@ namespace CapaVistaNomina
         private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void btnPrestacionesIndividuales_Click_1(object sender, EventArgs e)
+        {
+            PrestacionesIndividuales b = new PrestacionesIndividuales();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
+            hideSubMenu();
         }
     }
 }
