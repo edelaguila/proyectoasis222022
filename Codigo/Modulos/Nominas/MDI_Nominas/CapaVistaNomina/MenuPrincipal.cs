@@ -216,9 +216,13 @@ namespace CapaVistaNomina
 
         private void btnNomina_Click(object sender, EventArgs e)
         {
-            nominas b = new nominas();
+            /*nominas b = new nominas();*/
+            EncabezadoNomina b = new EncabezadoNomina();
+            PagoNomina c = new PagoNomina();
             b.MdiParent = this;
             b.Show();
+            c.MdiParent = this;
+            c.Show();
             pictureBox1.Visible = false;
             hideSubMenu();
         }

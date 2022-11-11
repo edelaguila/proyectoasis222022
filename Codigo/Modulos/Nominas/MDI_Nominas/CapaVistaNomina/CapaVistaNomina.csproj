@@ -184,6 +184,12 @@
     <Compile Include="nominas.Designer.cs">
       <DependentUpon>nominas.cs</DependentUpon>
     </Compile>
+    <Compile Include="PagoNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PagoNomina.Designer.cs">
+      <DependentUpon>PagoNomina.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrestacionesDeducciones.cs">
       <SubType>Form</SubType>
     </Compile>
