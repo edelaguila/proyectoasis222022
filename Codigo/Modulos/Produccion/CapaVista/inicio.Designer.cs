@@ -32,14 +32,14 @@ namespace CapaVistaProduccion
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
@@ -54,14 +54,18 @@ namespace CapaVistaProduccion
             this.button9 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -99,7 +103,9 @@ namespace CapaVistaProduccion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(138)))), ((int)(((byte)(28)))));
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel9);
+            this.panel1.Controls.Add(this.button18);
             this.panel1.Controls.Add(this.button17);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel3);
@@ -118,6 +124,44 @@ namespace CapaVistaProduccion
             this.panel1.Size = new System.Drawing.Size(250, 929);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.button16);
+            this.panel9.Location = new System.Drawing.Point(3, 888);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(250, 28);
+            this.panel9.TabIndex = 13;
+            // 
+            // button16
+            // 
+            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Location = new System.Drawing.Point(0, 0);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(250, 25);
+            this.button16.TabIndex = 0;
+            this.button16.Text = "Salir";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // button17
+            // 
+            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(138)))), ((int)(((byte)(28)))));
+            this.button17.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(138)))), ((int)(((byte)(28)))));
+            this.button17.FlatAppearance.BorderSize = 0;
+            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button17.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.button17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button17.Location = new System.Drawing.Point(6, 854);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(247, 48);
+            this.button17.TabIndex = 12;
+            this.button17.Text = "Salir";
+            this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // pictureBox1
             // 
@@ -177,48 +221,10 @@ namespace CapaVistaProduccion
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.button16);
-            this.panel9.Location = new System.Drawing.Point(3, 815);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(250, 28);
-            this.panel9.TabIndex = 13;
-            // 
-            // button16
-            // 
-            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Location = new System.Drawing.Point(0, 0);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(250, 31);
-            this.button16.TabIndex = 0;
-            this.button16.Text = "Salir";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(138)))), ((int)(((byte)(28)))));
-            this.button17.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(138)))), ((int)(((byte)(28)))));
-            this.button17.FlatAppearance.BorderSize = 0;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.button17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button17.Location = new System.Drawing.Point(6, 781);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(247, 48);
-            this.button17.TabIndex = 12;
-            this.button17.Text = "Salir";
-            this.button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button17.UseVisualStyleBackColor = false;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.button14);
-            this.panel8.Location = new System.Drawing.Point(3, 730);
+            this.panel8.Location = new System.Drawing.Point(3, 803);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(250, 45);
             this.panel8.TabIndex = 11;
@@ -230,7 +236,7 @@ namespace CapaVistaProduccion
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Location = new System.Drawing.Point(0, 0);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(250, 45);
+            this.button14.Size = new System.Drawing.Size(250, 27);
             this.button14.TabIndex = 0;
             this.button14.Text = "Consulta inteligente avanzada";
             this.button14.UseVisualStyleBackColor = true;
@@ -244,7 +250,7 @@ namespace CapaVistaProduccion
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.button15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button15.Location = new System.Drawing.Point(6, 686);
+            this.button15.Location = new System.Drawing.Point(6, 759);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(241, 48);
             this.button15.TabIndex = 10;
@@ -256,9 +262,9 @@ namespace CapaVistaProduccion
             // panel7
             // 
             this.panel7.Controls.Add(this.button10);
-            this.panel7.Location = new System.Drawing.Point(3, 640);
+            this.panel7.Location = new System.Drawing.Point(0, 635);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(250, 45);
+            this.panel7.Size = new System.Drawing.Size(253, 45);
             this.panel7.TabIndex = 9;
             // 
             // button10
@@ -268,9 +274,9 @@ namespace CapaVistaProduccion
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Location = new System.Drawing.Point(0, 0);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(250, 32);
+            this.button10.Size = new System.Drawing.Size(253, 32);
             this.button10.TabIndex = 0;
-            this.button10.Text = "Seguridad";
+            this.button10.Text = "Consultar ayuda";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -282,11 +288,11 @@ namespace CapaVistaProduccion
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.button13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button13.Location = new System.Drawing.Point(6, 596);
+            this.button13.Location = new System.Drawing.Point(3, 591);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(241, 48);
+            this.button13.Size = new System.Drawing.Size(244, 48);
             this.button13.TabIndex = 8;
-            this.button13.Text = "Seguridad";
+            this.button13.Text = "Ayudas";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
@@ -381,11 +387,48 @@ namespace CapaVistaProduccion
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.button3);
+            this.panel4.Location = new System.Drawing.Point(3, 708);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(250, 45);
+            this.panel4.TabIndex = 11;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(250, 22);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Seguridad";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(138)))), ((int)(((byte)(28)))));
+            this.button18.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(138)))), ((int)(((byte)(28)))));
+            this.button18.FlatAppearance.BorderSize = 0;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.button18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button18.Location = new System.Drawing.Point(3, 675);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(241, 38);
+            this.button18.TabIndex = 10;
+            this.button18.Text = "Seguridad";
+            this.button18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
             // inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1068, 929);
+            this.ClientSize = new System.Drawing.Size(1117, 929);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
             this.Name = "inicio";
@@ -393,13 +436,14 @@ namespace CapaVistaProduccion
             this.Text = "inicio";
             this.Load += new System.EventHandler(this.inicio_Load);
             this.panel1.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -431,5 +475,8 @@ namespace CapaVistaProduccion
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button18;
     }
 }

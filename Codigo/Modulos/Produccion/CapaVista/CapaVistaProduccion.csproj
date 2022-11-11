@@ -38,6 +38,9 @@
     <Reference Include="CapaControladorProduccion">
       <HintPath>..\CapaControlador\bin\Debug\CapaControladorProduccion.dll</HintPath>
     </Reference>
+    <Reference Include="CapaVistaReporteria">
+      <HintPath>..\..\..\Componentes\Reporteador\CapaVistaReporteria\bin\Debug\CapaVistaReporteria.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
@@ -46,10 +49,9 @@
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="NavegadorControlador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="NavegadorVista, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\NavegadorVista.dll</HintPath>
+      <HintPath>..\..\..\Componentes\Navegador\Vista\bin\Debug\NavegadorVista.dll</HintPath>
     </Reference>
     <Reference Include="Seguridad_Controlador, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="System" />
@@ -110,6 +112,12 @@
     <Compile Include="inicio.Designer.cs">
       <DependentUpon>inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="ordenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ordenes.Designer.cs">
+      <DependentUpon>ordenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -122,6 +130,24 @@
     <Compile Include="Recetas.Designer.cs">
       <DependentUpon>Recetas.cs</DependentUpon>
     </Compile>
+    <Compile Include="reporte_ordenes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporte_ordenes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reporte_recetas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporte_recetas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ver_ordenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ver_ordenes.Designer.cs">
+      <DependentUpon>ver_ordenes.cs</DependentUpon>
+    </Compile>
     <Compile Include="ver_receta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,12 +159,26 @@
     <EmbeddedResource Include="inicio.resx">
       <DependentUpon>inicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ordenes.resx">
+      <DependentUpon>ordenes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Recetas.resx">
       <DependentUpon>Recetas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte_ordenes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporte_ordenes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte_recetas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporte_recetas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ver_ordenes.resx">
+      <DependentUpon>ver_ordenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ver_receta.resx">
       <DependentUpon>ver_receta.cs</DependentUpon>
