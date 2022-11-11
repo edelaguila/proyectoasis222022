@@ -33,14 +33,14 @@ namespace NavegadorVista
         public void consulta()
         {
             string tablan2 = tabla.Tag.ToString();
-            Capa_VistaConsultas.Busqueda_Simple bs = new Capa_VistaConsultas.Busqueda_Simple();
+            /*Capa_VistaConsultas.Busqueda_Simple bs = new Capa_VistaConsultas.Busqueda_Simple();
 
             bs.tableN1 = tablan2;
             Console.WriteLine(tablan2);
             bs.BuscarT();
             bs.Show();
            
-            Console.WriteLine(bs.tableN1);
+            Console.WriteLine(bs.tableN1);*/
             
             
         }

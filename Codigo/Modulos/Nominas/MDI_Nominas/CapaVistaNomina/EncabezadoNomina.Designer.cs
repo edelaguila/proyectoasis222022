@@ -1,7 +1,7 @@
 ﻿
 namespace CapaVistaNomina
 {
-    partial class TrabajadoresInfo
+    partial class EncabezadoNomina
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,7 @@ namespace CapaVistaNomina
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.navegador1 = new NavegadorVista.Navegador();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtestado = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -45,34 +44,22 @@ namespace CapaVistaNomina
             this.label4 = new System.Windows.Forms.Label();
             this.txtnomTrab = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtIDtrabajador = new System.Windows.Forms.TextBox();
+            this.txtIDNomina = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridTrabajador = new System.Windows.Forms.DataGridView();
-            this.navegador1 = new NavegadorVista.Navegador();
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTrabajador)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // navegador1
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkSalmon;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(784, 64);
-            this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "TRABAJADORES";
+            this.navegador1.Location = new System.Drawing.Point(66, 70);
+            this.navegador1.Name = "navegador1";
+            this.navegador1.Size = new System.Drawing.Size(574, 152);
+            this.navegador1.TabIndex = 4;
             // 
             // panel2
             // 
@@ -93,18 +80,18 @@ namespace CapaVistaNomina
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txtnomTrab);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.txtIDtrabajador);
+            this.panel2.Controls.Add(this.txtIDNomina);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.dataGridTrabajador);
-            this.panel2.Location = new System.Drawing.Point(32, 240);
+            this.panel2.Location = new System.Drawing.Point(37, 242);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(720, 337);
-            this.panel2.TabIndex = 0;
+            this.panel2.Size = new System.Drawing.Size(639, 323);
+            this.panel2.TabIndex = 2;
             // 
             // txtestado
             // 
             this.txtestado.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.txtestado.Location = new System.Drawing.Point(128, 304);
+            this.txtestado.Location = new System.Drawing.Point(128, 295);
             this.txtestado.Name = "txtestado";
             this.txtestado.Size = new System.Drawing.Size(80, 22);
             this.txtestado.TabIndex = 18;
@@ -113,7 +100,7 @@ namespace CapaVistaNomina
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(64, 304);
+            this.checkBox1.Location = new System.Drawing.Point(66, 295);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(56, 17);
             this.checkBox1.TabIndex = 17;
@@ -124,7 +111,7 @@ namespace CapaVistaNomina
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.label8.Location = new System.Drawing.Point(16, 304);
+            this.label8.Location = new System.Drawing.Point(16, 299);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(42, 13);
             this.label8.TabIndex = 16;
@@ -228,14 +215,14 @@ namespace CapaVistaNomina
             this.label3.TabIndex = 10;
             this.label3.Text = "Nombre";
             // 
-            // txtIDtrabajador
+            // txtIDNomina
             // 
-            this.txtIDtrabajador.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.txtIDtrabajador.Location = new System.Drawing.Point(16, 24);
-            this.txtIDtrabajador.Name = "txtIDtrabajador";
-            this.txtIDtrabajador.Size = new System.Drawing.Size(192, 22);
-            this.txtIDtrabajador.TabIndex = 5;
-            this.txtIDtrabajador.Tag = "pk_id_trabajador";
+            this.txtIDNomina.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.txtIDNomina.Location = new System.Drawing.Point(16, 24);
+            this.txtIDNomina.Name = "txtIDNomina";
+            this.txtIDNomina.Size = new System.Drawing.Size(192, 22);
+            this.txtIDNomina.TabIndex = 5;
+            this.txtIDNomina.Tag = "pk_id_trabajador";
             // 
             // label2
             // 
@@ -259,7 +246,7 @@ namespace CapaVistaNomina
             this.dataGridTrabajador.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridTrabajador.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridTrabajador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridTrabajador.Location = new System.Drawing.Point(240, 16);
+            this.dataGridTrabajador.Location = new System.Drawing.Point(263, 10);
             this.dataGridTrabajador.MultiSelect = false;
             this.dataGridTrabajador.Name = "dataGridTrabajador";
             this.dataGridTrabajador.ReadOnly = true;
@@ -267,44 +254,56 @@ namespace CapaVistaNomina
             this.dataGridTrabajador.RowHeadersWidth = 51;
             this.dataGridTrabajador.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridTrabajador.ShowEditingIcon = false;
-            this.dataGridTrabajador.Size = new System.Drawing.Size(464, 313);
+            this.dataGridTrabajador.Size = new System.Drawing.Size(359, 299);
             this.dataGridTrabajador.TabIndex = 0;
             this.dataGridTrabajador.Tag = "tbl_trabajador";
             // 
-            // navegador1
+            // panel1
             // 
-            this.navegador1.Location = new System.Drawing.Point(104, 80);
-            this.navegador1.Name = "navegador1";
-            this.navegador1.Size = new System.Drawing.Size(574, 152);
-            this.navegador1.TabIndex = 1;
-            this.navegador1.Load += new System.EventHandler(this.navegador1_Load);
+            this.panel1.BackColor = System.Drawing.Color.DarkSalmon;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(714, 64);
+            this.panel1.TabIndex = 3;
             // 
-            // TrabajadoresInfo
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(292, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ENCABEZADO NOMINA\r\n";
+            // 
+            // EncabezadoNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 584);
+            this.ClientSize = new System.Drawing.Size(714, 572);
             this.Controls.Add(this.navegador1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "TrabajadoresInfo";
-            this.Text = "TrabajadoresInfo";
-            this.Load += new System.EventHandler(this.TrabajadoresInfo_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Name = "EncabezadoNomina";
+            this.Text = "EncabezadoNomina";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTrabajador)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private NavegadorVista.Navegador navegador1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridTrabajador;
+        private System.Windows.Forms.TextBox txtestado;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtfechaAlta;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txttelefonoTrab;
@@ -315,11 +314,10 @@ namespace CapaVistaNomina
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtnomTrab;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtIDtrabajador;
+        private System.Windows.Forms.TextBox txtIDNomina;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox txtestado;
-        private NavegadorVista.Navegador navegador1;
+        private System.Windows.Forms.DataGridView dataGridTrabajador;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }
