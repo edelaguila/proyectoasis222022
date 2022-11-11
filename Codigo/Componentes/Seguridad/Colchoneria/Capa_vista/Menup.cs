@@ -58,8 +58,8 @@ namespace Vista_Seguridad
 
         private void btncompras_Click(object sender, EventArgs e)
         {
-            ComprasVista.central_Compra b = new ComprasVista.central_Compra();
-            b.Show();
+            /*ComprasVista.central_Compra b = new ComprasVista.central_Compra();
+            b.Show();*/
             cn.setBtitacora("3000", "Ingreso Compras");
         }
 
@@ -72,22 +72,22 @@ namespace Vista_Seguridad
 
         private void btnnominas_Click(object sender, EventArgs e)
         {
-            CapaVistaNomina.MenuPrincipal b = new CapaVistaNomina.MenuPrincipal();
-            b.Show();
+           /* CapaVistaNomina.MenuPrincipal b = new CapaVistaNomina.MenuPrincipal();
+            b.Show();*/
             cn.setBtitacora("6000", "Ingreso Nominas");
         }
 
         private void btnBancos_Click(object sender, EventArgs e)
         {
-           Vista_Bancos.Banco_Form b = new Vista_Bancos.Banco_Form();
-           b.Show();
+           /*Vista_Bancos.Banco_Form b = new Vista_Bancos.Banco_Form();
+           b.Show();*/
            cn.setBtitacora("7000", "Ingreso Bancos");
         }
 
         private void btnContabilidad_Click(object sender, EventArgs e)
         {
-           Capa_VistaContabilidad.Nuevo_MDI b = new Capa_VistaContabilidad.Nuevo_MDI();
-           b.Show();
+           /*Capa_VistaContabilidad.Nuevo_MDI b = new Capa_VistaContabilidad.Nuevo_MDI();
+           b.Show();*/
             cn.setBtitacora("8000", "Ingreso Contabilidad");
         }
     }
