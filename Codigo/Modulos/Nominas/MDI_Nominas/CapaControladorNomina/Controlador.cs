@@ -31,6 +31,7 @@ namespace CapaControladorNomina
             return table;
         }
 
+
         public void selectContratos(ComboBox combobox)
         {
             string campos = "pk_id_contrato, estado_contrato";
@@ -49,6 +50,118 @@ namespace CapaControladorNomina
             }
         }
 
+        public void selectDepartamentos(ComboBox combobox)
+        {
+            string campos = "nombre_departamento, estado_departamento";
+            string tabla = "tbl_departamentos";
+            string[] data = sn.Select(campos, tabla);
+
+            if (data.Length > 0)
+            {
+                for (int i = 0; i < data.Length; i = i + 2)
+                {
+                    if (data[i + 1].Equals("1"))
+                    {
+                        combobox.Items.Add(data[i]);
+                    }
+                }
+            }
+        }
+
+        public void selectNominas(ComboBox combobox)
+        {
+            string campos = "pk_id_nomina, total_nomina";
+            string tabla = "tbl_encabezadonominas";
+            string[] data = sn.Select(campos, tabla);
+
+            if (data.Length > 0)
+            {
+                for (int i = 0; i < data.Length; i = i + 2)
+                {
+                    if (float.Parse(data[i + 1]) == 0)
+                    {
+                        combobox.Items.Add(data[i]);
+                    }
+                }
+            }
+        }
+
+        public string selectTotalNomina(string idNomina)
+        {
+            string campos = "total_nomina";
+            string tabla = "tbl_encabezadonominas";
+            string clausula = "pk_id_nomina = " + idNomina;
+            string[] data = sn.Query(campos, tabla, clausula);
+
+            if (data.Length > 0)
+            {
+                return data[0];
+            }
+            return "";
+        }
+
+
+        public string queryIdDepto(string nombreDepto)
+        {
+            string campos = "pk_id_departamento";
+            string tabla = "tbl_departamentos";
+            string clausula = "nombre_departamento = '" + nombreDepto + "'";
+            string[] data = sn.Query(campos, tabla, clausula);
+
+            return data[0];
+        }
+
+        public DataTable selectCTrabajadores(string idDepto)
+        {
+            string tabla = "tbl_trabajador, tbl_asignacion_puestotrabajador, tbl_asignacion_puestodepartamento";
+            string clausulas = "tbl_trabajador.pk_id_trabajador = tbl_asignacion_puestotrabajador.fk_id_trabajador " +
+                " AND tbl_asignacion_puestotrabajador.fk_id_puesto = tbl_asignacion_puestodepartamento.fk_id_puesto" +
+                " AND tbl_asignacion_puestodepartamento.fk_id_departamento = " + idDepto;
+            OdbcDataAdapter dt = sn.llenarTblCustom(tabla, clausulas);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
+        }
+
+        public string queryContratoTrabajador(string idTrabajador)
+        {
+            string campos = "fk_id_contrato";
+            string tabla = "tbl_asignacion_contratotrabajador";
+            string clausula = "fk_id_trabajador = " + idTrabajador;
+            string[] data = sn.Query(campos, tabla, clausula);
+
+            if (data.Length > 0)
+            {
+                return data[0];
+            }
+            return "";
+        }
+
+        public string querySalarioContrato(string idContrato)
+        {
+            string campos = "salario_contrato";
+            string tabla = "tbl_contrato";
+            string clausula = "pk_id_contrato = " + idContrato;
+            string[] data = sn.Query(campos, tabla, clausula);
+
+            if (data.Length > 0)
+            {
+                return data[0];
+            }
+            return "";
+        }
+
+        public string[] selectPercepcionesContrato(string Contrato)
+        {
+            string campos = "tipo_prestdeduc,porcentaje_prestdeduc,valorFijo_prestdeduc";
+            string tabla = "tbl_percepciones, tbl_asignacion_contratopercepciones, tbl_asignacion_contratotrabajador";
+            string clausula = "tbl_percepciones.pk_id_prestdeduc = tbl_asignacion_contratopercepciones.fk_id_prestdeduc" +
+                " AND tbl_asignacion_contratopercepciones.fk_id_contrato = " + Contrato + " group by tbl_asignacion_contratopercepciones.fk_id_prestdeduc; ";
+            string[] data = sn.SelectCustom(campos, tabla, clausula);
+
+            return data;
+        }
+
         public void queryContrato(string idContrato, TextBox[] textboxs)
         {
             string campos = "salario_contrato";
@@ -65,15 +178,40 @@ namespace CapaControladorNomina
             }
         }
 
+        public string queryTotalNomian(string idNomina)
+        {
+            string campos = "total_nomina";
+            string tabla = "tbl_encabezadonominas";
+            string clausula = "pk_id_nomina = " + idNomina;
+            string[] data = sn.Query(campos, tabla, clausula);
+            return data.Length > 0 ? data[0] : "error en obtener el total de la nomina";
+        }
+
+        public void actualizarNomina(string idNomina, float total)
+        {
+            sn.Update("total_nomina="+total, "tbl_encabezadonominas", "pk_id_nomina="+idNomina);
+        }
+
         public void asignarContratoPercepcion(string datos)
         {
             string campos = "fk_id_contrato, fk_id_prestdeduc";
             string tabla = "tbl_asignacion_contratopercepciones";
-            if(!sn.Insert(campos, tabla, datos))
+            if (!sn.Insert(campos, tabla, datos))
             {
                 MessageBox.Show("NO SE PUDO REGISTRAR LA ASIGNACIÓN");
             }
         }
+
+        public void pagarTrabajador(string datos)
+        {
+            string campos = "`pk_id_nomina`, `fk_id_trabajador`, `salario_nomina`, `totalHorasExtras_nomina`, `totalPercepciones_nomina`, `totalDeducciones_nomina`, `liquidez_nomina`";
+            string tabla = "tbl_detallenominas";
+            if (!sn.Insert(campos, tabla, datos))
+            {
+                MessageBox.Show("NO SE PUDO REGISTRAR LA ASIGNACIÓN");
+            }
+        }
+
 
         public void mostrarReporte(Form forma, string url)
         {
@@ -93,7 +231,7 @@ namespace CapaControladorNomina
             string tabla = "tbl_asignacion_contratopercepciones";
             string clausula = "fk_id_contrato=" + contrato + " AND fk_id_prestdeduc=" + percepcion;
 
-            respuesta = sn.CountQuery(tabla, clausula) == 0 ?  true : false;
+            respuesta = sn.CountQuery(tabla, clausula) == 0 ? true : false;
 
             return respuesta;
         }
@@ -103,7 +241,7 @@ namespace CapaControladorNomina
             Boolean respuesta = false;
             string tabla = "tbl_regreporteria";
             string clausula = "aplicacion='" + idApp + "' AND estado='Visible'";
-            respuesta = sn.CountQuery(tabla, clausula) == 0 ? false : true;
+            respuesta = sn.CountQuery(tabla, clausula) > 0 ? true : false;
             return respuesta;
         }
         public string buscarPathReporte(string idApp)
@@ -111,7 +249,7 @@ namespace CapaControladorNomina
             string path = "";
             string campos = "ruta";
             string tabla = "tbl_regreporteria";
-            string clausula = "aplicacion='" + idApp +"'";
+            string clausula = "aplicacion='" + idApp + "'";
             string[] data = sn.Query(campos, tabla, clausula);
             return path = data[0];
         }
@@ -136,6 +274,7 @@ namespace CapaControladorNomina
             }
             tabla.RowHeadersVisible = false;
         }
+
         public void llenarListPuestos(string ntabla, DataGridView tabla)
         {
             OdbcDataAdapter dt = sn.llenarListaPuesto(ntabla);

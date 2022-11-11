@@ -22,7 +22,7 @@ namespace CapaModuloNomina
 
         public OdbcDataAdapter llenarTblCustom(string tabla, string clausula)//Leonel Dominguez
         {
-            string sql = "SELECT * FROM " + tabla + " WHERE "+ clausula +";";
+            string sql = "SELECT * FROM " + tabla + " WHERE " + clausula + ";";
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, con.conexion());
             return dataTable;
         }
@@ -30,7 +30,7 @@ namespace CapaModuloNomina
         public string[] Query(string campoSolicitado, string tabla, string clausula)//Leonel Dominguez
         {
             string[] respuesta = new string[100];
-            string sql = "SELECT "+campoSolicitado+ " FROM colchoneria." + tabla+ " WHERE "+clausula+";";
+            string sql = "SELECT " + campoSolicitado + " FROM colchoneria." + tabla + " WHERE " + clausula + ";";
             try
             {
                 OdbcCommand command = new OdbcCommand(sql, con.conexion());
@@ -80,10 +80,38 @@ namespace CapaModuloNomina
             return respuesta;
         }
 
-        public Boolean Insert(string campos, string tabla, string datos)//Leonel Dominguez
+        public string[] SelectCustom(string campoSolicitado, string tabla, string clausula)//Leonel Dominguez
+        {
+            string[] respuesta = new string[999];
+            string sql = "SELECT " + campoSolicitado + " FROM " + tabla + " WHERE " + clausula + ";";
+            int j = 0;
+            try
+            {
+                OdbcCommand command = new OdbcCommand(sql, con.conexion());
+                OdbcDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        respuesta[j] = reader.GetValue(i).ToString();
+                        j++;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString() +
+                    " \n Error en SELECT hacia la tabla de " + tabla);
+            }
+
+            Array.Resize(ref respuesta, j);
+            return respuesta;
+        }
+
+        public Boolean Update(string campos, string tabla, string clausula)//Leonel Dominguez
         {
             Boolean respuesta = false;
-            string sql = "INSERT INTO "+ tabla + " (" + campos + ") values (" + datos + ");";
+            string sql = "UPDATE " + tabla + " SET " + campos + " WHERE " + clausula + ";";
             OdbcCommand command = new OdbcCommand(sql, con.conexion());
             try
             {
@@ -94,7 +122,26 @@ namespace CapaModuloNomina
             {
                 respuesta = false;
                 Console.WriteLine(ex.Message.ToString() +
-                    " \n Error en guardar registro en "+ tabla);   
+                    " \n Error en guardar registro en " + tabla);
+            }
+            return respuesta;
+        }
+
+        public Boolean Insert(string campos, string tabla, string datos)//Leonel Dominguez
+        {
+            Boolean respuesta = false;
+            string sql = "INSERT INTO " + tabla + " (" + campos + ") values (" + datos + ");";
+            OdbcCommand command = new OdbcCommand(sql, con.conexion());
+            try
+            {
+                command.ExecuteNonQuery();
+                respuesta = true;
+            }
+            catch (Exception ex)
+            {
+                respuesta = false;
+                Console.WriteLine(ex.Message.ToString() +
+                    " \n Error en guardar registro en " + tabla);
             }
             return respuesta;
         }
@@ -102,7 +149,7 @@ namespace CapaModuloNomina
         public Boolean Delete(string tabla, string clausula)//Leonel Dominguez
         {
             Boolean respuesta = false;
-            string sql = "DELETE FROM "+ tabla +" WHERE "+ clausula +";";
+            string sql = "DELETE FROM " + tabla + " WHERE " + clausula + ";";
             OdbcCommand command = new OdbcCommand(sql, con.conexion());
             try
             {
@@ -120,7 +167,7 @@ namespace CapaModuloNomina
 
         public int CountQuery(string tabla, string clausulas)
         {
-            string sql = "SELECT COUNT(*) FROM colchoneria." + tabla +" WHERE "+ clausulas +";";
+            string sql = "SELECT COUNT(*) FROM colchoneria." + tabla + " WHERE " + clausulas + ";";
             OdbcCommand command = new OdbcCommand(sql, con.conexion());
             int count = Convert.ToInt32(command.ExecuteScalar());
             return count;
