@@ -34,5 +34,10 @@ namespace CapaVistaNomina
             navegador1.actual = this;
             navegador1.cargar(dataGridContrato, Grupotextbox, "modulo_Nominas");
         }
+
+        private void Contrato_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

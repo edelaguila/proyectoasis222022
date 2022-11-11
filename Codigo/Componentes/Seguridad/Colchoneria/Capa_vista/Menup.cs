@@ -44,7 +44,7 @@ namespace Vista_Seguridad
         public void btlogistica_Click(object sender, EventArgs e)
         {
             VistaLogistica.Menu b = new VistaLogistica.Menu();
-              b.Show();
+            b.Show();
             cn.setBtitacora("2000", "Ingreso Logistica");
         }
 
@@ -65,9 +65,9 @@ namespace Vista_Seguridad
 
         private void btnProduccion_Click(object sender, EventArgs e)
         {
-            CapaVistaProduccion.inicio b = new CapaVistaProduccion.inicio();
+           CapaVistaProduccion.inicio b = new CapaVistaProduccion.inicio();
            b.Show();
-            cn.setBtitacora("5000", "Ingreso Produccion");
+           cn.setBtitacora("5000", "Ingreso Produccion");
         }
 
         private void btnnominas_Click(object sender, EventArgs e)

@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CapaControladorNomina, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\CapaControladorNomina\bin\Debug\CapaControladorNomina.dll</HintPath>
@@ -42,6 +43,8 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+
     <Reference Include="NavegadorVista">
       <HintPath>..\..\..\..\Componentes\Navegador\Vista\bin\Debug\NavegadorVista.dll</HintPath>
     </Reference>
@@ -51,6 +54,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -83,6 +88,12 @@
     </Compile>
     <Compile Include="AgregarTrabajador.Designer.cs">
       <DependentUpon>AgregarTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AsigacionHorasExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AsigacionHorasExtra.Designer.cs">
+      <DependentUpon>AsigacionHorasExtra.cs</DependentUpon>
     </Compile>
     <Compile Include="AsignacionContratoPestaciones.cs">
       <SubType>Form</SubType>
@@ -144,6 +155,12 @@
     <Compile Include="Departamentos.Designer.cs">
       <DependentUpon>Departamentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="EncabezadoNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncabezadoNomina.Designer.cs">
+      <DependentUpon>EncabezadoNomina.cs</DependentUpon>
+    </Compile>
     <Compile Include="HorasExtra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,11 +173,23 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="nominas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nominas.Designer.cs">
+      <DependentUpon>nominas.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrestacionesDeducciones.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PrestacionesDeducciones.Designer.cs">
       <DependentUpon>PrestacionesDeducciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrestacionesIndividuales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrestacionesIndividuales.Designer.cs">
+      <DependentUpon>PrestacionesIndividuales.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -173,6 +202,24 @@
     </Compile>
     <Compile Include="PuestosTrabajo.Designer.cs">
       <DependentUpon>PuestosTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepAsigPuestoTrab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepAsigPuestoTrab.Designer.cs">
+      <DependentUpon>RepAsigPuestoTrab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteContratos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteContratos.Designer.cs">
+      <DependentUpon>ReporteContratos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPuestosTrab.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportPuestosTrab.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="TrabajadoresInfo.cs">
       <SubType>Form</SubType>
@@ -193,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarTrabajador.resx">
       <DependentUpon>AgregarTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AsigacionHorasExtra.resx">
+      <DependentUpon>AsigacionHorasExtra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AsignacionContratoPestaciones.resx">
       <DependentUpon>AsignacionContratoPestaciones.cs</DependentUpon>
@@ -224,14 +274,23 @@
     <EmbeddedResource Include="Departamentos.resx">
       <DependentUpon>Departamentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EncabezadoNomina.resx">
+      <DependentUpon>EncabezadoNomina.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HorasExtra.resx">
       <DependentUpon>HorasExtra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="nominas.resx">
+      <DependentUpon>nominas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrestacionesDeducciones.resx">
       <DependentUpon>PrestacionesDeducciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrestacionesIndividuales.resx">
+      <DependentUpon>PrestacionesIndividuales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -239,6 +298,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PuestosTrabajo.resx">
       <DependentUpon>PuestosTrabajo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepAsigPuestoTrab.resx">
+      <DependentUpon>RepAsigPuestoTrab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteContratos.resx">
+      <DependentUpon>ReporteContratos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPuestosTrab.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportPuestosTrab.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="TrabajadoresInfo.resx">
       <DependentUpon>TrabajadoresInfo.cs</DependentUpon>
