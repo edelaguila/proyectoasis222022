@@ -71,6 +71,48 @@ insert into `Tbl_tiposPagos` values (3,"Transferencia");
 insert into `Tbl_tiposPagos` values (4,"Tarjeta de Credito");
 insert into `Tbl_tiposPagos` values (5,"Otros");
 
+insert into `Tbl_bancos` values (2,"BAM","Ciudad Quetzaltenango","2290-0010",1);
+insert into `Tbl_bancos` values (3,"BANTRAB","Antigua Guatemala","2280-0250",1);
+insert into `Tbl_bancos` values (4,"BANCO INDUSTRIAL","Ciudad Cayala","2290-9029",1);
+
+insert into `Tbl_Miembros` values (1,"Joshua Alejandro Barrios Ortíz","Guatemala","3019 09201 0101",1);
+insert into `Tbl_Miembros` values (2,"Jorge Mario Marroquin Roca","Guatemala","3323 09381 0101",1);
+insert into `Tbl_Miembros` values (3,"Yordi Daniel Hernadez ","Guatemala","9212 23401 0101",1);
+insert into `Tbl_Miembros` values (4,"Ester Daniela Lopez Cruz","Guatemala","5893 93301 0101",1);
+insert into `Tbl_Miembros` values (5,"Derek Leonel Herrera Pineda","Guatemala","3232 03211 0101",1);
+
+-- ------TRIGGER DE BANCOS ---------------
+DELIMITER //
+CREATE TRIGGER tgCheques  AFTER INSERT ON Tbl_Ctrl_cheques 
+for each row begin
+	insert into Tbl_Movimientos_bancos (fk_tipo_pago,fk_id_concepto,fecha_mov,fk_Cuenta_banco,fk_cuentarelacionada,Monto_mov) 
+    values (2,new.fk_id_concepto,new.fechaReg_cheques,new.fk_Banco_cheques,new.fk_id_cuentabancaria,new.montoNum_cheques);
+END//
+
+DELIMITER //
+CREATE TRIGGER tgSaldos  AFTER INSERT ON Tbl_Movimientos_bancos
+for each row begin
+	IF (select Clasificacion from Tbl_Movimientos_bancos inner join Tbl_ConceptosBancario on 
+    Pk_idConcepto = fk_id_concepto where Pk_idMovimientos = new.Pk_idMovimientos)  = "Cargo" then
+		UPDATE Tbl_CuentasBancos set SActual_montbancario = SActual_montbancario - new.Monto_mov where new.fk_Cuenta_banco = Pk_idCuentas;
+		UPDATE Tbl_CuentasBancos set SConciliado_montbancario = SConciliado_montbancario - new.Monto_mov where new.fk_Cuenta_banco = Pk_idCuentas;
+		UPDATE Tbl_CuentasBancos set TCargos_montbancario = TCargos_montbancario + new.Monto_mov where new.fk_Cuenta_banco = Pk_idCuentas;
+   END IF;
+    	IF (select Clasificacion from Tbl_Movimientos_bancos inner join Tbl_ConceptosBancario on 
+    Pk_idConcepto = fk_id_concepto where Pk_idMovimientos = new.Pk_idMovimientos)  = "Abono" then
+		UPDATE Tbl_CuentasBancos set SActual_montbancario = SActual_montbancario + new.Monto_mov where new.fk_Cuenta_banco = Pk_idCuentas;
+		UPDATE Tbl_CuentasBancos set SConciliado_montbancario = SConciliado_montbancario + new.Monto_mov where new.fk_Cuenta_banco = Pk_idCuentas;
+	    UPDATE Tbl_CuentasBancos set TAbonos_montbancario = TAbonos_montbancario + new.Monto_mov where new.fk_Cuenta_banco = Pk_idCuentas;
+   END IF;
+END//
+drop trigger tgSaldos;
+select * from Tbl_Movimientos_bancos;
+insert into Tbl_Movimientos_bancos values (20,1,8,"2022-10-10",1,2,1000);
+
+select nombre_banco,Nombre_cta,TCargos_montbancario,TAbonos_montbancario,SActual_montbancario from tbl_cuentasbancos inner join Tbl_bancos on fk_bancos = Pk_idbancos;
+
+
+-- PRODUCCION
 -- Store procedure produccion (ordenes agregar o editar)
 DROP procedure IF EXISTS `pa_produccion_ordenes_agregareditar`;
 DELIMITER $$
@@ -120,3 +162,98 @@ BEGIN
 END$$
 
 DELIMITER ;
+
+DELIMITER $$
+USE `colchoneria`$$
+CREATE PROCEDURE `pa_recetas_agregareditar` (
+_pk_idrecetas_tbl_recetas INT,
+_producto_tbl_recetas varchar(45),
+_nombre_material_tbl_recetas varchar(100),
+_cantidad_tbl_recetas varchar(100),
+_medida_tbl_recetas varchar(45)
+)
+BEGIN
+if _pk_idrecetas_tbl_recetas = 0 then
+    insert into tbl_recetas (producto_tbl_recetas,nombre_material_tbl_recetas,cantidad_tbl_recetas,medida_tbl_recetas)
+    values (_producto_tbl_recetas,_nombre_material_tbl_recetas,_cantidad_tbl_recetas,_medida_tbl_recetas);
+else
+    update tbl_recetas
+    set
+        producto_tbl_recetas = _producto_tbl_recetas,
+        nombre_material_tbl_recetas = _nombre_material_tbl_recetas,
+        cantidad_tbl_recetas = _cantidad_tbl_recetas,
+        medida_tbl_recetas = _medida_tbl_recetas
+        where pk_idrecetas_tbl_recetas = _pk_idrecetas_tbl_recetas;
+end if;
+
+END$$
+
+DELIMITER ;
+
+
+-- Nominas
+INSERT INTO `tbl_departamentos` VALUES 
+('2000', 'Logistica', 'DEPTO. LOGISTICA', '1'), 
+('3000', 'Compras', 'DEPTO. COMPRAS', '1'), 
+('4000', 'Comercial', 'DEPTO. COMERCIAL', '1'), 
+('5000', 'Marketing Y Publicidad', 'DEPTO. Marketing y Publicidad', '0'), 
+('6000', 'Recursos Humanos', 'DEPTO. RRHH', '0');
+
+INSERT INTO `tbl_puestosdetrabajo` VALUES 
+('2001', 'JEFE DE LOGISTICA', '1'), ('2002', 'ASISTENTE DE LOGISTICA', '0'), ('2003', 'ANALISTA DE ABASTECIMIENTO', '0'), 
+('3001', 'GESTOR DE PROVEEDORES', '1'), ('3002', 'GESTOR DE PRODUCTOS', '1'), ('3003', 'ANALISTA DE COMPRAS', '0'), 
+('4001', 'DIRECTOR COMERCIAL', '1'), ('4002', 'GERENTE DE VENTAS', '1'), ('4003', 'VENDEDOR', '0'), 
+('5001', 'ANALISTA DE MARKETING', '1'), ('5002', 'SUPERVISOR DE MARKETING', '1'), ('5003', 'PUBLICISTA', '0'), 
+('6001', 'DIRECTOR DE RRHH', '1'), ('6002', 'ADMINISTRADOR DE PERSONAL', '1'), ('6003', 'RECLUTADOR', '0');
+
+INSERT INTO `tbl_trabajador` VALUES
+(1, '2022-10-18', 'Amerigo', 'achalliss0@time.com', '4 Carpenter Court', '12345671', 1),
+(2, '2022-10-19', 'Merrill', 'mfilipponi1@springer.com', '649 Vermont Avenue', '12345672', 1),
+(3, '2022-10-21', 'Morgan', 'mstonhard2@bing.com', '48922 Bayside Avenue', '12345673', 1),
+(4, '2022-10-18', 'Mirna', 'mstillwell3@japanpost.jp', '8 1st Center', '12345674', 1),
+(5, '2022-10-23', 'Leilah', 'lgerlack4@pcworld.com', '38208 Miller Junction', '12345675', 1),
+(6, '2022-10-18', 'Waite', 'wvanderbeken5@e-recht24.de', '2 Hoffman Lane', '12345676', 1),
+(7, '2022-10-18', 'Fionnula', 'fgiraths6@japanpost.jp', '7 Talisman Lane', '12345677', 1),
+(8, '2022-10-20', 'Giulietta', 'gchapellow7@123-reg.co.uk', '03806 Hanson Lane', '12345678', 1),
+(9, '2022-10-19', 'Brande', 'bcosyns8@ustream.tv', '3 1st Center', '12345679', 1),
+(10, '2022-10-19', 'Adrea', 'ahutchence9@fema.gov', '3094 Calypso Plaza', '12345670', 1),
+(11, '2022-10-20', 'Wadsworth', 'wtrewetta@51.la', '87 Amoth Parkway', '12345680', 1),
+(12, '2022-10-19', 'Dirk', 'dboliverb@issuu.com', '4000 Magdeline Park', '12345681', 1),
+(13, '2022-10-23', 'Towny', 'tdurranc@blogtalkradio.com', '5 Barnett Way', '12345682', 1),
+(14, '2022-10-23', 'Jinny', 'jlaxtond@google.com', '14 Forster Road', '12345683', 1),
+(15, '2022-10-22', 'Hannah', 'hmerrelle@java.com', '21 Autumn Leaf Hill', '12345684', 1);
+
+INSERT INTO `tbl_contrato` VALUES 
+('1', '5000', '1', '80', '1', '1'), 
+('2', '5000', '1', '80', '2', '1'),
+('3', '10000', '2', '160', '2', '1'),
+('4', '10000', '2', '160', '1', '1');
+
+INSERT INTO `tbl_percepciones` VALUES 
+('1', 'IGSS', '0', '4.83', '0', '1'), 
+('2', 'FORMACIÓN PROFESIONAL', '0', '0.1', '0', '1'), 
+('3', 'HORAS EXTRAS', '1', '150', '0', '1'), 
+('4', 'BONIFICACIÓN INCENTIVO', '1', '0', '250', '1');
+
+INSERT INTO `tbl_asignacion_puestodepartamento` VALUES 
+('2001', '2000'), ('2002', '2000'), ('2003', '2000'), 
+('3001', '3000'), ('3002', '3000'), ('3003', '3000'), 
+('4001', '4000'), ('4002', '4000'), ('4003', '4000'), 
+('5001', '5000'), ('5002', '5000'), ('5003', '5000'), 
+('6001', '6000'), ('6002', '6000'), ('6003', '6000');
+
+INSERT INTO `tbl_asignacion_puestotrabajador` VALUES 
+('2001', '1'), ('2002', '2'), ('2003', '3'), 
+('3001', '4'), ('3002', '5'), ('3003', '6'), 
+('4001', '7'), ('4002', '8'), ('4003', '9'), 
+('5001', '10'), ('5002', '11'), ('5003', '12'), 
+('6001', '13'), ('6002', '14'), ('6003', '15');
+
+INSERT INTO `tbl_asignacion_contratopercepciones` VALUES 
+('1', '1'), ('1', '2'), ('1', '3');
+
+INSERT INTO `tbl_asignacion_contratotrabajador` VALUES 
+('1', '1'), ('1', '2'), ('1', '3'), ('1', '4');
+
+INSERT INTO `tbl_horasextras` VALUES 
+('1', '2022-10-26', '1.5'), ('1', '2022-10-27', '1.5');
