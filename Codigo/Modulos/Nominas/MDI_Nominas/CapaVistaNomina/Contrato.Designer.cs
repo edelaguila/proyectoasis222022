@@ -266,6 +266,7 @@ namespace CapaVistaNomina
             this.Controls.Add(this.panel1);
             this.Name = "Contrato";
             this.Text = "Contrato";
+            this.Load += new System.EventHandler(this.Contrato_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

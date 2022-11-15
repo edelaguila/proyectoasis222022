@@ -227,9 +227,6 @@ namespace Modelo_Seguridad
             {
                 Console.WriteLine(ex.Message.ToString() + " \nError en obtener");
             }
-
-
-            
         }
 
         public void busqueda(TextBox[] textbox, string tabla,int num, string condicion)

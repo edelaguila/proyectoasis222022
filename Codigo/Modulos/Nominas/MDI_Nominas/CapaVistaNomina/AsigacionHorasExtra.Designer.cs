@@ -1,7 +1,7 @@
 ﻿
 namespace CapaVistaNomina
 {
-    partial class AsignacionPuestoTrabajador
+    partial class AsigacionHorasExtra
     {
         /// <summary>
         /// Required designer variable.
@@ -85,7 +85,6 @@ namespace CapaVistaNomina
             this.ListaDatos.Size = new System.Drawing.Size(281, 468);
             this.ListaDatos.TabIndex = 0;
             this.ListaDatos.Tag = "tbl_puestosdetrabajo";
-            this.ListaDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListaDatos_CellClick);
             // 
             // panel2
             // 
@@ -119,7 +118,6 @@ namespace CapaVistaNomina
             this.btnReport.TabIndex = 56;
             this.btnReport.Text = "Reporte";
             this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnAgregar
             // 
@@ -132,7 +130,6 @@ namespace CapaVistaNomina
             this.btnAgregar.TabIndex = 55;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnBuscar
             // 
@@ -145,7 +142,6 @@ namespace CapaVistaNomina
             this.btnBuscar.TabIndex = 54;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // button2
             // 
@@ -155,7 +151,6 @@ namespace CapaVistaNomina
             this.button2.TabIndex = 53;
             this.button2.Text = "?";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtCadenas2
             // 
@@ -191,7 +186,6 @@ namespace CapaVistaNomina
             this.button3.TabIndex = 44;
             this.button3.Text = "?";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // ListaAsignacion
             // 
@@ -253,7 +247,7 @@ namespace CapaVistaNomina
             this.label1.TabIndex = 0;
             this.label1.Text = "Asiganación de Puestos a Trabajadores";
             // 
-            // AsignacionPuestoTrabajador
+            // AsigacionHorasExtra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -261,9 +255,8 @@ namespace CapaVistaNomina
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "AsignacionPuestoTrabajador";
-            this.Text = "AsignacionPuestoTrabajador";
-            this.Load += new System.EventHandler(this.AsignacionPuestoTrabajador_Load);
+            this.Name = "AsigacionHorasExtra";
+            this.Text = "AsigacionHorasExtra";
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ListaDatos)).EndInit();
             this.panel2.ResumeLayout(false);

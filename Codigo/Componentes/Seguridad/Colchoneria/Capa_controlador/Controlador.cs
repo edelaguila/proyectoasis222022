@@ -258,7 +258,6 @@ namespace Seguridad_Controlador
 
             }
             sn.insertar(dato, tipo, tabla);
-          //  setBtitacora(app, "Insertar");
         }
 
         public void buscar(TextBox[] textbox, string tabla,int num,string condicion)

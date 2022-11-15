@@ -20,7 +20,7 @@ namespace CapaVistaNomina
 
             Button[] apps = { btnTrabajadores, btnPuestos, btnDepto, btnContrato, btnPres, btnHorasX,
                 btnFaltas, btnAsPuestoDepto, btnAsPuestoTrab, btnAsContratoTrab, btnAsContratoPres, btnPercyDeduc,
-                btnNomina,btnRplanilla,btnRcontrato,bntRtrabajador,btnSegNomina,btnInfo};
+                btnNomina,btnRplanilla,btnRcontrato,bntRtrabajador,btnSegNomina,btnInfo,btnPrestacionesIndividuales};
             cnseg.deshabilitarApps(apps);
 
             cnseg.getAccesoApp(6001, apps[0]);
@@ -44,6 +44,8 @@ namespace CapaVistaNomina
 
             cnseg.getAccesoApp(6301, apps[16]);
             cnseg.getAccesoApp(6401, apps[17]);
+
+            cnseg.getAccesoApp(6009, apps[18]);
 
         }
 
@@ -214,6 +216,14 @@ namespace CapaVistaNomina
 
         private void btnNomina_Click(object sender, EventArgs e)
         {
+            /*nominas b = new nominas();*/
+            EncabezadoNomina b = new EncabezadoNomina();
+            PagoNomina c = new PagoNomina();
+            b.MdiParent = this;
+            b.Show();
+            c.MdiParent = this;
+            c.Show();
+            pictureBox1.Visible = false;
             hideSubMenu();
         }
 
@@ -224,6 +234,10 @@ namespace CapaVistaNomina
 
         private void btnRcontrato_Click(object sender, EventArgs e)
         {
+            ReporteContratos b = new ReporteContratos();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
             hideSubMenu();
         }
 
@@ -239,12 +253,25 @@ namespace CapaVistaNomina
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
+            AyudaInfo b = new AyudaInfo();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
             hideSubMenu();
         }
 
         private void MenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void btnPrestacionesIndividuales_Click_1(object sender, EventArgs e)
+        {
+            PrestacionesIndividuales b = new PrestacionesIndividuales();
+            b.MdiParent = this;
+            b.Show();
+            pictureBox1.Visible = false;
+            hideSubMenu();
         }
     }
 }
